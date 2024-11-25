@@ -16,6 +16,7 @@
 		D153BE572CF47ACC00A81FFC /* SeekersBHTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D153BE562CF47ACC00A81FFC /* SeekersBHTests.swift */; };
 		D153BE612CF47ACC00A81FFC /* SeekersBHUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D153BE602CF47ACC00A81FFC /* SeekersBHUITests.swift */; };
 		D153BE632CF47ACC00A81FFC /* SeekersBHUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D153BE622CF47ACC00A81FFC /* SeekersBHUITestsLaunchTests.swift */; };
+		D153BE702CF47E8400A81FFC /* testTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D153BE6F2CF47E8400A81FFC /* testTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		D153BE5C2CF47ACC00A81FFC /* SeekersBHUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SeekersBHUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D153BE602CF47ACC00A81FFC /* SeekersBHUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeekersBHUITests.swift; sourceTree = "<group>"; };
 		D153BE622CF47ACC00A81FFC /* SeekersBHUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeekersBHUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D153BE6F2CF47E8400A81FFC /* testTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				D153BE412CF47AC900A81FFC /* SceneDelegate.swift */,
 				D153BE432CF47AC900A81FFC /* ViewController.swift */,
 				D153BE452CF47AC900A81FFC /* Main.storyboard */,
+				D153BE6F2CF47E8400A81FFC /* testTableViewController.swift */,
 				D153BE482CF47ACC00A81FFC /* Assets.xcassets */,
 				D153BE4A2CF47ACC00A81FFC /* LaunchScreen.storyboard */,
 				D153BE4D2CF47ACC00A81FFC /* Info.plist */,
@@ -261,6 +264,7 @@
 				D153BE442CF47AC900A81FFC /* ViewController.swift in Sources */,
 				D153BE402CF47AC900A81FFC /* AppDelegate.swift in Sources */,
 				D153BE422CF47AC900A81FFC /* SceneDelegate.swift in Sources */,
+				D153BE702CF47E8400A81FFC /* testTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
