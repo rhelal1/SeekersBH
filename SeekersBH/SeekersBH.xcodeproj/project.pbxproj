@@ -37,7 +37,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		899D38AD2CF7A755005CADC8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D153BE3C2CF47AC900A81FFC /* SeekersBH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeekersBH.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D153BE3F2CF47AC900A81FFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D153BE412CF47AC900A81FFC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,7 +81,6 @@
 		D153BE332CF47AC900A81FFC = {
 			isa = PBXGroup;
 			children = (
-				899D38AD2CF7A755005CADC8 /* README.md */,
 				D153BE3E2CF47AC900A81FFC /* SeekersBH */,
 				D153BE552CF47ACC00A81FFC /* SeekersBHTests */,
 				D153BE5F2CF47ACC00A81FFC /* SeekersBHUITests */,
