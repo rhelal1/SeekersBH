@@ -17,6 +17,13 @@
 		D153BE612CF47ACC00A81FFC /* SeekersBHUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D153BE602CF47ACC00A81FFC /* SeekersBHUITests.swift */; };
 		D153BE632CF47ACC00A81FFC /* SeekersBHUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D153BE622CF47ACC00A81FFC /* SeekersBHUITestsLaunchTests.swift */; };
 		D153BE702CF47E8400A81FFC /* testTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D153BE6F2CF47E8400A81FFC /* testTableViewController.swift */; };
+		D184E3E42CF86C6700D896D6 /* ruqaya.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D184E3E32CF86C6700D896D6 /* ruqaya.storyboard */; };
+		D184E3E62CF86C7500D896D6 /* marwa.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D184E3E52CF86C7500D896D6 /* marwa.storyboard */; };
+		D184E3E82CF86C7F00D896D6 /* qasim.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D184E3E72CF86C7F00D896D6 /* qasim.storyboard */; };
+		D184E3EA2CF86C8900D896D6 /* duha.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D184E3E92CF86C8900D896D6 /* duha.storyboard */; };
+		D184E3EC2CF86C9400D896D6 /* zainab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D184E3EB2CF86C9400D896D6 /* zainab.storyboard */; };
+		D184E3EE2CF86C9C00D896D6 /* reem.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D184E3ED2CF86C9C00D896D6 /* reem.storyboard */; };
+		D184E3F12CF86CF400D896D6 /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = D184E3F02CF86CF400D896D6 /* user.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +58,13 @@
 		D153BE602CF47ACC00A81FFC /* SeekersBHUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeekersBHUITests.swift; sourceTree = "<group>"; };
 		D153BE622CF47ACC00A81FFC /* SeekersBHUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeekersBHUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D153BE6F2CF47E8400A81FFC /* testTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testTableViewController.swift; sourceTree = "<group>"; };
+		D184E3E32CF86C6700D896D6 /* ruqaya.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ruqaya.storyboard; sourceTree = "<group>"; };
+		D184E3E52CF86C7500D896D6 /* marwa.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = marwa.storyboard; sourceTree = "<group>"; };
+		D184E3E72CF86C7F00D896D6 /* qasim.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = qasim.storyboard; sourceTree = "<group>"; };
+		D184E3E92CF86C8900D896D6 /* duha.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = duha.storyboard; sourceTree = "<group>"; };
+		D184E3EB2CF86C9400D896D6 /* zainab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = zainab.storyboard; sourceTree = "<group>"; };
+		D184E3ED2CF86C9C00D896D6 /* reem.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = reem.storyboard; sourceTree = "<group>"; };
+		D184E3F02CF86CF400D896D6 /* user.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,9 +115,11 @@
 		D153BE3E2CF47AC900A81FFC /* SeekersBH */ = {
 			isa = PBXGroup;
 			children = (
+				D184E3F32CF86D6600D896D6 /* controllers */,
+				D184E3F22CF86D4800D896D6 /* views */,
+				D184E3EF2CF86CD500D896D6 /* models */,
 				D153BE3F2CF47AC900A81FFC /* AppDelegate.swift */,
 				D153BE412CF47AC900A81FFC /* SceneDelegate.swift */,
-				D153BE432CF47AC900A81FFC /* ViewController.swift */,
 				D153BE452CF47AC900A81FFC /* Main.storyboard */,
 				D153BE6F2CF47E8400A81FFC /* testTableViewController.swift */,
 				D153BE482CF47ACC00A81FFC /* Assets.xcassets */,
@@ -128,6 +144,35 @@
 				D153BE622CF47ACC00A81FFC /* SeekersBHUITestsLaunchTests.swift */,
 			);
 			path = SeekersBHUITests;
+			sourceTree = "<group>";
+		};
+		D184E3EF2CF86CD500D896D6 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				D184E3F02CF86CF400D896D6 /* user.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		D184E3F22CF86D4800D896D6 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				D184E3E92CF86C8900D896D6 /* duha.storyboard */,
+				D184E3E72CF86C7F00D896D6 /* qasim.storyboard */,
+				D184E3E32CF86C6700D896D6 /* ruqaya.storyboard */,
+				D184E3ED2CF86C9C00D896D6 /* reem.storyboard */,
+				D184E3EB2CF86C9400D896D6 /* zainab.storyboard */,
+				D184E3E52CF86C7500D896D6 /* marwa.storyboard */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		D184E3F32CF86D6600D896D6 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D153BE432CF47AC900A81FFC /* ViewController.swift */,
+			);
+			path = controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,9 +279,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D184E3EA2CF86C8900D896D6 /* duha.storyboard in Resources */,
+				D184E3E62CF86C7500D896D6 /* marwa.storyboard in Resources */,
 				D153BE4C2CF47ACC00A81FFC /* LaunchScreen.storyboard in Resources */,
+				D184E3E82CF86C7F00D896D6 /* qasim.storyboard in Resources */,
 				D153BE492CF47ACC00A81FFC /* Assets.xcassets in Resources */,
+				D184E3EC2CF86C9400D896D6 /* zainab.storyboard in Resources */,
 				D153BE472CF47AC900A81FFC /* Main.storyboard in Resources */,
+				D184E3E42CF86C6700D896D6 /* ruqaya.storyboard in Resources */,
+				D184E3EE2CF86C9C00D896D6 /* reem.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +312,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D184E3F12CF86CF400D896D6 /* user.swift in Sources */,
 				D153BE442CF47AC900A81FFC /* ViewController.swift in Sources */,
 				D153BE402CF47AC900A81FFC /* AppDelegate.swift in Sources */,
 				D153BE422CF47AC900A81FFC /* SceneDelegate.swift in Sources */,
