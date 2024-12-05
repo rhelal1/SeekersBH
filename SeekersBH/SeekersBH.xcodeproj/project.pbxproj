@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8946BB4E2D01B54100332942 /* zainab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8946BB4D2D01B54100332942 /* zainab.storyboard */; };
 		D153BE402CF47AC900A81FFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D153BE3F2CF47AC900A81FFC /* AppDelegate.swift */; };
 		D153BE422CF47AC900A81FFC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D153BE412CF47AC900A81FFC /* SceneDelegate.swift */; };
 		D153BE442CF47AC900A81FFC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D153BE432CF47AC900A81FFC /* ViewController.swift */; };
@@ -21,7 +22,6 @@
 		D184E3E62CF86C7500D896D6 /* marwa.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D184E3E52CF86C7500D896D6 /* marwa.storyboard */; };
 		D184E3E82CF86C7F00D896D6 /* qasim.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D184E3E72CF86C7F00D896D6 /* qasim.storyboard */; };
 		D184E3EA2CF86C8900D896D6 /* duha.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D184E3E92CF86C8900D896D6 /* duha.storyboard */; };
-		D184E3EC2CF86C9400D896D6 /* zainab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D184E3EB2CF86C9400D896D6 /* zainab.storyboard */; };
 		D184E3EE2CF86C9C00D896D6 /* reem.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D184E3ED2CF86C9C00D896D6 /* reem.storyboard */; };
 		D184E3F12CF86CF400D896D6 /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = D184E3F02CF86CF400D896D6 /* user.swift */; };
 		D184E3F72CF8760E00D896D6 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = D184E3F62CF8760E00D896D6 /* FirebaseAnalytics */; };
@@ -51,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8946BB4D2D01B54100332942 /* zainab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = zainab.storyboard; sourceTree = "<group>"; };
 		D153BE3C2CF47AC900A81FFC /* SeekersBH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeekersBH.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D153BE3F2CF47AC900A81FFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D153BE412CF47AC900A81FFC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,7 +70,6 @@
 		D184E3E52CF86C7500D896D6 /* marwa.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = marwa.storyboard; sourceTree = "<group>"; };
 		D184E3E72CF86C7F00D896D6 /* qasim.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = qasim.storyboard; sourceTree = "<group>"; };
 		D184E3E92CF86C8900D896D6 /* duha.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = duha.storyboard; sourceTree = "<group>"; };
-		D184E3EB2CF86C9400D896D6 /* zainab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = zainab.storyboard; sourceTree = "<group>"; };
 		D184E3ED2CF86C9C00D896D6 /* reem.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = reem.storyboard; sourceTree = "<group>"; };
 		D184E3F02CF86CF400D896D6 /* user.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
 		D184E3FC2CF8769000D896D6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -180,7 +180,7 @@
 				D184E3E72CF86C7F00D896D6 /* qasim.storyboard */,
 				D184E3E32CF86C6700D896D6 /* ruqaya.storyboard */,
 				D184E3ED2CF86C9C00D896D6 /* reem.storyboard */,
-				D184E3EB2CF86C9400D896D6 /* zainab.storyboard */,
+				8946BB4D2D01B54100332942 /* zainab.storyboard */,
 				D184E3E52CF86C7500D896D6 /* marwa.storyboard */,
 			);
 			path = views;
@@ -316,9 +316,9 @@
 				D184E3EA2CF86C8900D896D6 /* duha.storyboard in Resources */,
 				D184E3E62CF86C7500D896D6 /* marwa.storyboard in Resources */,
 				D153BE4C2CF47ACC00A81FFC /* LaunchScreen.storyboard in Resources */,
+				8946BB4E2D01B54100332942 /* zainab.storyboard in Resources */,
 				D184E3E82CF86C7F00D896D6 /* qasim.storyboard in Resources */,
 				D153BE492CF47ACC00A81FFC /* Assets.xcassets in Resources */,
-				D184E3EC2CF86C9400D896D6 /* zainab.storyboard in Resources */,
 				D153BE472CF47AC900A81FFC /* Main.storyboard in Resources */,
 				D184E3FD2CF8769000D896D6 /* GoogleService-Info.plist in Resources */,
 				D184E3E42CF86C6700D896D6 /* ruqaya.storyboard in Resources */,
