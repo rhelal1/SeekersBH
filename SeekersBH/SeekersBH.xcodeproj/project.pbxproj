@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -286,6 +286,7 @@
 				};
 			};
 			buildConfigurationList = D153BE372CF47AC900A81FFC /* Build configuration list for PBXProject "SeekersBH" */;
+			compatibilityVersion = "Xcode 15.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -296,7 +297,6 @@
 			packageReferences = (
 				D184E3F42CF875AC00D896D6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
-			preferredProjectObjectVersion = 77;
 			productRefGroup = D153BE3D2CF47AC900A81FFC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
