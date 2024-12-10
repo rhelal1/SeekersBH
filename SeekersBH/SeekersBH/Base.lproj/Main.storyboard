@@ -37,7 +37,6 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Growth Hub"/>
                                 <connections>
-                                    <action selector="growthHub:" destination="KrW-qs-F0k" eventType="touchUpInside" id="72z-Dw-dZD"/>
                                     <segue destination="69e-JO-d4P" kind="show" id="r8m-TB-gYu"/>
                                 </connections>
                             </button>
@@ -108,7 +107,7 @@
         <!--FirstNavController-->
         <scene sceneID="L5R-8W-NK4">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="FirstNavController" storyboardName="ruqaya" referencedIdentifier="FirstNavController" id="69e-JO-d4P" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="optionID" storyboardName="ruqaya" referencedIdentifier="FirstNavController" id="69e-JO-d4P" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Y6O-cG-7Vf"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q24-Nw-lM0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
