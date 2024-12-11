@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		94E2D2752D074F9F00614521 /* SidebarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E2D2742D074F9F00614521 /* SidebarViewController.swift */; };
+		94E2D2772D076FB500614521 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E2D2762D076FB500614521 /* Resource.swift */; };
+		94E2D2792D07925000614521 /* ArticlesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E2D2782D07925000614521 /* ArticlesViewController.swift */; };
+		94E2D27B2D07964600614521 /* OptionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E2D27A2D07964600614521 /* OptionController.swift */; };
+		C311B0D32D06FDF00071CF9B /* EmployerDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C311B0D22D06FDF00071CF9B /* EmployerDashboardViewController.swift */; };
+		C311B0D52D0707D30071CF9B /* ViewJobApplicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C311B0D42D0707D30071CF9B /* ViewJobApplicationViewController.swift */; };
+		C311B0D92D07276E0071CF9B /* addJobViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C311B0D82D07276E0071CF9B /* addJobViewController.swift */; };
 		D153BE402CF47AC900A81FFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D153BE3F2CF47AC900A81FFC /* AppDelegate.swift */; };
 		D153BE422CF47AC900A81FFC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D153BE412CF47AC900A81FFC /* SceneDelegate.swift */; };
 		D153BE442CF47AC900A81FFC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D153BE432CF47AC900A81FFC /* ViewController.swift */; };
@@ -31,6 +38,8 @@
 		D184E3FF2CF8785A00D896D6 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = D184E3FE2CF8785A00D896D6 /* Job.swift */; };
 		D184E4012CF87A5600D896D6 /* CV.swift in Sources */ = {isa = PBXBuildFile; fileRef = D184E4002CF87A5600D896D6 /* CV.swift */; };
 		D184E4032CF87E5500D896D6 /* JobApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = D184E4022CF87E5500D896D6 /* JobApplication.swift */; };
+		D45526BC2D09ED2A00149AA9 /* JobTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45526BB2D09ED2A00149AA9 /* JobTableViewCell.swift */; };
+		D45526BE2D09F2E000149AA9 /* JobRecommendationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45526BD2D09F2E000149AA9 /* JobRecommendationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +60,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		94E2D2742D074F9F00614521 /* SidebarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarViewController.swift; sourceTree = "<group>"; };
+		94E2D2762D076FB500614521 /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
+		94E2D2782D07925000614521 /* ArticlesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesViewController.swift; sourceTree = "<group>"; };
+		94E2D27A2D07964600614521 /* OptionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionController.swift; sourceTree = "<group>"; };
+		C311B0D22D06FDF00071CF9B /* EmployerDashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployerDashboardViewController.swift; sourceTree = "<group>"; };
+		C311B0D42D0707D30071CF9B /* ViewJobApplicationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewJobApplicationViewController.swift; sourceTree = "<group>"; };
+		C311B0D82D07276E0071CF9B /* addJobViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addJobViewController.swift; sourceTree = "<group>"; };
 		D153BE3C2CF47AC900A81FFC /* SeekersBH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeekersBH.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D153BE3F2CF47AC900A81FFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D153BE412CF47AC900A81FFC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +92,8 @@
 		D184E3FE2CF8785A00D896D6 /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
 		D184E4002CF87A5600D896D6 /* CV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CV.swift; sourceTree = "<group>"; };
 		D184E4022CF87E5500D896D6 /* JobApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobApplication.swift; sourceTree = "<group>"; };
+		D45526BB2D09ED2A00149AA9 /* JobTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobTableViewCell.swift; sourceTree = "<group>"; };
+		D45526BD2D09F2E000149AA9 /* JobRecommendationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobRecommendationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +127,7 @@
 		D153BE332CF47AC900A81FFC = {
 			isa = PBXGroup;
 			children = (
+				94E2D2782D07925000614521 /* ArticlesViewController.swift */,
 				D153BE3E2CF47AC900A81FFC /* SeekersBH */,
 				D153BE552CF47ACC00A81FFC /* SeekersBHTests */,
 				D153BE5F2CF47ACC00A81FFC /* SeekersBHUITests */,
@@ -136,6 +155,7 @@
 				D153BE3F2CF47AC900A81FFC /* AppDelegate.swift */,
 				D153BE412CF47AC900A81FFC /* SceneDelegate.swift */,
 				D153BE452CF47AC900A81FFC /* Main.storyboard */,
+				94E2D27A2D07964600614521 /* OptionController.swift */,
 				D184E3FC2CF8769000D896D6 /* GoogleService-Info.plist */,
 				D153BE6F2CF47E8400A81FFC /* testTableViewController.swift */,
 				D153BE482CF47ACC00A81FFC /* Assets.xcassets */,
@@ -167,6 +187,7 @@
 			children = (
 				D184E3F02CF86CF400D896D6 /* user.swift */,
 				D184E4022CF87E5500D896D6 /* JobApplication.swift */,
+				94E2D2762D076FB500614521 /* Resource.swift */,
 				D184E4002CF87A5600D896D6 /* CV.swift */,
 				D184E3FE2CF8785A00D896D6 /* Job.swift */,
 			);
@@ -190,6 +211,12 @@
 			isa = PBXGroup;
 			children = (
 				D153BE432CF47AC900A81FFC /* ViewController.swift */,
+				C311B0D22D06FDF00071CF9B /* EmployerDashboardViewController.swift */,
+				C311B0D42D0707D30071CF9B /* ViewJobApplicationViewController.swift */,
+				C311B0D82D07276E0071CF9B /* addJobViewController.swift */,
+				94E2D2742D074F9F00614521 /* SidebarViewController.swift */,
+				D45526BB2D09ED2A00149AA9 /* JobTableViewCell.swift */,
+				D45526BD2D09F2E000149AA9 /* JobRecommendationViewController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -274,6 +301,7 @@
 				TargetAttributes = {
 					D153BE3B2CF47AC900A81FFC = {
 						CreatedOnToolsVersion = 15.2;
+						LastSwiftMigration = 1610;
 					};
 					D153BE512CF47ACC00A81FFC = {
 						CreatedOnToolsVersion = 15.2;
@@ -347,14 +375,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C311B0D52D0707D30071CF9B /* ViewJobApplicationViewController.swift in Sources */,
+				94E2D2792D07925000614521 /* ArticlesViewController.swift in Sources */,
 				D184E3F12CF86CF400D896D6 /* user.swift in Sources */,
+				C311B0D92D07276E0071CF9B /* addJobViewController.swift in Sources */,
 				D184E4012CF87A5600D896D6 /* CV.swift in Sources */,
 				D184E3FF2CF8785A00D896D6 /* Job.swift in Sources */,
+				D45526BE2D09F2E000149AA9 /* JobRecommendationViewController.swift in Sources */,
 				D153BE442CF47AC900A81FFC /* ViewController.swift in Sources */,
+				94E2D2752D074F9F00614521 /* SidebarViewController.swift in Sources */,
+				94E2D27B2D07964600614521 /* OptionController.swift in Sources */,
+				94E2D2772D076FB500614521 /* Resource.swift in Sources */,
 				D153BE402CF47AC900A81FFC /* AppDelegate.swift in Sources */,
 				D153BE422CF47AC900A81FFC /* SceneDelegate.swift in Sources */,
 				D184E4032CF87E5500D896D6 /* JobApplication.swift in Sources */,
+				C311B0D32D06FDF00071CF9B /* EmployerDashboardViewController.swift in Sources */,
 				D153BE702CF47E8400A81FFC /* testTableViewController.swift in Sources */,
+				D45526BC2D09ED2A00149AA9 /* JobTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -534,6 +571,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -551,6 +589,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = m.SeekersBH;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -561,6 +600,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
