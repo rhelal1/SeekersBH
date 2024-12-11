@@ -150,7 +150,7 @@
         <!--Navigation Controller-->
         <scene sceneID="6at-di-bK2">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bFG-hT-Emk" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="HomePage" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bFG-hT-Emk" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="uBW-WJ-Py1">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
