@@ -126,6 +126,31 @@
             </objects>
             <point key="canvasLocation" x="114" y="-366"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="hRu-cT-SCZ">
+            <objects>
+                <viewController id="K87-3i-qJH" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="njT-0J-3DP">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Online Courses" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LAi-5s-VAC">
+                                <rect key="frame" x="138" y="360" width="116" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="RnC-Jm-T3B"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="7Hl-Cm-5yY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="98S-78-idY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="286" y="454"/>
+        </scene>
         <!--Articles View Controller-->
         <scene sceneID="p88-oq-zs7">
             <objects>
@@ -176,7 +201,7 @@
                                                                     <color key="textColor" red="0.050980389119999997" green="0.094117648900000003" blue="0.32156863810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Description" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7BB-TU-T2P">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Description" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7BB-TU-T2P">
                                                                     <rect key="frame" x="0.0" y="25.333333333333329" width="343" height="134.66666666666669"/>
                                                                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
                                                                     <nil key="textColor"/>
@@ -246,7 +271,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Ifq-eZ-BTF">
             <objects>
-                <navigationController storyboardIdentifier="FirstNavController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XbX-1p-WJA" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="FirstNavController" wantsFullScreenLayout="YES" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XbX-1p-WJA" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hpg-gh-uq4">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -260,6 +285,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oyw-98-Jsk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-763" y="-366"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kAN-tx-Igj">
+            <objects>
+                <navigationController storyboardIdentifier="OnlineCourses" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="yjO-5r-IZT" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6fx-1l-ymY">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="K87-3i-qJH" kind="relationship" relationship="rootViewController" id="gea-A5-pS8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B9K-2r-Di9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-735" y="454"/>
         </scene>
     </scenes>
     <resources>
