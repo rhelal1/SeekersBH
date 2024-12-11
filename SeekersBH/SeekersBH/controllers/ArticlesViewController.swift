@@ -112,18 +112,39 @@ class ArticlesViewController: UIViewController {
         super.viewDidLoad()
 
         articleTable.dataSource = self
+        articleTable.delegate = self
     }
 }
 
-extension ArticlesViewController: UITableViewDataSource {
+extension ArticlesViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return articles.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ArticleCell", for: indexPath)
-        
-        cell.textLabel?.text = articles[indexPath.row].title
+        let cell = tableView.dequeueReusableCell(withIdentifier: "articleCell", for: indexPath) as! ArticlesTableViewCell
+
+        cell.update(with: articles[indexPath.row])
+        cell.showsReorderControl = true
+                
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        // Optional: remove separator lines (if not needed)
+        cell.separatorInset = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15)
+        cell.preservesSuperviewLayoutMargins = false
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 200
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+//        let article = articles[indexPath.row]
+        
+//        navigationController?.pushViewController(ArticleViewController(article: article), animated: true)
     }
 }
