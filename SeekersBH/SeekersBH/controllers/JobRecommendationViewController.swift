@@ -2,29 +2,54 @@
 //  JobRecommendationViewController.swift
 //  SeekersBH
 //
-//  Created by Duha Hashem on 11/12/2024.
+//  Created by Duha Hashem on 13/12/2024.
 //
 
 import UIKit
 
-class JobRecommendationViewController: UIViewController {
+class JobRecommendationViewController: UIViewController, UITableViewDelegate , UITableViewDataSource{
+    
+    
+    
 
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tabelView: UITableView!
+    var jobRecommendations = [JobRecommendation]()
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        tabelView.delegate = self
+        tabelView.dataSource = self
+        
+        jobRecommendations.append(JobRecommendation.init(jobTitle: "Software Engineer", companyName: "TechCorp", location: "Manama", employmentType: "Full-time", experience: "2+ years", salary: "800-1000 per month", meetsRequirements: false))
+        
+        jobRecommendations.append(JobRecommendation.init(jobTitle: "UI/UX Designer", companyName: "DesignPro", location: "Manama", employmentType: "Full-time", experience: "2+ years", salary: "800-1000 per month", meetsRequirements: false))
+        
+               jobRecommendations.append(JobRecommendation.init(jobTitle: "Data Analyst", companyName: "DataWorld", location: "Manama", employmentType: "Full-time", experience: "2+ years", salary: "800-1000 per month", meetsRequirements: true))
+
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return jobRecommendations.count
     }
-    */
 
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "jobRecCell", for: indexPath) as! JobRecommendationTableViewCell
+                let data = jobRecommendations[indexPath.row]
+        
+        cell.configure(jobTitle: data.jobTitle, companyName: data.companyName, location: data.location, employmentType: data.employmentType, experience: data.experience, salary: data.salary, meetsRequirements: data.meetsRequirements)
+        return cell
+    }
 }
+
+
+
+struct JobRecommendation {
+        let jobTitle: String
+        let companyName: String
+        let location: String
+        let employmentType: String
+        let experience: String
+        let salary: String
+        let meetsRequirements: Bool
+    }
