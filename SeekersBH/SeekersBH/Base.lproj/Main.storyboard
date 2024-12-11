@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RxE-Q0-RCh">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
@@ -10,7 +11,7 @@
         <!--Home-->
         <scene sceneID="GwA-MF-eVw">
             <objects>
-                <viewController id="H7w-DE-aqX" sceneMemberID="viewController">
+                <viewController id="H7w-DE-aqX" customClass="ViewController" customModule="SeekersBH" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QCA-Hp-CMF">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
