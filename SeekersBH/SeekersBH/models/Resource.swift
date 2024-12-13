@@ -1,6 +1,13 @@
 import Foundation
 
-struct Article {
+protocol Resource : Codable {
+    var title: String { get }
+    var description: String { get }
+    var url: String { get }
+    var views: Int { get }
+}
+
+struct Article : Resource {
     var title : String
     var author : String
     var yearOfPublication : Int
@@ -13,7 +20,7 @@ struct Article {
     var views : Int
 }
 
-struct Webinar {
+struct Webinar : Resource{
     var title : String
     var speaker : String
     var date : Date
@@ -25,7 +32,7 @@ struct Webinar {
     var views : Int
 }
 
-struct Video {
+struct Video : Resource {
     var title : String
     var speaker : String
     var channel : String
@@ -35,4 +42,15 @@ struct Video {
     var description : String
     var url : String
     var views : Int
+}
+
+struct SavedResource {
+    var resource: Resource
+    var type : ResourceTypes
+}
+
+enum ResourceTypes: String, Codable {
+    case article
+    case webinar
+    case video
 }

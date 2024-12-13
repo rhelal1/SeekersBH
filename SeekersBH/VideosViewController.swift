@@ -1,10 +1,3 @@
-//
-//  VideosViewController.swift
-//  SeekersBH
-//
-//  Created by Ruqaya Helal on 13/12/2024.
-//
-
 import UIKit
 
 class VideosViewController: UIViewController {
