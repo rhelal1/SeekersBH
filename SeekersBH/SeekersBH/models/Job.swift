@@ -9,7 +9,7 @@ struct JobAd {
     var jobQualifications : String
     var jobSalary : Int
     var jobEmploymentBenfits : String
-    var AdditionalQuestions : [String]
+    var AdditionalPerks : [String]
     var jobApplicationDeadline : Date
 }
 
@@ -17,4 +17,6 @@ struct JobAd {
 enum JobType {
     case fullTime
     case parTime
+    case contract
+    case temporary
 }
