@@ -13,7 +13,7 @@
             <objects>
                 <viewController id="Y6W-OH-hqX" customClass="EmployerDashboardViewController" customModule="SeekersBH" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MAN-Uq-tF3">
@@ -77,9 +77,9 @@ Management</string>
         <!--Test View Controller-->
         <scene sceneID="gSf-kn-sFG">
             <objects>
-                <viewController id="Ive-Lm-Ti1" customClass="testViewController" customModule="SeekersBH" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Ive-Lm-Ti1" customClass="TestViewController" customModule="SeekersBH" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZZ3-kM-NUh">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ftz-7s-wlO">
@@ -153,7 +153,8 @@ Job Application</string>
                                     <color key="baseBackgroundColor" red="0.035294117647058823" green="0.094117647058823528" blue="0.33725490196078434" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="Tmr-VP-Pcs" kind="show" id="Gh8-hq-mwr"/>
+                                    <action selector="nextbtn:" destination="Ive-Lm-Ti1" eventType="touchUpInside" id="4sn-x2-ybG"/>
+                                    <segue destination="Tmr-VP-Pcs" kind="show" identifier="toAddJobView2" id="Gh8-hq-mwr"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -162,7 +163,10 @@ Job Application</string>
                     </view>
                     <navigationItem key="navigationItem" id="tKn-mq-4eR"/>
                     <connections>
-                        <outlet property="viewTest" destination="Ftz-7s-wlO" id="Qn0-ar-aW1"/>
+                        <outlet property="JobLocationTxtField" destination="bQ6-gp-Bss" id="EJR-ly-Koi"/>
+                        <outlet property="JobTypeTxtField" destination="ZMZ-kP-3e0" id="iQX-iS-MOM"/>
+                        <outlet property="jobNameTxtField" destination="rrn-lf-fuo" id="Bs0-Ze-GMh"/>
+                        <outlet property="viewTest" destination="Ftz-7s-wlO" id="y5V-jw-I1n"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aso-tu-Kth" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -172,9 +176,9 @@ Job Application</string>
         <!--Add Job View2 View Controller-->
         <scene sceneID="4JI-nR-Qgn">
             <objects>
-                <viewController id="Tmr-VP-Pcs" customClass="addJobView2ViewController" customModule="SeekersBH" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Tmr-VP-Pcs" customClass="AddJobView2ViewController" customModule="SeekersBH" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PiM-eM-lqP">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u4T-3b-umD">
@@ -241,7 +245,8 @@ Job Application</string>
                                     <color key="baseBackgroundColor" red="0.035294117649999998" green="0.094117647060000004" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="3V7-MO-bcr" kind="show" id="qV1-hb-R6X"/>
+                                    <action selector="nextbtn:" destination="Tmr-VP-Pcs" eventType="touchUpInside" id="8cK-6a-Tve"/>
+                                    <segue destination="3V7-MO-bcr" kind="show" identifier="toAddJobView4" id="qV1-hb-R6X"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -264,7 +269,7 @@ Job Application</string>
             <objects>
                 <viewController id="4my-VJ-Swo" customClass="addJobView3ViewController" customModule="SeekersBH" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gyO-YI-byN">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7iU-A1-GWH">
@@ -316,7 +321,7 @@ Job Application</string>
                                         <color key="textColor" red="0.035294117649999998" green="0.094117647060000004" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="mbu-k8-Rd0">
+                                    <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="mbu-k8-Rd0">
                                         <rect key="frame" x="30" y="393" width="185" height="73"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                     </datePicker>
@@ -349,6 +354,9 @@ Job Application</string>
                     </view>
                     <navigationItem key="navigationItem" id="V2J-0u-Jx8"/>
                     <connections>
+                        <outlet property="AdditionalPerksTxtView" destination="sEB-jv-gNd" id="bfy-eS-94q"/>
+                        <outlet property="applicationdeadline" destination="mbu-k8-Rd0" id="vuv-uI-OpI"/>
+                        <outlet property="salaryRangetxtField" destination="jF9-Id-Lmu" id="M84-N9-BQk"/>
                         <outlet property="textview1" destination="sEB-jv-gNd" id="IHm-OG-W3W"/>
                         <outlet property="vieww" destination="XCM-Oh-Szd" id="GsK-6k-ev1"/>
                     </connections>
@@ -360,9 +368,9 @@ Job Application</string>
         <!--Add Job View4 View Controller-->
         <scene sceneID="Kws-A7-cFp">
             <objects>
-                <viewController id="3V7-MO-bcr" customClass="addJobView4_ViewController" customModule="SeekersBH" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="3V7-MO-bcr" customClass="AddJobView4ViewController" customModule="SeekersBH" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Cas-qV-37b">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N1a-8y-NHd">
@@ -429,7 +437,8 @@ Job Application</string>
                                     <color key="baseBackgroundColor" red="0.035294117649999998" green="0.094117647060000004" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="4my-VJ-Swo" kind="show" id="Gby-55-t6x"/>
+                                    <action selector="nextbtn:" destination="3V7-MO-bcr" eventType="touchUpInside" id="UPA-cv-hLX"/>
+                                    <segue destination="4my-VJ-Swo" kind="show" identifier="toAddJobView3" id="Gby-55-t6x"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -467,7 +476,7 @@ Job Application</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="poA-xV-kQN"/>
+        <segue reference="1SI-hX-EtE"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="labelColor">
