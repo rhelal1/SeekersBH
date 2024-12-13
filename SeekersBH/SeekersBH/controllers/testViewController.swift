@@ -1,18 +1,18 @@
 //
-//  addJobViewController.swift
+//  testViewController.swift
 //  SeekersBH
 //
-//  Created by BP-36-201-18 on 09/12/2024.
+//  Created by Guest User on 12/12/2024.
 //
 
 import UIKit
 
-class addJobViewController: UIViewController {
-    @IBOutlet weak var view11: UIView!
-    
+class testViewController: UIViewController {
+
+    @IBOutlet weak var viewTest: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        viewTest.layer.cornerRadius = 15
         // Do any additional setup after loading the view.
     }
     

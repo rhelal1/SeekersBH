@@ -1,26 +1,24 @@
 //
-//  ViewJobApplicationViewController.swift
+//  addJobView4\ViewController.swift
 //  SeekersBH
 //
-//  Created by BP-36-201-18 on 09/12/2024.
+//  Created by Guest User on 12/12/2024.
 //
 
 import UIKit
 
-class ViewJobApplicationViewController: UIViewController {
-    @IBOutlet weak var view2: UIView!
-    
-    @IBOutlet weak var view3: UIView!
-    @IBOutlet weak var view1: UIView!
+class addJobView4_ViewController: UIViewController {
+
+    @IBOutlet weak var textview2: UITextView!
+    @IBOutlet weak var textview1: UITextView!
+    @IBOutlet weak var viewv: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        viewv.layer.cornerRadius = 10
+        textview1.layer.cornerRadius = 10
+        textview2.layer.cornerRadius = 10
+        
         // Do any additional setup after loading the view.
-        
-        view1.layer.cornerRadius = 10
-        view2.layer.cornerRadius = 10
-        view3.layer.cornerRadius = 10
-        
     }
     
 
