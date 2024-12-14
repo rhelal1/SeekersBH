@@ -200,7 +200,6 @@ extension WebinarsViewController: UITableViewDataSource, UITableViewDelegate {
     
      //UITableViewDelegate method
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Entering didSelectRowAt")
         let selectedWebinar = webinars[indexPath.row]
 
         // Instantiate the ArticleDetailsViewController
@@ -212,6 +211,4 @@ extension WebinarsViewController: UITableViewDataSource, UITableViewDelegate {
             navigationController?.pushViewController(webinarDetailsVC, animated: true)
         }
     }
-    
-    //Exception    NSException *    "[<SeekersBH.WebinarDetailsViewController 0x310158200> setValue:forUndefinedKey:]: this class is not key value coding-compliant for the key articleTitle."    0x00006000009698f0
 }
