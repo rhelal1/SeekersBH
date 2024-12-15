@@ -9,9 +9,6 @@ import UIKit
 
 class JobRecommendationViewController: UIViewController, UITableViewDelegate , UITableViewDataSource{
     
-    
-    
-
     @IBOutlet weak var tabelView: UITableView!
     var jobRecommendations = [JobRecommendation]()
     override func viewDidLoad() {

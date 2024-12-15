@@ -53,6 +53,10 @@
 		D184E3FF2CF8785A00D896D6 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = D184E3FE2CF8785A00D896D6 /* Job.swift */; };
 		D184E4012CF87A5600D896D6 /* CV.swift in Sources */ = {isa = PBXBuildFile; fileRef = D184E4002CF87A5600D896D6 /* CV.swift */; };
 		D184E4032CF87E5500D896D6 /* JobApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = D184E4022CF87E5500D896D6 /* JobApplication.swift */; };
+		D4070DB02D0F11C700E517FE /* NewJobRecommendationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4070DAF2D0F11C700E517FE /* NewJobRecommendationTableViewCell.swift */; };
+		D4070DB22D0F144600E517FE /* NewJobRecommendationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4070DB12D0F144600E517FE /* NewJobRecommendationViewController.swift */; };
+		D4070DB42D0F200600E517FE /* NewJobDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4070DB32D0F200600E517FE /* NewJobDetailViewController.swift */; };
+		D4070DB62D0F206B00E517FE /* NewJobDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4070DB52D0F206B00E517FE /* NewJobDetailTableViewController.swift */; };
 		D45526BC2D09ED2A00149AA9 /* JobTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45526BB2D09ED2A00149AA9 /* JobTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -121,10 +125,10 @@
 		D184E3FE2CF8785A00D896D6 /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
 		D184E4002CF87A5600D896D6 /* CV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CV.swift; sourceTree = "<group>"; };
 		D184E4022CF87E5500D896D6 /* JobApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobApplication.swift; sourceTree = "<group>"; };
-		D4070DAB2D0EFF6A00E517FE /* JobRecommendationTableViewCell 2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JobRecommendationTableViewCell 2.swift"; sourceTree = "<group>"; };
-		D4070DAC2D0EFF6A00E517FE /* JobRecommendationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobRecommendationViewController.swift; sourceTree = "<group>"; };
-		D4070DAD2D0EFF6A00E517FE /* JobRecDetailsViewController 2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JobRecDetailsViewController 2.swift"; sourceTree = "<group>"; };
-		D4070DAE2D0EFF6A00E517FE /* JobRecDetailsTableViewController 2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JobRecDetailsTableViewController 2.swift"; sourceTree = "<group>"; };
+		D4070DAF2D0F11C700E517FE /* NewJobRecommendationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewJobRecommendationTableViewCell.swift; sourceTree = "<group>"; };
+		D4070DB12D0F144600E517FE /* NewJobRecommendationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewJobRecommendationViewController.swift; sourceTree = "<group>"; };
+		D4070DB32D0F200600E517FE /* NewJobDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewJobDetailViewController.swift; sourceTree = "<group>"; };
+		D4070DB52D0F206B00E517FE /* NewJobDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewJobDetailTableViewController.swift; sourceTree = "<group>"; };
 		D45526BB2D09ED2A00149AA9 /* JobTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -263,10 +267,10 @@
 				AC2776E52D0AF25B0019677C /* addJobView3ViewController.swift */,
 				AC2776EB2D0B05360019677C /* addJobView2ViewController.swift */,
 				AC2776E92D0B02E10019677C /* AddJobView4ViewController.swift */,
-				D4070DAB2D0EFF6A00E517FE /* JobRecommendationTableViewCell 2.swift */,
-				D4070DAC2D0EFF6A00E517FE /* JobRecommendationViewController.swift */,
-				D4070DAD2D0EFF6A00E517FE /* JobRecDetailsViewController 2.swift */,
-				D4070DAE2D0EFF6A00E517FE /* JobRecDetailsTableViewController 2.swift */,
+				D4070DAF2D0F11C700E517FE /* NewJobRecommendationTableViewCell.swift */,
+				D4070DB12D0F144600E517FE /* NewJobRecommendationViewController.swift */,
+				D4070DB32D0F200600E517FE /* NewJobDetailViewController.swift */,
+				D4070DB52D0F206B00E517FE /* NewJobDetailTableViewController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -451,10 +455,14 @@
 				AC2776EA2D0B02E10019677C /* AddJobView4ViewController.swift in Sources */,
 				942060602D0DAB0E00A2DE36 /* SavedTableViewCell.swift in Sources */,
 				AC2776EA2D0B02E10019677C /* AddJobView4ViewController.swift in Sources */,
+				D4070DB22D0F144600E517FE /* NewJobRecommendationViewController.swift in Sources */,
 				D153BE422CF47AC900A81FFC /* SceneDelegate.swift in Sources */,
 				D184E4032CF87E5500D896D6 /* JobApplication.swift in Sources */,
+				D4070DB02D0F11C700E517FE /* NewJobRecommendationTableViewCell.swift in Sources */,
 				9420605C2D0CCE1900A2DE36 /* VideoDetailsViewController.swift in Sources */,
+				D4070DB62D0F206B00E517FE /* NewJobDetailTableViewController.swift in Sources */,
 				C311B0D32D06FDF00071CF9B /* EmployerDashboardViewController.swift in Sources */,
+				D4070DB42D0F200600E517FE /* NewJobDetailViewController.swift in Sources */,
 				D153BE702CF47E8400A81FFC /* testTableViewController.swift in Sources */,
 				D45526BC2D09ED2A00149AA9 /* JobTableViewCell.swift in Sources */,
 			);
