@@ -12,7 +12,14 @@
 		9420605C2D0CCE1900A2DE36 /* VideoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9420605B2D0CCE1900A2DE36 /* VideoDetailsViewController.swift */; };
 		9420605E2D0DAA7600A2DE36 /* SavedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9420605D2D0DAA7600A2DE36 /* SavedViewController.swift */; };
 		942060602D0DAB0E00A2DE36 /* SavedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9420605F2D0DAB0E00A2DE36 /* SavedTableViewCell.swift */; };
-		942060622D0DC00100A2DE36 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942060612D0DC00100A2DE36 /* FirebaseManager.swift */; };
+		942060642D10509900A2DE36 /* CourseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942060632D10509900A2DE36 /* CourseTableViewCell.swift */; };
+		942060662D1050A600A2DE36 /* CourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942060652D1050A600A2DE36 /* CourseViewController.swift */; };
+		942060682D1050B900A2DE36 /* CourseDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942060672D1050B900A2DE36 /* CourseDetailsViewController.swift */; };
+		9420606A2D10516000A2DE36 /* OnlineCourses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942060692D10516000A2DE36 /* OnlineCourses.swift */; };
+		9420606C2D1073EC00A2DE36 /* CourseContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9420606B2D1073EC00A2DE36 /* CourseContentViewController.swift */; };
+		9420606E2D1074D400A2DE36 /* CourseContentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9420606D2D1074D400A2DE36 /* CourseContentTableViewCell.swift */; };
+		942060702D10828700A2DE36 /* CourseReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9420606F2D10828700A2DE36 /* CourseReviewTableViewCell.swift */; };
+		942060722D1082AD00A2DE36 /* CourseReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942060712D1082AD00A2DE36 /* CourseReviewViewController.swift */; };
 		946297222D0AFD86005542AA /* ArticleDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946297212D0AFD86005542AA /* ArticleDetailsViewController.swift */; };
 		946297242D0CA075005542AA /* WebinarsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946297232D0CA075005542AA /* WebinarsViewController.swift */; };
 		946297262D0CA226005542AA /* WebinarsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946297252D0CA226005542AA /* WebinarsTableViewCell.swift */; };
@@ -84,7 +91,14 @@
 		9420605B2D0CCE1900A2DE36 /* VideoDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDetailsViewController.swift; sourceTree = "<group>"; };
 		9420605D2D0DAA7600A2DE36 /* SavedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SavedViewController.swift; path = SeekersBH/views/SavedViewController.swift; sourceTree = SOURCE_ROOT; };
 		9420605F2D0DAB0E00A2DE36 /* SavedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SavedTableViewCell.swift; path = SeekersBH/views/SavedTableViewCell.swift; sourceTree = SOURCE_ROOT; };
-		942060612D0DC00100A2DE36 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		942060632D10509900A2DE36 /* CourseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		942060652D1050A600A2DE36 /* CourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseViewController.swift; sourceTree = "<group>"; };
+		942060672D1050B900A2DE36 /* CourseDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailsViewController.swift; sourceTree = "<group>"; };
+		942060692D10516000A2DE36 /* OnlineCourses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineCourses.swift; sourceTree = "<group>"; };
+		9420606B2D1073EC00A2DE36 /* CourseContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseContentViewController.swift; sourceTree = "<group>"; };
+		9420606D2D1074D400A2DE36 /* CourseContentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseContentTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		9420606F2D10828700A2DE36 /* CourseReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseReviewTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		942060712D1082AD00A2DE36 /* CourseReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseReviewViewController.swift; sourceTree = SOURCE_ROOT; };
 		946297212D0AFD86005542AA /* ArticleDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailsViewController.swift; sourceTree = SOURCE_ROOT; };
 		946297232D0CA075005542AA /* WebinarsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebinarsViewController.swift; sourceTree = SOURCE_ROOT; };
 		946297252D0CA226005542AA /* WebinarsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebinarsTableViewCell.swift; sourceTree = SOURCE_ROOT; };
@@ -222,10 +236,10 @@
 		D184E3EF2CF86CD500D896D6 /* models */ = {
 			isa = PBXGroup;
 			children = (
-				942060612D0DC00100A2DE36 /* FirebaseManager.swift */,
 				D184E3F02CF86CF400D896D6 /* user.swift */,
 				D184E4022CF87E5500D896D6 /* JobApplication.swift */,
 				94E2D2762D076FB500614521 /* Resource.swift */,
+				942060692D10516000A2DE36 /* OnlineCourses.swift */,
 				D184E4002CF87A5600D896D6 /* CV.swift */,
 				D184E3FE2CF8785A00D896D6 /* Job.swift */,
 			);
@@ -248,6 +262,13 @@
 		D184E3F32CF86D6600D896D6 /* controllers */ = {
 			isa = PBXGroup;
 			children = (
+				942060712D1082AD00A2DE36 /* CourseReviewViewController.swift */,
+				9420606F2D10828700A2DE36 /* CourseReviewTableViewCell.swift */,
+				9420606D2D1074D400A2DE36 /* CourseContentTableViewCell.swift */,
+				942060632D10509900A2DE36 /* CourseTableViewCell.swift */,
+				942060652D1050A600A2DE36 /* CourseViewController.swift */,
+				942060672D1050B900A2DE36 /* CourseDetailsViewController.swift */,
+				9420606B2D1073EC00A2DE36 /* CourseContentViewController.swift */,
 				9420605F2D0DAB0E00A2DE36 /* SavedTableViewCell.swift */,
 				9420605D2D0DAA7600A2DE36 /* SavedViewController.swift */,
 				942060572D0CCDE800A2DE36 /* VideosViewController.swift */,
@@ -445,16 +466,18 @@
 				946297282D0CB25F005542AA /* WebinarDetailsViewController.swift in Sources */,
 				AC8BA8FD2D0F430800EE7A2C /* jobCellTableViewCell.swift in Sources */,
 				D184E3FF2CF8785A00D896D6 /* Job.swift in Sources */,
-				942060622D0DC00100A2DE36 /* FirebaseManager.swift in Sources */,
 				D153BE442CF47AC900A81FFC /* ViewController.swift in Sources */,
 				946297242D0CA075005542AA /* WebinarsViewController.swift in Sources */,
 				AC2776E82D0AF55F0019677C /* testViewController.swift in Sources */,
 				94E2D2752D074F9F00614521 /* SidebarViewController.swift in Sources */,
+				942060662D1050A600A2DE36 /* CourseViewController.swift in Sources */,
 				94E2D27B2D07964600614521 /* OptionController.swift in Sources */,
+				9420606A2D10516000A2DE36 /* OnlineCourses.swift in Sources */,
 				9420605E2D0DAA7600A2DE36 /* SavedViewController.swift in Sources */,
 				AC2776E62D0AF25B0019677C /* addJobView3ViewController.swift in Sources */,
 				94E2D2772D076FB500614521 /* Resource.swift in Sources */,
 				D153BE402CF47AC900A81FFC /* AppDelegate.swift in Sources */,
+				9420606E2D1074D400A2DE36 /* CourseContentTableViewCell.swift in Sources */,
 				946297222D0AFD86005542AA /* ArticleDetailsViewController.swift in Sources */,
 				AC2776EA2D0B02E10019677C /* AddJobView4ViewController.swift in Sources */,
 				942060602D0DAB0E00A2DE36 /* SavedTableViewCell.swift in Sources */,
@@ -462,13 +485,19 @@
 				D4070DB22D0F144600E517FE /* NewJobRecommendationViewController.swift in Sources */,
 				D153BE422CF47AC900A81FFC /* SceneDelegate.swift in Sources */,
 				D184E4032CF87E5500D896D6 /* JobApplication.swift in Sources */,
+				942060702D10828700A2DE36 /* CourseReviewTableViewCell.swift in Sources */,
+				9420605C2D0CCE1900A2DE36 /* VideoDetailsViewController.swift in Sources */,
+				9420606C2D1073EC00A2DE36 /* CourseContentViewController.swift in Sources */,
+				942060722D1082AD00A2DE36 /* CourseReviewViewController.swift in Sources */,
 				D4070DB02D0F11C700E517FE /* NewJobRecommendationTableViewCell.swift in Sources */,
 				9420605C2D0CCE1900A2DE36 /* VideoDetailsViewController.swift in Sources */,
 				D4070DB62D0F206B00E517FE /* NewJobDetailTableViewController.swift in Sources */,
 				C311B0D32D06FDF00071CF9B /* EmployerDashboardViewController.swift in Sources */,
 				D4070DB42D0F200600E517FE /* NewJobDetailViewController.swift in Sources */,
 				D153BE702CF47E8400A81FFC /* testTableViewController.swift in Sources */,
+				942060682D1050B900A2DE36 /* CourseDetailsViewController.swift in Sources */,
 				D45526BC2D09ED2A00149AA9 /* JobTableViewCell.swift in Sources */,
+				942060642D10509900A2DE36 /* CourseTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
