@@ -43,6 +43,9 @@ class NewJobDetailViewController: UIViewController {
             }
             
     
+    @IBAction func btnApply(_ sender: Any) {
+        performSegue(withIdentifier: "showApplyPage", sender: nil)
+    }
     
   
     
