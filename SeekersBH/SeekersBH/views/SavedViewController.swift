@@ -100,7 +100,7 @@ extension SavedViewController: UITableViewDataSource, UITableViewDelegate {
             } else if let webinar = savedResource.resource as? Webinar {
 
                 if let webinarDetailsVC = storyboard?.instantiateViewController(withIdentifier: "WebinarDetailsViewController") as? WebinarDetailsViewController {
-                    // Pass the selected article to the ArticleDetailsViewController
+                    // Pass the selected webinar to the WebinarDetailsViewController
                     webinarDetailsVC.webinar = webinar
                     
                     // Push the detail view controller
@@ -109,7 +109,7 @@ extension SavedViewController: UITableViewDataSource, UITableViewDelegate {
                 } else if let video = savedResource.resource as? Video {
 
                     if let videoDetailsVC = storyboard?.instantiateViewController(withIdentifier: "VideoDetailsViewController") as? VideoDetailsViewController {
-                        // Pass the selected article to the ArticleDetailsViewController
+                        // Pass the selected video to the VideoDetailsViewController
                         videoDetailsVC.video = video
                         
                         // Push the detail view controller
