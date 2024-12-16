@@ -12,7 +12,6 @@
 		9420605C2D0CCE1900A2DE36 /* VideoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9420605B2D0CCE1900A2DE36 /* VideoDetailsViewController.swift */; };
 		9420605E2D0DAA7600A2DE36 /* SavedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9420605D2D0DAA7600A2DE36 /* SavedViewController.swift */; };
 		942060602D0DAB0E00A2DE36 /* SavedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9420605F2D0DAB0E00A2DE36 /* SavedTableViewCell.swift */; };
-		942060622D0DC00100A2DE36 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942060612D0DC00100A2DE36 /* FirebaseManager.swift */; };
 		942060642D10509900A2DE36 /* CourseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942060632D10509900A2DE36 /* CourseTableViewCell.swift */; };
 		942060662D1050A600A2DE36 /* CourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942060652D1050A600A2DE36 /* CourseViewController.swift */; };
 		942060682D1050B900A2DE36 /* CourseDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942060672D1050B900A2DE36 /* CourseDetailsViewController.swift */; };
@@ -92,7 +91,6 @@
 		9420605B2D0CCE1900A2DE36 /* VideoDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDetailsViewController.swift; sourceTree = "<group>"; };
 		9420605D2D0DAA7600A2DE36 /* SavedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SavedViewController.swift; path = SeekersBH/views/SavedViewController.swift; sourceTree = SOURCE_ROOT; };
 		9420605F2D0DAB0E00A2DE36 /* SavedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SavedTableViewCell.swift; path = SeekersBH/views/SavedTableViewCell.swift; sourceTree = SOURCE_ROOT; };
-		942060612D0DC00100A2DE36 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		942060632D10509900A2DE36 /* CourseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		942060652D1050A600A2DE36 /* CourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseViewController.swift; sourceTree = "<group>"; };
 		942060672D1050B900A2DE36 /* CourseDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailsViewController.swift; sourceTree = "<group>"; };
@@ -238,7 +236,6 @@
 		D184E3EF2CF86CD500D896D6 /* models */ = {
 			isa = PBXGroup;
 			children = (
-				942060612D0DC00100A2DE36 /* FirebaseManager.swift */,
 				D184E3F02CF86CF400D896D6 /* user.swift */,
 				D184E4022CF87E5500D896D6 /* JobApplication.swift */,
 				94E2D2762D076FB500614521 /* Resource.swift */,
@@ -469,7 +466,6 @@
 				946297282D0CB25F005542AA /* WebinarDetailsViewController.swift in Sources */,
 				AC8BA8FD2D0F430800EE7A2C /* jobCellTableViewCell.swift in Sources */,
 				D184E3FF2CF8785A00D896D6 /* Job.swift in Sources */,
-				942060622D0DC00100A2DE36 /* FirebaseManager.swift in Sources */,
 				D153BE442CF47AC900A81FFC /* ViewController.swift in Sources */,
 				946297242D0CA075005542AA /* WebinarsViewController.swift in Sources */,
 				AC2776E82D0AF55F0019677C /* testViewController.swift in Sources */,
