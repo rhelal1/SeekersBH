@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XbX-1p-WJA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
@@ -1684,6 +1684,7 @@
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
                                         <connections>
+                                            <action selector="StartQuize:" destination="wnI-pM-fPj" eventType="touchUpInside" id="qeZ-9o-Jqf"/>
                                             <action selector="seeComments:" destination="lAu-K2-E8p" eventType="touchUpInside" id="oUq-Oq-Eng"/>
                                         </connections>
                                     </button>
@@ -1852,19 +1853,188 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SRi-vx-4vM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1947.2727272727275" y="2814.853556485356"/>
+            <point key="canvasLocation" x="-2746" y="2762"/>
+        </scene>
+        <!--Course Quiz View Controller-->
+        <scene sceneID="JlL-u0-2HA">
+            <objects>
+                <viewController storyboardIdentifier="CourseQuizViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="C9S-7n-coF" customClass="CourseQuizViewController" customModule="SeekersBH" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gCT-YC-UaV">
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="4Ze-no-TFX">
+                                <rect key="frame" x="44" y="72.666666666666686" width="352" height="811"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="qwY-Ww-nvJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="352" height="742"/>
+                                        <color key="sectionIndexBackgroundColor" red="0.85098040100000005" green="0.85098040100000005" blue="0.85098040100000005" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <prototypes>
+                                            <tableViewCell opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="6" indentationWidth="0.0" reuseIdentifier="questionCell" rowHeight="400" id="XNX-Rc-WlR" customClass="CourseQuizTableViewCell" customModule="SeekersBH" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="50" width="352" height="400"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XNX-Rc-WlR" id="TVO-Q0-UTe">
+                                                    <rect key="frame" x="0.0" y="0.0" width="352" height="400"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kG7-IA-RXd">
+                                                            <rect key="frame" x="0.0" y="0.0" width="352" height="400"/>
+                                                            <subviews>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="PSc-Iw-R5b">
+                                                                    <rect key="frame" x="20" y="20" width="312" height="360"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1PB-70-ZkJ">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="312" height="21"/>
+                                                                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
+                                                                            <color key="textColor" red="0.050980389119999997" green="0.094117648900000003" blue="0.32156863810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="vW0-zk-7Bv">
+                                                                            <rect key="frame" x="0.0" y="36" width="312" height="324"/>
+                                                                            <subviews>
+                                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Lr-af-kAu">
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="312" height="75.666666666666671"/>
+                                                                                    <color key="tintColor" red="0.050980389119999997" green="0.094117648900000003" blue="0.32156863810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                    <state key="normal" title="Button"/>
+                                                                                    <buttonConfiguration key="configuration" style="plain" title="Button" cornerStyle="dynamic">
+                                                                                        <backgroundConfiguration key="background" cornerRadius="15">
+                                                                                            <color key="strokeColor" red="0.85098040100000005" green="0.85098040100000005" blue="0.85098040100000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                        </backgroundConfiguration>
+                                                                                        <fontDescription key="titleFontDescription" name="Helvetica-Light" family="Helvetica" pointSize="12"/>
+                                                                                    </buttonConfiguration>
+                                                                                    <connections>
+                                                                                        <action selector="optionButtonTapped:" destination="XNX-Rc-WlR" eventType="touchUpInside" id="7dc-pN-PYk"/>
+                                                                                    </connections>
+                                                                                </button>
+                                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KjF-hB-DQj">
+                                                                                    <rect key="frame" x="0.0" y="82.666666666666657" width="312" height="76"/>
+                                                                                    <color key="tintColor" red="0.050980389119999997" green="0.094117648900000003" blue="0.32156863810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                    <state key="normal" title="Button"/>
+                                                                                    <buttonConfiguration key="configuration" style="plain" title="Button" cornerStyle="dynamic">
+                                                                                        <backgroundConfiguration key="background" cornerRadius="15">
+                                                                                            <color key="strokeColor" red="0.85098040100000005" green="0.85098040100000005" blue="0.85098040100000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                        </backgroundConfiguration>
+                                                                                        <fontDescription key="titleFontDescription" name="Helvetica-Light" family="Helvetica" pointSize="12"/>
+                                                                                    </buttonConfiguration>
+                                                                                    <connections>
+                                                                                        <action selector="optionButtonTapped:" destination="XNX-Rc-WlR" eventType="touchUpInside" id="euq-hH-S3I"/>
+                                                                                    </connections>
+                                                                                </button>
+                                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gyT-aQ-FtT">
+                                                                                    <rect key="frame" x="0.0" y="165.66666666666666" width="312" height="75.666666666666657"/>
+                                                                                    <color key="tintColor" red="0.050980389119999997" green="0.094117648900000003" blue="0.32156863810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                    <state key="normal" title="Button"/>
+                                                                                    <buttonConfiguration key="configuration" style="plain" title="Button">
+                                                                                        <backgroundConfiguration key="background" cornerRadius="15">
+                                                                                            <color key="strokeColor" red="0.85098040100000005" green="0.85098040100000005" blue="0.85098040100000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                        </backgroundConfiguration>
+                                                                                        <fontDescription key="titleFontDescription" name="Helvetica-Light" family="Helvetica" pointSize="12"/>
+                                                                                    </buttonConfiguration>
+                                                                                    <connections>
+                                                                                        <action selector="optionButtonTapped:" destination="XNX-Rc-WlR" eventType="touchUpInside" id="7rx-xm-SwE"/>
+                                                                                    </connections>
+                                                                                </button>
+                                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HSz-cG-ih7">
+                                                                                    <rect key="frame" x="0.0" y="248.33333333333329" width="312" height="75.666666666666657"/>
+                                                                                    <color key="tintColor" red="0.050980389119999997" green="0.094117648900000003" blue="0.32156863810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                    <state key="normal" title="Button"/>
+                                                                                    <buttonConfiguration key="configuration" style="plain" title="Button">
+                                                                                        <backgroundConfiguration key="background" cornerRadius="15">
+                                                                                            <color key="strokeColor" red="0.85098040100000005" green="0.85098040100000005" blue="0.85098040100000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                        </backgroundConfiguration>
+                                                                                        <fontDescription key="titleFontDescription" name="Helvetica-Light" family="Helvetica" pointSize="12"/>
+                                                                                    </buttonConfiguration>
+                                                                                    <connections>
+                                                                                        <action selector="optionButtonTapped:" destination="XNX-Rc-WlR" eventType="touchUpInside" id="D3u-Ku-zfz"/>
+                                                                                    </connections>
+                                                                                </button>
+                                                                            </subviews>
+                                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </stackView>
+                                                                    </subviews>
+                                                                </stackView>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="bottom" secondItem="PSc-Iw-R5b" secondAttribute="bottom" constant="20" id="0pr-a7-9PO"/>
+                                                                <constraint firstAttribute="trailing" secondItem="PSc-Iw-R5b" secondAttribute="trailing" constant="20" id="A8S-S1-cCn"/>
+                                                                <constraint firstItem="PSc-Iw-R5b" firstAttribute="top" secondItem="kG7-IA-RXd" secondAttribute="top" constant="20" id="Vvg-iv-gAe"/>
+                                                                <constraint firstItem="PSc-Iw-R5b" firstAttribute="leading" secondItem="kG7-IA-RXd" secondAttribute="leading" constant="20" id="pGC-5E-NJm"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="kG7-IA-RXd" firstAttribute="leading" secondItem="TVO-Q0-UTe" secondAttribute="leading" id="7Wk-x1-AHY"/>
+                                                        <constraint firstItem="kG7-IA-RXd" firstAttribute="top" secondItem="TVO-Q0-UTe" secondAttribute="top" id="81U-0a-Tmt"/>
+                                                        <constraint firstAttribute="trailing" secondItem="kG7-IA-RXd" secondAttribute="trailing" id="VH7-hM-tcq"/>
+                                                        <constraint firstAttribute="bottom" secondItem="kG7-IA-RXd" secondAttribute="bottom" id="qMF-DJ-23i"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="question" destination="1PB-70-ZkJ" id="s3K-Sc-SRM"/>
+                                                    <outlet property="view" destination="kG7-IA-RXd" id="U3q-qm-tG2"/>
+                                                    <outletCollection property="optionButtons" destination="HSz-cG-ih7" collectionClass="NSMutableArray" id="iQK-EL-wBs"/>
+                                                    <outletCollection property="optionButtons" destination="gyT-aQ-FtT" collectionClass="NSMutableArray" id="CYq-w1-5Vl"/>
+                                                    <outletCollection property="optionButtons" destination="KjF-hB-DQj" collectionClass="NSMutableArray" id="wcS-9s-dfm"/>
+                                                    <outletCollection property="optionButtons" destination="3Lr-af-kAu" collectionClass="NSMutableArray" id="1vu-hh-ejb"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MUh-rE-ZoT">
+                                        <rect key="frame" x="0.0" y="754" width="352" height="57"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Start Quiz" cornerStyle="dynamic">
+                                            <backgroundConfiguration key="background" cornerRadius="15">
+                                                <color key="backgroundColor" red="0.050980389119999997" green="0.094117648900000003" blue="0.32156863810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="strokeColor" red="0.85098040100000005" green="0.85098040100000005" blue="0.85098040100000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </backgroundConfiguration>
+                                            <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="seeComments:" destination="lAu-K2-E8p" eventType="touchUpInside" id="RWR-z7-DJi"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="MUh-rE-ZoT" firstAttribute="width" secondItem="4Ze-no-TFX" secondAttribute="width" id="PID-qW-C7d"/>
+                                    <constraint firstItem="MUh-rE-ZoT" firstAttribute="height" secondItem="4Ze-no-TFX" secondAttribute="height" multiplier="0.07" id="Sf1-lX-nNc"/>
+                                    <constraint firstItem="qwY-Ww-nvJ" firstAttribute="width" secondItem="4Ze-no-TFX" secondAttribute="width" id="kWP-rD-K4W"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="CCq-st-V4A"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4Ze-no-TFX" firstAttribute="centerX" secondItem="gCT-YC-UaV" secondAttribute="centerX" id="AkG-1c-N91"/>
+                            <constraint firstItem="4Ze-no-TFX" firstAttribute="height" secondItem="CCq-st-V4A" secondAttribute="height" id="c81-z6-HaT"/>
+                            <constraint firstItem="4Ze-no-TFX" firstAttribute="centerY" secondItem="gCT-YC-UaV" secondAttribute="centerY" id="f97-Qd-P02"/>
+                            <constraint firstItem="4Ze-no-TFX" firstAttribute="width" secondItem="CCq-st-V4A" secondAttribute="width" multiplier="0.8" id="m16-5j-QRc"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Bsa-pn-VVs"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="quizeTable" destination="qwY-Ww-nvJ" id="HDp-Mx-tCd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7oY-Eg-WoF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1947" y="2762"/>
         </scene>
     </scenes>
     <resources>
         <image name="swiftpm_step1.png" width="1347" height="828"/>
         <systemColor name="opaqueSeparatorColor">
-            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
