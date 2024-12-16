@@ -1,15 +1,14 @@
 //
-//  JobRecommendationTableViewCell.swift
+//  NewJobRecommendationTableViewCell.swift
 //  SeekersBH
 //
-//  Created by Duha Hashem on 13/12/2024.
+//  Created by Duha Hashem on 15/12/2024.
 //
 
 import UIKit
 
-class JobRecommendationTableViewCell: UITableViewCell {
+class NewJobRecommendationTableViewCell: UITableViewCell {
 
-    //card view that hold everythings
     @IBOutlet weak var cardView: UIView!
     @IBOutlet weak var lblJobTitle: UILabel!
     @IBOutlet weak var lblJobCompany: UILabel!
@@ -55,7 +54,7 @@ class JobRecommendationTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-       
+        // Configure the view for the selected state
     }
     
     
