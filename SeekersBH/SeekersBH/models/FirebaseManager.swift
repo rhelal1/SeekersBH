@@ -1,6 +1,6 @@
-import Foundation
-import Firebase
-
+//import Foundation
+//import Firebase
+//
 //class FirebaseManager {
 //    
 //    // Singleton instance
@@ -14,7 +14,7 @@ import Firebase
 //    
 //    // MARK: - Save User Information
 //    func saveUserInfo(userId: String, name: String, email: String, phone: String, completion: @escaping (Bool) -> Void) {
-////        let userRef = db.collection("users").document(userId)
+//        let userRef = db.collection("users").document(userId)
 //        
 //        let userData: [String: Any] = [
 //            "name": name,
@@ -23,7 +23,7 @@ import Firebase
 ////            "createdAt": FieldValue.serverTimestamp()
 //        ]
 //        
-////        userRef.setData(userData) { error in
+//        userRef.setData(userData) { error in
 //            if let error = error {
 //                print("Error saving user info: \(error.localizedDescription)")
 //                completion(false)
