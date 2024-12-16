@@ -210,6 +210,7 @@
                                     <action selector="btnApply:" destination="Qzg-KW-xv2" eventType="touchUpInside" id="3C0-ZF-aPi"/>
                                     <segue destination="60Q-GC-yR2" kind="show" identifier="showApplyPage" id="wCK-qy-lHj"/>
                                 </connections>
+
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4vw-F7-jUx"/>
@@ -680,6 +681,7 @@
             </objects>
             <point key="canvasLocation" x="5273" y="256"/>
         </scene>
+
         <!--New Job Detail Table View Controller-->
         <scene sceneID="Qw4-8c-3B7">
             <objects>
