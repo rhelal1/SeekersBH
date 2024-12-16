@@ -25,6 +25,9 @@
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="24"/>
                                     <color key="baseBackgroundColor" red="0.035294117649999998" green="0.094117647060000004" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="1oC-qo-OFL" kind="show" id="63n-hD-XPL"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dlf-Od-88a">
                                 <rect key="frame" x="61" y="317" width="270" height="57"/>
@@ -66,13 +69,116 @@ Management</string>
                     <view key="view" contentMode="scaleToFill" id="hz7-GU-OtC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="g6C-65-axX">
+                                <rect key="frame" x="0.0" y="141" width="393" height="711"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="jobPostCell" rowHeight="188" id="xxN-Iq-9lB" customClass="jobCellTableViewCell" customModule="SeekersBH" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="188"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xxN-Iq-9lB" id="999-vm-vIJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="188"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Job Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dhd-Tm-dmc">
+                                                    <rect key="frame" x="43" y="21" width="291" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date Posted" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7no-Uq-ZqW">
+                                                    <rect key="frame" x="43" y="50" width="291" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Job Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tyj-pa-Fxi">
+                                                    <rect key="frame" x="43" y="121" width="291" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number Of Application" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ur-07-W7K">
+                                                    <rect key="frame" x="43" y="150" width="291" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qsz-uq-yuV">
+                                                    <rect key="frame" x="338" y="76.666666666666671" width="35" height="35"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="qsz-uq-yuV" secondAttribute="height" multiplier="1:1" id="tKp-QU-aaJ"/>
+                                                    </constraints>
+                                                    <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="chevron.right" catalog="system">
+                                                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="23"/>
+                                                    </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="showDetailsBtn:" destination="xxN-Iq-9lB" eventType="touchUpInside" id="ToW-33-nwi"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="7no-Uq-ZqW" firstAttribute="top" secondItem="Dhd-Tm-dmc" secondAttribute="bottom" constant="8" symbolic="YES" id="Bu6-yX-PVX"/>
+                                                <constraint firstItem="qsz-uq-yuV" firstAttribute="height" secondItem="999-vm-vIJ" secondAttribute="height" multiplier="0.18617" id="C5W-gp-fKt"/>
+                                                <constraint firstItem="7no-Uq-ZqW" firstAttribute="trailing" secondItem="Dhd-Tm-dmc" secondAttribute="trailing" id="H5H-gB-aER"/>
+                                                <constraint firstItem="7no-Uq-ZqW" firstAttribute="top" secondItem="Dhd-Tm-dmc" secondAttribute="bottom" constant="8" symbolic="YES" id="HHH-hD-QC9"/>
+                                                <constraint firstItem="1ur-07-W7K" firstAttribute="leading" secondItem="tyj-pa-Fxi" secondAttribute="leading" id="Lzs-cY-PaK"/>
+                                                <constraint firstItem="tyj-pa-Fxi" firstAttribute="trailing" secondItem="7no-Uq-ZqW" secondAttribute="trailing" id="Ow8-RN-4ia"/>
+                                                <constraint firstItem="tyj-pa-Fxi" firstAttribute="leading" secondItem="7no-Uq-ZqW" secondAttribute="leading" id="cum-0i-fqR"/>
+                                                <constraint firstItem="7no-Uq-ZqW" firstAttribute="leading" secondItem="Dhd-Tm-dmc" secondAttribute="leading" id="d6q-cV-S2k"/>
+                                                <constraint firstItem="1ur-07-W7K" firstAttribute="top" secondItem="tyj-pa-Fxi" secondAttribute="bottom" constant="8" symbolic="YES" id="d9y-zd-tOj"/>
+                                                <constraint firstItem="Dhd-Tm-dmc" firstAttribute="leading" secondItem="999-vm-vIJ" secondAttribute="leadingMargin" constant="23" id="eaX-oK-g4O"/>
+                                                <constraint firstItem="Dhd-Tm-dmc" firstAttribute="top" secondItem="999-vm-vIJ" secondAttribute="topMargin" constant="10" id="euT-zO-Syj"/>
+                                                <constraint firstItem="1ur-07-W7K" firstAttribute="trailing" secondItem="tyj-pa-Fxi" secondAttribute="trailing" id="hH8-Tb-6Kj"/>
+                                                <constraint firstItem="qsz-uq-yuV" firstAttribute="trailing" secondItem="999-vm-vIJ" secondAttribute="trailingMargin" id="oMJ-GL-7Lg"/>
+                                                <constraint firstItem="qsz-uq-yuV" firstAttribute="centerY" secondItem="999-vm-vIJ" secondAttribute="centerY" id="rIx-wp-EOp"/>
+                                                <constraint firstItem="tyj-pa-Fxi" firstAttribute="top" secondItem="7no-Uq-ZqW" secondAttribute="bottom" constant="50" id="rQa-nn-hgL"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Dhd-Tm-dmc" secondAttribute="trailing" constant="39" id="vsG-tH-hyd"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="datePosted" destination="7no-Uq-ZqW" id="xfa-PT-3xt"/>
+                                            <outlet property="jobNamelbl" destination="Dhd-Tm-dmc" id="bwx-vO-Rsl"/>
+                                            <outlet property="numberOfApplication" destination="1ur-07-W7K" id="N3a-4u-7DL"/>
+                                            <outlet property="status" destination="tyj-pa-Fxi" id="ay5-DP-0kZ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Slh-qB-Vtx">
+                                <rect key="frame" x="0.0" y="97" width="393" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="O0K-4M-1Su"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="1oC-qo-OFL" id="GqE-xC-zId"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="918-Ii-R3z"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="g6C-65-axX" firstAttribute="leading" secondItem="918-Ii-R3z" secondAttribute="leading" id="91F-pS-eIA"/>
+                            <constraint firstItem="918-Ii-R3z" firstAttribute="trailing" secondItem="g6C-65-axX" secondAttribute="trailing" id="GuG-i3-qLH"/>
+                            <constraint firstItem="g6C-65-axX" firstAttribute="top" secondItem="Slh-qB-Vtx" secondAttribute="bottom" id="Hsa-Fc-ur5"/>
+                            <constraint firstItem="Slh-qB-Vtx" firstAttribute="leading" secondItem="g6C-65-axX" secondAttribute="leading" id="X5g-iK-r5d"/>
+                            <constraint firstItem="918-Ii-R3z" firstAttribute="bottom" secondItem="g6C-65-axX" secondAttribute="bottom" id="oJg-BR-0pa"/>
+                            <constraint firstItem="Slh-qB-Vtx" firstAttribute="trailing" secondItem="g6C-65-axX" secondAttribute="trailing" id="qns-RG-wuD"/>
+                            <constraint firstItem="Slh-qB-Vtx" firstAttribute="top" secondItem="918-Ii-R3z" secondAttribute="top" constant="97" id="tAn-lY-FEx"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="p0i-9n-3fa"/>
+                    <connections>
+                        <outlet property="jobsTableView" destination="g6C-65-axX" id="nut-Fx-zLJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hGU-FQ-a89" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2054" y="4"/>
+            <point key="canvasLocation" x="2052.6717557251909" y="3.5211267605633805"/>
         </scene>
         <!--Test View Controller-->
         <scene sceneID="gSf-kn-sFG">
@@ -203,7 +309,6 @@ Job Application</string>
                                         <rect key="frame" x="30" y="64" width="240" height="110"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="next"/>
@@ -212,7 +317,6 @@ Job Application</string>
                                         <rect key="frame" x="30" y="223" width="240" height="131"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="next"/>
@@ -309,7 +413,6 @@ Job Application</string>
                                         <rect key="frame" x="30" y="153" width="240" height="190"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="next"/>
@@ -388,7 +491,6 @@ Job Application</string>
                                         <rect key="frame" x="31" y="63" width="246" height="122"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="next"/>
@@ -404,7 +506,6 @@ Job Application</string>
                                         <rect key="frame" x="31" y="236" width="252" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="next"/>
@@ -479,6 +580,7 @@ Job Application</string>
         <segue reference="1SI-hX-EtE"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="chevron.right" catalog="system" width="97" height="128"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

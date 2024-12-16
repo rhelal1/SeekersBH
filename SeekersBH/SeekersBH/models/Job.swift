@@ -11,11 +11,18 @@ struct JobAd {
     var jobEmploymentBenfits: String = ""
     var additionalPerks: [String] = []
     var jobApplicationDeadline: Date = Date()
+    var applicants: [JobApplication] = [] // Array to hold job applicants
+    var datePosted: Date = Date() // Date when the job post was added
 }
 
 enum JobType {
     case fullTime, partTime, contract, temporary
 }
+
+enum ApplicationStatus {
+    case pending, underReview, shortlisted, interviewScheduled
+}
+
 
 class JobManager {
     static let shared = JobManager() // Singleton instance
