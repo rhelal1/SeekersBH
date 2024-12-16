@@ -12,7 +12,7 @@ struct Course {
     
     var courseComments : [CourseComments]
     var courseContent : [CourseContent]
-    var courseQuestions : [question]
+    var courseQuestions : [Question]
 }
 
 struct CourseComments {
@@ -29,13 +29,11 @@ struct CourseContent {
     var videoUrl : String
 }
 
-struct question {
+struct Question {
     var questionTxt : String
-    var option1 : String
-    var option2 : String
-    var option3 : String
-    var option4 : String
+    var options : [String]
     var correctAnswer : String
+    var selectedAnswer : Int = -1
     var points : Int
 }
 

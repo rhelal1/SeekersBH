@@ -23,7 +23,7 @@ class CourseViewController: UIViewController {
                 CourseContent(title: "Control Flow", duration: 25, description: "Learn about loops, conditions, and functions.", videoUrl: "https://example.com/video2")
             ],
             courseQuestions: [
-                question(questionTxt: "What does the `print()` function do?", option1: "Prints to the screen", option2: "Saves data", option3: "Creates a file", option4: "None of the above", correctAnswer: "Prints to the screen", points: 5)
+                Question(questionTxt: "What does the `print()` function do?", options: ["Prints to the screen", "Saves data", "Creates a file", "None of the above"], correctAnswer: "Prints to the screen", points: 5)
             ]
         ),
         Course(
@@ -43,7 +43,7 @@ class CourseViewController: UIViewController {
                 CourseContent(title: "Social Media Marketing", duration: 50, description: "Discover strategies to grow your brand on social media.", videoUrl: "https://example.com/video2")
             ],
             courseQuestions: [
-                question(questionTxt: "What does SEO stand for?", option1: "Search Engine Optimization", option2: "Social Engagement Optimization", option3: "Search Engine Organization", option4: "None of the above", correctAnswer: "Search Engine Optimization", points: 5)
+                Question(questionTxt: "What does SEO stand for?", options: ["Search Engine Optimization", "Social Engagement Optimization", "Search Engine Organization", "None of the above"], correctAnswer: "Search Engine Optimization", points: 5)
             ]
         ),
         Course(
@@ -63,7 +63,7 @@ class CourseViewController: UIViewController {
                 CourseContent(title: "Introduction to Machine Learning", duration: 60, description: "An overview of machine learning algorithms and their applications.", videoUrl: "https://example.com/video2")
             ],
             courseQuestions: [
-                question(questionTxt: "What is a dataset?", option1: "A collection of data", option2: "A type of algorithm", option3: "A graph", option4: "None of the above", correctAnswer: "A collection of data", points: 5)
+                Question(questionTxt: "What is a dataset?", options:[ "A collection of data", "A type of algorithm", "A graph", "None of the above"], correctAnswer: "A collection of data", points: 5)
             ]
         ),
         Course(
@@ -83,7 +83,7 @@ class CourseViewController: UIViewController {
                 CourseContent(title: "Data-Driven Decision Making", duration: 60, description: "How to analyze data and make business decisions based on insights.", videoUrl: "https://example.com/video2")
             ],
             courseQuestions: [
-                question(questionTxt: "What is the main purpose of business analytics?", option1: "To increase sales", option2: "To inform business decisions", option3: "To manage employees", option4: "None of the above", correctAnswer: "To inform business decisions", points: 5)
+                Question(questionTxt: "What is the main purpose of business analytics?", options: ["To increase sales", "To inform business decisions", "To manage employees",  "None of the above"], correctAnswer: "To inform business decisions", points: 5)
             ]
         ),
         Course(
@@ -103,7 +103,7 @@ class CourseViewController: UIViewController {
                 CourseContent(title: "React and APIs", duration: 50, description: "How to fetch and display data from APIs in React.", videoUrl: "https://example.com/video2")
             ],
             courseQuestions: [
-                question(questionTxt: "What is JSX in React?", option1: "JavaScript XML", option2: "JavaScript Extension", option3: "JavaScript Execution", option4: "None of the above", correctAnswer: "JavaScript XML", points: 5)
+                Question(questionTxt: "What is JSX in React?", options: ["JavaScript XML", "JavaScript Extension", "JavaScript Execution", "None of the above"], correctAnswer: "JavaScript XML", points: 5)
             ]
         ),
         Course(
@@ -123,7 +123,7 @@ class CourseViewController: UIViewController {
                 CourseContent(title: "Market Structures", duration: 50, description: "Learn about different market structures and their characteristics.", videoUrl: "https://example.com/video2")
             ],
             courseQuestions: [
-                question(questionTxt: "What is the law of demand?", option1: "As prices rise, demand decreases", option2: "As prices rise, demand increases", option3: "Demand stays constant regardless of price", option4: "None of the above", correctAnswer: "As prices rise, demand decreases", points: 5)
+                Question(questionTxt: "What is the law of demand?", options: ["As prices rise, demand decreases", "As prices rise, demand increases",  "Demand stays constant regardless of price",  "None of the above"], correctAnswer: "As prices rise, demand decreases", points: 5)
             ]
         ),
         Course(
@@ -143,7 +143,7 @@ class CourseViewController: UIViewController {
                 CourseContent(title: "Exercise and Fitness", duration: 40, description: "A guide to staying fit and active.", videoUrl: "https://example.com/video2")
             ],
             courseQuestions: [
-                question(questionTxt: "What is a balanced diet?", option1: "A diet that includes all food groups", option2: "A diet that excludes fats", option3: "A diet that focuses only on protein", option4: "None of the above", correctAnswer: "A diet that includes all food groups", points: 5)
+                Question(questionTxt: "What is a balanced diet?", options: ["A diet that includes all food groups", "A diet that excludes fats", "A diet that focuses only on protein", "None of the above"], correctAnswer: "A diet that includes all food groups", points: 5)
             ]
         ),
         Course(
@@ -163,7 +163,7 @@ class CourseViewController: UIViewController {
                 CourseContent(title: "Unsupervised Learning", duration: 60, description: "Understand clustering and dimensionality reduction techniques.", videoUrl: "https://example.com/video2")
             ],
             courseQuestions: [
-                question(questionTxt: "Which algorithm is used for classification?", option1: "Linear Regression", option2: "K-Nearest Neighbors", option3: "K-Means Clustering", option4: "None of the above", correctAnswer: "K-Nearest Neighbors", points: 5)
+                Question(questionTxt: "Which algorithm is used for classification?", options:[ "Linear Regression", "K-Nearest Neighbors", "K-Means Clustering", "None of the above"], correctAnswer: "K-Nearest Neighbors", points: 5)
             ]
         )
     ]

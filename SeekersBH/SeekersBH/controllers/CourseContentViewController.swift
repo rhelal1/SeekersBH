@@ -5,6 +5,19 @@ class CourseContentViewController: UIViewController {
     @IBOutlet weak var courseContentTable: UITableView!
     
     var courseContents: [CourseContent]!
+    var quize : [Question]!
+    
+    @IBAction func StartQuize(_ sender: Any) {
+        // Instantiate the CourseQuizViewController
+        if let courseQuizVC = storyboard?.instantiateViewController(withIdentifier: "CourseQuizViewController") as? CourseQuizViewController {
+            
+            // Pass the selected course to the CourseQuizViewController
+            courseQuizVC.quizeQuestions = quize
+
+            // Push the detail view controller
+            navigationController?.pushViewController(courseQuizVC, animated: true)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
