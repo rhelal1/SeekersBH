@@ -26,6 +26,8 @@
 		946297282D0CB25F005542AA /* WebinarDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946297272D0CB25F005542AA /* WebinarDetailsViewController.swift */; };
 		947B8FDB2D10B69D004463EF /* CourseQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947B8FDA2D10B69D004463EF /* CourseQuizViewController.swift */; };
 		947B8FDD2D10B6BB004463EF /* CourseQuizTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947B8FDC2D10B6BB004463EF /* CourseQuizTableViewCell.swift */; };
+		437286D02D0B31B7000D3518 /* CreateCVView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437286CF2D0B31B7000D3518 /* CreateCVView.swift */; };
+		437286D22D11DF64000D3518 /* CreateCVNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437286D12D11DF64000D3518 /* CreateCVNavigationController.swift */; };
 		94CADAAA2D08ADD700F8B3AC /* growthHubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CADAA92D08ADD700F8B3AC /* growthHubViewController.swift */; };
 		94CADAAE2D08B96000F8B3AC /* ArticlesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CADAAD2D08B96000F8B3AC /* ArticlesTableViewCell.swift */; };
 		94E2D2752D074F9F00614521 /* SidebarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E2D2742D074F9F00614521 /* SidebarViewController.swift */; };
@@ -109,6 +111,8 @@
 		946297272D0CB25F005542AA /* WebinarDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebinarDetailsViewController.swift; sourceTree = SOURCE_ROOT; };
 		947B8FDA2D10B69D004463EF /* CourseQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseQuizViewController.swift; sourceTree = SOURCE_ROOT; };
 		947B8FDC2D10B6BB004463EF /* CourseQuizTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseQuizTableViewCell.swift; sourceTree = "<group>"; };
+		437286CF2D0B31B7000D3518 /* CreateCVView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCVView.swift; sourceTree = "<group>"; };
+		437286D12D11DF64000D3518 /* CreateCVNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCVNavigationController.swift; sourceTree = "<group>"; };
 		94CADAA92D08ADD700F8B3AC /* growthHubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = growthHubViewController.swift; path = SeekersBH/views/growthHubViewController.swift; sourceTree = SOURCE_ROOT; };
 		94CADAAD2D08B96000F8B3AC /* ArticlesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		94E2D2742D074F9F00614521 /* SidebarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarViewController.swift; sourceTree = "<group>"; };
@@ -307,6 +311,9 @@
 				D4070DB52D0F206B00E517FE /* NewJobDetailTableViewController.swift */,
 				D4070DB72D10768C00E517FE /* ApplyPageViewController.swift */,
 				D4070DBB2D107AA100E517FE /* NewApplyPageFormTableViewController.swift */,
+				D45526BD2D09F2E000149AA9 /* JobRecommendationViewController.swift */,
+				437286CF2D0B31B7000D3518 /* CreateCVView.swift */,
+				437286D12D11DF64000D3518 /* CreateCVNavigationController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -475,6 +482,8 @@
 				9420605A2D0CCE0100A2DE36 /* VideosTableViewCell.swift in Sources */,
 				D184E3F12CF86CF400D896D6 /* user.swift in Sources */,
 				942060582D0CCDE800A2DE36 /* VideosViewController.swift in Sources */,
+				437286D02D0B31B7000D3518 /* CreateCVView.swift in Sources */,
+				C311B0D92D07276E0071CF9B /* addJobViewController.swift in Sources */,
 				D184E4012CF87A5600D896D6 /* CV.swift in Sources */,
 				946297282D0CB25F005542AA /* WebinarDetailsViewController.swift in Sources */,
 				AC8BA8FD2D0F430800EE7A2C /* jobCellTableViewCell.swift in Sources */,
@@ -488,6 +497,7 @@
 				9420606A2D10516000A2DE36 /* OnlineCourses.swift in Sources */,
 				9420605E2D0DAA7600A2DE36 /* SavedViewController.swift in Sources */,
 				AC2776E62D0AF25B0019677C /* addJobView3ViewController.swift in Sources */,
+				437286D22D11DF64000D3518 /* CreateCVNavigationController.swift in Sources */,
 				94E2D2772D076FB500614521 /* Resource.swift in Sources */,
 				D153BE402CF47AC900A81FFC /* AppDelegate.swift in Sources */,
 				D4070DBC2D107AA100E517FE /* NewApplyPageFormTableViewController.swift in Sources */,
