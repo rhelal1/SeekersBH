@@ -7,7 +7,14 @@ protocol Resource : Codable {
     var views: Int { get }
 }
 
+enum ResourceTypes: String, Codable {
+    case article
+    case webinar
+    case video
+}
+
 struct Article : Resource {
+    var id : String
     var title : String
     var author : String
     var yearOfPublication : Int
@@ -15,7 +22,6 @@ struct Article : Resource {
     var DOI : String
     
     var description : String
-    var shortDescription : String
     var url : String
     var views : Int
 }
@@ -49,8 +55,4 @@ struct SavedResource {
     var type : ResourceTypes
 }
 
-enum ResourceTypes: String, Codable {
-    case article
-    case webinar
-    case video
-}
+

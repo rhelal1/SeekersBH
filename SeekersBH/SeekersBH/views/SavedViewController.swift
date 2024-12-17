@@ -6,13 +6,13 @@ class SavedViewController: UIViewController {
     
     var saved: [SavedResource] = [
         SavedResource ( resource: Article(
+            id : "",
             title: "Swift Programming",
             author: "John Doe",
             yearOfPublication: 2023,
             publisher: "TechPress",
             DOI: "12345",
             description: "An in-depth guide to Swift programming.",
-            shortDescription: "A guide to Swift.",
             url: "https://example.com/swift",
             views: 1000
         ), type : .article),

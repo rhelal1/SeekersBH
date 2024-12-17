@@ -34,4 +34,16 @@ class WebinarDetailsViewController: UIViewController {
         
         webinarDescription.text = webinar.description
     }
+
+    @IBAction func joinWebinar(_ sender: Any) {
+        
+        guard let url = URL(string: webinar.url), UIApplication.shared.canOpenURL(url) else {
+            let alert = UIAlertController(title: "Invalid URL", message: "The URL provided is not valid.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            present(alert, animated: true)
+            return
+        }
+        
+        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+    }
 }
