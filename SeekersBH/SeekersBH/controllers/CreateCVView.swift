@@ -37,6 +37,11 @@ class CreateCVView: UIViewController {
         phoneNumber = phoneNumberField.text ?? ""
         linkedIn = linkedInField.text ?? ""
         portfolio = portfolioField.text ?? ""
+        
+        guard let createCVController = navigationController as? CreateCVNavigationController else { return }
+        
+        createCVController.fullName = fullName
+//        createCVController.aboutMe
 
         // debug: Print the inputs to console
         print("Full Name: \(fullName)")

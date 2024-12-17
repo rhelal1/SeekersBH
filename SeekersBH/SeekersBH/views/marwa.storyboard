@@ -1326,10 +1326,10 @@ Tracker</string>
             </objects>
             <point key="canvasLocation" x="5025.1908396946565" y="-120.42253521126761"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--CreateCV Navigation Controller-->
         <scene sceneID="WeP-Di-DvK">
             <objects>
-                <navigationController storyboardIdentifier="CreateNewCV" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Rah-9X-dcA" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="CreateNewCV" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Rah-9X-dcA" customClass="CreateCVNavigationController" customModule="SeekersBH" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="wsQ-m3-TxE">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
