@@ -16,10 +16,10 @@ struct User {
     var listOfUserInterset : [Interest]
     var listOfSkills : [Skill]
     
-    var CVs : [CV]
-    var following : [User]
-    var followers : [User]
-    var jobApplications : [JobApplication]
+//    var CVs : [CV]
+//    var following : [User]
+//    var followers : [User]
+//    var jobApplications : [JobApplication]
 }
 
 enum Location {
