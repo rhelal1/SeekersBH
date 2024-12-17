@@ -31,6 +31,9 @@
 		D184E3FF2CF8785A00D896D6 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = D184E3FE2CF8785A00D896D6 /* Job.swift */; };
 		D184E4012CF87A5600D896D6 /* CV.swift in Sources */ = {isa = PBXBuildFile; fileRef = D184E4002CF87A5600D896D6 /* CV.swift */; };
 		D184E4032CF87E5500D896D6 /* JobApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = D184E4022CF87E5500D896D6 /* JobApplication.swift */; };
+		DA32F2282D0B5B4400DC9353 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA32F2272D0B5B4400DC9353 /* RegisterViewController.swift */; };
+		DA32F22A2D0CC70A00DC9353 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA32F2292D0CC70A00DC9353 /* Login.swift */; };
+		DA32F22C2D1069F400DC9353 /* Regester.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA32F22B2D1069F400DC9353 /* Regester.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +79,9 @@
 		D184E3FE2CF8785A00D896D6 /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
 		D184E4002CF87A5600D896D6 /* CV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CV.swift; sourceTree = "<group>"; };
 		D184E4022CF87E5500D896D6 /* JobApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobApplication.swift; sourceTree = "<group>"; };
+		DA32F2272D0B5B4400DC9353 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		DA32F2292D0CC70A00DC9353 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		DA32F22B2D1069F400DC9353 /* Regester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Regester.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +175,7 @@
 				D184E4022CF87E5500D896D6 /* JobApplication.swift */,
 				D184E4002CF87A5600D896D6 /* CV.swift */,
 				D184E3FE2CF8785A00D896D6 /* Job.swift */,
+				DA32F2272D0B5B4400DC9353 /* RegisterViewController.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -190,6 +197,8 @@
 			isa = PBXGroup;
 			children = (
 				D153BE432CF47AC900A81FFC /* ViewController.swift */,
+				DA32F2292D0CC70A00DC9353 /* Login.swift */,
+				DA32F22B2D1069F400DC9353 /* Regester.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -347,6 +356,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA32F22C2D1069F400DC9353 /* Regester.swift in Sources */,
+				DA32F2282D0B5B4400DC9353 /* RegisterViewController.swift in Sources */,
+				DA32F22A2D0CC70A00DC9353 /* Login.swift in Sources */,
 				D184E3F12CF86CF400D896D6 /* user.swift in Sources */,
 				D184E4012CF87A5600D896D6 /* CV.swift in Sources */,
 				D184E3FF2CF8785A00D896D6 /* Job.swift in Sources */,
