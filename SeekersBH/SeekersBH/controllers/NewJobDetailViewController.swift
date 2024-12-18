@@ -21,7 +21,11 @@ class NewJobDetailViewController: UIViewController {
       var postedDate: String?
     
    
-   
+   //also Properties to receive data to the new job deatils table view controller
+    var location: String?
+    var employmentType: String?
+    var experience: String?
+    var salary: String?
     
     
     override func viewDidLoad() {
@@ -48,7 +52,16 @@ class NewJobDetailViewController: UIViewController {
     }
     
   
-    
+        //to receive data to the new job deatils table view controller
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destinationVC = segue.destination as? NewJobDetailTableViewController {
+            // Pass data to the container view controller
+            destinationVC.location = location
+            destinationVC.employmentType = employmentType
+            destinationVC.experience = experience
+            destinationVC.salary = salary
+        }
+    }
 
  
 

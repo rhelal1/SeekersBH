@@ -28,6 +28,8 @@
 		946297282D0CB25F005542AA /* WebinarDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946297272D0CB25F005542AA /* WebinarDetailsViewController.swift */; };
 		947B8FDB2D10B69D004463EF /* CourseQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947B8FDA2D10B69D004463EF /* CourseQuizViewController.swift */; };
 		947B8FDD2D10B6BB004463EF /* CourseQuizTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947B8FDC2D10B6BB004463EF /* CourseQuizTableViewCell.swift */; };
+		437286D02D0B31B7000D3518 /* CreateCVView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437286CF2D0B31B7000D3518 /* CreateCVView.swift */; };
+		437286D22D11DF64000D3518 /* CreateCVNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437286D12D11DF64000D3518 /* CreateCVNavigationController.swift */; };
 		947B8FE22D11B4C0004463EF /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 947B8FE12D11B4C0004463EF /* FirebaseAnalytics */; };
 		947B8FE42D11B559004463EF /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 947B8FE32D11B559004463EF /* FirebaseFirestore */; };
 		947B8FE62D11CA5B004463EF /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947B8FE52D11CA5B004463EF /* FirebaseManager.swift */; };
@@ -112,6 +114,8 @@
 		946297272D0CB25F005542AA /* WebinarDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebinarDetailsViewController.swift; sourceTree = SOURCE_ROOT; };
 		947B8FDA2D10B69D004463EF /* CourseQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseQuizViewController.swift; sourceTree = SOURCE_ROOT; };
 		947B8FDC2D10B6BB004463EF /* CourseQuizTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseQuizTableViewCell.swift; sourceTree = "<group>"; };
+		437286CF2D0B31B7000D3518 /* CreateCVView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCVView.swift; sourceTree = "<group>"; };
+		437286D12D11DF64000D3518 /* CreateCVNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCVNavigationController.swift; sourceTree = "<group>"; };
 		947B8FE52D11CA5B004463EF /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = SOURCE_ROOT; };
 		947B8FEA2D12360B004463EF /* ResourceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceManager.swift; sourceTree = "<group>"; };
 		94CADAA92D08ADD700F8B3AC /* growthHubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = growthHubViewController.swift; path = SeekersBH/views/growthHubViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -487,6 +491,10 @@
 				D184E3F12CF86CF400D896D6 /* user.swift in Sources */,
 				942060582D0CCDE800A2DE36 /* VideosViewController.swift in Sources */,
 				437286D02D0B31B7000D3518 /* CreateCVView.swift in Sources */,
+				C311B0D92D07276E0071CF9B /* addJobViewController.swift in Sources */,
+				437286D02D0B31B7000D3518 /* CreateCVView.swift in Sources */,
+        
+				942060582D0CCDE800A2DE36 /* VideosViewController.swift in Sources */,
 				D184E4012CF87A5600D896D6 /* CV.swift in Sources */,
 				946297282D0CB25F005542AA /* WebinarDetailsViewController.swift in Sources */,
 				AC8BA8FD2D0F430800EE7A2C /* jobCellTableViewCell.swift in Sources */,
@@ -514,6 +522,7 @@
 				D4070DB02D0F11C700E517FE /* NewJobRecommendationTableViewCell.swift in Sources */,
 				9420605C2D0CCE1900A2DE36 /* VideoDetailsViewController.swift in Sources */,
 				942060702D10828700A2DE36 /* CourseReviewTableViewCell.swift in Sources */,
+				9420605C2D0CCE1900A2DE36 /* VideoDetailsViewController.swift in Sources */,
 				947B8FE62D11CA5B004463EF /* FirebaseManager.swift in Sources */,
 				9420606C2D1073EC00A2DE36 /* CourseContentViewController.swift in Sources */,
 				947B8FEB2D12360B004463EF /* ResourceManager.swift in Sources */,
