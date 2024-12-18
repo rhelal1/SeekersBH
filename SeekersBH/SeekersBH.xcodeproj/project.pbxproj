@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		437286D02D0B31B7000D3518 /* CreateCVView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437286CF2D0B31B7000D3518 /* CreateCVView.swift */; };
 		437286D22D11DF64000D3518 /* CreateCVNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437286D12D11DF64000D3518 /* CreateCVNavigationController.swift */; };
+		66E035012D1432C60050E168 /* jobDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E035002D1432C60050E168 /* jobDetailsViewController.swift */; };
+		66E035052D143B050050E168 /* generalInformationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E035042D143B050050E168 /* generalInformationCollectionViewCell.swift */; };
 		942060582D0CCDE800A2DE36 /* VideosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942060572D0CCDE800A2DE36 /* VideosViewController.swift */; };
 		9420605A2D0CCE0100A2DE36 /* VideosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942060592D0CCE0100A2DE36 /* VideosTableViewCell.swift */; };
 		9420605C2D0CCE1900A2DE36 /* VideoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9420605B2D0CCE1900A2DE36 /* VideoDetailsViewController.swift */; };
@@ -28,8 +30,6 @@
 		946297282D0CB25F005542AA /* WebinarDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946297272D0CB25F005542AA /* WebinarDetailsViewController.swift */; };
 		947B8FDB2D10B69D004463EF /* CourseQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947B8FDA2D10B69D004463EF /* CourseQuizViewController.swift */; };
 		947B8FDD2D10B6BB004463EF /* CourseQuizTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947B8FDC2D10B6BB004463EF /* CourseQuizTableViewCell.swift */; };
-		437286D02D0B31B7000D3518 /* CreateCVView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437286CF2D0B31B7000D3518 /* CreateCVView.swift */; };
-		437286D22D11DF64000D3518 /* CreateCVNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437286D12D11DF64000D3518 /* CreateCVNavigationController.swift */; };
 		947B8FE22D11B4C0004463EF /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 947B8FE12D11B4C0004463EF /* FirebaseAnalytics */; };
 		947B8FE42D11B559004463EF /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 947B8FE32D11B559004463EF /* FirebaseFirestore */; };
 		947B8FE62D11CA5B004463EF /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947B8FE52D11CA5B004463EF /* FirebaseManager.swift */; };
@@ -95,6 +95,8 @@
 /* Begin PBXFileReference section */
 		437286CF2D0B31B7000D3518 /* CreateCVView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCVView.swift; sourceTree = "<group>"; };
 		437286D12D11DF64000D3518 /* CreateCVNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCVNavigationController.swift; sourceTree = "<group>"; };
+		66E035002D1432C60050E168 /* jobDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jobDetailsViewController.swift; sourceTree = "<group>"; };
+		66E035042D143B050050E168 /* generalInformationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = generalInformationCollectionViewCell.swift; sourceTree = "<group>"; };
 		942060572D0CCDE800A2DE36 /* VideosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosViewController.swift; sourceTree = SOURCE_ROOT; };
 		942060592D0CCE0100A2DE36 /* VideosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosTableViewCell.swift; sourceTree = "<group>"; };
 		9420605B2D0CCE1900A2DE36 /* VideoDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDetailsViewController.swift; sourceTree = "<group>"; };
@@ -114,8 +116,6 @@
 		946297272D0CB25F005542AA /* WebinarDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebinarDetailsViewController.swift; sourceTree = SOURCE_ROOT; };
 		947B8FDA2D10B69D004463EF /* CourseQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseQuizViewController.swift; sourceTree = SOURCE_ROOT; };
 		947B8FDC2D10B6BB004463EF /* CourseQuizTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseQuizTableViewCell.swift; sourceTree = "<group>"; };
-		437286CF2D0B31B7000D3518 /* CreateCVView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCVView.swift; sourceTree = "<group>"; };
-		437286D12D11DF64000D3518 /* CreateCVNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCVNavigationController.swift; sourceTree = "<group>"; };
 		947B8FE52D11CA5B004463EF /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = SOURCE_ROOT; };
 		947B8FEA2D12360B004463EF /* ResourceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceManager.swift; sourceTree = "<group>"; };
 		94CADAA92D08ADD700F8B3AC /* growthHubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = growthHubViewController.swift; path = SeekersBH/views/growthHubViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -323,6 +323,8 @@
 				D4070DBB2D107AA100E517FE /* NewApplyPageFormTableViewController.swift */,
 				437286CF2D0B31B7000D3518 /* CreateCVView.swift */,
 				437286D12D11DF64000D3518 /* CreateCVNavigationController.swift */,
+				66E035002D1432C60050E168 /* jobDetailsViewController.swift */,
+				66E035042D143B050050E168 /* generalInformationCollectionViewCell.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -481,6 +483,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				946297262D0CA226005542AA /* WebinarsTableViewCell.swift in Sources */,
+				66E035012D1432C60050E168 /* jobDetailsViewController.swift in Sources */,
 				947B8FDD2D10B6BB004463EF /* CourseQuizTableViewCell.swift in Sources */,
 				AC2776EC2D0B05360019677C /* addJobView2ViewController.swift in Sources */,
 				94CADAAE2D08B96000F8B3AC /* ArticlesTableViewCell.swift in Sources */,
@@ -491,9 +494,7 @@
 				D184E3F12CF86CF400D896D6 /* user.swift in Sources */,
 				942060582D0CCDE800A2DE36 /* VideosViewController.swift in Sources */,
 				437286D02D0B31B7000D3518 /* CreateCVView.swift in Sources */,
-				C311B0D92D07276E0071CF9B /* addJobViewController.swift in Sources */,
 				437286D02D0B31B7000D3518 /* CreateCVView.swift in Sources */,
-        
 				942060582D0CCDE800A2DE36 /* VideosViewController.swift in Sources */,
 				D184E4012CF87A5600D896D6 /* CV.swift in Sources */,
 				946297282D0CB25F005542AA /* WebinarDetailsViewController.swift in Sources */,
@@ -511,6 +512,7 @@
 				D153BE402CF47AC900A81FFC /* AppDelegate.swift in Sources */,
 				D4070DBC2D107AA100E517FE /* NewApplyPageFormTableViewController.swift in Sources */,
 				9420606E2D1074D400A2DE36 /* CourseContentTableViewCell.swift in Sources */,
+				66E035052D143B050050E168 /* generalInformationCollectionViewCell.swift in Sources */,
 				946297222D0AFD86005542AA /* ArticleDetailsViewController.swift in Sources */,
 				D4070DB82D10768C00E517FE /* ApplyPageViewController.swift in Sources */,
 				AC2776EA2D0B02E10019677C /* AddJobView4ViewController.swift in Sources */,

@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Growth Hub View Controller-->
+        <!--View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="growthHubViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="growthHubViewController" customModule="SeekersBH" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -575,7 +575,8 @@
         <!--Navigation Controller-->
         <scene sceneID="Ifq-eZ-BTF">
             <objects>
-                <navigationController storyboardIdentifier="FirstNavController" wantsFullScreenLayout="YES" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XbX-1p-WJA" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oyw-98-Jsk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController storyboardIdentifier="GrowthHubViewController" wantsFullScreenLayout="YES" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XbX-1p-WJA" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hpg-gh-uq4">
                         <rect key="frame" x="0.0" y="62" width="440" height="44"/>
@@ -586,14 +587,13 @@
                         <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="cTM-k4-a8o"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Oyw-98-Jsk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-765" y="-327"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kAN-tx-Igj">
             <objects>
-                <navigationController storyboardIdentifier="OnlineCourses" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="yjO-5r-IZT" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="OnlineCoursesViewController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="yjO-5r-IZT" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6fx-1l-ymY">
                         <rect key="frame" x="0.0" y="62" width="440" height="44"/>
@@ -763,7 +763,7 @@
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1gd-rO-9Qq">
-                                                                                <rect key="frame" x="72.333333333333329" y="0.0" width="239.33333333333343" height="25"/>
+                                                                                <rect key="frame" x="72.333333333333329" y="0.0" width="239.33333333333337" height="25"/>
                                                                                 <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="16"/>
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
@@ -1079,7 +1079,7 @@
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tT4-tz-JuR">
-                                                                                <rect key="frame" x="72.333333333333329" y="0.0" width="239.33333333333343" height="25"/>
+                                                                                <rect key="frame" x="72.333333333333329" y="0.0" width="239.33333333333337" height="25"/>
                                                                                 <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="16"/>
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
