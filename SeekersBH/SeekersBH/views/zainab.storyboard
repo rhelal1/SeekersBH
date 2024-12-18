@@ -1171,7 +1171,7 @@
         <!--View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ManageUsers" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1236,7 +1236,7 @@ Management</string>
         <!--View Controller-->
         <scene sceneID="MIp-eU-VqE">
             <objects>
-                <viewController id="QxZ-U1-oet" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ResourceManagementViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QxZ-U1-oet" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9IB-ke-fQc">
                         <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
