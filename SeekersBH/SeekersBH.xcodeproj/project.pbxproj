@@ -33,13 +33,11 @@
 		947B8FE22D11B4C0004463EF /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 947B8FE12D11B4C0004463EF /* FirebaseAnalytics */; };
 		947B8FE42D11B559004463EF /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 947B8FE32D11B559004463EF /* FirebaseFirestore */; };
 		947B8FE62D11CA5B004463EF /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947B8FE52D11CA5B004463EF /* FirebaseManager.swift */; };
-		947B8FE82D11CF51004463EF /* ResourceFireBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947B8FE72D11CF51004463EF /* ResourceFireBase.swift */; };
+		947B8FEB2D12360B004463EF /* ResourceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947B8FEA2D12360B004463EF /* ResourceManager.swift */; };
 		94CADAAA2D08ADD700F8B3AC /* growthHubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CADAA92D08ADD700F8B3AC /* growthHubViewController.swift */; };
 		94CADAAE2D08B96000F8B3AC /* ArticlesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CADAAD2D08B96000F8B3AC /* ArticlesTableViewCell.swift */; };
-		94E2D2752D074F9F00614521 /* SidebarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E2D2742D074F9F00614521 /* SidebarViewController.swift */; };
 		94E2D2772D076FB500614521 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E2D2762D076FB500614521 /* Resource.swift */; };
 		94E2D2792D07925000614521 /* ArticlesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E2D2782D07925000614521 /* ArticlesViewController.swift */; };
-		94E2D27B2D07964600614521 /* OptionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E2D27A2D07964600614521 /* OptionController.swift */; };
 		AC2776E62D0AF25B0019677C /* addJobView3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2776E52D0AF25B0019677C /* addJobView3ViewController.swift */; };
 		AC2776E82D0AF55F0019677C /* testViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2776E72D0AF55F0019677C /* testViewController.swift */; };
 		AC2776EA2D0B02E10019677C /* AddJobView4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2776E92D0B02E10019677C /* AddJobView4ViewController.swift */; };
@@ -119,13 +117,11 @@
 		437286CF2D0B31B7000D3518 /* CreateCVView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCVView.swift; sourceTree = "<group>"; };
 		437286D12D11DF64000D3518 /* CreateCVNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCVNavigationController.swift; sourceTree = "<group>"; };
 		947B8FE52D11CA5B004463EF /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = SOURCE_ROOT; };
-		947B8FE72D11CF51004463EF /* ResourceFireBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceFireBase.swift; sourceTree = "<group>"; };
+		947B8FEA2D12360B004463EF /* ResourceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceManager.swift; sourceTree = "<group>"; };
 		94CADAA92D08ADD700F8B3AC /* growthHubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = growthHubViewController.swift; path = SeekersBH/views/growthHubViewController.swift; sourceTree = SOURCE_ROOT; };
 		94CADAAD2D08B96000F8B3AC /* ArticlesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesTableViewCell.swift; sourceTree = SOURCE_ROOT; };
-		94E2D2742D074F9F00614521 /* SidebarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarViewController.swift; sourceTree = "<group>"; };
 		94E2D2762D076FB500614521 /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 		94E2D2782D07925000614521 /* ArticlesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesViewController.swift; sourceTree = "<group>"; };
-		94E2D27A2D07964600614521 /* OptionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionController.swift; sourceTree = "<group>"; };
 		AC2776E52D0AF25B0019677C /* addJobView3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addJobView3ViewController.swift; sourceTree = "<group>"; };
 		AC2776E72D0AF55F0019677C /* testViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testViewController.swift; sourceTree = "<group>"; };
 		AC2776E92D0B02E10019677C /* AddJobView4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddJobView4ViewController.swift; sourceTree = "<group>"; };
@@ -194,6 +190,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		947B8FE92D123571004463EF /* Firestore */ = {
+			isa = PBXGroup;
+			children = (
+				947B8FE52D11CA5B004463EF /* FirebaseManager.swift */,
+				947B8FEA2D12360B004463EF /* ResourceManager.swift */,
+			);
+			path = Firestore;
+			sourceTree = "<group>";
+		};
 		D153BE332CF47AC900A81FFC = {
 			isa = PBXGroup;
 			children = (
@@ -218,13 +223,13 @@
 		D153BE3E2CF47AC900A81FFC /* SeekersBH */ = {
 			isa = PBXGroup;
 			children = (
+				947B8FE92D123571004463EF /* Firestore */,
 				D184E3F32CF86D6600D896D6 /* controllers */,
 				D184E3F22CF86D4800D896D6 /* views */,
 				D184E3EF2CF86CD500D896D6 /* models */,
 				D153BE3F2CF47AC900A81FFC /* AppDelegate.swift */,
 				D153BE412CF47AC900A81FFC /* SceneDelegate.swift */,
 				D153BE452CF47AC900A81FFC /* Main.storyboard */,
-				94E2D27A2D07964600614521 /* OptionController.swift */,
 				D184E3FC2CF8769000D896D6 /* GoogleService-Info.plist */,
 				D153BE6F2CF47E8400A81FFC /* testTableViewController.swift */,
 				D153BE482CF47ACC00A81FFC /* Assets.xcassets */,
@@ -280,8 +285,6 @@
 		D184E3F32CF86D6600D896D6 /* controllers */ = {
 			isa = PBXGroup;
 			children = (
-				947B8FE52D11CA5B004463EF /* FirebaseManager.swift */,
-				947B8FE72D11CF51004463EF /* ResourceFireBase.swift */,
 				947B8FDA2D10B69D004463EF /* CourseQuizViewController.swift */,
 				947B8FDC2D10B6BB004463EF /* CourseQuizTableViewCell.swift */,
 				942060712D1082AD00A2DE36 /* CourseReviewViewController.swift */,
@@ -307,7 +310,6 @@
 				94E2D2782D07925000614521 /* ArticlesViewController.swift */,
 				C311B0D42D0707D30071CF9B /* ViewJobApplicationViewController.swift */,
 				AC8BA8FC2D0F430800EE7A2C /* jobCellTableViewCell.swift */,
-				94E2D2742D074F9F00614521 /* SidebarViewController.swift */,
 				AC2776E72D0AF55F0019677C /* testViewController.swift */,
 				D45526BB2D09ED2A00149AA9 /* JobTableViewCell.swift */,
 				AC2776E52D0AF25B0019677C /* addJobView3ViewController.swift */,
@@ -487,12 +489,12 @@
 				94CADAAA2D08ADD700F8B3AC /* growthHubViewController.swift in Sources */,
 				94E2D2792D07925000614521 /* ArticlesViewController.swift in Sources */,
 				9420605A2D0CCE0100A2DE36 /* VideosTableViewCell.swift in Sources */,
-				947B8FE82D11CF51004463EF /* ResourceFireBase.swift in Sources */,
 				D184E3F12CF86CF400D896D6 /* user.swift in Sources */,
 				942060582D0CCDE800A2DE36 /* VideosViewController.swift in Sources */,
 				437286D02D0B31B7000D3518 /* CreateCVView.swift in Sources */,
 				C311B0D92D07276E0071CF9B /* addJobViewController.swift in Sources */,
 				437286D02D0B31B7000D3518 /* CreateCVView.swift in Sources */,
+        
 				942060582D0CCDE800A2DE36 /* VideosViewController.swift in Sources */,
 				D184E4012CF87A5600D896D6 /* CV.swift in Sources */,
 				946297282D0CB25F005542AA /* WebinarDetailsViewController.swift in Sources */,
@@ -501,12 +503,11 @@
 				D153BE442CF47AC900A81FFC /* ViewController.swift in Sources */,
 				946297242D0CA075005542AA /* WebinarsViewController.swift in Sources */,
 				AC2776E82D0AF55F0019677C /* testViewController.swift in Sources */,
-				94E2D2752D074F9F00614521 /* SidebarViewController.swift in Sources */,
 				942060662D1050A600A2DE36 /* CourseViewController.swift in Sources */,
-				94E2D27B2D07964600614521 /* OptionController.swift in Sources */,
 				9420606A2D10516000A2DE36 /* OnlineCourses.swift in Sources */,
 				9420605E2D0DAA7600A2DE36 /* SavedViewController.swift in Sources */,
 				AC2776E62D0AF25B0019677C /* addJobView3ViewController.swift in Sources */,
+        
 				437286D22D11DF64000D3518 /* CreateCVNavigationController.swift in Sources */,
 				437286D22D11DF64000D3518 /* CreateCVNavigationController.swift in Sources */,
 				9420606A2D10516000A2DE36 /* OnlineCourses.swift in Sources */,
@@ -531,6 +532,7 @@
 				9420605C2D0CCE1900A2DE36 /* VideoDetailsViewController.swift in Sources */,
 				947B8FE62D11CA5B004463EF /* FirebaseManager.swift in Sources */,
 				9420606C2D1073EC00A2DE36 /* CourseContentViewController.swift in Sources */,
+				947B8FEB2D12360B004463EF /* ResourceManager.swift in Sources */,
 				942060722D1082AD00A2DE36 /* CourseReviewViewController.swift in Sources */,
 				D4070DB02D0F11C700E517FE /* NewJobRecommendationTableViewCell.swift in Sources */,
 				9420605C2D0CCE1900A2DE36 /* VideoDetailsViewController.swift in Sources */,

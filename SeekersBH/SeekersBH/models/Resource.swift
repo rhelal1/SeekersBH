@@ -14,6 +14,7 @@ enum ResourceTypes: String, Codable {
 }
 
 struct Article : Resource {
+    var id : String
     var title : String
     var author : String
     var yearOfPublication : Int

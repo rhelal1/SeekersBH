@@ -15,6 +15,18 @@ class ArticleDetailsViewController: UIViewController {
     
     @IBOutlet weak var articleTitle: UILabel!
     
+    
+    @IBAction func readMore(_ sender: Any) {
+        guard let url = URL(string: article.url), UIApplication.shared.canOpenURL(url) else {
+            let alert = UIAlertController(title: "Invalid URL", message: "The URL provided is not valid.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            present(alert, animated: true)
+            return
+        }
+        
+        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         generalView.layer.cornerRadius = 15
@@ -30,5 +42,13 @@ class ArticleDetailsViewController: UIViewController {
         DOI.text = article.DOI
         
         articleDescription.text = article.description
+        
+        // Increment views when the page is loaded
+        ResourceManager.share.incrementViews(forArticleId: article.id) { error in
+            if let error = error {
+                print("Failed to update views: \(error.localizedDescription)")
+            }
+        }
     }
+
 }
