@@ -606,7 +606,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B9K-2r-Di9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3490" y="2053"/>
+            <point key="canvasLocation" x="-3507" y="2053"/>
         </scene>
         <!--Webinars View Controller-->
         <scene sceneID="FS7-IH-bGg">
@@ -763,7 +763,7 @@
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1gd-rO-9Qq">
-                                                                                <rect key="frame" x="72.333333333333329" y="0.0" width="239.33333333333337" height="25"/>
+                                                                                <rect key="frame" x="72.333333333333329" y="0.0" width="239.33333333333343" height="25"/>
                                                                                 <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="16"/>
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
@@ -1079,7 +1079,7 @@
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tT4-tz-JuR">
-                                                                                <rect key="frame" x="72.333333333333329" y="0.0" width="239.33333333333337" height="25"/>
+                                                                                <rect key="frame" x="72.333333333333329" y="0.0" width="239.33333333333343" height="25"/>
                                                                                 <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="16"/>
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>

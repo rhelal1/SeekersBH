@@ -9,7 +9,7 @@ import UIKit
 
 class NewJobDetailTableViewController: UITableViewController {
 
-    @IBOutlet weak var cardGeneralInformationSection: UIView!
+    
     
     @IBOutlet weak var lblLocationInGeneralSection: UILabel!
     
@@ -20,21 +20,20 @@ class NewJobDetailTableViewController: UITableViewController {
     
     @IBOutlet weak var lblSalaryInGeneralSection: UILabel!
     
-    @IBOutlet weak var cardJobDescriptionSection: UIView!
+    
     
     @IBOutlet weak var lblJobDescriptionInJobDescriptionSection: UILabel!
     
     
-    @IBOutlet weak var cardKeyResponsibilitiesSection: UIView!
+    
     
     @IBOutlet weak var lblKeyResponsInKeyResponsibilitiesSection: UILabel!
     
-    @IBOutlet weak var cardRequirementsSection: UIView!
     
     @IBOutlet weak var lblRequirementsInRequiremntsSection: UILabel!
     
     
-    @IBOutlet weak var cardBenefitsSection: UIView!
+    
     
     
     @IBOutlet weak var lblBenefitsInBenefitsSection: UILabel!
@@ -46,12 +45,20 @@ class NewJobDetailTableViewController: UITableViewController {
         var salary: String?
     
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupCardViewCorners()
+       
         
-        // Apply the formatted data to the labels
+        
+        // Allow the table view to automatically adjust row height
+        tableView.rowHeight = UITableView.automaticDimension
+        
+        
+        
+        // Apply the formatted data to the labels (custome)
         if let location = location {
             lblLocationInGeneralSection.attributedText = getFormattedText(title: "Location:", value: location)
         }
@@ -68,20 +75,63 @@ class NewJobDetailTableViewController: UITableViewController {
             lblSalaryInGeneralSection.attributedText = getFormattedText(title: "Salary:", value: salary)
         }
        
+        
+        lblJobDescriptionInJobDescriptionSection.text = """
+           This is a test for the Job Description section to check if the cell resizes 
+           This is a test for the Job Description section to check if the cell resizes
+           This is a test for the Job Description section to check if the cell resizes
+           This is a test for the Job Description section to check if the cell resizes
+           This is a test for the Job Description section to check if the cell resizes
+           This is a test for the Job Description section to check if the cell resizes
+           This is a test for the Job Description section to check if the cell resizes
+           This is a test for the Job Description section to check if the cell resizes
+           This is a test for the Job Description section to check if the cell resizes
+           This is a test for the Job Description section to check if the cell resizes
+           This is a test for the Job Description section to check if the cell resizes
+           This is a test for the Job Description section to check if the cell resizes
+           This is a test for the Job Description section to check if the cell resizes
+           This is a test for the Job Description section to check if the cell resizes
+           This is a test for the Job Description section to check if the cell duha
+           """
+           
+           lblKeyResponsInKeyResponsibilitiesSection.text = """
+           This section lists the key responsibilities for the role. Add enough content here to test the resizing behavior. 
+           Responsibilities include:
+           - Developing and maintaining applications.
+           - Collaborating with the team.
+           - Collaborating with the team.
+           - Collaborating with the team.
+           - Collaborating with the team.
+           - Collaborating with the team.
+           - Collaborating with the team.
+           - Collaborating with the team.
+           - Collaborating with the team.
+           - Collaborating with the team.
+           - Collaborating with the team.
+           
+           """
+           
+           lblRequirementsInRequiremntsSection.text = """
+           Requirements for the role include a degree in Computer Science, 5+ years of experience, and expertise in Swift. 
+           Add long text here to simulate detailed requirements and observe resizing.
+           """
+           
+           lblBenefitsInBenefitsSection.text = """
+           This section describes the benefits offered to employees. 
+           Add more content to test multiline labels, ensuring that the cell dynamically resifit the full content.
+           Add more content to test multiline labels, ensuring that the cell dynamically resifit the full content.
+           Add more content to test multiline labels, ensuring that the cell dynamically resifit the full content.
+           Add more content to test multiline labels, ensuring that the cell dynamically resifit the full content.
+           Add more content to test multiline labels, ensuring that the cell dynamically resifit the full content.
+           """
+        
+
     }
     
-    //for the shape of card (UIView)
-    private func setupCardViewCorners() {
-        // Apply corner radius to all card views
-        cardGeneralInformationSection?.layer.cornerRadius = 15
-        cardJobDescriptionSection?.layer.cornerRadius = 15
-        cardKeyResponsibilitiesSection?.layer.cornerRadius = 15
-        cardRequirementsSection?.layer.cornerRadius = 15
-        cardBenefitsSection?.layer.cornerRadius = 15
-    }
+
     
     
-    // Helper function to apply bold for titles and regular for values
+    // apply bold for titles and regular for values
      private func getFormattedText(title: String, value: String) -> NSMutableAttributedString {
          // Create a mutable attributed string with the full text
          let fullText = "\(title) \(value)"
@@ -120,5 +170,10 @@ class NewJobDetailTableViewController: UITableViewController {
         }
     }
 
+
+    // For  dynamic resizing, manually calculate height
+       override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+           return UITableView.automaticDimension
+       }
 
 }
