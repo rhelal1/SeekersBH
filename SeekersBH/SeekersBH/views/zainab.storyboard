@@ -88,18 +88,18 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OSz-Jg-tpN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="790" y="3"/>
+            <point key="canvasLocation" x="37" y="-675"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="393-UY-8gJ">
             <objects>
                 <viewController id="I0s-jd-32h" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fWy-8c-0ak">
-                        <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="946"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rxf-21-3jI">
-                                <rect key="frame" x="0.0" y="62" width="440" height="50"/>
+                                <rect key="frame" x="0.0" y="0.0" width="440" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="8kd-sA-GOv"/>
                                 </constraints>
@@ -111,7 +111,7 @@
                                 </items>
                             </navigationBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rwz-QE-wnY" userLabel="send message view">
-                                <rect key="frame" x="0.0" y="878" width="440" height="44"/>
+                                <rect key="frame" x="0.0" y="902" width="440" height="44"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wz1-Gr-n2f">
                                         <rect key="frame" x="20" y="0.0" width="360" height="44"/>
@@ -143,7 +143,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="DfC-rA-VYZ">
-                                <rect key="frame" x="20" y="112" width="400" height="766"/>
+                                <rect key="frame" x="20" y="50" width="400" height="852"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="sentCell" rowHeight="70" id="Afu-MY-P2C">
@@ -220,10 +220,11 @@
                             <constraint firstItem="rxf-21-3jI" firstAttribute="leading" secondItem="RVM-OL-d9N" secondAttribute="leading" id="xu0-UE-FIf"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="vO7-Ez-K5c"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TY3-f7-xfk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="114.53488372093024" y="-2624.5639534883721"/>
+            <point key="canvasLocation" x="-271" y="-2623"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="TCv-XM-h22">
@@ -284,6 +285,9 @@
                                                     <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="26"/>
                                                     <color key="baseBackgroundColor" red="0.050980389119999997" green="0.094117648900000003" blue="0.32156863810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <segue destination="I0s-jd-32h" kind="show" id="7Fd-Zb-IJ4"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -338,7 +342,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="haK-pZ-soi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="795" y="-2626.5690376569037"/>
+            <point key="canvasLocation" x="757" y="-3351"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="34f-b8-OOc">
@@ -384,7 +388,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XXB-nD-BK9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2062" y="-2623"/>
+            <point key="canvasLocation" x="2029" y="-2758"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Qu1-SQ-Gtv">
@@ -628,11 +632,11 @@
             <objects>
                 <viewController id="XdV-Rk-fyv" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CXa-kf-Q1M">
-                        <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="946"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ZCk-jS-Xx2">
-                                <rect key="frame" x="20" y="82" width="400" height="820"/>
+                                <rect key="frame" x="20" y="20" width="400" height="906"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="209" id="lcD-8I-L9E">
@@ -663,7 +667,7 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s0h-1H-jr3">
                                                     <rect key="frame" x="40" y="133" width="280" height="44"/>
                                                     <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="filled" title="Hide">
+                                                    <buttonConfiguration key="configuration" style="filled" title="unhide">
                                                         <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="26"/>
                                                         <color key="baseBackgroundColor" red="0.050980389119999997" green="0.094117648900000003" blue="0.32156863810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </buttonConfiguration>
@@ -701,21 +705,22 @@
                             <constraint firstItem="ZCk-jS-Xx2" firstAttribute="leading" secondItem="Djp-FR-BGV" secondAttribute="leading" constant="20" id="doP-NX-3sr"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Wk1-kc-IMc"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ank-Ke-agj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="129.54545454545456" y="-1304.18410041841"/>
+            <point key="canvasLocation" x="-4540" y="2012"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="gPT-fP-CLf">
             <objects>
                 <viewController id="MY9-2f-deu" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="omc-wP-SFW">
-                        <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="946"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="PoV-Nz-REI">
-                                <rect key="frame" x="20" y="82" width="400" height="820"/>
+                                <rect key="frame" x="20" y="20" width="400" height="906"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="213" id="1Im-Gu-tO5">
@@ -728,7 +733,7 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zxg-on-fvU">
                                                     <rect key="frame" x="10" y="159" width="340" height="44"/>
                                                     <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="filled" title="Button">
+                                                    <buttonConfiguration key="configuration" style="filled" title="unhide">
                                                         <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="26"/>
                                                         <color key="baseBackgroundColor" red="0.050980389119999997" green="0.094117648900000003" blue="0.32156863810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </buttonConfiguration>
@@ -780,21 +785,22 @@
                             <constraint firstItem="P1F-9R-6VO" firstAttribute="trailing" secondItem="PoV-Nz-REI" secondAttribute="trailing" constant="20" id="uy1-B0-W2g"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="QS9-1T-upc"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iqa-eF-ZVZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="799.09090909090912" y="-1304.8117154811716"/>
+            <point key="canvasLocation" x="-4570" y="543"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Vns-C0-Nx2">
             <objects>
                 <viewController id="EQm-se-xhu" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ch9-fc-pLj">
-                        <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="946"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="5pf-6U-uSB">
-                                <rect key="frame" x="20" y="82" width="400" height="820"/>
+                                <rect key="frame" x="20" y="20" width="400" height="906"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="282" id="8R0-3e-mgf">
@@ -819,8 +825,8 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U2w-3n-Cjr">
                                                     <rect key="frame" x="30" y="216" width="310" height="44"/>
                                                     <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="filled" title="Hide">
-                                                        <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="26"/>
+                                                    <buttonConfiguration key="configuration" style="filled" title="unhide">
+                                                        <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="26"/>
                                                         <color key="baseBackgroundColor" red="0.050980389119999997" green="0.094117648900000003" blue="0.32156863810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </buttonConfiguration>
                                                 </button>
@@ -858,28 +864,29 @@
                             <constraint firstItem="pOG-AM-UQo" firstAttribute="bottom" secondItem="5pf-6U-uSB" secondAttribute="bottom" constant="20" id="zt7-0c-9dG"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="ZOe-mq-1h9"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rUW-gu-iad" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1480.909090909091" y="-1304.18410041841"/>
+            <point key="canvasLocation" x="-4788" y="1282"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="drP-sg-usg">
             <objects>
                 <viewController id="kXk-nB-O9X" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4tg-Vw-paQ">
-                        <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="946"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="rKI-S0-V0a">
-                                <rect key="frame" x="20" y="82" width="400" height="56"/>
+                                <rect key="frame" x="20" y="20" width="400" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="kXk-nB-O9X" id="O05-Vs-rUg"/>
                                 </connections>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="TnB-43-gyy">
-                                <rect key="frame" x="20" y="158" width="400" height="680"/>
+                                <rect key="frame" x="20" y="96" width="400" height="766"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="209" id="0mx-Xa-vJM">
@@ -934,12 +941,15 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wcM-3k-BT7">
-                                <rect key="frame" x="20" y="858" width="400" height="44"/>
+                                <rect key="frame" x="20" y="882" width="400" height="44"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="View Hidden Articles">
                                     <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="26"/>
                                     <color key="baseBackgroundColor" red="0.050980389119999997" green="0.094117648900000003" blue="0.32156863810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="XdV-Rk-fyv" kind="show" id="sEh-be-eB6"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="YhL-3s-Qcf"/>
@@ -957,21 +967,22 @@
                             <constraint firstItem="rKI-S0-V0a" firstAttribute="top" secondItem="YhL-3s-Qcf" secondAttribute="top" constant="20" id="sCF-Rx-G1Z"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Ooj-vS-JSu"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E0j-4C-osg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="129.54545454545456" y="-660.25104602510464"/>
+            <point key="canvasLocation" x="-3305" y="1306"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="fzl-7o-9TR">
             <objects>
                 <viewController id="9iT-Qt-2CK" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="h9K-q3-eCa">
-                        <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="946"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="m5b-Td-wpM">
-                                <rect key="frame" x="20" y="158" width="400" height="680"/>
+                                <rect key="frame" x="20" y="96" width="400" height="766"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="213" id="SH1-d8-CQ1">
@@ -986,10 +997,10 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bKJ-Ki-LAZ">
-                                                    <rect key="frame" x="30" y="162" width="350" height="38"/>
+                                                    <rect key="frame" x="30" y="159" width="350" height="44"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="filled" title="Button">
+                                                    <buttonConfiguration key="configuration" style="filled" title="Hide">
                                                         <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="26"/>
                                                         <color key="baseBackgroundColor" red="0.050980389119999997" green="0.094117648900000003" blue="0.32156863810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </buttonConfiguration>
@@ -1015,19 +1026,22 @@
                                 </prototypes>
                             </tableView>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Rjr-uy-H8u">
-                                <rect key="frame" x="20" y="82" width="400" height="56"/>
+                                <rect key="frame" x="20" y="20" width="400" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="9iT-Qt-2CK" id="FRB-ar-7SG"/>
                                 </connections>
                             </searchBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CNz-hK-uIB">
-                                <rect key="frame" x="20" y="858" width="400" height="44"/>
+                                <rect key="frame" x="20" y="882" width="400" height="44"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="View Hidden Webinars">
                                     <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="26"/>
                                     <color key="baseBackgroundColor" red="0.050980389119999997" green="0.094117648900000003" blue="0.32156863810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="MY9-2f-deu" kind="show" id="AL3-y5-DeJ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hwu-tQ-TdT"/>
@@ -1045,28 +1059,29 @@
                             <constraint firstItem="m5b-Td-wpM" firstAttribute="leading" secondItem="hwu-tQ-TdT" secondAttribute="leading" constant="20" id="ygb-b7-1XL"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="rh3-AA-jQe"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nqT-gK-Zwq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="789.54545454545462" y="-660.25104602510464"/>
+            <point key="canvasLocation" x="-3213" y="-139"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="xGE-oM-vqQ">
             <objects>
                 <viewController id="hR0-ns-cR3" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xs3-H3-qw8">
-                        <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="946"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Lf5-vv-Jrk">
-                                <rect key="frame" x="20" y="79" width="400" height="56"/>
+                                <rect key="frame" x="20" y="17" width="400" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="hR0-ns-cR3" id="qBL-Cs-fP4"/>
                                 </connections>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="kVT-SI-fki">
-                                <rect key="frame" x="20" y="155" width="400" height="683"/>
+                                <rect key="frame" x="20" y="93" width="400" height="769"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="282" id="b25-fi-xI2">
@@ -1121,12 +1136,15 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E5k-53-xDF">
-                                <rect key="frame" x="20" y="858" width="400" height="44"/>
+                                <rect key="frame" x="20" y="882" width="400" height="44"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="View Hidden Videos">
                                     <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="26"/>
                                     <color key="baseBackgroundColor" red="0.050980389119999997" green="0.094117648900000003" blue="0.32156863810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="EQm-se-xhu" kind="show" id="CRc-zQ-gza"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="SN9-L8-bBz"/>
@@ -1144,15 +1162,16 @@
                             <constraint firstItem="kVT-SI-fki" firstAttribute="leading" secondItem="SN9-L8-bBz" secondAttribute="leading" constant="20" id="xWv-yE-Y53"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Hoq-Mg-DrG"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zxm-cl-eEt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1480.909090909091" y="-660.25104602510464"/>
+            <point key="canvasLocation" x="-3342" y="589"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ManageUsers" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1179,6 +1198,9 @@ Management</string>
                                         <buttonConfiguration key="configuration" style="filled" title="Add Employer" cornerStyle="capsule">
                                             <fontDescription key="titleFontDescription" type="boldSystem" pointSize="26"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="gtK-bm-Wzi" kind="show" id="ZPj-Ah-hGq"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c8E-DW-ccp">
                                         <rect key="frame" x="0.0" y="88" width="332" height="68"/>
@@ -1209,12 +1231,12 @@ Management</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="119.76744186046511" y="3.4883720930232558"/>
+            <point key="canvasLocation" x="38" y="3"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="MIp-eU-VqE">
             <objects>
-                <viewController id="QxZ-U1-oet" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ResourceManagementViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QxZ-U1-oet" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9IB-ke-fQc">
                         <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1241,6 +1263,9 @@ Management</string>
                                         <buttonConfiguration key="configuration" style="filled" title="Manage Articles " cornerStyle="capsule">
                                             <fontDescription key="titleFontDescription" type="boldSystem" pointSize="26"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="kXk-nB-O9X" kind="show" id="pPR-a9-W35"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wcw-9i-QSs">
                                         <rect key="frame" x="0.0" y="88" width="332" height="68"/>
@@ -1252,6 +1277,9 @@ Management</string>
                                         <buttonConfiguration key="configuration" style="filled" title="Manage Webinars" cornerStyle="capsule">
                                             <fontDescription key="titleFontDescription" type="boldSystem" pointSize="26"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="9iT-Qt-2CK" kind="show" id="4LT-Lb-YW8"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fnw-zJ-5Fh">
                                         <rect key="frame" x="0.0" y="176" width="332" height="68"/>
@@ -1263,6 +1291,9 @@ Management</string>
                                         <buttonConfiguration key="configuration" style="filled" title="Manage Videos " cornerStyle="capsule">
                                             <fontDescription key="titleFontDescription" type="boldSystem" pointSize="26"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="hR0-ns-cR3" kind="show" id="epS-UW-47s"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H4d-s9-QDy">
                                         <rect key="frame" x="0.0" y="264" width="332" height="68"/>
@@ -1274,6 +1305,9 @@ Management</string>
                                         <buttonConfiguration key="configuration" style="filled" title="Add Resources" cornerStyle="capsule">
                                             <fontDescription key="titleFontDescription" type="boldSystem" pointSize="26"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="DQ9-Ds-sWi" kind="show" id="KLm-ra-X0d"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -1293,25 +1327,25 @@ Management</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X5X-mM-w9x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="116.79389312977099" y="660.56338028169023"/>
+            <point key="canvasLocation" x="-1458" y="286"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="rA3-o4-wOz">
             <objects>
                 <viewController id="DQ9-Ds-sWi" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fmD-5z-ozh">
-                        <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="946"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Resource" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vCX-6f-jfI">
-                                <rect key="frame" x="20" y="162" width="400" height="37"/>
+                                <rect key="frame" x="20" y="100" width="400" height="37"/>
                                 <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="32"/>
                                 <color key="textColor" red="0.45330621778350511" green="0.45330621778350511" blue="0.45330621778350511" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="highlightedColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="w74-bJ-U62">
-                                <rect key="frame" x="54" y="356" width="332" height="244"/>
+                                <rect key="frame" x="54" y="351" width="332" height="244"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7pj-jX-RSs">
                                         <rect key="frame" x="0.0" y="0.0" width="332" height="68"/>
@@ -1323,6 +1357,9 @@ Management</string>
                                         <buttonConfiguration key="configuration" style="filled" title="Add Articles " cornerStyle="capsule">
                                             <fontDescription key="titleFontDescription" type="boldSystem" pointSize="26"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="r5a-fF-vh8" kind="show" id="UvI-xA-cyA"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S8X-3M-lFt">
                                         <rect key="frame" x="0.0" y="88" width="332" height="68"/>
@@ -1334,6 +1371,9 @@ Management</string>
                                         <buttonConfiguration key="configuration" style="filled" title="Add Webinars" cornerStyle="capsule">
                                             <fontDescription key="titleFontDescription" type="boldSystem" pointSize="26"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="HxD-7L-UvD" kind="show" id="Kfu-od-vVO"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eb5-Vg-bSa">
                                         <rect key="frame" x="0.0" y="176" width="332" height="68"/>
@@ -1345,6 +1385,9 @@ Management</string>
                                         <buttonConfiguration key="configuration" style="filled" title="Add Videos " cornerStyle="capsule">
                                             <fontDescription key="titleFontDescription" type="boldSystem" pointSize="26"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="yyg-Bg-ttG" kind="show" id="3dZ-UD-HMV"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -1361,6 +1404,7 @@ Management</string>
                             <constraint firstItem="w74-bJ-U62" firstAttribute="leading" secondItem="ayS-Xj-X8s" secondAttribute="leading" constant="54" id="qoL-vg-QDg"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="o0Q-XC-KTH"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Uh-f0-fD9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1371,11 +1415,11 @@ Management</string>
             <objects>
                 <viewController id="r5a-fF-vh8" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6Wa-wM-pQi">
-                        <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="946"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D95-Ff-Spg">
-                                <rect key="frame" x="20" y="82" width="400" height="252"/>
+                                <rect key="frame" x="20" y="20" width="400" height="252"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U5P-HX-aB9">
                                         <rect key="frame" x="20" y="20" width="360" height="20"/>
@@ -1438,7 +1482,7 @@ Management</string>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EpI-W5-qcF">
-                                <rect key="frame" x="20" y="858" width="400" height="44"/>
+                                <rect key="frame" x="20" y="882" width="400" height="44"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Add Article">
                                     <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="26"/>
@@ -1457,21 +1501,22 @@ Management</string>
                             <constraint firstItem="D95-Ff-Spg" firstAttribute="top" secondItem="Bhx-Gt-biz" secondAttribute="top" constant="20" id="a6B-Dz-BLI"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="lSy-14-KBC"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B6c-0N-fpc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="770" y="1301"/>
+            <point key="canvasLocation" x="1706" y="660"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="PGf-nK-aUS">
             <objects>
                 <viewController id="HxD-7L-UvD" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mS7-qq-e5t">
-                        <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="946"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Eg-3f-BbJ">
-                                <rect key="frame" x="20" y="82" width="400" height="400"/>
+                                <rect key="frame" x="20" y="20" width="400" height="400"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pxe-At-Zfp">
                                         <rect key="frame" x="20" y="20" width="360" height="20"/>
@@ -1578,7 +1623,7 @@ Management</string>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hl8-wr-FtV">
-                                <rect key="frame" x="20" y="844" width="400" height="44"/>
+                                <rect key="frame" x="20" y="868" width="400" height="44"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Add Webinars">
                                     <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="26"/>
@@ -1598,21 +1643,22 @@ Management</string>
                             <constraint firstItem="5Eg-3f-BbJ" firstAttribute="top" secondItem="HGS-C4-0Hz" secondAttribute="top" constant="20" id="xFx-r3-C71"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="FhM-DE-0aF"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xkO-Iu-Fuo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1399" y="1308"/>
+            <point key="canvasLocation" x="2674" y="1306"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="KPJ-wS-Jhj">
             <objects>
                 <viewController id="yyg-Bg-ttG" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="k4r-ho-aLc">
-                        <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="946"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KyL-XC-ehl">
-                                <rect key="frame" x="20" y="82" width="400" height="400"/>
+                                <rect key="frame" x="20" y="20" width="400" height="400"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SPB-il-QLA">
                                         <rect key="frame" x="20" y="20" width="360" height="20"/>
@@ -1713,7 +1759,7 @@ Management</string>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aB4-BL-dhJ">
-                                <rect key="frame" x="20" y="858" width="400" height="44"/>
+                                <rect key="frame" x="20" y="882" width="400" height="44"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Add Video">
                                     <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="26"/>
@@ -1732,21 +1778,22 @@ Management</string>
                             <constraint firstItem="0Aj-Lw-Tl9" firstAttribute="bottom" secondItem="aB4-BL-dhJ" secondAttribute="bottom" constant="20" id="pL0-4y-co0"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="CDk-xe-A2q"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AMd-iE-WmG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2063" y="1308"/>
+            <point key="canvasLocation" x="1636" y="2065"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="xTx-ay-bra">
             <objects>
                 <viewController id="gtK-bm-Wzi" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cNZ-ra-54N">
-                        <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="946"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Oe-lz-4WL">
-                                <rect key="frame" x="20" y="82" width="400" height="622"/>
+                                <rect key="frame" x="20" y="20" width="400" height="622"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fcr-Ym-EhI">
                                         <rect key="frame" x="20" y="20" width="360" height="20"/>
@@ -1891,7 +1938,7 @@ Management</string>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LxU-N3-hbf">
-                                <rect key="frame" x="20" y="858" width="400" height="44"/>
+                                <rect key="frame" x="20" y="882" width="400" height="44"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="add">
                                     <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="26"/>
@@ -1910,6 +1957,7 @@ Management</string>
                             <constraint firstItem="6Oe-lz-4WL" firstAttribute="top" secondItem="uUo-kx-Llc" secondAttribute="top" constant="20" id="xvg-X7-KaP"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="wCJ-He-Z4U"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BCs-Ui-wsu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
