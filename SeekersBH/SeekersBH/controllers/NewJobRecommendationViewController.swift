@@ -63,7 +63,11 @@ class NewJobRecommendationViewController: UIViewController, UITableViewDelegate 
                 destinationVC.companyName = jobData.companyName
                 
                 
-               
+                // Pass additional data for NewJobDetailTableViewController
+                            destinationVC.location = jobData.location
+                            destinationVC.employmentType = jobData.employmentType
+                            destinationVC.experience = jobData.experience
+                            destinationVC.salary = jobData.salary
                 
                 
                 // Optionally set the posted date (hardcoded for now)
