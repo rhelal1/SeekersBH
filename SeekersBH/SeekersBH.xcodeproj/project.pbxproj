@@ -321,7 +321,6 @@
 				D4070DB52D0F206B00E517FE /* NewJobDetailTableViewController.swift */,
 				D4070DB72D10768C00E517FE /* ApplyPageViewController.swift */,
 				D4070DBB2D107AA100E517FE /* NewApplyPageFormTableViewController.swift */,
-				D45526BD2D09F2E000149AA9 /* JobRecommendationViewController.swift */,
 				437286CF2D0B31B7000D3518 /* CreateCVView.swift */,
 				437286D12D11DF64000D3518 /* CreateCVNavigationController.swift */,
 			);
@@ -403,7 +402,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1520;
-				LastUpgradeCheck = 1520;
+				LastUpgradeCheck = 1610;
 				TargetAttributes = {
 					D153BE3B2CF47AC900A81FFC = {
 						CreatedOnToolsVersion = 15.2;
@@ -507,12 +506,7 @@
 				9420606A2D10516000A2DE36 /* OnlineCourses.swift in Sources */,
 				9420605E2D0DAA7600A2DE36 /* SavedViewController.swift in Sources */,
 				AC2776E62D0AF25B0019677C /* addJobView3ViewController.swift in Sources */,
-        
 				437286D22D11DF64000D3518 /* CreateCVNavigationController.swift in Sources */,
-				437286D22D11DF64000D3518 /* CreateCVNavigationController.swift in Sources */,
-				9420606A2D10516000A2DE36 /* OnlineCourses.swift in Sources */,
-				9420605E2D0DAA7600A2DE36 /* SavedViewController.swift in Sources */,
-				AC2776E62D0AF25B0019677C /* addJobView3ViewController.swift in Sources */,
 				94E2D2772D076FB500614521 /* Resource.swift in Sources */,
 				D153BE402CF47AC900A81FFC /* AppDelegate.swift in Sources */,
 				D4070DBC2D107AA100E517FE /* NewApplyPageFormTableViewController.swift in Sources */,
@@ -522,7 +516,6 @@
 				AC2776EA2D0B02E10019677C /* AddJobView4ViewController.swift in Sources */,
 				942060602D0DAB0E00A2DE36 /* SavedTableViewCell.swift in Sources */,
 				947B8FDB2D10B69D004463EF /* CourseQuizViewController.swift in Sources */,
-				AC2776EA2D0B02E10019677C /* AddJobView4ViewController.swift in Sources */,
 				D4070DB22D0F144600E517FE /* NewJobRecommendationViewController.swift in Sources */,
 				D153BE422CF47AC900A81FFC /* SceneDelegate.swift in Sources */,
 				D184E4032CF87E5500D896D6 /* JobApplication.swift in Sources */,
@@ -534,8 +527,6 @@
 				9420606C2D1073EC00A2DE36 /* CourseContentViewController.swift in Sources */,
 				947B8FEB2D12360B004463EF /* ResourceManager.swift in Sources */,
 				942060722D1082AD00A2DE36 /* CourseReviewViewController.swift in Sources */,
-				D4070DB02D0F11C700E517FE /* NewJobRecommendationTableViewCell.swift in Sources */,
-				9420605C2D0CCE1900A2DE36 /* VideoDetailsViewController.swift in Sources */,
 				D4070DB62D0F206B00E517FE /* NewJobDetailTableViewController.swift in Sources */,
 				C311B0D32D06FDF00071CF9B /* EmployerDashboardViewController.swift in Sources */,
 				D4070DB42D0F200600E517FE /* NewJobDetailViewController.swift in Sources */,
@@ -779,7 +770,6 @@
 		D153BE6A2CF47ACC00A81FFC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -798,7 +788,6 @@
 		D153BE6B2CF47ACC00A81FFC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -817,7 +806,6 @@
 		D153BE6D2CF47ACC00A81FFC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -834,7 +822,6 @@
 		D153BE6E2CF47ACC00A81FFC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
