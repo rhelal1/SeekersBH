@@ -1,15 +1,14 @@
 //
-//  addJobViewController.swift
+//  ApplyPageViewController.swift
 //  SeekersBH
 //
-//  Created by BP-36-201-18 on 09/12/2024.
+//  Created by Duha Hashem on 16/12/2024.
 //
 
 import UIKit
 
-class addJobViewController: UIViewController {
-    @IBOutlet weak var view11: UIView!
-    
+class ApplyPageViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

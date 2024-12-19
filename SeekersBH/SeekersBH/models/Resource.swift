@@ -1,39 +1,58 @@
 import Foundation
 
-struct Article {
+protocol Resource : Codable {
+    var title: String { get }
+    var description: String { get }
+    var url: String { get }
+    var views: Int { get }
+}
+
+enum ResourceTypes: String, Codable {
+    case article
+    case webinar
+    case video
+}
+
+struct Article : Resource {
+    var id : String
     var title : String
+    var author : String
     var yearOfPublication : Int
     var publisher : String
     var DOI : String
     
     var description : String
-    var shortDescription : String
     var url : String
     var views : Int
 }
 
-struct Webinar {
+struct Webinar : Resource{
     var title : String
     var speaker : String
     var date : Date
-    var time : TimeZone //not sure
+    var timeZone : TimeZone //not sure
     var picture : String
     
     var description : String
-    var shortDescription : String
     var url : String
     var views : Int
 }
 
-struct Videos {
+struct Video : Resource {
     var title : String
     var speaker : String
     var channel : String
-    var Duration : Int
+    var duration : Int // Duration in seconds
     var picture : String
     
     var description : String
-    var shortDescription : String
     var url : String
     var views : Int
 }
+
+struct SavedResource {
+    var resource: Resource
+    var type : ResourceTypes
+}
+
+

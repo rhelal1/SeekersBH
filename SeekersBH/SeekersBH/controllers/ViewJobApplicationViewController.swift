@@ -7,22 +7,35 @@
 
 import UIKit
 
-class ViewJobApplicationViewController: UIViewController {
-    @IBOutlet weak var view2: UIView!
-    
-    @IBOutlet weak var view3: UIView!
-    @IBOutlet weak var view1: UIView!
+class ViewJobApplicationViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    let jobs = JobManager.shared.jobs
+    @IBOutlet weak var jobsTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        jobsTableView.delegate = self
+        jobsTableView.dataSource = self
         
-        view1.layer.cornerRadius = 25
-        view2.layer.cornerRadius = 25
-        view3.layer.cornerRadius = 25
+      
         
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        jobsTableView.reloadData() // Ensure the table updates when the view is shown
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return jobs.count
+    }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = jobsTableView.dequeueReusableCell(withIdentifier: "jobPostCell") as! jobCellTableViewCell
+        
+        // Access the job for the current row
+            let job = jobs[indexPath.row]
+        
+        return cell
+    }
 
     /*
     // MARK: - Navigation
