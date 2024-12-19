@@ -7,7 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		437286D02D0B31B7000D3518 /* CreateCVView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437286CF2D0B31B7000D3518 /* CreateCVView.swift */; };
+		4338FC012D147D7600327622 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 4338FC002D147D7600327622 /* FirebaseFirestore */; };
+		435039F02D132D02006F7794 /* CreateCVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435039EF2D132D02006F7794 /* CreateCVViewController.swift */; };
+		435039F22D14161C006F7794 /* AboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435039F12D14161C006F7794 /* AboutMeViewController.swift */; };
+		435039F42D1417C5006F7794 /* EducationCVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435039F32D1417C5006F7794 /* EducationCVViewController.swift */; };
+		435039F62D141C08006F7794 /* SkillCVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435039F52D141C08006F7794 /* SkillCVViewController.swift */; };
+		435039F82D141F54006F7794 /* CertificationCVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435039F72D141F54006F7794 /* CertificationCVViewController.swift */; };
+		435039FA2D142285006F7794 /* ProjectsCVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435039F92D142285006F7794 /* ProjectsCVViewController.swift */; };
+		435039FC2D142811006F7794 /* CVManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435039FB2D142811006F7794 /* CVManager.swift */; };
 		437286D22D11DF64000D3518 /* CreateCVNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437286D12D11DF64000D3518 /* CreateCVNavigationController.swift */; };
 		942060582D0CCDE800A2DE36 /* VideosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942060572D0CCDE800A2DE36 /* VideosViewController.swift */; };
 		9420605A2D0CCE0100A2DE36 /* VideosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942060592D0CCE0100A2DE36 /* VideosTableViewCell.swift */; };
@@ -93,7 +100,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		437286CF2D0B31B7000D3518 /* CreateCVView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCVView.swift; sourceTree = "<group>"; };
+		435039EF2D132D02006F7794 /* CreateCVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCVViewController.swift; sourceTree = "<group>"; };
+		435039F12D14161C006F7794 /* AboutMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
+		435039F32D1417C5006F7794 /* EducationCVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationCVViewController.swift; sourceTree = "<group>"; };
+		435039F52D141C08006F7794 /* SkillCVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillCVViewController.swift; sourceTree = "<group>"; };
+		435039F72D141F54006F7794 /* CertificationCVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificationCVViewController.swift; sourceTree = "<group>"; };
+		435039F92D142285006F7794 /* ProjectsCVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsCVViewController.swift; sourceTree = "<group>"; };
+		435039FB2D142811006F7794 /* CVManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVManager.swift; sourceTree = "<group>"; };
 		437286D12D11DF64000D3518 /* CreateCVNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCVNavigationController.swift; sourceTree = "<group>"; };
 		942060572D0CCDE800A2DE36 /* VideosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosViewController.swift; sourceTree = SOURCE_ROOT; };
 		942060592D0CCE0100A2DE36 /* VideosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosTableViewCell.swift; sourceTree = "<group>"; };
@@ -177,6 +190,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F82D4AE73494AEC707C535F1 /* Pods_SeekersBHTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,6 +198,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E13200409D12F4692624420C /* Pods_SeekersBH_SeekersBHUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,6 +338,13 @@
 				D4070DBB2D107AA100E517FE /* NewApplyPageFormTableViewController.swift */,
 				437286CF2D0B31B7000D3518 /* CreateCVView.swift */,
 				437286D12D11DF64000D3518 /* CreateCVNavigationController.swift */,
+				435039EF2D132D02006F7794 /* CreateCVViewController.swift */,
+				435039F12D14161C006F7794 /* AboutMeViewController.swift */,
+				435039F32D1417C5006F7794 /* EducationCVViewController.swift */,
+				435039F72D141F54006F7794 /* CertificationCVViewController.swift */,
+				435039F52D141C08006F7794 /* SkillCVViewController.swift */,
+				435039F92D142285006F7794 /* ProjectsCVViewController.swift */,
+				435039FB2D142811006F7794 /* CVManager.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -330,6 +352,9 @@
 		D184E3F52CF8760E00D896D6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D3E709E3E7D02573BED309D6 /* Pods_SeekersBH.framework */,
+				892337F14E50C3B1773C5A90 /* Pods_SeekersBH_SeekersBHUITests.framework */,
+				C6486E267B6213C396D2670E /* Pods_SeekersBHTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -341,6 +366,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D153BE662CF47ACC00A81FFC /* Build configuration list for PBXNativeTarget "SeekersBH" */;
 			buildPhases = (
+				46E2B08EB6025F9ADCA63091 /* [CP] Check Pods Manifest.lock */,
 				D153BE382CF47AC900A81FFC /* Sources */,
 				D153BE392CF47AC900A81FFC /* Frameworks */,
 				D153BE3A2CF47AC900A81FFC /* Resources */,
@@ -362,6 +388,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D153BE692CF47ACC00A81FFC /* Build configuration list for PBXNativeTarget "SeekersBHTests" */;
 			buildPhases = (
+				818C1DE736285CD851719DA8 /* [CP] Check Pods Manifest.lock */,
 				D153BE4E2CF47ACC00A81FFC /* Sources */,
 				D153BE4F2CF47ACC00A81FFC /* Frameworks */,
 				D153BE502CF47ACC00A81FFC /* Resources */,
@@ -380,6 +407,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D153BE6C2CF47ACC00A81FFC /* Build configuration list for PBXNativeTarget "SeekersBHUITests" */;
 			buildPhases = (
+				33A96FDBAC0760CD6A600880 /* [CP] Check Pods Manifest.lock */,
 				D153BE582CF47ACC00A81FFC /* Sources */,
 				D153BE592CF47ACC00A81FFC /* Frameworks */,
 				D153BE5A2CF47ACC00A81FFC /* Resources */,
@@ -475,11 +503,81 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		33A96FDBAC0760CD6A600880 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SeekersBH-SeekersBHUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		46E2B08EB6025F9ADCA63091 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SeekersBH-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		818C1DE736285CD851719DA8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SeekersBHTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D153BE382CF47AC900A81FFC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				435039FC2D142811006F7794 /* CVManager.swift in Sources */,
 				946297262D0CA226005542AA /* WebinarsTableViewCell.swift in Sources */,
 				947B8FDD2D10B6BB004463EF /* CourseQuizTableViewCell.swift in Sources */,
 				AC2776EC2D0B05360019677C /* addJobView2ViewController.swift in Sources */,
@@ -489,17 +587,21 @@
 				94E2D2792D07925000614521 /* ArticlesViewController.swift in Sources */,
 				9420605A2D0CCE0100A2DE36 /* VideosTableViewCell.swift in Sources */,
 				D184E3F12CF86CF400D896D6 /* user.swift in Sources */,
+				435039F62D141C08006F7794 /* SkillCVViewController.swift in Sources */,
 				942060582D0CCDE800A2DE36 /* VideosViewController.swift in Sources */,
 				437286D02D0B31B7000D3518 /* CreateCVView.swift in Sources */,
 				C311B0D92D07276E0071CF9B /* addJobViewController.swift in Sources */,
 				437286D02D0B31B7000D3518 /* CreateCVView.swift in Sources */,
-        
 				942060582D0CCDE800A2DE36 /* VideosViewController.swift in Sources */,
 				D184E4012CF87A5600D896D6 /* CV.swift in Sources */,
 				946297282D0CB25F005542AA /* WebinarDetailsViewController.swift in Sources */,
 				AC8BA8FD2D0F430800EE7A2C /* jobCellTableViewCell.swift in Sources */,
 				D184E3FF2CF8785A00D896D6 /* Job.swift in Sources */,
 				D153BE442CF47AC900A81FFC /* ViewController.swift in Sources */,
+				435039F82D141F54006F7794 /* CertificationCVViewController.swift in Sources */,
+				435039F42D1417C5006F7794 /* EducationCVViewController.swift in Sources */,
+				435039F22D14161C006F7794 /* AboutMeViewController.swift in Sources */,
+				435039F02D132D02006F7794 /* CreateCVViewController.swift in Sources */,
 				946297242D0CA075005542AA /* WebinarsViewController.swift in Sources */,
 				AC2776E82D0AF55F0019677C /* testViewController.swift in Sources */,
 				942060662D1050A600A2DE36 /* CourseViewController.swift in Sources */,
@@ -529,6 +631,7 @@
 				942060722D1082AD00A2DE36 /* CourseReviewViewController.swift in Sources */,
 				D4070DB62D0F206B00E517FE /* NewJobDetailTableViewController.swift in Sources */,
 				C311B0D32D06FDF00071CF9B /* EmployerDashboardViewController.swift in Sources */,
+				435039FA2D142285006F7794 /* ProjectsCVViewController.swift in Sources */,
 				D4070DB42D0F200600E517FE /* NewJobDetailViewController.swift in Sources */,
 				D153BE702CF47E8400A81FFC /* testTableViewController.swift in Sources */,
 				942060682D1050B900A2DE36 /* CourseDetailsViewController.swift in Sources */,
