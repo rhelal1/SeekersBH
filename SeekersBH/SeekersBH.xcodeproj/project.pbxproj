@@ -7,7 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		437286D02D0B31B7000D3518 /* CreateCVView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437286CF2D0B31B7000D3518 /* CreateCVView.swift */; };
+		4338FC012D147D7600327622 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 4338FC002D147D7600327622 /* FirebaseFirestore */; };
+		435039F02D132D02006F7794 /* CreateCVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435039EF2D132D02006F7794 /* CreateCVViewController.swift */; };
+		435039F22D14161C006F7794 /* AboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435039F12D14161C006F7794 /* AboutMeViewController.swift */; };
+		435039F42D1417C5006F7794 /* EducationCVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435039F32D1417C5006F7794 /* EducationCVViewController.swift */; };
+		435039F62D141C08006F7794 /* SkillCVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435039F52D141C08006F7794 /* SkillCVViewController.swift */; };
+		435039F82D141F54006F7794 /* CertificationCVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435039F72D141F54006F7794 /* CertificationCVViewController.swift */; };
+		435039FA2D142285006F7794 /* ProjectsCVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435039F92D142285006F7794 /* ProjectsCVViewController.swift */; };
+		435039FC2D142811006F7794 /* CVManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435039FB2D142811006F7794 /* CVManager.swift */; };
 		437286D22D11DF64000D3518 /* CreateCVNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437286D12D11DF64000D3518 /* CreateCVNavigationController.swift */; };
 		94CADAAA2D08ADD700F8B3AC /* growthHubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CADAA92D08ADD700F8B3AC /* growthHubViewController.swift */; };
 		94CADAAE2D08B96000F8B3AC /* ArticlesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CADAAD2D08B96000F8B3AC /* ArticlesTableViewCell.swift */; };
@@ -44,6 +51,9 @@
 		D184E4032CF87E5500D896D6 /* JobApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = D184E4022CF87E5500D896D6 /* JobApplication.swift */; };
 		D45526BC2D09ED2A00149AA9 /* JobTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45526BB2D09ED2A00149AA9 /* JobTableViewCell.swift */; };
 		D45526BE2D09F2E000149AA9 /* JobRecommendationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45526BD2D09F2E000149AA9 /* JobRecommendationViewController.swift */; };
+		E13200409D12F4692624420C /* Pods_SeekersBH_SeekersBHUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 892337F14E50C3B1773C5A90 /* Pods_SeekersBH_SeekersBHUITests.framework */; };
+		F11835E528B09D76D351C469 /* Pods_SeekersBH.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E709E3E7D02573BED309D6 /* Pods_SeekersBH.framework */; };
+		F82D4AE73494AEC707C535F1 /* Pods_SeekersBHTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6486E267B6213C396D2670E /* Pods_SeekersBHTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,8 +74,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		437286CF2D0B31B7000D3518 /* CreateCVView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCVView.swift; sourceTree = "<group>"; };
+		435039EF2D132D02006F7794 /* CreateCVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCVViewController.swift; sourceTree = "<group>"; };
+		435039F12D14161C006F7794 /* AboutMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
+		435039F32D1417C5006F7794 /* EducationCVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationCVViewController.swift; sourceTree = "<group>"; };
+		435039F52D141C08006F7794 /* SkillCVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillCVViewController.swift; sourceTree = "<group>"; };
+		435039F72D141F54006F7794 /* CertificationCVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificationCVViewController.swift; sourceTree = "<group>"; };
+		435039F92D142285006F7794 /* ProjectsCVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsCVViewController.swift; sourceTree = "<group>"; };
+		435039FB2D142811006F7794 /* CVManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVManager.swift; sourceTree = "<group>"; };
 		437286D12D11DF64000D3518 /* CreateCVNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCVNavigationController.swift; sourceTree = "<group>"; };
+		892337F14E50C3B1773C5A90 /* Pods_SeekersBH_SeekersBHUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SeekersBH_SeekersBHUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94CADAA92D08ADD700F8B3AC /* growthHubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = growthHubViewController.swift; path = SeekersBH/views/growthHubViewController.swift; sourceTree = SOURCE_ROOT; };
 		94CADAAD2D08B96000F8B3AC /* ArticlesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		94E2D2742D074F9F00614521 /* SidebarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +92,7 @@
 		C311B0D22D06FDF00071CF9B /* EmployerDashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployerDashboardViewController.swift; sourceTree = "<group>"; };
 		C311B0D42D0707D30071CF9B /* ViewJobApplicationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewJobApplicationViewController.swift; sourceTree = "<group>"; };
 		C311B0D82D07276E0071CF9B /* addJobViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addJobViewController.swift; sourceTree = "<group>"; };
+		C6486E267B6213C396D2670E /* Pods_SeekersBHTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SeekersBHTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D153BE3C2CF47AC900A81FFC /* SeekersBH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeekersBH.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D153BE3F2CF47AC900A81FFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D153BE412CF47AC900A81FFC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +118,7 @@
 		D184E3FE2CF8785A00D896D6 /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
 		D184E4002CF87A5600D896D6 /* CV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CV.swift; sourceTree = "<group>"; };
 		D184E4022CF87E5500D896D6 /* JobApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobApplication.swift; sourceTree = "<group>"; };
+		D3E709E3E7D02573BED309D6 /* Pods_SeekersBH.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SeekersBH.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D45526BB2D09ED2A00149AA9 /* JobTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobTableViewCell.swift; sourceTree = "<group>"; };
 		D45526BD2D09F2E000149AA9 /* JobRecommendationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobRecommendationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -112,6 +131,8 @@
 				D184E3FB2CF8763200D896D6 /* FirebaseDatabase in Frameworks */,
 				D184E3F72CF8760E00D896D6 /* FirebaseAnalytics in Frameworks */,
 				D184E3F92CF8762900D896D6 /* FirebaseAuth in Frameworks */,
+				4338FC012D147D7600327622 /* FirebaseFirestore in Frameworks */,
+				F11835E528B09D76D351C469 /* Pods_SeekersBH.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +140,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F82D4AE73494AEC707C535F1 /* Pods_SeekersBHTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,6 +148,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E13200409D12F4692624420C /* Pods_SeekersBH_SeekersBHUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,8 +250,14 @@
 				94E2D2742D074F9F00614521 /* SidebarViewController.swift */,
 				D45526BB2D09ED2A00149AA9 /* JobTableViewCell.swift */,
 				D45526BD2D09F2E000149AA9 /* JobRecommendationViewController.swift */,
-				437286CF2D0B31B7000D3518 /* CreateCVView.swift */,
 				437286D12D11DF64000D3518 /* CreateCVNavigationController.swift */,
+				435039EF2D132D02006F7794 /* CreateCVViewController.swift */,
+				435039F12D14161C006F7794 /* AboutMeViewController.swift */,
+				435039F32D1417C5006F7794 /* EducationCVViewController.swift */,
+				435039F72D141F54006F7794 /* CertificationCVViewController.swift */,
+				435039F52D141C08006F7794 /* SkillCVViewController.swift */,
+				435039F92D142285006F7794 /* ProjectsCVViewController.swift */,
+				435039FB2D142811006F7794 /* CVManager.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -236,6 +265,9 @@
 		D184E3F52CF8760E00D896D6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D3E709E3E7D02573BED309D6 /* Pods_SeekersBH.framework */,
+				892337F14E50C3B1773C5A90 /* Pods_SeekersBH_SeekersBHUITests.framework */,
+				C6486E267B6213C396D2670E /* Pods_SeekersBHTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -247,6 +279,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D153BE662CF47ACC00A81FFC /* Build configuration list for PBXNativeTarget "SeekersBH" */;
 			buildPhases = (
+				46E2B08EB6025F9ADCA63091 /* [CP] Check Pods Manifest.lock */,
 				D153BE382CF47AC900A81FFC /* Sources */,
 				D153BE392CF47AC900A81FFC /* Frameworks */,
 				D153BE3A2CF47AC900A81FFC /* Resources */,
@@ -260,6 +293,7 @@
 				D184E3F62CF8760E00D896D6 /* FirebaseAnalytics */,
 				D184E3F82CF8762900D896D6 /* FirebaseAuth */,
 				D184E3FA2CF8763200D896D6 /* FirebaseDatabase */,
+				4338FC002D147D7600327622 /* FirebaseFirestore */,
 			);
 			productName = SeekersBH;
 			productReference = D153BE3C2CF47AC900A81FFC /* SeekersBH.app */;
@@ -269,6 +303,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D153BE692CF47ACC00A81FFC /* Build configuration list for PBXNativeTarget "SeekersBHTests" */;
 			buildPhases = (
+				818C1DE736285CD851719DA8 /* [CP] Check Pods Manifest.lock */,
 				D153BE4E2CF47ACC00A81FFC /* Sources */,
 				D153BE4F2CF47ACC00A81FFC /* Frameworks */,
 				D153BE502CF47ACC00A81FFC /* Resources */,
@@ -287,6 +322,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D153BE6C2CF47ACC00A81FFC /* Build configuration list for PBXNativeTarget "SeekersBHUITests" */;
 			buildPhases = (
+				33A96FDBAC0760CD6A600880 /* [CP] Check Pods Manifest.lock */,
 				D153BE582CF47ACC00A81FFC /* Sources */,
 				D153BE592CF47ACC00A81FFC /* Frameworks */,
 				D153BE5A2CF47ACC00A81FFC /* Resources */,
@@ -382,23 +418,97 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		33A96FDBAC0760CD6A600880 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SeekersBH-SeekersBHUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		46E2B08EB6025F9ADCA63091 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SeekersBH-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		818C1DE736285CD851719DA8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SeekersBHTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D153BE382CF47AC900A81FFC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				435039FC2D142811006F7794 /* CVManager.swift in Sources */,
 				94CADAAE2D08B96000F8B3AC /* ArticlesTableViewCell.swift in Sources */,
 				C311B0D52D0707D30071CF9B /* ViewJobApplicationViewController.swift in Sources */,
 				94CADAAA2D08ADD700F8B3AC /* growthHubViewController.swift in Sources */,
 				94E2D2792D07925000614521 /* ArticlesViewController.swift in Sources */,
 				D184E3F12CF86CF400D896D6 /* user.swift in Sources */,
-				437286D02D0B31B7000D3518 /* CreateCVView.swift in Sources */,
+				435039F62D141C08006F7794 /* SkillCVViewController.swift in Sources */,
 				C311B0D92D07276E0071CF9B /* addJobViewController.swift in Sources */,
 				D184E4012CF87A5600D896D6 /* CV.swift in Sources */,
 				D184E3FF2CF8785A00D896D6 /* Job.swift in Sources */,
 				D45526BE2D09F2E000149AA9 /* JobRecommendationViewController.swift in Sources */,
 				D153BE442CF47AC900A81FFC /* ViewController.swift in Sources */,
+				435039F82D141F54006F7794 /* CertificationCVViewController.swift in Sources */,
+				435039F42D1417C5006F7794 /* EducationCVViewController.swift in Sources */,
+				435039F22D14161C006F7794 /* AboutMeViewController.swift in Sources */,
 				94E2D2752D074F9F00614521 /* SidebarViewController.swift in Sources */,
+				435039F02D132D02006F7794 /* CreateCVViewController.swift in Sources */,
 				94E2D27B2D07964600614521 /* OptionController.swift in Sources */,
 				437286D22D11DF64000D3518 /* CreateCVNavigationController.swift in Sources */,
 				94E2D2772D076FB500614521 /* Resource.swift in Sources */,
@@ -406,6 +516,7 @@
 				D153BE422CF47AC900A81FFC /* SceneDelegate.swift in Sources */,
 				D184E4032CF87E5500D896D6 /* JobApplication.swift in Sources */,
 				C311B0D32D06FDF00071CF9B /* EmployerDashboardViewController.swift in Sources */,
+				435039FA2D142285006F7794 /* ProjectsCVViewController.swift in Sources */,
 				D153BE702CF47E8400A81FFC /* testTableViewController.swift in Sources */,
 				D45526BC2D09ED2A00149AA9 /* JobTableViewCell.swift in Sources */,
 			);
@@ -764,6 +875,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		4338FC002D147D7600327622 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D184E3F42CF875AC00D896D6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
 		D184E3F62CF8760E00D896D6 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D184E3F42CF875AC00D896D6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

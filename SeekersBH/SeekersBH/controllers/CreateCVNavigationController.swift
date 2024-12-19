@@ -8,8 +8,31 @@
 import UIKit
 
 class CreateCVNavigationController: UINavigationController {
-    var fullName = ""
-    var aboutMe = ""
+    
+//    var fullName = ""
+//    var email = ""
+//    var phoneNumber = 0
+//    var linkedIn = ""
+//    var portfolio = ""
+    
+//    class CVManager {
+//        static let shared = CVManager()
+//        
+//        var cv: CV = CV(
+//            fullName: "",
+//            email: "",
+//            phoneNumber: "",
+//            likedInURL: "",
+//            protofolioURL: "",
+//            aboutMe: "",
+//            educations: [:],
+//            skills: [],
+//            certifications: [],
+//            projectSecions: []
+//        )
+//        
+//        private init() {}
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,7 +40,12 @@ class CreateCVNavigationController: UINavigationController {
         // Do any additional setup after loading the view.
     }
     
-    
+//    func navigateToNextScreen() {
+//        if let nextVC = storyboard?.instantiateViewController(withIdentifier: "NextViewControllerID") as? NextViewController {
+//            navigationController?.pushViewController(nextVC, animated: true)
+//        }
+//    }
+
     /*
      // MARK: - Navigation
      
