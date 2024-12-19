@@ -13,6 +13,8 @@ struct JobAd {
     var jobApplicationDeadline: Date = Date()
     var applicants: [JobApplication] = [] // Array to hold job applicants
     var datePosted: Date = Date() // Date when the job post was added
+    var status: status = .Open
+    var applicationStatus : ApplicationStatus = .pending
 }
 
 enum JobType {
@@ -23,6 +25,9 @@ enum ApplicationStatus {
     case pending, underReview, shortlisted, interviewScheduled
 }
 
+enum status {
+    case Closed,Open
+}
 
 class JobManager {
     static let shared = JobManager() // Singleton instance
