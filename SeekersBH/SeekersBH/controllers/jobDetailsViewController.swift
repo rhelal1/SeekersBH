@@ -29,7 +29,7 @@ class jobDetailsViewController: UIViewController, UICollectionViewDelegate, UICo
         
         let job = jobs[indexPath.row]
         
-        cell.setupCell(Location: <#T##String#>, Type: <#T##String#>, salary: <#T##String#>, Deadline: <#T##Date#>)
+//        cell.setupCell(Location: "String", Type: "String", salary: "String", Deadline: nil)
         
         return cell
     }
