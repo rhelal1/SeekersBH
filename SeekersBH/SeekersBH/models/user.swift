@@ -33,3 +33,16 @@ enum Interest {
 enum Skill {
     
 }
+
+struct Employer {
+    var id : Int
+    var email : String
+    var firstName : String
+    var lastName : String
+    var userName : String
+    var dateOfBirth : Date
+    var location : Location
+    var mostResentJobTitle : String
+    var mostResentCompany : String
+    var password : String
+}
