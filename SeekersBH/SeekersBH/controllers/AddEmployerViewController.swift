@@ -2,7 +2,7 @@
 //  AddEmployerViewController.swift
 //  SeekersBH
 //
-//  Created by Zainab Madan on 18/12/2024.
+//  Created by Zainab Madan on 19/12/2024.
 //
 
 import UIKit
@@ -22,15 +22,15 @@ class AddEmployerViewController: UIViewController {
     @IBOutlet weak var JobTitle: UITextField!
     
     @IBOutlet weak var company: UITextField!
-        
+    
     @IBOutlet weak var password: UITextField!
     
     @IBOutlet weak var email: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        
     }
     @IBAction func saveEmployerData(_ sender: UIButton) {
         guard let username = username.text, !username.isEmpty,
@@ -59,7 +59,6 @@ class AddEmployerViewController: UIViewController {
         ]
         
         FirebaseManager.shared.addDocumentToCollection(collectionName: "Employer", data: employerData)
+        
     }
-    
-
 }
