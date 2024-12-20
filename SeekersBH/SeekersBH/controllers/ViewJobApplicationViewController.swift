@@ -23,6 +23,7 @@ class ViewJobApplicationViewController: UIViewController, UITableViewDelegate, U
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         jobsTableView.reloadData() // Ensure the table updates when the view is shown
+        updateJobStatuses()
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return jobs.count
@@ -33,9 +34,22 @@ class ViewJobApplicationViewController: UIViewController, UITableViewDelegate, U
         
         // Access the job for the current row
             let job = jobs[indexPath.row]
+//        cell.setupCell(jobName: job.jobName, date: job.datePosted, Status: job.status, numOfApplications: job.applicants.count)
         
         return cell
     }
+    
+    func updateJobStatuses() {
+        let currentDate = Date() // Get the current date
+        for (index, job) in JobManager.shared.jobs.enumerated() {
+            if job.jobApplicationDeadline < currentDate {
+                JobManager.shared.jobs[index].status = .Closed
+            } else {
+                JobManager.shared.jobs[index].status = .Open
+            }
+        }
+    }
+
 
     /*
     // MARK: - Navigation
