@@ -14,6 +14,8 @@ public struct CloudinaryManager {
         return CLDCloudinary(configuration: config)
     }()
     
+    private init() {}
+    
     /// Uploads a file to Cloudinary
     /// - Parameters:
     ///   - filePath: The local file path or URL of the file to upload.
