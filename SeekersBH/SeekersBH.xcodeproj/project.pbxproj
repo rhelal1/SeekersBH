@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE807E7B2D1AC9AF00F4FA1B /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = CE807E7A2D1AC9AF00F4FA1B /* FirebaseFirestore */; };
+		CE807E7F2D1AD5FD00F4FA1B /* AppUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE807E7E2D1AD5FD00F4FA1B /* AppUser.swift */; };
+		CE807E812D1AF13C00F4FA1B /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE807E802D1AF13C00F4FA1B /* RegisterController.swift */; };
+		CE807E852D1B07C700F4FA1B /* InterestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE807E842D1B07C700F4FA1B /* InterestViewController.swift */; };
+		CE807E872D1B0FD000F4FA1B /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE807E862D1B0FD000F4FA1B /* CollectionViewCell.swift */; };
+		CE807E892D1B12B000F4FA1B /* Interest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE807E882D1B12B000F4FA1B /* Interest.swift */; };
 		D153BE402CF47AC900A81FFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D153BE3F2CF47AC900A81FFC /* AppDelegate.swift */; };
 		D153BE422CF47AC900A81FFC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D153BE412CF47AC900A81FFC /* SceneDelegate.swift */; };
 		D153BE442CF47AC900A81FFC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D153BE432CF47AC900A81FFC /* ViewController.swift */; };
@@ -31,7 +37,6 @@
 		D184E3FF2CF8785A00D896D6 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = D184E3FE2CF8785A00D896D6 /* Job.swift */; };
 		D184E4012CF87A5600D896D6 /* CV.swift in Sources */ = {isa = PBXBuildFile; fileRef = D184E4002CF87A5600D896D6 /* CV.swift */; };
 		D184E4032CF87E5500D896D6 /* JobApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = D184E4022CF87E5500D896D6 /* JobApplication.swift */; };
-		DA32F2282D0B5B4400DC9353 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA32F2272D0B5B4400DC9353 /* RegisterViewController.swift */; };
 		DA32F22A2D0CC70A00DC9353 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA32F2292D0CC70A00DC9353 /* Login.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +58,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE807E7E2D1AD5FD00F4FA1B /* AppUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUser.swift; sourceTree = "<group>"; };
+		CE807E802D1AF13C00F4FA1B /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
+		CE807E842D1B07C700F4FA1B /* InterestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestViewController.swift; sourceTree = "<group>"; };
+		CE807E862D1B0FD000F4FA1B /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		CE807E882D1B12B000F4FA1B /* Interest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interest.swift; sourceTree = "<group>"; };
 		D153BE3C2CF47AC900A81FFC /* SeekersBH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeekersBH.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D153BE3F2CF47AC900A81FFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D153BE412CF47AC900A81FFC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,7 +88,6 @@
 		D184E3FE2CF8785A00D896D6 /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
 		D184E4002CF87A5600D896D6 /* CV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CV.swift; sourceTree = "<group>"; };
 		D184E4022CF87E5500D896D6 /* JobApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobApplication.swift; sourceTree = "<group>"; };
-		DA32F2272D0B5B4400DC9353 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		DA32F2292D0CC70A00DC9353 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,6 +97,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D184E3FB2CF8763200D896D6 /* FirebaseDatabase in Frameworks */,
+				CE807E7B2D1AC9AF00F4FA1B /* FirebaseFirestore in Frameworks */,
 				D184E3F72CF8760E00D896D6 /* FirebaseAnalytics in Frameworks */,
 				D184E3F92CF8762900D896D6 /* FirebaseAuth in Frameworks */,
 			);
@@ -173,6 +183,8 @@
 				D184E4022CF87E5500D896D6 /* JobApplication.swift */,
 				D184E4002CF87A5600D896D6 /* CV.swift */,
 				D184E3FE2CF8785A00D896D6 /* Job.swift */,
+				CE807E7E2D1AD5FD00F4FA1B /* AppUser.swift */,
+				CE807E882D1B12B000F4FA1B /* Interest.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -195,7 +207,9 @@
 			children = (
 				D153BE432CF47AC900A81FFC /* ViewController.swift */,
 				DA32F2292D0CC70A00DC9353 /* Login.swift */,
-				DA32F2272D0B5B4400DC9353 /* RegisterViewController.swift */,
+				CE807E802D1AF13C00F4FA1B /* RegisterController.swift */,
+				CE807E842D1B07C700F4FA1B /* InterestViewController.swift */,
+				CE807E862D1B0FD000F4FA1B /* CollectionViewCell.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -227,6 +241,7 @@
 				D184E3F62CF8760E00D896D6 /* FirebaseAnalytics */,
 				D184E3F82CF8762900D896D6 /* FirebaseAuth */,
 				D184E3FA2CF8763200D896D6 /* FirebaseDatabase */,
+				CE807E7A2D1AC9AF00F4FA1B /* FirebaseFirestore */,
 			);
 			productName = SeekersBH;
 			productReference = D153BE3C2CF47AC900A81FFC /* SeekersBH.app */;
@@ -353,12 +368,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA32F2282D0B5B4400DC9353 /* RegisterViewController.swift in Sources */,
 				DA32F22A2D0CC70A00DC9353 /* Login.swift in Sources */,
 				D184E3F12CF86CF400D896D6 /* user.swift in Sources */,
+				CE807E812D1AF13C00F4FA1B /* RegisterController.swift in Sources */,
 				D184E4012CF87A5600D896D6 /* CV.swift in Sources */,
+				CE807E7F2D1AD5FD00F4FA1B /* AppUser.swift in Sources */,
+				CE807E892D1B12B000F4FA1B /* Interest.swift in Sources */,
+				CE807E852D1B07C700F4FA1B /* InterestViewController.swift in Sources */,
 				D184E3FF2CF8785A00D896D6 /* Job.swift in Sources */,
 				D153BE442CF47AC900A81FFC /* ViewController.swift in Sources */,
+				CE807E872D1B0FD000F4FA1B /* CollectionViewCell.swift in Sources */,
 				D153BE402CF47AC900A81FFC /* AppDelegate.swift in Sources */,
 				D153BE422CF47AC900A81FFC /* SceneDelegate.swift in Sources */,
 				D184E4032CF87E5500D896D6 /* JobApplication.swift in Sources */,
@@ -716,6 +735,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		CE807E7A2D1AC9AF00F4FA1B /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D184E3F42CF875AC00D896D6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
 		D184E3F62CF8760E00D896D6 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D184E3F42CF875AC00D896D6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
