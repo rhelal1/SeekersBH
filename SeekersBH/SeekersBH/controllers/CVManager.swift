@@ -6,9 +6,8 @@
 //
 
 import Foundation
-
 import FirebaseFirestore
-//import FirebaseFirestoreSwift
+
 
 class CVManager {
     static let shared = CVManager()
@@ -19,6 +18,7 @@ class CVManager {
         phoneNumber: "",
         likedInURL: "",
         protofolioURL: "",
+        cvName: "",
         aboutMe: "",
         educations: [:],
         skills: "",
@@ -36,30 +36,35 @@ class CVManager {
     // Function to save the CV to Firebase
     func saveCVToFirebase() {
         let cv = CVManager.shared.cv
-
+        
         let cvData: [String: Any] = [
             "fullName": cv.fullName,
             "email": cv.email,
             "phoneNumber": cv.phoneNumber,
-            "likedInURL": cv.likedInURL,
-            "protofolioURL": cv.protofolioURL,
+            "linkenIn": cv.likedInURL,
+            "portfolio": cv.protofolioURL,
+            "cvName": cv.cvName,
             "aboutMe": cv.aboutMe,
-//            "degree": cv.educations.map { $0.key.rawValue }, // Assuming you want to save the degree as a string
-            "insinuation": cv.educations.map { $0.value },  // Same for insinuation
-            "skills": cv.skills,
+            "highestDegree": cv.highestDegree,
+            "university": cv.university,
+            "skillName": cv.skills,
+            "otherSkill": cv.otherSkills,
             "certifications": cv.certifications.map { [
                 "certificationName": $0.name,
                 "certificationDateObtained": formatDateToString($0.DateObtained),
                 "certificationIssuingOrganization": $0.IssuingOrganization
             ] },
-            "projectName": cv.projectSecions.map { $0.name }, // Assuming you want to save an array of project names
-            "projectOverView": cv.projectSecions.map { $0.overview },
-            "projectResourse": cv.projectSecions.map { $0.resource },
-            "id": 0 // This is the ID field; you'll need to handle it based on your collection's logic (like autoincrement or assigning manually)
+            "otherCertification": cv.otherCertification,
+            "projectName": cv.projectSecions.map { $0.name },
+            "projectOverview": cv.projectSecions.map { $0.overview },
+            "projectURL": cv.projectSecions.map { $0.resource },
+            "otherProjects": cv.otherProjects,
+            "id": 0,
+            "createdDate": Timestamp()
         ]
-
+        
         let db = Firestore.firestore()
-        db.collection("CVs").addDocument(data: cvData) { error in
+        db.collection("CV").addDocument(data: cvData) { error in
             if let error = error {
                 print("Error saving CV: \(error.localizedDescription)")
             } else {
@@ -69,9 +74,8 @@ class CVManager {
     }
 }
 
-// Helper function to format date to string (you can adjust the date format as needed)
 func formatDateToString(_ date: Date) -> String {
     let dateFormatter = DateFormatter()
-    dateFormatter.dateFormat = "yyyy-MM-dd" // Adjust the format to your preferred date format
+    dateFormatter.dateFormat = "yyyy-MM-dd"
     return dateFormatter.string(from: date)
 }
