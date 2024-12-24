@@ -6,7 +6,7 @@
 //
 
 import Cloudinary
-import Foundation
+import UIKit
 
 public struct CloudinaryManager {
     private static let cloudinary: CLDCloudinary = {
@@ -29,6 +29,30 @@ public struct CloudinaryManager {
         
         let params = CLDUploadRequestParams().setFolder(folder)
         cloudinary.createUploader().upload(url: url, uploadPreset: uploadPreset, params: params, progress: nil) { result, error in
+            if let error = error {
+                completion(.failure(error))
+            } else if let publicId = result?.publicId {
+                completion(.success(publicId))
+            } else {
+                completion(.failure(NSError(domain: "CloudinaryManager", code: 0, userInfo: [NSLocalizedDescriptionKey: "Unknown error"])))
+            }
+        }
+    }
+    
+    /// Uploads a UIImage to Cloudinary
+    /// - Parameters:
+    ///   - image: The UIImage to upload.
+    ///   - folder: The folder in Cloudinary where the file will be stored.
+    ///   - uploadPreset: The upload preset for unsigned uploads.
+    ///   - completion: Completion handler with the result of the upload operation.
+    public static func upload(image: UIImage, to folder: String, uploadPreset: String, completion: @escaping (Result<String, Error>) -> Void) {
+        guard let imageData = image.jpegData(compressionQuality: 0.8) else {
+            completion(.failure(NSError(domain: "CloudinaryManager", code: 0, userInfo: [NSLocalizedDescriptionKey: "Failed to convert UIImage to data"])))
+            return
+        }
+        
+        let params = CLDUploadRequestParams().setFolder(folder)
+        cloudinary.createUploader().upload(data: imageData, uploadPreset: uploadPreset, params: params, progress: nil) { result, error in
             if let error = error {
                 completion(.failure(error))
             } else if let publicId = result?.publicId {
