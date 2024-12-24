@@ -57,6 +57,8 @@ class ProjectsCVViewController: UIViewController {
         CVManager.shared.cv.otherProjects = otherProjects.text ?? ""
         // printing just to make sure it is saved
         print("Saved other projects: \(CVManager.shared.cv.otherProjects)")
+        
+        CVManager.shared.saveCVToFirebase()
     }
     
     func showAlert(message: String) {
