@@ -20,6 +20,8 @@
 		43B1C5372D17326E0046F96C /* CVDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B1C5362D17326E0046F96C /* CVDetailsViewController.swift */; };
 		66E035012D1432C60050E168 /* jobDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E035002D1432C60050E168 /* jobDetailsViewController.swift */; };
 		66E035052D143B050050E168 /* generalInformationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E035042D143B050050E168 /* generalInformationCollectionViewCell.swift */; };
+		895C0AAB2D17354800E7283B /* Cloudinary in Frameworks */ = {isa = PBXBuildFile; productRef = 895C0AAA2D17354800E7283B /* Cloudinary */; };
+		895C0AAE2D1735DA00E7283B /* CloudinaryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895C0AAD2D1735D500E7283B /* CloudinaryManager.swift */; };
 		8983F9A02D147DF400DE32B5 /* AddEmployerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8983F99F2D147DF400DE32B5 /* AddEmployerViewController.swift */; };
 		942060582D0CCDE800A2DE36 /* VideosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942060572D0CCDE800A2DE36 /* VideosViewController.swift */; };
 		9420605A2D0CCE0100A2DE36 /* VideosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942060592D0CCE0100A2DE36 /* VideosTableViewCell.swift */; };
@@ -116,6 +118,7 @@
 		43B1C5362D17326E0046F96C /* CVDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVDetailsViewController.swift; sourceTree = "<group>"; };
 		66E035002D1432C60050E168 /* jobDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jobDetailsViewController.swift; sourceTree = "<group>"; };
 		66E035042D143B050050E168 /* generalInformationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = generalInformationCollectionViewCell.swift; sourceTree = "<group>"; };
+		895C0AAD2D1735D500E7283B /* CloudinaryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudinaryManager.swift; sourceTree = "<group>"; };
 		8983F99F2D147DF400DE32B5 /* AddEmployerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEmployerViewController.swift; sourceTree = "<group>"; };
 		942060572D0CCDE800A2DE36 /* VideosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosViewController.swift; sourceTree = SOURCE_ROOT; };
 		942060592D0CCE0100A2DE36 /* VideosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosTableViewCell.swift; sourceTree = "<group>"; };
@@ -190,12 +193,21 @@
 			files = (
 				947B8FE22D11B4C0004463EF /* FirebaseAnalytics in Frameworks */,
 				947B8FE42D11B559004463EF /* FirebaseFirestore in Frameworks */,
+				895C0AAB2D17354800E7283B /* Cloudinary in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		895C0AAC2D1735C900E7283B /* Cloudinary */ = {
+			isa = PBXGroup;
+			children = (
+				895C0AAD2D1735D500E7283B /* CloudinaryManager.swift */,
+			);
+			path = Cloudinary;
+			sourceTree = "<group>";
+		};
 		947B8FE92D123571004463EF /* Firestore */ = {
 			isa = PBXGroup;
 			children = (
@@ -228,6 +240,7 @@
 		D153BE3E2CF47AC900A81FFC /* SeekersBH */ = {
 			isa = PBXGroup;
 			children = (
+				895C0AAC2D1735C900E7283B /* Cloudinary */,
 				947B8FE92D123571004463EF /* Firestore */,
 				D184E3F32CF86D6600D896D6 /* controllers */,
 				D184E3F22CF86D4800D896D6 /* views */,
@@ -363,6 +376,7 @@
 			packageProductDependencies = (
 				947B8FE12D11B4C0004463EF /* FirebaseAnalytics */,
 				947B8FE32D11B559004463EF /* FirebaseFirestore */,
+				895C0AAA2D17354800E7283B /* Cloudinary */,
 			);
 			productName = SeekersBH;
 			productReference = D153BE3C2CF47AC900A81FFC /* SeekersBH.app */;
@@ -437,6 +451,7 @@
 			mainGroup = D153BE332CF47AC900A81FFC;
 			packageReferences = (
 				947B8FE02D11B4BF004463EF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				895C0AA92D17354800E7283B /* XCRemoteSwiftPackageReference "cloudinary_ios" */,
 			);
 			productRefGroup = D153BE3D2CF47AC900A81FFC /* Products */;
 			projectDirPath = "";
@@ -537,6 +552,7 @@
 				D4070DB02D0F11C700E517FE /* NewJobRecommendationTableViewCell.swift in Sources */,
 				43B1C5372D17326E0046F96C /* CVDetailsViewController.swift in Sources */,
 				9420605C2D0CCE1900A2DE36 /* VideoDetailsViewController.swift in Sources */,
+				895C0AAE2D1735DA00E7283B /* CloudinaryManager.swift in Sources */,
 				942060702D10828700A2DE36 /* CourseReviewTableViewCell.swift in Sources */,
 				9420605C2D0CCE1900A2DE36 /* VideoDetailsViewController.swift in Sources */,
 				947B8FE62D11CA5B004463EF /* FirebaseManager.swift in Sources */,
@@ -894,6 +910,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		895C0AA92D17354800E7283B /* XCRemoteSwiftPackageReference "cloudinary_ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/cloudinary/cloudinary_ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.0;
+			};
+		};
 		947B8FE02D11B4BF004463EF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -905,6 +929,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		895C0AAA2D17354800E7283B /* Cloudinary */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 895C0AA92D17354800E7283B /* XCRemoteSwiftPackageReference "cloudinary_ios" */;
+			productName = Cloudinary;
+		};
 		947B8FE12D11B4C0004463EF /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 947B8FE02D11B4BF004463EF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
