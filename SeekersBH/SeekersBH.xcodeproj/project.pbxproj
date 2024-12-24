@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4338FC012D147D7600327622 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 4338FC002D147D7600327622 /* FirebaseFirestore */; };
 		435039F02D132D02006F7794 /* CreateCVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435039EF2D132D02006F7794 /* CreateCVViewController.swift */; };
 		435039F22D14161C006F7794 /* AboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435039F12D14161C006F7794 /* AboutMeViewController.swift */; };
 		435039F42D1417C5006F7794 /* EducationCVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435039F32D1417C5006F7794 /* EducationCVViewController.swift */; };
@@ -367,7 +366,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D153BE662CF47ACC00A81FFC /* Build configuration list for PBXNativeTarget "SeekersBH" */;
 			buildPhases = (
-				46E2B08EB6025F9ADCA63091 /* [CP] Check Pods Manifest.lock */,
 				D153BE382CF47AC900A81FFC /* Sources */,
 				D153BE392CF47AC900A81FFC /* Frameworks */,
 				D153BE3A2CF47AC900A81FFC /* Resources */,
@@ -389,7 +387,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D153BE692CF47ACC00A81FFC /* Build configuration list for PBXNativeTarget "SeekersBHTests" */;
 			buildPhases = (
-				818C1DE736285CD851719DA8 /* [CP] Check Pods Manifest.lock */,
 				D153BE4E2CF47ACC00A81FFC /* Sources */,
 				D153BE502CF47ACC00A81FFC /* Resources */,
 			);
@@ -407,7 +404,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D153BE6C2CF47ACC00A81FFC /* Build configuration list for PBXNativeTarget "SeekersBHUITests" */;
 			buildPhases = (
-				33A96FDBAC0760CD6A600880 /* [CP] Check Pods Manifest.lock */,
 				D153BE582CF47ACC00A81FFC /* Sources */,
 				D153BE5A2CF47ACC00A81FFC /* Resources */,
 			);
@@ -501,75 +497,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		33A96FDBAC0760CD6A600880 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SeekersBH-SeekersBHUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		46E2B08EB6025F9ADCA63091 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SeekersBH-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		818C1DE736285CD851719DA8 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SeekersBHTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D153BE382CF47AC900A81FFC /* Sources */ = {

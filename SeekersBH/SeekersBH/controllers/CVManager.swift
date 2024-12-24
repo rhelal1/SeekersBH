@@ -44,7 +44,7 @@ class CVManager {
             "likedInURL": cv.likedInURL,
             "protofolioURL": cv.protofolioURL,
             "aboutMe": cv.aboutMe,
-            "degree": cv.educations.map { $0.key.rawValue }, // Assuming you want to save the degree as a string
+//            "degree": cv.educations.map { $0.key.rawValue }, // Assuming you want to save the degree as a string
             "insinuation": cv.educations.map { $0.value },  // Same for insinuation
             "skills": cv.skills,
             "certifications": cv.certifications.map { [
