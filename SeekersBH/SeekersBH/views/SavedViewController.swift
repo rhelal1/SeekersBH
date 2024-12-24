@@ -18,10 +18,11 @@ class SavedViewController: UIViewController {
         ), type : .article),
         
         SavedResource ( resource: Webinar(
+            id : "",
             title: "Swift in Practice",
             speaker: "Jane Smith",
             date: Date(),
-            timeZone: TimeZone.current,
+            timeZone: "",
             picture: "webinar-image.png",
             description: "A webinar on Swift best practices.",
             url: "https://example.com/webinar",
@@ -29,6 +30,7 @@ class SavedViewController: UIViewController {
         ), type : .webinar),
 
         SavedResource ( resource: Video(
+            id : "",
             title: "Learn Swift in 30 Minutes",
             speaker: "Mark Lee",
             channel: "SwiftTutorials",

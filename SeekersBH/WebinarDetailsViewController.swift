@@ -29,14 +29,13 @@ class WebinarDetailsViewController: UIViewController {
         webinarTitle.text = webinar.title
         speaker.text = webinar.speaker
         date.text = "\(webinar.date)"
-        time.text = "\(webinar.timeZone)"
+        time.text = webinar.timeZone
         imageW.image = UIImage(named: "imageTest2")
         
         webinarDescription.text = webinar.description
     }
 
     @IBAction func joinWebinar(_ sender: Any) {
-        
         guard let url = URL(string: webinar.url), UIApplication.shared.canOpenURL(url) else {
             let alert = UIAlertController(title: "Invalid URL", message: "The URL provided is not valid.", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default))
@@ -46,4 +45,13 @@ class WebinarDetailsViewController: UIViewController {
         
         UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
+    
+    
+    @IBAction func SaveResourceButtonTapped(_ sender: Any) {
+        let savedResource = SavedResource(resource: webinar, type: .webinar)
+        
+        // Save resource to Firebase
+        ResourceManager.share.saveResourceToFirebase(userID: AccessManager.userID!, resourceId: webinar.id, resourceType: .webinar, viewController: self)
+    }
+    
 }
