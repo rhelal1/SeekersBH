@@ -34,7 +34,7 @@ class ViewJobApplicationViewController: UIViewController, UITableViewDelegate, U
         
         // Access the job for the current row
             let job = jobs[indexPath.row]
-        cell.setupCell(jobName: job.jobName, date: job.datePosted, Status: job.status, numOfApplications: job.applicants.count)
+//        cell.setupCell(jobName: job.jobName, date: job.datePosted, Status: job.status, numOfApplications: job.applicants.count)
         
         return cell
     }
