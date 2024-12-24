@@ -18,6 +18,7 @@ class AddJobView2ViewController: UIViewController, UITextViewDelegate {
         }
     }
     
+    var coordinator: AddEditJobCoordinator? // Added coordinator for mode handling
     var job: JobAd? // Receive JobAd object
     
     override func viewDidLoad() {
@@ -29,6 +30,24 @@ class AddJobView2ViewController: UIViewController, UITextViewDelegate {
         // Set delegate for text views
         textview1.delegate = self
         textview2.delegate = self
+        
+        setupPage()
+    }
+    
+    private func setupPage() {
+        if let coordinator = coordinator, case .edit(let job) = coordinator.mode {
+            setupForEditMode(with: job)
+        }
+    }
+    
+    private func setupForEditMode(with job: JobAd) {
+        self.title = "Edit Job Details" // Update title for edit mode
+        populateFields(with: job)
+    }
+    
+    private func populateFields(with job: JobAd) {
+        textview1.text = job.jobDescription 
+        textview2.text = job.jobQualifications
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -37,6 +56,7 @@ class AddJobView2ViewController: UIViewController, UITextViewDelegate {
             job?.jobDescription = textview1.text
             job?.jobQualifications = textview2.text
             destination.job = job
+            destination.coordinator = coordinator // Pass the coordinator to maintain the mode
         }
     }
     
@@ -78,7 +98,7 @@ class AddJobView2ViewController: UIViewController, UITextViewDelegate {
     
     // Alert function
     private func showAlert(message: String) {
-        let alert = UIAlertController(title: "Validation Error", message: message, preferredStyle: .alert)
+        let alert = UIAlertController(title: "Invalid Input", message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         alert.addAction(okAction)
         present(alert, animated: true, completion: nil)

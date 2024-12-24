@@ -1,14 +1,7 @@
-//
-//  addJobView3ViewController.swift
-//  SeekersBH
-//
-//  Created by Guest User on 12/12/2024.
-//
-
 import UIKit
 
 class addJobView3ViewController: UIViewController {
-    
+    var coordinator: AddEditJobCoordinator? // Added coordinator for mode handling
     @IBOutlet weak var applicationdeadline: UIDatePicker!
     @IBOutlet weak var AdditionalPerksTxtView: UITextView!
     @IBOutlet weak var salaryRangetxtField: UITextField!
@@ -27,6 +20,13 @@ class addJobView3ViewController: UIViewController {
         // Ensure the date picker starts from tomorrow's date
         let tomorrow = Calendar.current.date(byAdding: .day, value: 1, to: Date())
         applicationdeadline.minimumDate = tomorrow
+        
+        // Populate UI with job data if editing
+        if let job = job {
+            salaryRangetxtField.text = job.jobSalary
+            AdditionalPerksTxtView.text = job.additionalPerks.joined(separator: ", ")
+            applicationdeadline.date = job.jobApplicationDeadline
+        }
     }
     
     @IBAction func finishbtn(_ sender: UIButton) {
@@ -34,13 +34,12 @@ class addJobView3ViewController: UIViewController {
             showAlert()
             saveJob()
             JobManager.shared.printSavedJobs()
-//            jobsTableView.reloadData()
         }
     }
     
     private func saveJob() {
         if var job = job {
-            // Update job properties with the current input
+            // Update existing job properties with the current input
             job.jobSalary = salaryRangetxtField.text ?? ""
             job.jobApplicationDeadline = applicationdeadline.date
             
@@ -51,8 +50,30 @@ class addJobView3ViewController: UIViewController {
             
             // Append the updated job object to the shared job array
             JobManager.shared.jobs.append(job)
+        } else {
+            // Create a new job with the provided inputs
+            let newJob = JobAd(
+                jobName: "",  // Default or required job name
+                jobLocation: "",  // Default or required location
+                jobType: .fullTime,  // Default to fullTime or set as needed
+                jobDescription: "",  // Default or required description
+                jobKeyResponsibilites: "",  // Default or required key responsibilities
+                jobQualifications: "",  // Default or required qualifications
+                jobSalary: salaryRangetxtField.text ?? "",  // Salary from input
+                jobEmploymentBenfits: "",  // Default or required employment benefits
+                additionalPerks: AdditionalPerksTxtView.text.trimmingCharacters(in: .whitespacesAndNewlines).components(separatedBy: ","),
+                jobApplicationDeadline: applicationdeadline.date,  // Deadline from input
+                applicants: [],  // Empty array for applicants
+                datePosted: Date(),  // Current date when job was posted
+                status: .Open,  // Default to Open status
+                applicationStatus: .pending  // Default to pending status
+            )
+            
+            // Append the new job object to the shared job array
+            JobManager.shared.jobs.append(newJob)
         }
     }
+
     
     private func showAlert() {
         // Create the alert controller
@@ -101,7 +122,7 @@ class addJobView3ViewController: UIViewController {
         let additionalPerksText = AdditionalPerksTxtView.text.trimmingCharacters(in: .whitespacesAndNewlines)
         let perksPattern = #"^[a-zA-Z\s,]*$"#
         if !additionalPerksText.isEmpty && !NSPredicate(format: "SELF MATCHES %@", perksPattern).evaluate(with: additionalPerksText) {
-            showValidationAlert(message: "please enter a valid addtional perks")
+            showValidationAlert(message: "Please enter valid additional perks.")
             return false
         }
         

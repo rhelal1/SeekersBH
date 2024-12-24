@@ -15,9 +15,7 @@ class jobCellTableViewCell: UITableViewCell {
     @IBOutlet weak var numberOfApplication:UILabel!
     
     
-    @IBAction func showDetailsBtn(_ sender: UIButton){
-        
-    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -30,23 +28,23 @@ class jobCellTableViewCell: UITableViewCell {
     }
     
     
-//    func setupCell(jobName: String, date: Date, Status: Status, numOfApplications: Int) {
-//        jobNamelbl.text = jobName
-//        
-//        // Format the date to a readable string
-//        let dateFormatter = DateFormatter()
-//        dateFormatter.dateStyle = .medium
-//        dateFormatter.timeStyle = .none
-//        let formattedDate = dateFormatter.string(from: date)
-//        
-//        datePosted.text = "Posted On \(formattedDate)"
-//        
-//        // Convert Status enum to a string
-//        let statusText = (Status == .Open) ? "Open" : "Closed"
-//        jobStatusLbl.text = "Status: \(statusText)"
-//        
-//        numberOfApplication.text = "Number Of Applications: \(numOfApplications)"
-//    }
+    func setupCell(jobName: String, date: Date, Status: status, numOfApplications: Int) {
+        jobNamelbl.text = jobName
+        
+        // Format the date to a readable string
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .none
+        let formattedDate = dateFormatter.string(from: date)
+        
+        datePosted.text = "Posted On \(formattedDate)"
+        
+        // Convert Status enum to a string
+        let statusText = (Status == .Open) ? "Open" : "Closed"
+        jobStatusLbl.text = "Status: \(statusText)"
+        
+        numberOfApplication.text = "Number Of Applications: \(numOfApplications)"
+    }
 
 
 }

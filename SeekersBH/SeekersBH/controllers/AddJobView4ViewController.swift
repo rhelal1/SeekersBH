@@ -1,5 +1,5 @@
 //
-//  addJobView4\ViewController.swift
+//  addJobView4ViewController.swift
 //  SeekersBH
 //
 //  Created by Guest User on 12/12/2024.
@@ -12,6 +12,7 @@ class AddJobView4ViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var textview2: UITextView!
     @IBOutlet weak var viewv: UIView!
     
+    var coordinator: AddEditJobCoordinator? // Added coordinator for mode handling
     var job: JobAd? // Receive JobAd object
     
     override func viewDidLoad() {
@@ -23,6 +24,24 @@ class AddJobView4ViewController: UIViewController, UITextViewDelegate {
         // Set delegates for text views
         textview1.delegate = self
         textview2.delegate = self
+        
+        setupPage()
+    }
+    
+    private func setupPage() {
+        if let coordinator = coordinator, case .edit(let job) = coordinator.mode {
+            setupForEditMode(with: job)
+        }
+    }
+    
+    private func setupForEditMode(with job: JobAd) {
+        self.title = "Edit Job Details" // Update title for edit mode
+        populateFields(with: job)
+    }
+    
+    private func populateFields(with job: JobAd) {
+        textview1.text = job.jobKeyResponsibilites
+        textview2.text = job.jobEmploymentBenfits
     }
     
     @IBAction func nextbtn(_ sender: UIButton) {
@@ -37,6 +56,7 @@ class AddJobView4ViewController: UIViewController, UITextViewDelegate {
             job?.jobKeyResponsibilites = textview1.text
             job?.jobEmploymentBenfits = textview2.text
             destination.job = job
+            destination.coordinator = coordinator // Pass the coordinator to maintain the mode
         }
     }
     
@@ -76,7 +96,7 @@ class AddJobView4ViewController: UIViewController, UITextViewDelegate {
     
     // Alert function
     private func showAlert(message: String) {
-        let alert = UIAlertController(title: "Validation Error", message: message, preferredStyle: .alert)
+        let alert = UIAlertController(title: "Invalid Input", message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         alert.addAction(okAction)
         present(alert, animated: true, completion: nil)

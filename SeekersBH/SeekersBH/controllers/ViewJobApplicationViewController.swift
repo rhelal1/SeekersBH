@@ -12,7 +12,7 @@ class ViewJobApplicationViewController: UIViewController, UITableViewDelegate, U
     @IBOutlet weak var jobsTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        jobsTableView.reloadData() // Ensure the table updates when the view is shown
         // Do any additional setup after loading the view.
         jobsTableView.delegate = self
         jobsTableView.dataSource = self
@@ -34,7 +34,7 @@ class ViewJobApplicationViewController: UIViewController, UITableViewDelegate, U
         
         // Access the job for the current row
             let job = jobs[indexPath.row]
-//        cell.setupCell(jobName: job.jobName, date: job.datePosted, Status: job.status, numOfApplications: job.applicants.count)
+   cell.setupCell(jobName: job.jobName, date: job.datePosted, Status: job.status, numOfApplications: job.applicants.count)
         
         return cell
     }
@@ -49,6 +49,16 @@ class ViewJobApplicationViewController: UIViewController, UITableViewDelegate, U
             }
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowJobDetails", // Replace with your actual segue identifier
+           let detailsVC = segue.destination as? JobDetailsViewController,
+           let indexPath = jobsTableView.indexPathForSelectedRow {
+            // Pass the selected job to the details view controller
+            detailsVC.selectedJob = JobManager.shared.jobs[indexPath.row]
+        }
+    }
+
 
 
     /*

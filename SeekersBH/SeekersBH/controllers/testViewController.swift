@@ -1,14 +1,7 @@
-//
-//  testViewController.swift
-//  SeekersBH
-//
-//  Created by Guest User on 12/12/2024.
-//
-
 import UIKit
 
 class TestViewController: UIViewController, UITextFieldDelegate {
-    
+    var coordinator: AddEditJobCoordinator?
     @IBAction func nextbtn(_ sender: UIButton) {
         if validateInput() {
             // Segue will be handled by the storyboard
@@ -24,10 +17,28 @@ class TestViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewTest.layer.cornerRadius = 15
-        
+        setupPage()
         // Set delegate for text fields
         jobNameTxtField.delegate = self
         JobLocationTxtField.delegate = self
+    }
+    
+    private func setupPage() {
+        if let coordinator = coordinator, case .edit(let job) = coordinator.mode {
+            setupForEditMode(with: job)
+        }
+    }
+    
+    private func setupForEditMode(with job: JobAd) {
+        self.title = "Edit Job Application" // Update title for edit mode
+        populateFields(with: job)
+    }
+
+    private func populateFields(with job: JobAd) {
+        // Populate fields with job data for edit mode
+        jobNameTxtField.text = job.jobName
+        JobLocationTxtField.text = job.jobLocation
+        JobTypeTxtField.text = job.jobType.rawValue
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -36,9 +47,10 @@ class TestViewController: UIViewController, UITextFieldDelegate {
             let job = JobAd(
                 jobName: jobNameTxtField.text ?? "",
                 jobLocation: JobLocationTxtField.text ?? "",
-                jobType: .fullTime // Map JobType if necessary
+                jobType: JobType(rawValue: JobTypeTxtField.text ?? "") ?? .fullTime // Map JobType if necessary
             )
             destination.job = job
+            destination.coordinator = coordinator // Pass the coordinator to maintain the mode
         }
     }
     

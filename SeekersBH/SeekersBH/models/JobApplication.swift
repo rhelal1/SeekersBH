@@ -28,7 +28,7 @@ struct JobApplication {
 struct WorkExperince {
     var jobTitle : String
     var companyName : String
-    var employmentDate : Data
+    var employmentDate : Date
     var jobResponsibilites : String?
 }
 

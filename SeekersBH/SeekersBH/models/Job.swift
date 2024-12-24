@@ -17,9 +17,13 @@ struct JobAd {
     var applicationStatus : ApplicationStatus = .pending
 }
 
-enum JobType {
-    case fullTime, partTime, contract, temporary
+enum JobType: String {
+    case fullTime = "Full Time"
+    case partTime = "Part Time"
+    case contract = "Contract"
+    case temporary = "Temporary"
 }
+
 
 enum ApplicationStatus {
     case pending, underReview, shortlisted, interviewScheduled
@@ -28,6 +32,27 @@ enum ApplicationStatus {
 enum status {
     case Closed,Open
 }
+
+enum JobPageMode {
+    case add
+    case edit(job: JobAd)  // edit case expects a JobAd object
+}
+
+
+class AddEditJobCoordinator {
+    var mode: JobPageMode
+    var jobToEdit: JobAd?  // If in edit mode, this will store the job being edited
+    
+    init(mode: JobPageMode) {
+        self.mode = mode
+        if case .edit(let job) = mode {
+            self.jobToEdit = job  // Store the job if the mode is edit
+        }
+    }
+}
+
+
+
 
 class JobManager {
     static let shared = JobManager() // Singleton instance
