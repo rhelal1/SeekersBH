@@ -1,6 +1,7 @@
 import Foundation
 
 protocol Resource : Codable {
+    var id: String { get }
     var title: String { get }
     var description: String { get }
     var url: String { get }
@@ -24,6 +25,19 @@ struct Article : Resource {
     var description : String
     var url : String
     var views : Int
+    
+    // Mapping Firestore's 'year_of_publication' to 'yearOfPublication'
+    enum CodingKeys: String, CodingKey {
+        case id
+        case title
+        case author
+        case yearOfPublication = "year_of_publication"  // Firestore field
+        case publisher
+        case DOI
+        case description
+        case url
+        case views
+    }
 }
 
 struct Webinar : Resource{
@@ -37,6 +51,19 @@ struct Webinar : Resource{
     var description : String
     var url : String
     var views : Int
+    
+    // Mapping Firestore's fields to Swift properties
+    enum CodingKeys: String, CodingKey {
+        case id
+        case title
+        case speaker
+        case date
+        case timeZone 
+        case picture
+        case description
+        case url
+        case views
+    }
 }
 
 struct Video : Resource {
@@ -50,6 +77,19 @@ struct Video : Resource {
     var description : String
     var url : String
     var views : Int
+    
+    // Mapping Firestore's fields to Swift properties
+    enum CodingKeys: String, CodingKey {
+        case id
+        case title
+        case speaker
+        case channel
+        case duration
+        case picture
+        case description
+        case url
+        case views
+    }
 }
 
 struct SavedResource {

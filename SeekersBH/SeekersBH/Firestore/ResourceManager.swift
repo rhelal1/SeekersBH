@@ -257,6 +257,81 @@ final class ResourceManager {
             }
     }
     
-
+    func fetchAllResourcesForUser(userID: String) async throws -> [Resource]{
+        
+        let db = Firestore.firestore()
+            
+            // Fetch all user resources where user_id matches the given userID
+            let querySnapshot = try await db.collection("userResources")
+                .whereField("user_id", isEqualTo: userID)
+                .getDocuments()
+            
+            var resources: [Resource] = []
+            
+            // Fetch each document's resource type and resource ID
+            for document in querySnapshot.documents {
+                guard let resourceTypeRaw = document.data()["resource_type"] as? String,
+                      let resourceType = ResourceTypes(rawValue: resourceTypeRaw),
+                      let resourceID = document.data()["resource_id"] as? String else {
+                    continue
+                }
+                
+                // Retrieve the resource based on its type, now using async/await
+                do {
+                    let resource = try await fetchResource(resourceType: resourceType, resourceID: resourceID)
+                    resources.append(resource)
+                } catch {
+                    print("Failed to fetch resource \(resourceID): \(error.localizedDescription)")
+                }
+            }
+            
+            return resources
+    }
+    
+    func fetchResource(resourceType: ResourceTypes, resourceID: String) async throws -> Resource {
+        let db = Firestore.firestore()
+        
+        switch resourceType {
+        case .article:
+            let document = try await db.collection("Article").document(resourceID).getDocument()
+            guard let data = document.data() else {
+                throw NSError(domain: "ResourceNotFound", code: 404, userInfo: nil)
+            }
+            let article = try Firestore.Decoder().decode(Article.self, from: data)
+            return article
+            
+        case .webinar:
+            let document = try await db.collection("Webinars").document(resourceID).getDocument()
+            guard let data = document.data() else {
+                throw NSError(domain: "ResourceNotFound", code: 404, userInfo: nil)
+            }
+            let webinar = try Firestore.Decoder().decode(Webinar.self, from: data)
+            return webinar
+            
+        case .video:
+            let document = try await db.collection("Videos").document(resourceID).getDocument()
+            guard let data = document.data() else {
+                throw NSError(domain: "ResourceNotFound", code: 404, userInfo: nil)
+            }
+            let video = try Firestore.Decoder().decode(Video.self, from: data)
+            return video
+        }
+    }
+    
+    func RemoveResourceFromUser(userID: String, resourceType: ResourceTypes, resourceID: String) async throws {
+        let db = Firestore.firestore()
+        
+        // Query the 'userResources' collection to find documents matching userID, resourceType, and resourceID
+        let querySnapshot = try await db.collection("userResources")
+            .whereField("user_id", isEqualTo: userID)
+            .whereField("resource_type", isEqualTo: resourceType.rawValue)
+            .whereField("resource_id", isEqualTo: resourceID)
+            .getDocuments()
+        
+        // Iterate over the matching documents and remove them
+        for document in querySnapshot.documents {
+            try await document.reference.delete()
+        }
+    }
 }
 
