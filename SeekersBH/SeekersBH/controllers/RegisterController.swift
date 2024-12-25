@@ -106,28 +106,45 @@ class RegisterController: UIViewController {
         
         // Prepare the user data dictionary
         let userData: [String: Any] = [
-               "firstName": firstName,
-               "lastName": lastName,
-               "username": username,
-               "email": email,
-               "location": location,
-               "recentJob": recentJob,
-               "recentCompany": recentCompany,
-               "password": password, // Store password (encrypted ideally)
-               "role": "NormalUser", // Default role
-               "dateOfBirth": Timestamp(date: self.date.date) // Convert to Firestore Timestamp
-           ]
+            "firstName": firstName,
+            "lastName": lastName,
+            "username": username,
+            "email": email,
+            "location": location,
+            "recentJob": recentJob,
+            "recentCompany": recentCompany,
+            "password": password, // Store password (encrypted ideally)
+            "role": "NormalUser", // Default role
+            "dateOfBirth": Timestamp(date: self.date.date), // Convert to Firestore Timestamp
+            "followers": 0, // Initialize followers count
+            "following": 0  // Initialize following count
+        ]
         
         // Save the user data in Firestore under "users" collection
         db.collection("User").addDocument(data: userData) { error in
             if let error = error {
                 self.showAlert(message: "Error saving user data: \(error.localizedDescription)")
             } else {
-                self.showAlert(message: "User successfully registered and saved to Firestore.", title: "Success")
+                // Navigate to the "Interests" screen after successful registration
+                DispatchQueue.main.async {
+                    self.navigateToInterestsScreen()
+                }
             }
         }
     }
 
+
+    func navigateToInterestsScreen() {
+        // Access the storyboard and instantiate the "Interests" view controller
+        if let interestsVC = storyboard?.instantiateViewController(withIdentifier: "Interests") {
+            // Navigate to the "Interests" screen
+            interestsVC.modalPresentationStyle = .fullScreen
+            self.present(interestsVC, animated: true, completion: nil)
+        } else {
+            showAlert(message: "Unable to load the 'Interests' screen.", title: "Navigation Error")
+        }
+    }
+    
     func isValidEmail(_ email: String) -> Bool {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         let emailPredicate = NSPredicate(format: "SELF MATCHES %@", emailRegEx)
