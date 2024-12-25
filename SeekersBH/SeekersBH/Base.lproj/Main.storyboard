@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RxE-Q0-RCh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RxE-Q0-RCh">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -91,6 +91,9 @@
                                         <rect key="frame" x="0.0" y="153.33333333333334" width="210.66666666666666" height="38.333333333333343"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Created CV"/>
+                                        <connections>
+                                            <segue destination="q8O-ZQ-Ppk" kind="show" id="l32-U9-g12"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BKj-RL-Y5p">
                                         <rect key="frame" x="0.0" y="191.66666666666666" width="210.66666666666666" height="38.333333333333343"/>
@@ -181,6 +184,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KtN-BH-giR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1872" y="777"/>
+        </scene>
+        <!--AllCVViewController-->
+        <scene sceneID="AkY-TQ-zOc">
+            <objects>
+                <viewControllerPlaceholder storyboardName="marwa" referencedIdentifier="AllCVViewController" id="q8O-ZQ-Ppk" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="dQf-Rc-tgG"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1d2-lI-LOt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1873" y="842"/>
         </scene>
         <!--ResourceManagementViewController-->
         <scene sceneID="uuU-6F-94V">
