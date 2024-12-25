@@ -27,6 +27,11 @@ class ArticleDetailsViewController: UIViewController {
         UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
     
+    @IBAction func savedResourceButtonTspped(_ sender: Any) {
+        // Save resource to Firebase
+        ResourceManager.share.saveResourceToFirebase(userID: AccessManager.userID!, resourceId: article.id, resourceType: .article, viewController: self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         generalView.layer.cornerRadius = 15
