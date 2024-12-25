@@ -48,8 +48,6 @@ class WebinarDetailsViewController: UIViewController {
     
     
     @IBAction func SaveResourceButtonTapped(_ sender: Any) {
-        let savedResource = SavedResource(resource: webinar, type: .webinar)
-        
         // Save resource to Firebase
         ResourceManager.share.saveResourceToFirebase(userID: AccessManager.userID!, resourceId: webinar.id, resourceType: .webinar, viewController: self)
     }
