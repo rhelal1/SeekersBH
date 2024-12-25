@@ -30,4 +30,15 @@ class FirebaseManager {
             }
         }
     }
+    
+    func updateDocument(collectionName: String, documentId: String, data: [String: Any], completion: ((Error?) -> Void)? = nil) {
+        db.collection(collectionName).document(documentId).updateData(data) { error in
+            if let error = error {
+                print("Error updating document: \(error.localizedDescription)")
+            } else {
+                print("Document updated successfully.")
+            }
+            completion?(error)
+        }
+    }
 }

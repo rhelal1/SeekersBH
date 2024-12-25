@@ -1,6 +1,8 @@
 import Foundation
 
 struct JobAd {
+    
+    var documentId: String?
     var jobName: String = ""
     var jobLocation: String = ""
     var jobType: JobType = .fullTime
@@ -13,7 +15,7 @@ struct JobAd {
     var jobApplicationDeadline: Date = Date()
     var applicants: [JobApplication] = [] // Array to hold job applicants
     var datePosted: Date = Date() // Date when the job post was added
-    var status: status = .Open
+    var status: JobStatus = .Open
     var applicationStatus : ApplicationStatus = .pending
 }
 
@@ -29,7 +31,7 @@ enum ApplicationStatus {
     case pending, underReview, shortlisted, interviewScheduled
 }
 
-enum status {
+enum JobStatus {
     case Closed,Open
 }
 
