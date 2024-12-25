@@ -88,6 +88,8 @@
 		D4070DB62D0F206B00E517FE /* NewJobDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4070DB52D0F206B00E517FE /* NewJobDetailTableViewController.swift */; };
 		D4070DB82D10768C00E517FE /* ApplyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4070DB72D10768C00E517FE /* ApplyPageViewController.swift */; };
 		D4070DBC2D107AA100E517FE /* NewApplyPageFormTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4070DBB2D107AA100E517FE /* NewApplyPageFormTableViewController.swift */; };
+		D41DE5E82D1C427900706104 /* CVSelectionJobApplicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41DE5E72D1C427900706104 /* CVSelectionJobApplicationViewController.swift */; };
+		D41DE5EA2D1C433500706104 /* CVSelectionApplicationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41DE5E92D1C433500706104 /* CVSelectionApplicationsTableViewController.swift */; };
 		D45526BC2D09ED2A00149AA9 /* JobTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45526BB2D09ED2A00149AA9 /* JobTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -191,6 +193,8 @@
 		D4070DB52D0F206B00E517FE /* NewJobDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewJobDetailTableViewController.swift; sourceTree = "<group>"; };
 		D4070DB72D10768C00E517FE /* ApplyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplyPageViewController.swift; sourceTree = "<group>"; };
 		D4070DBB2D107AA100E517FE /* NewApplyPageFormTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewApplyPageFormTableViewController.swift; sourceTree = "<group>"; };
+		D41DE5E72D1C427900706104 /* CVSelectionJobApplicationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVSelectionJobApplicationViewController.swift; sourceTree = "<group>"; };
+		D41DE5E92D1C433500706104 /* CVSelectionApplicationsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVSelectionApplicationsTableViewController.swift; sourceTree = "<group>"; };
 		D45526BB2D09ED2A00149AA9 /* JobTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -363,6 +367,8 @@
 				43B1C5322D1585BF0046F96C /* AllCVViewController.swift */,
 				43B1C5342D15EFA20046F96C /* CVTableViewCell.swift */,
 				43B1C5362D17326E0046F96C /* CVDetailsViewController.swift */,
+				D41DE5E72D1C427900706104 /* CVSelectionJobApplicationViewController.swift */,
+				D41DE5E92D1C433500706104 /* CVSelectionApplicationsTableViewController.swift */,
 				89ACEE282D1B98F4008D5F57 /* AddWebinarsViewController.swift */,
 				89ACEE2A2D1BC799008D5F57 /* AddVideoViewController.swift */,
 			);
@@ -545,6 +551,7 @@
 				946297242D0CA075005542AA /* WebinarsViewController.swift in Sources */,
 				AC2776E82D0AF55F0019677C /* testViewController.swift in Sources */,
 				942060662D1050A600A2DE36 /* CourseViewController.swift in Sources */,
+				D41DE5E82D1C427900706104 /* CVSelectionJobApplicationViewController.swift in Sources */,
 				9420606A2D10516000A2DE36 /* OnlineCourses.swift in Sources */,
 				9420605E2D0DAA7600A2DE36 /* SavedViewController.swift in Sources */,
 				AC2776E62D0AF25B0019677C /* addJobView3ViewController.swift in Sources */,
@@ -563,6 +570,7 @@
 				947B8FDB2D10B69D004463EF /* CourseQuizViewController.swift in Sources */,
 				D4070DB22D0F144600E517FE /* NewJobRecommendationViewController.swift in Sources */,
 				D153BE422CF47AC900A81FFC /* SceneDelegate.swift in Sources */,
+				D41DE5EA2D1C433500706104 /* CVSelectionApplicationsTableViewController.swift in Sources */,
 				D184E4032CF87E5500D896D6 /* JobApplication.swift in Sources */,
 				D4070DB02D0F11C700E517FE /* NewJobRecommendationTableViewCell.swift in Sources */,
 				43B1C5372D17326E0046F96C /* CVDetailsViewController.swift in Sources */,
