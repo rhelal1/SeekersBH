@@ -27,51 +27,53 @@ class addJobView3ViewController: UIViewController {
             AdditionalPerksTxtView.text = job.additionalPerks.joined(separator: ", ")
             applicationdeadline.date = job.jobApplicationDeadline
         }
+        setupKeyboard()
     }
     
     @IBAction func finishbtn(_ sender: UIButton) {
         if validateInput() {
             showAlert()
             saveJob()
-            JobManager.shared.printSavedJobs()
         }
     }
     
+    private func setupKeyboard() {
+         view.addGestureRecognizer(UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing)))
+         
+         [UIResponder.keyboardWillShowNotification, UIResponder.keyboardWillHideNotification].forEach { notification in
+             NotificationCenter.default.addObserver(forName: notification, object: nil, queue: .main) { [weak self] _ in
+                 UIView.animate(withDuration: 0.3) {
+                     self?.view.frame.origin.y = notification == UIResponder.keyboardWillShowNotification ? -100 : 0
+                 }
+             }
+         }
+     }
+    
     private func saveJob() {
-        if var job = job {
-            // Update existing job properties with the current input
-            job.jobSalary = salaryRangetxtField.text ?? ""
-            job.jobApplicationDeadline = applicationdeadline.date
-            
-            let additionalPerksText = AdditionalPerksTxtView.text.trimmingCharacters(in: .whitespacesAndNewlines)
-            job.additionalPerks = additionalPerksText.isEmpty ? [] : additionalPerksText.components(separatedBy: ",")
-            
-            job.datePosted = Date()
-            
-            // Append the updated job object to the shared job array
-            JobManager.shared.jobs.append(job)
-        } else {
-            // Create a new job with the provided inputs
-            let newJob = JobAd(
-                jobName: "",  // Default or required job name
-                jobLocation: "",  // Default or required location
-                jobType: .fullTime,  // Default to fullTime or set as needed
-                jobDescription: "",  // Default or required description
-                jobKeyResponsibilites: "",  // Default or required key responsibilities
-                jobQualifications: "",  // Default or required qualifications
-                jobSalary: salaryRangetxtField.text ?? "",  // Salary from input
-                jobEmploymentBenfits: "",  // Default or required employment benefits
-                additionalPerks: AdditionalPerksTxtView.text.trimmingCharacters(in: .whitespacesAndNewlines).components(separatedBy: ","),
-                jobApplicationDeadline: applicationdeadline.date,  // Deadline from input
-                applicants: [],  // Empty array for applicants
-                datePosted: Date(),  // Current date when job was posted
-                status: .Open,  // Default to Open status
-                applicationStatus: .pending  // Default to pending status
-            )
-            
-            // Append the new job object to the shared job array
-            JobManager.shared.jobs.append(newJob)
-        }
+
+        var jobData: [String: Any] = [
+              "jobSalary": salaryRangetxtField.text ?? "",
+              "jobApplicationDeadline": applicationdeadline.date,
+              "additionalPerks": AdditionalPerksTxtView.text.trimmingCharacters(in: .whitespacesAndNewlines).components(separatedBy: ","),
+              "datePosted": Date(),
+              "status": "Open",
+              "applicationStatus": "pending"
+          ]
+          
+          // Add existing job data if we're updating
+          if let existingJob = job {
+              jobData["jobName"] = existingJob.jobName
+              jobData["jobLocation"] = existingJob.jobLocation
+              jobData["jobType"] = existingJob.jobType.rawValue
+              jobData["jobDescription"] = existingJob.jobDescription
+              jobData["jobKeyResponsibilites"] = existingJob.jobKeyResponsibilites
+              jobData["jobQualifications"] = existingJob.jobQualifications
+              jobData["jobEmploymentBenfits"] = existingJob.jobEmploymentBenfits
+              jobData["applicants"] = existingJob.applicants
+          }
+          
+          // Save to Firebase
+          FirebaseManager.shared.addDocumentToCollection(collectionName: "jobs", data: jobData)
     }
 
     

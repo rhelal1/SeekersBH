@@ -21,6 +21,7 @@ class TestViewController: UIViewController, UITextFieldDelegate {
         // Set delegate for text fields
         jobNameTxtField.delegate = self
         JobLocationTxtField.delegate = self
+        setupKeyboard()
     }
     
     private func setupPage() {
@@ -28,6 +29,18 @@ class TestViewController: UIViewController, UITextFieldDelegate {
             setupForEditMode(with: job)
         }
     }
+    
+    private func setupKeyboard() {
+         view.addGestureRecognizer(UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing)))
+         
+         [UIResponder.keyboardWillShowNotification, UIResponder.keyboardWillHideNotification].forEach { notification in
+             NotificationCenter.default.addObserver(forName: notification, object: nil, queue: .main) { [weak self] _ in
+                 UIView.animate(withDuration: 0.3) {
+                     self?.view.frame.origin.y = notification == UIResponder.keyboardWillShowNotification ? -100 : 0
+                 }
+             }
+         }
+     }
     
     private func setupForEditMode(with job: JobAd) {
         self.title = "Edit Job Application" // Update title for edit mode
