@@ -46,6 +46,7 @@
 		947B8FE42D11B559004463EF /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 947B8FE32D11B559004463EF /* FirebaseFirestore */; };
 		947B8FE62D11CA5B004463EF /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947B8FE52D11CA5B004463EF /* FirebaseManager.swift */; };
 		947B8FEB2D12360B004463EF /* ResourceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947B8FEA2D12360B004463EF /* ResourceManager.swift */; };
+		947B8FED2D1C682B004463EF /* AccessManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947B8FEC2D1C682B004463EF /* AccessManager.swift */; };
 		94CADAAA2D08ADD700F8B3AC /* growthHubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CADAA92D08ADD700F8B3AC /* growthHubViewController.swift */; };
 		94CADAAE2D08B96000F8B3AC /* ArticlesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CADAAD2D08B96000F8B3AC /* ArticlesTableViewCell.swift */; };
 		94E2D2772D076FB500614521 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E2D2762D076FB500614521 /* Resource.swift */; };
@@ -141,6 +142,7 @@
 		947B8FDC2D10B6BB004463EF /* CourseQuizTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseQuizTableViewCell.swift; sourceTree = "<group>"; };
 		947B8FE52D11CA5B004463EF /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = SOURCE_ROOT; };
 		947B8FEA2D12360B004463EF /* ResourceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceManager.swift; sourceTree = "<group>"; };
+		947B8FEC2D1C682B004463EF /* AccessManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessManager.swift; sourceTree = "<group>"; };
 		94CADAA92D08ADD700F8B3AC /* growthHubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = growthHubViewController.swift; path = SeekersBH/views/growthHubViewController.swift; sourceTree = SOURCE_ROOT; };
 		94CADAAD2D08B96000F8B3AC /* ArticlesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		94E2D2762D076FB500614521 /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 				D184E3EF2CF86CD500D896D6 /* models */,
 				D153BE3F2CF47AC900A81FFC /* AppDelegate.swift */,
 				D153BE412CF47AC900A81FFC /* SceneDelegate.swift */,
+				947B8FEC2D1C682B004463EF /* AccessManager.swift */,
 				D153BE452CF47AC900A81FFC /* Main.storyboard */,
 				D184E3FC2CF8769000D896D6 /* GoogleService-Info.plist */,
 				D153BE6F2CF47E8400A81FFC /* testTableViewController.swift */,
@@ -505,6 +508,7 @@
 			files = (
 				435039FC2D142811006F7794 /* CVManager.swift in Sources */,
 				946297262D0CA226005542AA /* WebinarsTableViewCell.swift in Sources */,
+				947B8FED2D1C682B004463EF /* AccessManager.swift in Sources */,
 				66E035012D1432C60050E168 /* jobDetailsViewController.swift in Sources */,
 				947B8FDD2D10B6BB004463EF /* CourseQuizTableViewCell.swift in Sources */,
 				43B1C5352D15EFA20046F96C /* CVTableViewCell.swift in Sources */,

@@ -45,4 +45,12 @@ class VideoDetailsViewController: UIViewController {
         
         UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
+    
+    @IBAction func savedResourceButtonTapped(_ sender: Any) {
+        let savedResource = SavedResource(resource: video, type: .video)
+        
+        // Save resource to Firebase
+        ResourceManager.share.saveResourceToFirebase(userID: AccessManager.userID!, resourceId: video.id, resourceType: .video, viewController: self)
+    }
+    
 }
