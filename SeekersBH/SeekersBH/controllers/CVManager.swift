@@ -37,7 +37,11 @@ class CVManager {
     func saveCVToFirebase() {
         let cv = CVManager.shared.cv
         
+        let documentReference = FirebaseManager.shared.db.collection("CV").document()
+        let documentID = documentReference.documentID
+        
         let cvData: [String: Any] = [
+            "id": documentID,
             "fullName": cv.fullName,
             "email": cv.email,
             "phoneNumber": cv.phoneNumber,
@@ -59,9 +63,10 @@ class CVManager {
             "projectOverview": cv.projectSecions.map { $0.overview },
             "projectURL": cv.projectSecions.map { $0.resource },
             "otherProjects": cv.otherProjects,
-            "id": 0,
             "createdDate": Timestamp()
         ]
+        
+       
         
         let db = Firestore.firestore()
         db.collection("CV").addDocument(data: cvData) { error in
