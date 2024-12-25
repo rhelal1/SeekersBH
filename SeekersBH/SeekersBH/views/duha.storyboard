@@ -290,16 +290,23 @@
             </objects>
             <point key="canvasLocation" x="4313.740458015267" y="970.4225352112677"/>
         </scene>
-        <!--View Controller-->
+        <!--Selection Job Application View Controller-->
         <scene sceneID="eea-gW-tQM">
             <objects>
-                <viewController id="QGB-Cb-yCY" sceneMemberID="viewController">
+                <viewController id="QGB-Cb-yCY" customClass="CVSelectionJobApplicationViewController" customModule="SeekersBH" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="x1p-a6-H2R">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b5P-cr-srf">
+                                <rect key="frame" x="0.0" y="135" width="393" height="728"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="hA2-k1-Dyn" kind="embed" id="RxG-DM-MH3"/>
+                                </connections>
+                            </containerView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FER-Gk-yB6">
-                                <rect key="frame" x="34" y="740" width="324" height="44"/>
+                                <rect key="frame" x="34" y="895" width="324" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
@@ -310,57 +317,109 @@
                                     <color key="baseBackgroundColor" red="0.035294117649999998" green="0.094117647060000004" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
                             </button>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b5P-cr-srf">
-                                <rect key="frame" x="0.0" y="128" width="393" height="578"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <connections>
-                                    <segue destination="hA2-k1-Dyn" kind="embed" id="RxG-DM-MH3"/>
-                                </connections>
-                            </containerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tRY-KF-qhU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="wcm-VX-sjF"/>
+                    <size key="freeformSize" width="393" height="1000"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I7p-AO-aho" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5337" y="989"/>
+            <point key="canvasLocation" x="5336.6412213740459" y="988.73239436619724"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Selection Applications Table View Controller-->
         <scene sceneID="XOU-ow-e4l">
             <objects>
-                <tableViewController id="hA2-k1-Dyn" sceneMemberID="viewController">
+                <tableViewController id="hA2-k1-Dyn" customClass="CVSelectionApplicationsTableViewController" customModule="SeekersBH" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="2tE-gA-EM5">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="578"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="728"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <sections>
                             <tableViewSection headerTitle="Upload CV" id="Ji1-TE-Ohx">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="302" id="xPy-0h-cda">
-                                        <rect key="frame" x="20" y="55.333332061767578" width="353" height="302"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="dropDownCell" rowHeight="476" id="xPy-0h-cda">
+                                        <rect key="frame" x="20" y="55.333332061767578" width="353" height="476"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xPy-0h-cda" id="iGM-68-EiK">
-                                            <rect key="frame" x="0.0" y="0.0" width="353" height="302"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="353" height="476"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Upload Created CV" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="98t-85-AQk">
-                                                    <rect key="frame" x="20" y="30" width="293" height="41"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upload Created CV" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="98t-85-AQk">
+                                                    <rect key="frame" x="20" y="30" width="293" height="21"/>
                                                     <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
                                                     <color key="textColor" red="0.035294117649999998" green="0.094117647060000004" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Upload  a CV/Cover Letter" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hI8-bh-gin">
-                                                    <rect key="frame" x="20" y="131" width="293" height="41"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upload  a CV/Cover Letter" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hI8-bh-gin">
+                                                    <rect key="frame" x="20" y="335" width="293" height="21"/>
                                                     <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
                                                     <color key="textColor" red="0.035294117649999998" green="0.094117647060000004" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="djZ-0L-XBw">
+                                                    <rect key="frame" x="15" y="79" width="323" height="214"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tOR-6l-v1p">
+                                                            <rect key="frame" x="0.0" y="0.0" width="323" height="44"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="44" id="Nnh-tY-vHM"/>
+                                                            </constraints>
+                                                            <state key="normal" title="Button"/>
+                                                            <buttonConfiguration key="configuration" style="filled" title="Select CV From Drop Down Menu" cornerStyle="dynamic">
+                                                                <backgroundConfiguration key="background" cornerRadius="8"/>
+                                                                <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
+                                                                <color key="baseForegroundColor" red="0.60392156860000001" green="0.60392156860000001" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </buttonConfiguration>
+                                                        </button>
+                                                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="9mn-jm-Wkw">
+                                                            <rect key="frame" x="0.0" y="44" width="323" height="170"/>
+                                                            <color key="backgroundColor" red="0.70196078431372544" green="0.70196078431372544" blue="0.70196078431372544" alpha="0.81999999999999995" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="170" id="cI2-Pf-meI"/>
+                                                            </constraints>
+                                                            <prototypes>
+                                                                <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="RBc-Qc-ofX">
+                                                                    <rect key="frame" x="0.0" y="50" width="323" height="47.666667938232422"/>
+                                                                    <autoresizingMask key="autoresizingMask"/>
+                                                                    <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RBc-Qc-ofX" id="E6r-r1-M76">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="323" height="47.666667938232422"/>
+                                                                        <autoresizingMask key="autoresizingMask"/>
+                                                                    </tableViewCellContentView>
+                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </tableViewCell>
+                                                            </prototypes>
+                                                        </tableView>
+                                                    </subviews>
+                                                </stackView>
+                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a7H-jS-upO">
+                                                    <rect key="frame" x="15" y="379" width="323" height="44"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="filled" title="Select CV/ Cover Letter from the System" cornerStyle="dynamic">
+                                                        <backgroundConfiguration key="background" cornerRadius="8"/>
+                                                        <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
+                                                        <color key="baseForegroundColor" red="0.60392156860000001" green="0.60392156860000001" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </buttonConfiguration>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" red="0.85098039219999999" green="0.85098039219999999" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="djZ-0L-XBw" firstAttribute="top" secondItem="98t-85-AQk" secondAttribute="bottom" constant="28" id="2Og-6t-8WK"/>
+                                                <constraint firstItem="98t-85-AQk" firstAttribute="leading" secondItem="iGM-68-EiK" secondAttribute="leadingMargin" id="4DA-g9-DqS"/>
+                                                <constraint firstItem="hI8-bh-gin" firstAttribute="top" secondItem="djZ-0L-XBw" secondAttribute="bottom" constant="42" id="4JD-sM-c8S"/>
+                                                <constraint firstItem="hI8-bh-gin" firstAttribute="leading" secondItem="iGM-68-EiK" secondAttribute="leadingMargin" id="Al8-y7-Xze"/>
+                                                <constraint firstAttribute="trailing" secondItem="a7H-jS-upO" secondAttribute="trailing" constant="15" id="C9Z-tZ-d73"/>
+                                                <constraint firstItem="djZ-0L-XBw" firstAttribute="leading" secondItem="iGM-68-EiK" secondAttribute="leading" constant="15" id="HsS-H2-LfW"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="hI8-bh-gin" secondAttribute="trailing" constant="20" id="NAF-xn-BaJ"/>
+                                                <constraint firstItem="98t-85-AQk" firstAttribute="top" secondItem="iGM-68-EiK" secondAttribute="topMargin" constant="18" id="QvC-Wu-Bxw"/>
+                                                <constraint firstItem="a7H-jS-upO" firstAttribute="leading" secondItem="iGM-68-EiK" secondAttribute="leading" constant="15" id="UPe-6s-rFs"/>
+                                                <constraint firstItem="a7H-jS-upO" firstAttribute="top" secondItem="hI8-bh-gin" secondAttribute="bottom" constant="23" id="Uk0-o3-VBr"/>
+                                                <constraint firstAttribute="trailing" secondItem="djZ-0L-XBw" secondAttribute="trailing" constant="15" id="c47-9t-MTH"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="98t-85-AQk" secondAttribute="trailing" constant="20" id="n3T-A5-ThM"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -757,6 +816,27 @@
                         </connections>
                     </tableView>
                     <size key="freeformSize" width="393" height="3000"/>
+                    <connections>
+                        <outlet property="Addresstxt" destination="y27-2f-ymw" id="pvY-ML-qeH"/>
+                        <outlet property="AnswerQuestion1txt" destination="KJh-LQ-AZp" id="KfU-ud-hOm"/>
+                        <outlet property="AnswerQuestion2txt" destination="AQ2-du-d2u" id="faW-US-eey"/>
+                        <outlet property="AnswerQuestion3txt" destination="Vz5-cd-qYl" id="5wc-Mj-o93"/>
+                        <outlet property="Certificationstxt" destination="hNY-f5-ItP" id="kNm-2Q-MRT"/>
+                        <outlet property="CompanyNametxt" destination="IBP-TT-DiE" id="1bj-At-27E"/>
+                        <outlet property="Degreetxt" destination="dBs-kO-rSr" id="chR-dY-z6x"/>
+                        <outlet property="Emailtxt" destination="DrT-T6-7ob" id="g3d-Tw-Rfz"/>
+                        <outlet property="EmploymentDatestxt" destination="eME-uF-lgX" id="CJD-SP-Wz5"/>
+                        <outlet property="FullNametxt" destination="pL5-hF-Nz1" id="f7Q-Ni-fkQ"/>
+                        <outlet property="GraduationDatetxt" destination="6PP-co-3VK" id="dm4-re-FLN"/>
+                        <outlet property="JobResponsibilitiestxt" destination="KeS-Be-Lfp" id="v3G-Tb-k0S"/>
+                        <outlet property="JobTitletxt" destination="btg-KG-uBp" id="IDZ-f7-7HA"/>
+                        <outlet property="LanguageProficiencytxt" destination="qfc-GG-hup" id="SnJ-DR-lTU"/>
+                        <outlet property="PhoneNumbertxt" destination="yud-G3-vp0" id="Kpf-mp-hv5"/>
+                        <outlet property="ReferenceContactInformationtxt" destination="Giv-i2-vy5" id="3RX-vk-ipa"/>
+                        <outlet property="ReferenceNametxt" destination="fAR-hA-nfu" id="Mfp-DG-5FE"/>
+                        <outlet property="TechnicalSkillstxt" destination="l21-g6-qg8" id="9Wc-qB-2e7"/>
+                        <outlet property="UniversitySchoolNametxt" destination="G75-aF-zfj" id="ZTS-nk-2Oc"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dWo-Q1-Fnv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
