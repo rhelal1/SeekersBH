@@ -27,10 +27,11 @@ struct Article : Resource {
 }
 
 struct Webinar : Resource{
+    var id : String
     var title : String
     var speaker : String
     var date : Date
-    var timeZone : TimeZone //not sure
+    var timeZone : String 
     var picture : String
     
     var description : String
@@ -39,10 +40,11 @@ struct Webinar : Resource{
 }
 
 struct Video : Resource {
+    var id : String
     var title : String
     var speaker : String
     var channel : String
-    var duration : Int // Duration in seconds
+    var duration : Int // Duration in mintues
     var picture : String
     
     var description : String
