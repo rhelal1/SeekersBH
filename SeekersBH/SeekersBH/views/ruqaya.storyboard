@@ -538,6 +538,9 @@
                                             <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
                                             <color key="baseForegroundColor" red="0.050980389119999997" green="0.094117648900000003" blue="0.32156863810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="savedResourceButtonTspped:" destination="CDe-HZ-5fH" eventType="touchUpInside" id="Ibi-FL-m5k"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -575,7 +578,6 @@
         <!--Navigation Controller-->
         <scene sceneID="Ifq-eZ-BTF">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Oyw-98-Jsk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController storyboardIdentifier="GrowthHubViewController" wantsFullScreenLayout="YES" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XbX-1p-WJA" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hpg-gh-uq4">
@@ -587,6 +589,7 @@
                         <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="cTM-k4-a8o"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oyw-98-Jsk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-765" y="-327"/>
         </scene>
@@ -889,6 +892,9 @@
                                             <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
                                             <color key="baseForegroundColor" red="0.050980389119999997" green="0.094117648900000003" blue="0.32156863810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="SaveResourceButtonTapped:" destination="pTn-hn-LJS" eventType="touchUpInside" id="X92-fa-vNR"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -1205,6 +1211,9 @@
                                             <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
                                             <color key="baseForegroundColor" red="0.050980389119999997" green="0.094117648900000003" blue="0.32156863810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="savedResourceButtonTapped:" destination="WDe-hw-pvM" eventType="touchUpInside" id="uPz-2o-t3a"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
