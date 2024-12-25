@@ -39,10 +39,14 @@ class AddArticleViewController: UIViewController {
                     return
                 }
         
+        let documentReference = FirebaseManager.shared.db.collection("Article").document()
+           let documentID = documentReference.documentID
+        
         let articleData: [String: Any] = [
-                   "title": title,
-                   "author": author,
-                   "year_of_publication": Int(yop) ?? 0, // Convert year to Int
+                    "id":documentID,
+                    "title": title,
+                    "author": author,
+                    "year_of_publication": Int(yop) ?? 0, // Convert year to Int
                    "publisher": publisher,
                    "description": description,
                    "url": url,
