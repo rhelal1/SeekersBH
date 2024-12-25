@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ib6-1g-hWS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ib6-1g-hWS">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
@@ -401,10 +402,10 @@
             </objects>
             <point key="canvasLocation" x="2180.9160305343512" y="787.32394366197184"/>
         </scene>
-        <!--Interest View Controller-->
+        <!--Interest Choice View Controller-->
         <scene sceneID="9Pr-b6-Z6r">
             <objects>
-                <viewController id="KyT-zh-GHu" customClass="InterestViewController" customModule="SeekersBH" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InterestViewController" id="KyT-zh-GHu" customClass="InterestChoiceViewController" customModule="SeekersBH" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ec1-mK-RzE">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -554,6 +555,9 @@ Social Impact</string>
                                         <color key="backgroundColor" red="0.035294117649999998" green="0.094117647060000004" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
                                     </backgroundConfiguration>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="registerButtonTapped:" destination="KyT-zh-GHu" eventType="touchUpInside" id="gCV-Lb-a0a"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qYv-S2-doA"/>
@@ -561,18 +565,19 @@ Social Impact</string>
                     </view>
                     <navigationItem key="navigationItem" id="MNe-Dz-fcY"/>
                     <connections>
-                        <outlet property="BuinessAndEnterpreneurshipbtn" destination="n8r-yf-mov" id="mcV-MQ-yqJ"/>
-                        <outlet property="HealthcareAndLifeSciencesbtn" destination="UWC-kj-xTe" id="a8L-Fv-dnn"/>
-                        <outlet property="designAndCreativity" destination="GfM-mj-OQI" id="mmL-hq-fjy"/>
-                        <outlet property="educationAndLearningbtn" destination="F7Q-tn-nn5" id="M5A-gF-mc0"/>
-                        <outlet property="financeAndAccountingbtn" destination="Rvj-RJ-YFB" id="gAo-Ig-3hW"/>
-                        <outlet property="humanResourcesbtn" destination="ZhR-A7-3Nh" id="feJ-NM-kFm"/>
-                        <outlet property="legalAndCompliancebtn" destination="hxz-qM-5NT" id="vpF-3s-0V2"/>
-                        <outlet property="marketingAndGrowth" destination="Xgi-qL-4hR" id="d9A-Vl-0rX"/>
-                        <outlet property="nonProfitAndSocialImpactbtn" destination="v6J-BW-9nz" id="kcS-6C-HNQ"/>
-                        <outlet property="salesAndCustomerSupportbtn" destination="glg-UU-sll" id="aL1-33-ZXC"/>
-                        <outlet property="supplyAndChainOerationsbtn" destination="lOT-Hq-NMB" id="Bcn-8W-FaW"/>
-                        <outlet property="techAndDevelopmentbtn" destination="6ZQ-PC-rXE" id="FoC-uk-DAz"/>
+                        <outlet property="businessEntrepreneurshipBtn" destination="n8r-yf-mov" id="RXX-0H-EeJ"/>
+                        <outlet property="designCreativityBtn" destination="GfM-mj-OQI" id="2Is-4W-xbe"/>
+                        <outlet property="educationLearningBtn" destination="F7Q-tn-nn5" id="n2W-hg-0PW"/>
+                        <outlet property="financeAccountingBtn" destination="Rvj-RJ-YFB" id="Ygn-Xp-Qga"/>
+                        <outlet property="healthcareSciencesBtn" destination="UWC-kj-xTe" id="Uhp-Mg-p1Z"/>
+                        <outlet property="humanResourcesBtn" destination="ZhR-A7-3Nh" id="V81-60-9ux"/>
+                        <outlet property="legalComplianceBtn" destination="hxz-qM-5NT" id="xUJ-9K-Lmx"/>
+                        <outlet property="marketingGrowthBtn" destination="Xgi-qL-4hR" id="AlD-Zu-MNY"/>
+                        <outlet property="nonProfitImpactBtn" destination="v6J-BW-9nz" id="TEX-hF-L1L"/>
+                        <outlet property="registerButton" destination="kyI-lB-DFb" id="WOg-G4-Rfg"/>
+                        <outlet property="salesCustomerSupportBtn" destination="glg-UU-sll" id="lbw-v0-Nhx"/>
+                        <outlet property="supplyChainBtn" destination="lOT-Hq-NMB" id="3aY-sP-TC5"/>
+                        <outlet property="techDevelopmentBtn" destination="6ZQ-PC-rXE" id="gl6-vo-gxS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NZs-Wz-scF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1009,7 +1014,7 @@ with us!</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="v1n-V4-fik"/>
+        <segue reference="Qfu-7u-yiw"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Image" width="1080" height="1080"/>

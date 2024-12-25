@@ -101,32 +101,46 @@ class RegisterController: UIViewController {
     }
     
     func saveUserData(firstName: String, lastName: String, username: String, email: String, location: String, recentJob: String, recentCompany: String, password: String) {
-        // Reference to Firestore
-        let db = Firestore.firestore()
-        
-        // Prepare the user data dictionary
-        let userData: [String: Any] = [
-               "firstName": firstName,
-               "lastName": lastName,
-               "username": username,
-               "email": email,
-               "location": location,
-               "recentJob": recentJob,
-               "recentCompany": recentCompany,
-               "password": password, // Store password (encrypted ideally)
-               "role": "NormalUser", // Default role
-               "dateOfBirth": Timestamp(date: self.date.date) // Convert to Firestore Timestamp
-           ]
-        
-        // Save the user data in Firestore under "users" collection
-        db.collection("User").addDocument(data: userData) { error in
-            if let error = error {
-                self.showAlert(message: "Error saving user data: \(error.localizedDescription)")
-            } else {
-                self.showAlert(message: "User successfully registered and saved to Firestore.", title: "Success")
+            // Reference to Firestore
+            let db = Firestore.firestore()
+            
+            // Prepare the user data dictionary
+            let userData: [String: Any] = [
+                "firstName": firstName,
+                "lastName": lastName,
+                "username": username,
+                "email": email,
+                "location": location,
+                "recentJob": recentJob,
+                "recentCompany": recentCompany,
+                "password": password,
+                "role": "NormalUser",
+                "dateOfBirth": Timestamp(date: self.date.date)
+            ]
+            
+            // Save the user data in Firestore under "users" collection
+            db.collection("User").addDocument(data: userData) { [weak self] error in
+                guard let self = self else { return }
+                
+                if let error = error {
+                    self.showAlert(message: "Error saving user data: \(error.localizedDescription)")
+                } else {
+                    // Show success alert and then navigate
+                    User.loggedInUser = email
+                    User.loggedInUsername = username
+                    let alert = UIAlertController(title: "Success", message: "User successfully registered and saved to Firestore.", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .default) { _ in
+                        // Navigate to InterestViewController after alert is dismissed
+                        if let interestVC = self.storyboard?.instantiateViewController(withIdentifier: "InterestViewController") as? UIViewController {
+                          
+                            // Push the view controller
+                            self.navigationController?.pushViewController(interestVC, animated: true)
+                        }
+                    })
+                    self.present(alert, animated: true, completion: nil)
+                }
             }
         }
-    }
 
     func isValidEmail(_ email: String) -> Bool {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
