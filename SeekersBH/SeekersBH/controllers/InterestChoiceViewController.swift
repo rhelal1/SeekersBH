@@ -114,10 +114,11 @@ class InterestChoiceViewController: UIViewController {
                     self?.showAlert(message: "Error saving interests: \(error.localizedDescription)")
                 } else {
                     self?.showAlert(message: "Interests saved successfully!", title: "Success") {
+                        //later
                         // Navigate to next screen
-                        if let nextVC = self?.storyboard?.instantiateViewController(withIdentifier: "NextViewController") {
-                            self?.navigationController?.pushViewController(nextVC, animated: true)
-                        }
+                       // if let nextVC = self?.storyboard?.instantiateViewController(withIdentifier: "NextViewController") {
+                      //      self?.navigationController?.pushViewController(nextVC, animated: true)
+                      //  }
                     }
                 }
             }

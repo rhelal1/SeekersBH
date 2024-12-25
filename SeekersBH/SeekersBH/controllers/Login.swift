@@ -27,6 +27,7 @@ class Login: UIViewController {
         checkIfUserExists(username: username, password: password) { userExists, isPasswordCorrect in
             if userExists {
                 if isPasswordCorrect {
+                    User.loggedInUser = username
                     self.showAlert(title: "Success", message: "You logged in successfully!")
                 } else {
                     self.showAlert(title: "Error", message: "Incorrect password.")
@@ -53,6 +54,7 @@ class Login: UIViewController {
                 // User exists, check if the password matches (note: in production, passwords should be hashed)
                 if let document = snapshot.documents.first, let storedPassword = document.data()["password"] as? String {
                     if storedPassword == password {
+                        
                         completion(true, true)
                     } else {
                         completion(true, false)
