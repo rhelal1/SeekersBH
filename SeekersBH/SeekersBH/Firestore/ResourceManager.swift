@@ -334,3 +334,4 @@ final class ResourceManager {
         }
     }
 }
+
