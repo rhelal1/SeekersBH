@@ -1,6 +1,9 @@
 import Foundation
 
 struct User {
+    
+    static var loggedInUser = ""
+    static var loggedInUsername = ""
     var id : Int
     var email : String
     var firstName : String
