@@ -89,7 +89,7 @@ class AllCVViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
                 loadingIndicator.stopAnimating()
                 loadingAlert.dismiss(animated: true) {
-                    if let cvDetails = self.cvDetails {
+                    if self.cvDetails != nil {
                         // Manually perform the segue
                         self.performSegue(withIdentifier: "showCVDetails", sender: self)
                     } else {
@@ -119,7 +119,8 @@ class AllCVViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
 
     
-    var cvDetails: (name: String, createdDate: String, aboutMe: String, certifications: [[String: Any]], email: String, fullName: String, highestDegree: String, phoneNumber: String, skillName: String, university: String, portfolio: String, projects: [(name: String, overview: String, url: String)])?
+    var cvDetails: (name: String, createdDate: String, aboutMe: String, certifications: [[String: Any]], email: String, fullName: String, highestDegree: String, phoneNumber: String, skillName: String, university: String, portfolio: String, projects: [(name: String, overview: String, url: String)], certificationsOther: String, projectsOther: String, skillsOther: String, linkedIn: String)?
+
     
     func fetchCVDetails(cvID: String, completion: @escaping () -> Void) {
         let db = Firestore.firestore()
@@ -132,9 +133,15 @@ class AllCVViewController: UIViewController, UITableViewDelegate, UITableViewDat
             guard let data = snapshot?.data() else { return }
             
             let certifications = data["certifications"] as? [[String: Any]] ?? []
+            let certificationsOther = data["certificationsOther"] as? String ?? "N/A"
+            
             let projectNames = data["projectName"] as? [String] ?? []
             let projectOverviews = data["projectOverview"] as? [String] ?? []
             let projectURLs = data["projectURL"] as? [String] ?? []
+            let projectsOther = data["projectsOther"] as? String ?? "N/A"
+            
+            let skillName = data["skillName"] as? String ?? "N/A"
+            let skillsOther = data["skillsOther"] as? String ?? "N/A"
             
             var projects: [(name: String, overview: String, url: String)] = []
             for i in 0..<min(projectNames.count, projectOverviews.count, projectURLs.count) {
@@ -150,15 +157,20 @@ class AllCVViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 fullName: data["fullName"] as? String ?? "N/A",
                 highestDegree: data["highestDegree"] as? String ?? "N/A",
                 phoneNumber: data["phoneNumber"] as? String ?? "N/A",
-                skillName: data["skillName"] as? String ?? "N/A",
+                skillName: skillName,
                 university: data["university"] as? String ?? "N/A",
                 portfolio: data["portfolio"] as? String ?? "N/A",
-                projects: projects
+                projects: projects,
+                certificationsOther: data["otherCertification"] as? String ?? "N/A",
+                projectsOther: data["otherProjects"] as? String ?? "N/A",
+                skillsOther: data["otherSkill"] as? String ?? "N/A",
+                linkedIn: data["linkenIn"] as? String ?? "N/A"
             )
             
             completion()
         }
     }
+
     
     func formatDateToString(date: Date) -> String {
         let formatter = DateFormatter()
