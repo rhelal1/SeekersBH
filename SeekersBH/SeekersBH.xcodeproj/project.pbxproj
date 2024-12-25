@@ -61,12 +61,6 @@
 		AC8BA8FD2D0F430800EE7A2C /* jobCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8BA8FC2D0F430800EE7A2C /* jobCellTableViewCell.swift */; };
 		C311B0D32D06FDF00071CF9B /* EmployerDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C311B0D22D06FDF00071CF9B /* EmployerDashboardViewController.swift */; };
 		C311B0D52D0707D30071CF9B /* ViewJobApplicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C311B0D42D0707D30071CF9B /* ViewJobApplicationViewController.swift */; };
-		CE807E7B2D1AC9AF00F4FA1B /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = CE807E7A2D1AC9AF00F4FA1B /* FirebaseFirestore */; };
-		CE807E7F2D1AD5FD00F4FA1B /* AppUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE807E7E2D1AD5FD00F4FA1B /* AppUser.swift */; };
-		CE807E812D1AF13C00F4FA1B /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE807E802D1AF13C00F4FA1B /* RegisterController.swift */; };
-		CE807E852D1B07C700F4FA1B /* InterestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE807E842D1B07C700F4FA1B /* InterestViewController.swift */; };
-		CE807E872D1B0FD000F4FA1B /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE807E862D1B0FD000F4FA1B /* CollectionViewCell.swift */; };
-		CE807E892D1B12B000F4FA1B /* Interest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE807E882D1B12B000F4FA1B /* Interest.swift */; };
 		D153BE402CF47AC900A81FFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D153BE3F2CF47AC900A81FFC /* AppDelegate.swift */; };
 		D153BE422CF47AC900A81FFC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D153BE412CF47AC900A81FFC /* SceneDelegate.swift */; };
 		D153BE442CF47AC900A81FFC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D153BE432CF47AC900A81FFC /* ViewController.swift */; };
@@ -97,8 +91,6 @@
 		D41DE5E82D1C427900706104 /* CVSelectionJobApplicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41DE5E72D1C427900706104 /* CVSelectionJobApplicationViewController.swift */; };
 		D41DE5EA2D1C433500706104 /* CVSelectionApplicationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41DE5E92D1C433500706104 /* CVSelectionApplicationsTableViewController.swift */; };
 		D45526BC2D09ED2A00149AA9 /* JobTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45526BB2D09ED2A00149AA9 /* JobTableViewCell.swift */; };
-		DA32F22A2D0CC70A00DC9353 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA32F2292D0CC70A00DC9353 /* Login.swift */; };
-		F23B987E2D1C8922005724A0 /* InterestChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23B987D2D1C8922005724A0 /* InterestChoiceViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -170,11 +162,6 @@
 		AC8BA8FC2D0F430800EE7A2C /* jobCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jobCellTableViewCell.swift; sourceTree = "<group>"; };
 		C311B0D22D06FDF00071CF9B /* EmployerDashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployerDashboardViewController.swift; sourceTree = "<group>"; };
 		C311B0D42D0707D30071CF9B /* ViewJobApplicationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewJobApplicationViewController.swift; sourceTree = "<group>"; };
-		CE807E7E2D1AD5FD00F4FA1B /* AppUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUser.swift; sourceTree = "<group>"; };
-		CE807E802D1AF13C00F4FA1B /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
-		CE807E842D1B07C700F4FA1B /* InterestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestViewController.swift; sourceTree = "<group>"; };
-		CE807E862D1B0FD000F4FA1B /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
-		CE807E882D1B12B000F4FA1B /* Interest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interest.swift; sourceTree = "<group>"; };
 		D153BE3C2CF47AC900A81FFC /* SeekersBH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeekersBH.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D153BE3F2CF47AC900A81FFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D153BE412CF47AC900A81FFC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -209,8 +196,6 @@
 		D41DE5E72D1C427900706104 /* CVSelectionJobApplicationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVSelectionJobApplicationViewController.swift; sourceTree = "<group>"; };
 		D41DE5E92D1C433500706104 /* CVSelectionApplicationsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVSelectionApplicationsTableViewController.swift; sourceTree = "<group>"; };
 		D45526BB2D09ED2A00149AA9 /* JobTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobTableViewCell.swift; sourceTree = "<group>"; };
-		DA32F2292D0CC70A00DC9353 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
-		F23B987D2D1C8922005724A0 /* InterestChoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestChoiceViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -311,8 +296,6 @@
 				942060692D10516000A2DE36 /* OnlineCourses.swift */,
 				D184E4002CF87A5600D896D6 /* CV.swift */,
 				D184E3FE2CF8785A00D896D6 /* Job.swift */,
-				CE807E7E2D1AD5FD00F4FA1B /* AppUser.swift */,
-				CE807E882D1B12B000F4FA1B /* Interest.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -388,11 +371,6 @@
 				D41DE5E92D1C433500706104 /* CVSelectionApplicationsTableViewController.swift */,
 				89ACEE282D1B98F4008D5F57 /* AddWebinarsViewController.swift */,
 				89ACEE2A2D1BC799008D5F57 /* AddVideoViewController.swift */,
-				DA32F2292D0CC70A00DC9353 /* Login.swift */,
-				CE807E802D1AF13C00F4FA1B /* RegisterController.swift */,
-				CE807E842D1B07C700F4FA1B /* InterestViewController.swift */,
-				CE807E862D1B0FD000F4FA1B /* CollectionViewCell.swift */,
-				F23B987D2D1C8922005724A0 /* InterestChoiceViewController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -417,10 +395,6 @@
 				947B8FE12D11B4C0004463EF /* FirebaseAnalytics */,
 				947B8FE32D11B559004463EF /* FirebaseFirestore */,
 				895C0AAA2D17354800E7283B /* Cloudinary */,
-				D184E3F62CF8760E00D896D6 /* FirebaseAnalytics */,
-				D184E3F82CF8762900D896D6 /* FirebaseAuth */,
-				D184E3FA2CF8763200D896D6 /* FirebaseDatabase */,
-				CE807E7A2D1AC9AF00F4FA1B /* FirebaseFirestore */,
 			);
 			productName = SeekersBH;
 			productReference = D153BE3C2CF47AC900A81FFC /* SeekersBH.app */;
@@ -583,17 +557,6 @@
 				AC2776E62D0AF25B0019677C /* addJobView3ViewController.swift in Sources */,
 				437286D22D11DF64000D3518 /* CreateCVNavigationController.swift in Sources */,
 				94E2D2772D076FB500614521 /* Resource.swift in Sources */,
-				DA32F22A2D0CC70A00DC9353 /* Login.swift in Sources */,
-				D184E3F12CF86CF400D896D6 /* user.swift in Sources */,
-				CE807E812D1AF13C00F4FA1B /* RegisterController.swift in Sources */,
-				D184E4012CF87A5600D896D6 /* CV.swift in Sources */,
-				CE807E7F2D1AD5FD00F4FA1B /* AppUser.swift in Sources */,
-				CE807E892D1B12B000F4FA1B /* Interest.swift in Sources */,
-				CE807E852D1B07C700F4FA1B /* InterestViewController.swift in Sources */,
-				D184E3FF2CF8785A00D896D6 /* Job.swift in Sources */,
-				D153BE442CF47AC900A81FFC /* ViewController.swift in Sources */,
-				CE807E872D1B0FD000F4FA1B /* CollectionViewCell.swift in Sources */,
-				F23B987E2D1C8922005724A0 /* InterestChoiceViewController.swift in Sources */,
 				D153BE402CF47AC900A81FFC /* AppDelegate.swift in Sources */,
 				8983F9A02D147DF400DE32B5 /* AddEmployerViewController.swift in Sources */,
 				43B1C5332D1585BF0046F96C /* AllCVViewController.swift in Sources */,
