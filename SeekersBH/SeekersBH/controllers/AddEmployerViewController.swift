@@ -46,7 +46,11 @@ class AddEmployerViewController: UIViewController {
             return
         }
         
+        let documentReference = FirebaseManager.shared.db.collection("Employer").document()
+           let documentID = documentReference.documentID
+        
         let employerData: [String: String] = [
+            "id":documentID,
             "username": username,
             "firstName": firstName,
             "lastName": lastName,
