@@ -15,9 +15,11 @@
 		435039FA2D142285006F7794 /* ProjectsCVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435039F92D142285006F7794 /* ProjectsCVViewController.swift */; };
 		435039FC2D142811006F7794 /* CVManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435039FB2D142811006F7794 /* CVManager.swift */; };
 		437286D22D11DF64000D3518 /* CreateCVNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437286D12D11DF64000D3518 /* CreateCVNavigationController.swift */; };
+		4377348A2D1D657300A5DBD2 /* EditCVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437734892D1D657300A5DBD2 /* EditCVViewController.swift */; };
 		43B1C5332D1585BF0046F96C /* AllCVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B1C5322D1585BF0046F96C /* AllCVViewController.swift */; };
 		43B1C5352D15EFA20046F96C /* CVTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B1C5342D15EFA20046F96C /* CVTableViewCell.swift */; };
 		43B1C5372D17326E0046F96C /* CVDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B1C5362D17326E0046F96C /* CVDetailsViewController.swift */; };
+		43F5F6AF2D1C923900FA080C /* EditCVFieldsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F5F6AE2D1C923900FA080C /* EditCVFieldsTableViewController.swift */; };
 		66E035012D1432C60050E168 /* jobDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E035002D1432C60050E168 /* jobDetailsViewController.swift */; };
 		66E035052D143B050050E168 /* generalInformationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E035042D143B050050E168 /* generalInformationCollectionViewCell.swift */; };
 		895C0AAB2D17354800E7283B /* Cloudinary in Frameworks */ = {isa = PBXBuildFile; productRef = 895C0AAA2D17354800E7283B /* Cloudinary */; };
@@ -117,9 +119,11 @@
 		435039F92D142285006F7794 /* ProjectsCVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsCVViewController.swift; sourceTree = "<group>"; };
 		435039FB2D142811006F7794 /* CVManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVManager.swift; sourceTree = "<group>"; };
 		437286D12D11DF64000D3518 /* CreateCVNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCVNavigationController.swift; sourceTree = "<group>"; };
+		437734892D1D657300A5DBD2 /* EditCVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCVViewController.swift; sourceTree = "<group>"; };
 		43B1C5322D1585BF0046F96C /* AllCVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCVViewController.swift; sourceTree = "<group>"; };
 		43B1C5342D15EFA20046F96C /* CVTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVTableViewCell.swift; sourceTree = "<group>"; };
 		43B1C5362D17326E0046F96C /* CVDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVDetailsViewController.swift; sourceTree = "<group>"; };
+		43F5F6AE2D1C923900FA080C /* EditCVFieldsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCVFieldsTableViewController.swift; sourceTree = "<group>"; };
 		66E035002D1432C60050E168 /* jobDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jobDetailsViewController.swift; sourceTree = "<group>"; };
 		66E035042D143B050050E168 /* generalInformationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = generalInformationCollectionViewCell.swift; sourceTree = "<group>"; };
 		895C0AAD2D1735D500E7283B /* CloudinaryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudinaryManager.swift; sourceTree = "<group>"; };
@@ -365,6 +369,8 @@
 				43B1C5362D17326E0046F96C /* CVDetailsViewController.swift */,
 				89ACEE282D1B98F4008D5F57 /* AddWebinarsViewController.swift */,
 				89ACEE2A2D1BC799008D5F57 /* AddVideoViewController.swift */,
+				43F5F6AE2D1C923900FA080C /* EditCVFieldsTableViewController.swift */,
+				437734892D1D657300A5DBD2 /* EditCVViewController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -554,9 +560,11 @@
 				8983F9A02D147DF400DE32B5 /* AddEmployerViewController.swift in Sources */,
 				43B1C5332D1585BF0046F96C /* AllCVViewController.swift in Sources */,
 				D4070DBC2D107AA100E517FE /* NewApplyPageFormTableViewController.swift in Sources */,
+				43F5F6AF2D1C923900FA080C /* EditCVFieldsTableViewController.swift in Sources */,
 				9420606E2D1074D400A2DE36 /* CourseContentTableViewCell.swift in Sources */,
 				66E035052D143B050050E168 /* generalInformationCollectionViewCell.swift in Sources */,
 				946297222D0AFD86005542AA /* ArticleDetailsViewController.swift in Sources */,
+				4377348A2D1D657300A5DBD2 /* EditCVViewController.swift in Sources */,
 				D4070DB82D10768C00E517FE /* ApplyPageViewController.swift in Sources */,
 				AC2776EA2D0B02E10019677C /* AddJobView4ViewController.swift in Sources */,
 				942060602D0DAB0E00A2DE36 /* SavedTableViewCell.swift in Sources */,
