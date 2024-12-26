@@ -24,5 +24,7 @@ class ManageArticlesTableViewCell: UITableViewCell {
             print("Error: Labels are not connected")
         }
     }
+    
+    
 }
 

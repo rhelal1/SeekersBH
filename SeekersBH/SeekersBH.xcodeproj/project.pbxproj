@@ -23,6 +23,8 @@
 		893E0F4D2D1D7998004CB6C3 /* MangeWebinarsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893E0F4C2D1D7998004CB6C3 /* MangeWebinarsViewController.swift */; };
 		893E0F4F2D1DA202004CB6C3 /* MangeVideosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893E0F4E2D1DA202004CB6C3 /* MangeVideosViewController.swift */; };
 		893E0F512D1DA2A6004CB6C3 /* MangeVideosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893E0F502D1DA2A6004CB6C3 /* MangeVideosTableViewCell.swift */; };
+		893E0F552D1DC263004CB6C3 /* ManageJobsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893E0F542D1DC263004CB6C3 /* ManageJobsViewController.swift */; };
+		893E0F592D1DCCC4004CB6C3 /* AdminJobCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893E0F582D1DCCC4004CB6C3 /* AdminJobCell.swift */; };
 		895C0AAB2D17354800E7283B /* Cloudinary in Frameworks */ = {isa = PBXBuildFile; productRef = 895C0AAA2D17354800E7283B /* Cloudinary */; };
 		895C0AAE2D1735DA00E7283B /* CloudinaryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895C0AAD2D1735D500E7283B /* CloudinaryManager.swift */; };
 		8983F9A02D147DF400DE32B5 /* AddEmployerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8983F99F2D147DF400DE32B5 /* AddEmployerViewController.swift */; };
@@ -137,6 +139,8 @@
 		893E0F4C2D1D7998004CB6C3 /* MangeWebinarsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MangeWebinarsViewController.swift; sourceTree = "<group>"; };
 		893E0F4E2D1DA202004CB6C3 /* MangeVideosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MangeVideosViewController.swift; sourceTree = "<group>"; };
 		893E0F502D1DA2A6004CB6C3 /* MangeVideosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MangeVideosTableViewCell.swift; sourceTree = "<group>"; };
+		893E0F542D1DC263004CB6C3 /* ManageJobsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageJobsViewController.swift; sourceTree = "<group>"; };
+		893E0F582D1DCCC4004CB6C3 /* AdminJobCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminJobCell.swift; sourceTree = "<group>"; };
 		895C0AAD2D1735D500E7283B /* CloudinaryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudinaryManager.swift; sourceTree = "<group>"; };
 		8983F99F2D147DF400DE32B5 /* AddEmployerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEmployerViewController.swift; sourceTree = "<group>"; };
 		8983F9A12D15D1C200DE32B5 /* AddArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddArticleViewController.swift; sourceTree = "<group>"; };
@@ -377,6 +381,7 @@
 				D4070DB52D0F206B00E517FE /* NewJobDetailTableViewController.swift */,
 				D4070DB72D10768C00E517FE /* ApplyPageViewController.swift */,
 				D4070DBB2D107AA100E517FE /* NewApplyPageFormTableViewController.swift */,
+				893E0F542D1DC263004CB6C3 /* ManageJobsViewController.swift */,
 				437286D12D11DF64000D3518 /* CreateCVNavigationController.swift */,
 				66E035042D143B050050E168 /* generalInformationCollectionViewCell.swift */,
 				8983F99F2D147DF400DE32B5 /* AddEmployerViewController.swift */,
@@ -399,6 +404,7 @@
 				89ACEE2A2D1BC799008D5F57 /* AddVideoViewController.swift */,
 				89BB590E2D1CC076000FE481 /* MangeArticlesViewController.swift */,
 				89BB59102D1CD711000FE481 /* ManageArticlesTableViewCell.swift */,
+				893E0F582D1DCCC4004CB6C3 /* AdminJobCell.swift */,
 				893E0F4E2D1DA202004CB6C3 /* MangeVideosViewController.swift */,
 				893E0F502D1DA2A6004CB6C3 /* MangeVideosTableViewCell.swift */,
 			);
@@ -616,6 +622,7 @@
 				43B1C5372D17326E0046F96C /* CVDetailsViewController.swift in Sources */,
 				9420605C2D0CCE1900A2DE36 /* VideoDetailsViewController.swift in Sources */,
 				895C0AAE2D1735DA00E7283B /* CloudinaryManager.swift in Sources */,
+				893E0F592D1DCCC4004CB6C3 /* AdminJobCell.swift in Sources */,
 				942060702D10828700A2DE36 /* CourseReviewTableViewCell.swift in Sources */,
 				9420605C2D0CCE1900A2DE36 /* VideoDetailsViewController.swift in Sources */,
 				947B8FE62D11CA5B004463EF /* FirebaseManager.swift in Sources */,
@@ -623,6 +630,7 @@
 				947B8FEB2D12360B004463EF /* ResourceManager.swift in Sources */,
 				942060722D1082AD00A2DE36 /* CourseReviewViewController.swift in Sources */,
 				D4070DB62D0F206B00E517FE /* NewJobDetailTableViewController.swift in Sources */,
+				893E0F552D1DC263004CB6C3 /* ManageJobsViewController.swift in Sources */,
 				8983F9A22D15D1C200DE32B5 /* AddArticleViewController.swift in Sources */,
 				C311B0D32D06FDF00071CF9B /* EmployerDashboardViewController.swift in Sources */,
 				435039FA2D142285006F7794 /* ProjectsCVViewController.swift in Sources */,
