@@ -11,6 +11,7 @@ class TestViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var JobLocationTxtField: UITextField!
     @IBOutlet weak var jobNameTxtField: UITextField!
     @IBOutlet weak var viewTest: UIView!
+    @IBOutlet weak var editJobApplication: UILabel!
     
     var job: JobAd? // Receive JobAd object
     
@@ -43,7 +44,7 @@ class TestViewController: UIViewController, UITextFieldDelegate {
      }
     
     private func setupForEditMode(with job: JobAd) {
-        self.title = "Edit Job Application" // Update title for edit mode
+        editJobApplication.text = "Edit Job Application"
         populateFields(with: job)
     }
 
@@ -57,12 +58,19 @@ class TestViewController: UIViewController, UITextFieldDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toAddJobView2", // Match the storyboard segue identifier
            let destination = segue.destination as? AddJobView2ViewController {
-            let job = JobAd(
+            let addedJob = JobAd(
                 jobName: jobNameTxtField.text ?? "",
                 jobLocation: JobLocationTxtField.text ?? "",
                 jobType: JobType(rawValue: JobTypeTxtField.text ?? "") ?? .fullTime // Map JobType if necessary
             )
-            destination.job = job
+            destination.job = addedJob
+            
+            if var job = job {
+                job.jobName = jobNameTxtField.text ?? ""
+                job.jobLocation  = JobLocationTxtField.text ?? ""
+                job.jobType = JobType(rawValue: JobTypeTxtField.text ?? "") ?? .fullTime
+                destination.job = job
+            }
             destination.coordinator = coordinator // Pass the coordinator to maintain the mode
         }
     }

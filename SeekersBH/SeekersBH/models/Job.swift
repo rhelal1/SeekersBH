@@ -17,11 +17,13 @@ struct JobAd {
     var datePosted: Date = Date() // Date when the job post was added
     var status: JobStatus = .Open
     var applicationStatus : ApplicationStatus = .pending
+    var isHidden : Bool = false
+
 }
 
 enum JobType: String {
-    case fullTime = "Full Time"
-    case partTime = "Part Time"
+    case fullTime = "Full-Time"
+    case partTime = "Part-Time"
     case contract = "Contract"
     case temporary = "Temporary"
 }

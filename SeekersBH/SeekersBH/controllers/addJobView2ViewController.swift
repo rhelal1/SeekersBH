@@ -11,6 +11,8 @@ class AddJobView2ViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var textview1: UITextView!
     @IBOutlet weak var textview2: UITextView!
     @IBOutlet weak var viewv: UIView!
+
+    @IBOutlet weak var titleLable: UILabel!
     
     @IBAction func nextbtn(_ sender: UIButton) {
         if validateInput() {
@@ -55,7 +57,7 @@ class AddJobView2ViewController: UIViewController, UITextViewDelegate {
     
     
     private func setupForEditMode(with job: JobAd) {
-        self.title = "Edit Job Details" // Update title for edit mode
+        titleLable.text = "Edit Job Details"
         populateFields(with: job)
     }
     

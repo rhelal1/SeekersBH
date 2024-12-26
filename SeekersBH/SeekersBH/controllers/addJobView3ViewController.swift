@@ -5,12 +5,12 @@ class addJobView3ViewController: UIViewController {
     @IBOutlet weak var applicationdeadline: UIDatePicker!
     @IBOutlet weak var AdditionalPerksTxtView: UITextView!
     @IBOutlet weak var salaryRangetxtField: UITextField!
+    @IBOutlet weak var titleLabel: UILabel!
     var job: JobAd? // Receive JobAd object
     
     @IBOutlet weak var vieww: UIView!
     @IBOutlet weak var textview1: UITextView!
     
-    var isSegueAlreadyPerformed = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,11 +28,31 @@ class addJobView3ViewController: UIViewController {
             applicationdeadline.date = job.jobApplicationDeadline
         }
         setupKeyboard()
+        setupPage()
+    }
+    
+    private func setupPage() {
+        if let coordinator = coordinator, case .edit(let job) = coordinator.mode {
+            setupForEditMode(with: job)
+        }
+    }
+    
+    private func setupForEditMode(with job: JobAd) {
+        titleLabel.text = "Edit Job Details"
+        populateFields(with: job)
+    }
+    
+    private func populateFields(with job: JobAd) {
+
+        applicationdeadline.setDate(job.jobApplicationDeadline,animated: false)
+        AdditionalPerksTxtView.text = job.additionalPerks.joined(separator: ", ")
+        salaryRangetxtField.text = job.jobSalary
+        
+       
     }
     
     @IBAction func finishbtn(_ sender: UIButton) {
         if validateInput() {
-            showAlert()
             saveJob()
         }
     }
@@ -48,69 +68,90 @@ class addJobView3ViewController: UIViewController {
              }
          }
      }
-    
     private func saveJob() {
-
+        // Prepare common job data
         var jobData: [String: Any] = [
-              "jobSalary": salaryRangetxtField.text ?? "",
-              "jobApplicationDeadline": applicationdeadline.date,
-              "additionalPerks": AdditionalPerksTxtView.text.trimmingCharacters(in: .whitespacesAndNewlines).components(separatedBy: ","),
-              "datePosted": Date(),
-              "status": "Open",
-              "applicationStatus": "pending"
-          ]
-          
-          // Add existing job data if we're updating
-          if let existingJob = job {
-              jobData["jobName"] = existingJob.jobName
-              jobData["jobLocation"] = existingJob.jobLocation
-              jobData["jobType"] = existingJob.jobType.rawValue
-              jobData["jobDescription"] = existingJob.jobDescription
-              jobData["jobKeyResponsibilites"] = existingJob.jobKeyResponsibilites
-              jobData["jobQualifications"] = existingJob.jobQualifications
-              jobData["jobEmploymentBenfits"] = existingJob.jobEmploymentBenfits
-              jobData["applicants"] = existingJob.applicants
-          }
-          
-          // Save to Firebase
-          FirebaseManager.shared.addDocumentToCollection(collectionName: "jobs", data: jobData)
+            "jobSalary": salaryRangetxtField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? "",
+            "jobApplicationDeadline":  applicationdeadline.date,
+            "additionalPerks": AdditionalPerksTxtView.text
+                .trimmingCharacters(in: .whitespacesAndNewlines)
+                .components(separatedBy: ",")
+                .map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }
+                .filter { !$0.isEmpty }, // Remove empty strings
+            "datePosted": Date(),
+            "status": "Open",
+            "applicationStatus": "pending"
+        ]
+        
+        // Handle add or edit mode
+        switch coordinator?.mode {
+        case .add:
+            // Adding a new job
+            // Include additional fields specific to adding if necessary
+            FirebaseManager.shared.addDocumentToCollection_qassim(collectionName: "jobs", data: jobData) { [weak self] error in
+                DispatchQueue.main.async {
+                    if let error = error {
+                        self?.showAlert(message: "Failed to save job: \(error.localizedDescription)")
+                    } else {
+                        self?.showAlert(title: "Success", message: "Job added successfully.") {
+                            self?.navigationController?.popViewController(animated: true)
+                        }
+                    }
+                }
+            }
+            
+        case .edit(let existingJob):
+            // Updating an existing job
+            // Include fields that can be updated
+            jobData["jobName"] = existingJob.jobName
+            jobData["jobLocation"] = existingJob.jobLocation
+            jobData["jobType"] = existingJob.jobType.rawValue
+            jobData["jobDescription"] = existingJob.jobDescription
+            jobData["jobKeyResponsibilites"] = existingJob.jobKeyResponsibilites
+            jobData["jobQualifications"] = existingJob.jobQualifications
+            jobData["jobEmploymentBenfits"] = existingJob.jobEmploymentBenfits
+            jobData["applicants"] = existingJob.applicants
+            
+            // Ensure documentId is available
+            guard let documentId = existingJob.documentId else {
+                self.showAlert(title: "Invalid Update" ,message: "Unable to update job: Missing document ID.")
+                return
+            }
+            
+            FirebaseManager.shared.updateDocument(collectionName: "jobs", documentId: documentId, data: jobData) { [weak self] error in
+                DispatchQueue.main.async {
+                    if let error = error {
+                        self?.showAlert(title:"Database error",message: "Failed to update job: \(error.localizedDescription)")
+                    } else {
+                        self?.showAlert(title: "Success", message: "Job updated successfully.") {
+                            self?.performSegue(withIdentifier: "goToNextPage", sender: nil)
+                        }
+                    }
+                }
+            }
+            
+        case .none:
+            // Handle the case where mode is not set
+            showAlert(title:"Invalid Mode",message: "Unable to determine the mode for saving the job.")
+        }
     }
 
-    
-    private func showAlert() {
-        // Create the alert controller
-        let alert = UIAlertController(title: "", message: "Job Application added Successfully", preferredStyle: .alert)
-        
-        let okAction = UIAlertAction(title: "Done", style: .default) { _ in
-            // Ensure you’re only performing the segue once
-            if !self.isSegueAlreadyPerformed {
-                self.isSegueAlreadyPerformed = true
-                self.performSegue(withIdentifier: "goToNextPage", sender: self)
-            }
+
+    private func showAlert(title: String = "Error", message: String, completion: (() -> Void)? = nil) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+            completion?()
         }
-        
-        // Add the action to the alert
         alert.addAction(okAction)
-        
-        // Present the alert
-        self.present(alert, animated: true, completion: nil)
+        present(alert, animated: true, completion: nil)
     }
     
     // Validation function
     private func validateInput() -> Bool {
         // Validate salary range
-        guard let salaryRange = salaryRangetxtField.text,
-              !salaryRange.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else {
-            showValidationAlert(message: "Salary range cannot be empty.")
-            return false
-        }
-        
-        // Check if the salary range is numeric or matches a range format
-        let salaryRangePattern = #"^\d{1,6}-\d{1,6}$|^\d{1,6}$"#
-        if !NSPredicate(format: "SELF MATCHES %@", salaryRangePattern).evaluate(with: salaryRange) {
-            showValidationAlert(message: "Salary range must be a number or in the format 'min-max' (e.g., 3000-5000).")
-            return false
-        }
+        if !validateSalaryRange() {
+             return false
+         }
         
         // Validate application deadline
         let today = Calendar.current.startOfDay(for: Date())
@@ -130,6 +171,46 @@ class addJobView3ViewController: UIViewController {
         
         return true
     }
+    
+
+    private func validateSalaryRange() -> Bool {
+        guard let salaryRange = salaryRangetxtField.text?.trimmingCharacters(in: .whitespacesAndNewlines),
+              !salaryRange.isEmpty else {
+            showValidationAlert(message: "Salary range cannot be empty.")
+            return false
+        }
+        
+        // Updated regex pattern to allow optional dollar signs
+        let salaryRangePattern = #"^\$?\d{1,6}(-\$?\d{1,6})?$"#
+        
+        // Validate the pattern
+        let regexTest = NSPredicate(format: "SELF MATCHES %@", salaryRangePattern)
+        if !regexTest.evaluate(with: salaryRange) {
+            showValidationAlert(message: "Salary range must be a number or in the format 'min-max' (e.g., 3000-5000).")
+            return false
+        }
+        
+        // Remove dollar signs and split by '-'
+        let cleanedSalaryRange = salaryRange.replacingOccurrences(of: "$", with: "")
+        let salaryParts = cleanedSalaryRange.components(separatedBy: "-")
+        
+        // Iterate through each part and validate
+        for part in salaryParts {
+            if let salary = Int(part) {
+                if salary >= 10000 {
+                    showValidationAlert(message: "Each salary amount must be less than $10,000.")
+                    return false
+                }
+            } else {
+                // This should not happen due to regex, but added for safety
+                showValidationAlert(message: "Invalid salary number.")
+                return false
+            }
+        }
+        
+        return true
+    }
+
     
     // Alert function for validation errors
     private func showValidationAlert(message: String) {

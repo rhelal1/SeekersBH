@@ -1,30 +1,11 @@
 import UIKit
 
 class JobDetailsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+    
     var selectedJob: JobAd? // Pass this from the previous screen
-    @IBOutlet weak var jobDetailsTableView:UITableView!
-    
-    @IBAction func deleteBtn(_ sender: Any) {
-        // Handle delete button action
-    }
-     
-    @IBAction func editBtn(_ sender: Any) {
-        guard let selectedJob = selectedJob else {
-            // Show an error message if the job object is missing
-            showAlert(message: "Failed to load job details for editing.")
-            return
-        }
-        // Navigate to the edit page
-       performSegue(withIdentifier: "toAddJobView1", sender: selectedJob)
-    }
-    
-    @IBAction func ViewAppbtn(_ sender: Any) {
-        // Handle view applications button action
-    }
-    
-    @IBOutlet weak var jobTitle: UILabel!
-    @IBOutlet weak var companyNamelbl: UILabel!
+    @IBOutlet weak var jobDetailsTableView: UITableView!
+    @IBOutlet weak var jobTitleLabel: UILabel!
+    @IBOutlet weak var companyNameLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,14 +19,81 @@ class JobDetailsViewController: UIViewController, UITableViewDelegate, UITableVi
         jobDetailsTableView.estimatedRowHeight = 44 // Set an estimated height
         
         // Set job title and company name
-        jobTitle.text = selectedJob?.jobName ?? "Unknown Job"
-        companyNamelbl.text = "Company Name" // Replace with actual company name if available
-
+        jobTitleLabel.text = selectedJob?.jobName ?? "Unknown Job"
+        companyNameLabel.text = "Company Name" // Replace with actual company name if available
+        
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func viewApplicantsButtonTapped(_ sender: UIButton) {
+        // Handle view applications button action
+    }
+    
+    @IBAction func editButtonTapped(_ sender: UIButton) {
+        guard let selectedJob = selectedJob else {
+            // Show an error message if the job object is missing
+            showAlert(message: "Failed to load job details for editing.")
+            return
+        }
+        // Navigate to the edit page
+        performSegue(withIdentifier: "editJob", sender: selectedJob)
+    }
+    
+    @IBAction func deleteButtonTapped(_ sender: UIButton) {
+        // Ensure a job is selected
+        guard let selectedJob = selectedJob else {
+            showAlert(message: "No job selected to delete.")
+            return
+        }
+        
+        // Present a confirmation alert to the user
+        let alertController = UIAlertController(title: "Delete Job",
+                                                message: "Are you sure you want to delete this job? This action cannot be undone.",
+                                                preferredStyle: .alert)
+        
+        // Cancel action
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        // Delete action
+        let deleteAction = UIAlertAction(title: "Delete", style: .destructive) { _ in
+            self.deleteJob(job: selectedJob)
+        }
+        
+        // Add actions to the alert controller
+        alertController.addAction(cancelAction)
+        alertController.addAction(deleteAction)
+        
+        // Present the alert
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    private func deleteJob(job: JobAd) {
+        // Safely unwrap documentId
+        guard let documentId = job.documentId else {
+            self.showAlert(message: "Job document ID is missing.")
+            return
+        }
+
+        // Optionally, show a loading indicator here
+
+        FirebaseManager.shared.deleteDocument(collectionName: "jobs", documentId: documentId) { error in
+            DispatchQueue.main.async {
+                // Optionally, hide the loading indicator here
+
+                if let error = error {
+                    self.showAlert(message: "Failed to delete job: \(error.localizedDescription)")
+                } else {
+                    self.showAlert(title:"Success", message: "Job deleted successfully.") {
+                        // Navigate back to the previous screen
+                        self.navigationController?.popViewController(animated: true)
+                    }
+                }
+            }
+        }
+    }
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toAddJobView1",
+        if segue.identifier == "editJob",
            let destination = segue.destination as? TestViewController,
            let job = sender as? JobAd {
             destination.job = job
@@ -53,6 +101,8 @@ class JobDetailsViewController: UIViewController, UITableViewDelegate, UITableVi
             destination.coordinator = AddEditJobCoordinator(mode: .edit(job: job))
         }
     }
+    
+    // MARK: - UITableViewDataSource
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 6 // General Info, Description, Qualifications, Responsibilities, Benefits, Perks
@@ -70,23 +120,59 @@ class JobDetailsViewController: UIViewController, UITableViewDelegate, UITableVi
         }
     }
     
-    // Customize the header view for each section
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = UIView()
-        headerView.backgroundColor = .white // Adjust background color if needed
-
-        let headerLabel = UILabel()
-        headerLabel.font = UIFont.boldSystemFont(ofSize: 20) // Increase font size and make it bold
-        headerLabel.textColor = UIColor(hex: "#091856") // Use the custom color
-        headerLabel.text = self.tableView(tableView, titleForHeaderInSection: section)
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "JobDetailsCell", for: indexPath) as? JobDetailsTableViewCell else {
+            return UITableViewCell()
+        }
         
-        // Adjust the headerLabel frame to add some spacing
-        headerLabel.frame = CGRect(x: 10, y: -5, width: tableView.frame.size.width - 20, height: 30) // Move it up by adjusting the y value (negative value)
-
-        headerView.addSubview(headerLabel)
+        // Populate the cell content based on the section and row
+        switch indexPath.section {
+        case 0: // General Information
+            switch indexPath.row {
+            case 0: cell.contentLabel.text = "Location: \(selectedJob?.jobLocation ?? "N/A")"
+            case 1: cell.contentLabel.text = "Type: \(selectedJob?.jobType.rawValue.capitalized ?? "N/A")"
+            case 2: cell.contentLabel.text = "Salary: \(selectedJob?.jobSalary ?? "N/A")"
+            case 3: cell.contentLabel.text = "Status: \(selectedJob?.status == .Open ? "Open" : "Closed")"
+            default: break
+            }
+        case 1: // Description
+            cell.contentLabel.text = selectedJob?.jobDescription ?? "N/A"
+        case 2: // Qualifications
+            cell.contentLabel.text = selectedJob?.jobQualifications ?? "N/A"
+        case 3: // Responsibilities
+            cell.contentLabel.text = selectedJob?.jobKeyResponsibilites ?? "N/A"
+        case 4: // Benefits
+            cell.contentLabel.text = selectedJob?.jobEmploymentBenfits ?? "N/A"
+        case 5: // Additional Perks
+            cell.contentLabel.text = selectedJob?.additionalPerks[indexPath.row] ?? "N/A"
+        default: break
+        }
+        
+        return cell
+    }
+    
+    // MARK: - UITableViewDelegate
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UITableViewHeaderFooterView()
+        
+        let titleLabel = UILabel()
+        titleLabel.font = UIFont.boldSystemFont(ofSize: 20)
+        titleLabel.textColor = UIColor(hex: "#091856")
+        titleLabel.text = self.tableView(tableView, titleForHeaderInSection: section)
+        
+        headerView.addSubview(titleLabel)
+        
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            titleLabel.leadingAnchor.constraint(equalTo: headerView.leadingAnchor, constant: 20),
+            titleLabel.trailingAnchor.constraint(equalTo: headerView.trailingAnchor, constant: -20),
+            titleLabel.topAnchor.constraint(equalTo: headerView.topAnchor, constant: 10),
+            titleLabel.bottomAnchor.constraint(equalTo: headerView.bottomAnchor, constant: -10)
+        ])
+        
         return headerView
     }
-
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
@@ -100,42 +186,14 @@ class JobDetailsViewController: UIViewController, UITableViewDelegate, UITableVi
         }
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "JobDetailsCell", for: indexPath) as? JobDetailsTableViewCell else {
-            return UITableViewCell()
-        }
-        
-        // Populate the cell content based on the section and row
-        switch indexPath.section {
-        case 0: // General Information
-            switch indexPath.row {
-            case 0: cell.contentlbl.text = "Location: \(selectedJob?.jobLocation ?? "N/A")"
-            case 1: cell.contentlbl.text = "Type: \(selectedJob?.jobType.rawValue.capitalized ?? "N/A")"
-            case 2: cell.contentlbl.text = "Salary: \(selectedJob?.jobSalary ?? "N/A")"
-            case 3: cell.contentlbl.text = "Status: \(selectedJob?.status == .Open ? "Open" : "Closed")"
-            default: break
-            }
-        case 1: // Description
-            cell.contentlbl.text = selectedJob?.jobDescription ?? "N/A"
-        case 2: // Qualifications
-            cell.contentlbl.text = selectedJob?.jobQualifications ?? "N/A"
-        case 3: // Responsibilities
-            cell.contentlbl.text = selectedJob?.jobKeyResponsibilites ?? "N/A"
-        case 4: // Benefits
-            cell.contentlbl.text = selectedJob?.jobEmploymentBenfits ?? "N/A"
-        case 5: // Additional Perks
-            cell.contentlbl.text = selectedJob?.additionalPerks[indexPath.row] ?? "N/A"
-        default: break
-        }
-        
-        return cell
-    }
+    // MARK: - Private Methods
     
-    private func showAlert(message: String) {
-        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+    private func showAlert(title: String = "Error", message: String, completion: (() -> Void)? = nil) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+            completion?()
+        }
         alert.addAction(okAction)
         present(alert, animated: true, completion: nil)
     }
 }
-          
