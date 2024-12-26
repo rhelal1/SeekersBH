@@ -35,6 +35,12 @@ class CVManager {
     
     // Function to save the CV to Firebase
     func saveCVToFirebase() {
+        
+        guard let userID = AccessManager.userID else {
+            print("Error: userID is nil. Cannot save CV.")
+            return
+        }
+        
         let cv = CVManager.shared.cv
         
         let documentReference = FirebaseManager.shared.db.collection("CV").document()
@@ -42,6 +48,7 @@ class CVManager {
         
         let cvData: [String: Any] = [
             "id": documentID,
+            "userID": userID,
             "fullName": cv.fullName,
             "email": cv.email,
             "phoneNumber": cv.phoneNumber,
@@ -66,8 +73,6 @@ class CVManager {
             "createdDate": Timestamp()
         ]
         
-       
-        
         let db = Firestore.firestore()
         db.collection("CV").addDocument(data: cvData) { error in
             if let error = error {
@@ -76,11 +81,14 @@ class CVManager {
                 print("CV saved successfully!")
             }
         }
+        
     }
+    
+    func formatDateToString(_ date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        return dateFormatter.string(from: date)
+    }
+    
 }
 
-func formatDateToString(_ date: Date) -> String {
-    let dateFormatter = DateFormatter()
-    dateFormatter.dateFormat = "yyyy-MM-dd"
-    return dateFormatter.string(from: date)
-}
