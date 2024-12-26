@@ -704,22 +704,22 @@ Job Application</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="next"/>
                                     </textView>
-                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="mbu-k8-Rd0">
-                                        <rect key="frame" x="30" y="393" width="255" height="73"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="73" id="tQF-XB-UpV"/>
-                                        </constraints>
-                                    </datePicker>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set Application Deadline" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3zE-1q-Kj0">
                                         <rect key="frame" x="20" y="360" width="200" height="21"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" red="0.035294117649999998" green="0.094117647060000004" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="mbu-k8-Rd0">
+                                        <rect key="frame" x="94" y="389" width="127" height="61"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="61" id="tQF-XB-UpV"/>
+                                        </constraints>
+                                    </datePicker>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="underPageBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="mbu-k8-Rd0" firstAttribute="top" secondItem="3zE-1q-Kj0" secondAttribute="bottom" constant="12" id="8gx-cN-b8A"/>
+                                    <constraint firstItem="mbu-k8-Rd0" firstAttribute="top" secondItem="3zE-1q-Kj0" secondAttribute="bottom" constant="8" id="8gx-cN-b8A"/>
                                     <constraint firstAttribute="trailing" secondItem="sEB-jv-gNd" secondAttribute="trailing" constant="20" id="Fyd-Nk-DBQ"/>
                                     <constraint firstItem="mbu-k8-Rd0" firstAttribute="centerX" secondItem="XCM-Oh-Szd" secondAttribute="centerX" id="GP7-qY-rPe"/>
                                     <constraint firstItem="jF9-Id-Lmu" firstAttribute="centerX" secondItem="XCM-Oh-Szd" secondAttribute="centerX" id="Hd9-vC-BgL"/>
@@ -733,9 +733,9 @@ Job Application</string>
                                     <constraint firstItem="sEB-jv-gNd" firstAttribute="centerX" secondItem="XCM-Oh-Szd" secondAttribute="centerX" id="WCy-lh-aeN"/>
                                     <constraint firstAttribute="trailing" secondItem="3zE-1q-Kj0" secondAttribute="trailing" constant="95" id="ZCa-ah-w5z"/>
                                     <constraint firstItem="sEB-jv-gNd" firstAttribute="leading" secondItem="XCM-Oh-Szd" secondAttribute="leading" constant="20" id="aZ3-g0-eeP"/>
-                                    <constraint firstItem="mbu-k8-Rd0" firstAttribute="bottom" secondItem="XCM-Oh-Szd" secondAttribute="bottomMargin" id="bve-Ab-fjb"/>
+                                    <constraint firstItem="mbu-k8-Rd0" firstAttribute="bottom" secondItem="XCM-Oh-Szd" secondAttribute="bottomMargin" constant="-16" id="bve-Ab-fjb"/>
                                     <constraint firstItem="3zE-1q-Kj0" firstAttribute="top" secondItem="sEB-jv-gNd" secondAttribute="bottom" constant="23" id="cAP-RB-jFJ"/>
-                                    <constraint firstItem="mbu-k8-Rd0" firstAttribute="leading" secondItem="XCM-Oh-Szd" secondAttribute="leading" constant="30" id="drz-ET-aqh"/>
+                                    <constraint firstItem="mbu-k8-Rd0" firstAttribute="leading" secondItem="XCM-Oh-Szd" secondAttribute="leading" constant="94" id="drz-ET-aqh"/>
                                     <constraint firstItem="sEB-jv-gNd" firstAttribute="top" secondItem="hj6-gC-ZEJ" secondAttribute="bottom" constant="8" symbolic="YES" id="fg1-Em-z1Y"/>
                                     <constraint firstItem="VJo-Ds-AY7" firstAttribute="top" secondItem="XCM-Oh-Szd" secondAttribute="top" constant="35" id="i5u-nB-Xn5"/>
                                     <constraint firstItem="jF9-Id-Lmu" firstAttribute="leading" secondItem="XCM-Oh-Szd" secondAttribute="leading" constant="20" id="k9j-1w-L4c"/>
@@ -906,7 +906,6 @@ Job Application</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Gh8-hq-mwr"/>
         <segue reference="oUM-it-RiT"/>
         <segue reference="5ug-3U-emQ"/>
     </inferredMetricsTieBreakers>
