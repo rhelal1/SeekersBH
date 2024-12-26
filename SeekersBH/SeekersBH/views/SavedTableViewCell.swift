@@ -32,11 +32,11 @@ class SavedTableViewCell: UITableViewCell {
     func update(with savedRescource: Resource) {
         
         switch savedRescource {
-        case let article as Article:
+        case _ as Article:
             resourceTitle.text = savedRescource.title + "(Article)"
-        case let webinar as Webinar:
+        case _ as Webinar:
             resourceTitle.text = savedRescource.title + "(Webinar)"
-        case let video as Video:
+        case _ as Video:
             resourceTitle.text = savedRescource.title + "(Video)"
         default:
             resourceTitle.text = "unknown"
