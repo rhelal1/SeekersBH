@@ -8,6 +8,9 @@
 import UIKit
 
 class CVSelectionJobApplicationViewController: UIViewController {
+    
+    // Property to hold the job application data passed from the previous view
+        var tempJobApplication: JobApplication?
 
     override func viewDidLoad() {
         super.viewDidLoad()

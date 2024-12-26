@@ -136,41 +136,42 @@ class NewApplyPageFormTableViewController: UITableViewController {
 //            }
 
             // Create and return JobApplication object
-//            let jobApplication = JobApplication(
-//                fullName: fullName,
-//                email: email,
-//                phoneNumber: phoneNumber,
-//                address: address,
-//                workExperince: WorkExperince(
-//                    jobTitle: jobTitle,
-//                    companyName: companyName,
-//                    employmentDate: employmentDate ?? Date(),
-//                    jobResponsibilites: jobResponsibilities
-//                ),
-//                education: Education(
-//                    dgree: degree,
-//                    insinuation: universityName,
-//                    graduationDate: graduationDate ?? Date()
-//                ),
-//                qualifications: Qualification(
-//                    skill: skills,
-//                    certifications: certifications,
-//                    languages: languages
-//                ),
-//                reference: Reference(
-//                    name: referenceName,  // Pass the string to the Reference struct
-//                    contactDetails: referenceContact  // Pass the string to the Reference struct
-//                ),
-//                additionalQuestions: [
-//                    "Question1": answer1,
-//                    "Question2": answer2,
-//                    "Question3": answer3
-//                ], uploadCV: CV
-//                 
-//            )
 
-//            return JobApplication()
-//        }
+            let jobApplication = JobApplication(
+                fullName: fullName,
+                email: email,
+                phoneNumber: phoneNumber,
+                address: address,
+                workExperince: WorkExperince(
+                    jobTitle: jobTitle,
+                    companyName: companyName,
+                    employmentDate: employmentDate ?? Date(),
+                    jobResponsibilites: jobResponsibilities
+                ),
+                education: Education(
+                    dgree: degree,
+                    insinuation: universityName,
+                    graduationDate: graduationDate ?? Date()
+                ),
+                qualifications: Qualification(
+                    skill: skills,
+                    certifications: certifications,
+                    languages: languages
+                ),
+                reference: Reference(
+                    name: referenceName,  // Pass the string to the Reference struct
+                    contactDetails: referenceContact  // Pass the string to the Reference struct
+                ),
+                additionalQuestions: [
+                    "Question1": answer1,
+                    "Question2": answer2,
+                    "Question3": answer3
+                ], uploadCV: nil // Don't include the CV field
+                 
+            )
+
+            return jobApplication
+        }
 
      
         
