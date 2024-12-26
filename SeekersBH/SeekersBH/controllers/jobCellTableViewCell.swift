@@ -12,41 +12,51 @@ class jobCellTableViewCell: UITableViewCell {
     @IBOutlet weak var jobStatusLbl: UILabel!
     @IBOutlet weak var jobNamelbl: UILabel!
     @IBOutlet weak var datePosted: UILabel!
-    @IBOutlet weak var numberOfApplication:UILabel!
+    @IBOutlet weak var numberOfApplication: UILabel!
+    @IBOutlet weak var cardContainer: UIView!
+    @IBOutlet weak var statusIndicator: UIView! 
     
-    
-    @IBAction func showDetailsBtn(_ sender: UIButton){
-        
-    }
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        setupCardView()
+        setupStatusIndicator()
+    }
+    
+    private func setupCardView() {
+        cardContainer.layer.cornerRadius = 12
+        cardContainer.layer.shadowColor = UIColor.black.cgColor
+        cardContainer.layer.shadowOffset = CGSize(width: 0, height: 2)
+        cardContainer.layer.shadowRadius = 4
+        cardContainer.layer.shadowOpacity = 0.1
+    }
+    
+    private func setupStatusIndicator() {
+        statusIndicator.layer.cornerRadius = statusIndicator.frame.height / 2
+        statusIndicator.clipsToBounds = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
-    
-//    func setupCell(jobName: String, date: Date, Status: Status, numOfApplications: Int) {
-//        jobNamelbl.text = jobName
-//        
-//        // Format the date to a readable string
-//        let dateFormatter = DateFormatter()
-//        dateFormatter.dateStyle = .medium
-//        dateFormatter.timeStyle = .none
-//        let formattedDate = dateFormatter.string(from: date)
-//        
-//        datePosted.text = "Posted On \(formattedDate)"
-//        
-//        // Convert Status enum to a string
-//        let statusText = (Status == .Open) ? "Open" : "Closed"
-//        jobStatusLbl.text = "Status: \(statusText)"
-//        
-//        numberOfApplication.text = "Number Of Applications: \(numOfApplications)"
-//    }
-
-
+    func setupCell(jobName: String, date: Date, Status: JobStatus, numOfApplications: Int) {
+        jobNamelbl.text = jobName
+        
+        // Format the date to a readable string
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .none
+        let formattedDate = dateFormatter.string(from: date)
+        
+        datePosted.text = "Posted On \(formattedDate)"
+        
+        // Convert Status enum to a string and set indicator color
+        let statusText = (Status == .Open) ? "Open" : "Closed"
+        jobStatusLbl.text = "Status: \(statusText)"
+        
+        // Set status indicator color
+        statusIndicator.backgroundColor = (Status == .Open) ? .systemGreen : .systemRed
+        
+        numberOfApplication.text = "Number Of Applications: \(numOfApplications)"
+    }
 }

@@ -1,14 +1,7 @@
-//
-//  testViewController.swift
-//  SeekersBH
-//
-//  Created by Guest User on 12/12/2024.
-//
-
 import UIKit
 
 class TestViewController: UIViewController, UITextFieldDelegate {
-    
+    var coordinator: AddEditJobCoordinator?
     @IBAction func nextbtn(_ sender: UIButton) {
         if validateInput() {
             // Segue will be handled by the storyboard
@@ -18,27 +11,67 @@ class TestViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var JobLocationTxtField: UITextField!
     @IBOutlet weak var jobNameTxtField: UITextField!
     @IBOutlet weak var viewTest: UIView!
+    @IBOutlet weak var editJobApplication: UILabel!
     
     var job: JobAd? // Receive JobAd object
     
     override func viewDidLoad() {
         super.viewDidLoad()
         viewTest.layer.cornerRadius = 15
-        
+        setupPage()
         // Set delegate for text fields
         jobNameTxtField.delegate = self
         JobLocationTxtField.delegate = self
+        setupKeyboard()
+    }
+    
+    private func setupPage() {
+        if let coordinator = coordinator, case .edit(let job) = coordinator.mode {
+            setupForEditMode(with: job)
+        }
+    }
+    
+    private func setupKeyboard() {
+         view.addGestureRecognizer(UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing)))
+         
+         [UIResponder.keyboardWillShowNotification, UIResponder.keyboardWillHideNotification].forEach { notification in
+             NotificationCenter.default.addObserver(forName: notification, object: nil, queue: .main) { [weak self] _ in
+                 UIView.animate(withDuration: 0.3) {
+                     self?.view.frame.origin.y = notification == UIResponder.keyboardWillShowNotification ? -100 : 0
+                 }
+             }
+         }
+     }
+    
+    private func setupForEditMode(with job: JobAd) {
+        editJobApplication.text = "Edit Job Application"
+        populateFields(with: job)
+    }
+
+    private func populateFields(with job: JobAd) {
+        // Populate fields with job data for edit mode
+        jobNameTxtField.text = job.jobName
+        JobLocationTxtField.text = job.jobLocation
+        JobTypeTxtField.text = job.jobType.rawValue
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toAddJobView2", // Match the storyboard segue identifier
            let destination = segue.destination as? AddJobView2ViewController {
-            let job = JobAd(
+            let addedJob = JobAd(
                 jobName: jobNameTxtField.text ?? "",
                 jobLocation: JobLocationTxtField.text ?? "",
-                jobType: .fullTime // Map JobType if necessary
+                jobType: JobType(rawValue: JobTypeTxtField.text ?? "") ?? .fullTime // Map JobType if necessary
             )
-            destination.job = job
+            destination.job = addedJob
+            
+            if var job = job {
+                job.jobName = jobNameTxtField.text ?? ""
+                job.jobLocation  = JobLocationTxtField.text ?? ""
+                job.jobType = JobType(rawValue: JobTypeTxtField.text ?? "") ?? .fullTime
+                destination.job = job
+            }
+            destination.coordinator = coordinator // Pass the coordinator to maintain the mode
         }
     }
     
