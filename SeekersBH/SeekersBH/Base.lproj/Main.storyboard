@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RxE-Q0-RCh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RxE-Q0-RCh">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,42 +10,18 @@
         <!--Home-->
         <scene sceneID="GwA-MF-eVw">
             <objects>
-                <viewController id="H7w-DE-aqX" customClass="ViewController" customModule="SeekersBH" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="H7w-DE-aqX" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QCA-Hp-CMF">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yGz-40-Iuo">
-                                <rect key="frame" x="161.66666666666666" y="406.66666666666669" width="70" height="39"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Home"/>
-                                <connections>
-                                    <segue destination="pVo-qb-eO3" kind="show" id="eA7-5h-egG"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="SoZ-mS-699"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="yGz-40-Iuo" firstAttribute="centerY" secondItem="QCA-Hp-CMF" secondAttribute="centerY" id="Txl-UO-kWV"/>
-                            <constraint firstItem="yGz-40-Iuo" firstAttribute="centerX" secondItem="QCA-Hp-CMF" secondAttribute="centerX" id="Xy2-Fv-2sl"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="3fm-tt-ijU"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OG9-US-oLF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1165.6488549618321" y="91.549295774647888"/>
-        </scene>
-        <!--HomePage-->
-        <scene sceneID="1By-x7-RXf">
-            <objects>
-                <viewControllerPlaceholder storyboardName="duha" referencedIdentifier="HomePage" id="pVo-qb-eO3" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="6XH-ju-LkL"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SN3-rH-7CI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1714" y="134"/>
         </scene>
         <!--Options-->
         <scene sceneID="Y7z-3O-eFg">
@@ -54,166 +30,14 @@
                     <view key="view" contentMode="scaleToFill" id="jpJ-6x-5hL">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Jlk-I7-Emx">
-                                <rect key="frame" x="91.333333333333329" y="234.33333333333334" width="210.66666666666669" height="383.33333333333326"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hX4-AI-RU9">
-                                        <rect key="frame" x="0.0" y="0.0" width="210.66666666666666" height="38.333333333333336"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Growth Hub"/>
-                                        <connections>
-                                            <segue destination="69e-JO-d4P" kind="presentation" modalPresentationStyle="fullScreen" id="r8m-TB-gYu"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LZw-Yg-SgM">
-                                        <rect key="frame" x="0.0" y="38.333333333333343" width="210.66666666666666" height="38.333333333333343"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Online Courses"/>
-                                        <connections>
-                                            <segue destination="Fae-Wc-3VP" kind="show" id="pN7-Ke-0n6"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2hL-87-vef">
-                                        <rect key="frame" x="0.0" y="76.666666666666657" width="210.66666666666666" height="38.333333333333343"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Settings"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p0j-Qt-Au7">
-                                        <rect key="frame" x="0.0" y="114.99999999999996" width="210.66666666666666" height="38.333333333333329"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Create CV"/>
-                                        <connections>
-                                            <segue destination="IyQ-7w-sgS" kind="show" id="xBE-vd-L82"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DuD-0y-rL2">
-                                        <rect key="frame" x="0.0" y="153.33333333333334" width="210.66666666666666" height="38.333333333333343"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Created CV"/>
-                                        <connections>
-                                            <segue destination="q8O-ZQ-Ppk" kind="show" id="l32-U9-g12"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BKj-RL-Y5p">
-                                        <rect key="frame" x="0.0" y="191.66666666666666" width="210.66666666666666" height="38.333333333333343"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Job Application Tracker"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jcm-6i-blT">
-                                        <rect key="frame" x="0.0" y="229.99999999999997" width="210.66666666666666" height="38.333333333333343"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="User Managment"/>
-                                        <connections>
-                                            <segue destination="NAg-k4-8eU" kind="show" id="RL0-Fz-XL4"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jzp-1i-QCl">
-                                        <rect key="frame" x="0.0" y="268.33333333333337" width="210.66666666666666" height="38.333333333333314"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Resource Managment"/>
-                                        <connections>
-                                            <segue destination="wZP-Xc-OZe" kind="show" id="kSo-QG-Up4"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t8x-IC-wwo">
-                                        <rect key="frame" x="0.0" y="306.66666666666663" width="210.66666666666666" height="38.333333333333314"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Job Managment (admin)"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="02A-5T-C2M">
-                                        <rect key="frame" x="0.0" y="345" width="210.66666666666666" height="38.333333333333314"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Job Managment"/>
-                                        <connections>
-                                            <segue destination="j1M-da-Cyt" kind="show" id="Plt-ZH-nQM"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="rPS-Dp-WoI"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="Jlk-I7-Emx" firstAttribute="centerY" secondItem="jpJ-6x-5hL" secondAttribute="centerY" id="8LE-qt-ens"/>
-                            <constraint firstItem="Jlk-I7-Emx" firstAttribute="centerX" secondItem="jpJ-6x-5hL" secondAttribute="centerX" id="odL-1c-inu"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Options" image="ellipsis.rectangle" catalog="system" id="4oS-EM-nOE"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FI0-tk-P6x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1132" y="842"/>
-        </scene>
-        <!--GrowthHubViewController-->
-        <scene sceneID="L5R-8W-NK4">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="optionID" storyboardName="ruqaya" referencedIdentifier="GrowthHubViewController" id="69e-JO-d4P" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="Y6O-cG-7Vf"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="q24-Nw-lM0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1900" y="675"/>
-        </scene>
-        <!--OnlineCoursesViewController-->
-        <scene sceneID="Osj-Wq-JZb">
-            <objects>
-                <viewControllerPlaceholder storyboardName="ruqaya" referencedIdentifier="OnlineCoursesViewController" id="Fae-Wc-3VP" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="U7t-h8-unI"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="EBH-BT-6Qa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1915" y="709"/>
-        </scene>
-        <!--CreateNewCV-->
-        <scene sceneID="dxK-FU-g7q">
-            <objects>
-                <viewControllerPlaceholder storyboardName="marwa" referencedIdentifier="CreateNewCV" id="IyQ-7w-sgS" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="ZTg-9N-b5S"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Xul-iF-N6g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1865" y="737"/>
-        </scene>
-        <!--JobManagment-->
-        <scene sceneID="Wd8-Sy-mr3">
-            <objects>
-                <viewControllerPlaceholder storyboardName="qasim" referencedIdentifier="JobManagment" id="j1M-da-Cyt" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="RBc-T1-WqT"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KtN-BH-giR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1872" y="777"/>
-        </scene>
-        <!--AllCVViewController-->
-        <scene sceneID="AkY-TQ-zOc">
-            <objects>
-                <viewControllerPlaceholder storyboardName="marwa" referencedIdentifier="AllCVViewController" id="q8O-ZQ-Ppk" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="dQf-Rc-tgG"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1d2-lI-LOt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1873" y="842"/>
-        </scene>
-        <!--ResourceManagementViewController-->
-        <scene sceneID="uuU-6F-94V">
-            <objects>
-                <viewControllerPlaceholder storyboardName="zainab" referencedIdentifier="ResourceManagementViewController" id="wZP-Xc-OZe" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="bFQ-G7-XsO"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="m58-DT-Zvh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1921" y="947"/>
-        </scene>
-        <!--ManageUsers-->
-        <scene sceneID="SxK-bS-XUn">
-            <objects>
-                <viewControllerPlaceholder storyboardName="zainab" referencedIdentifier="ManageUsers" id="NAg-k4-8eU" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="geO-Mr-g3C"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iIg-lf-p48" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1940" y="1048"/>
+            <point key="canvasLocation" x="1166" y="823"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="65P-2L-DON">
@@ -250,7 +74,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1X0-Mm-ucb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-592" y="842"/>
+            <point key="canvasLocation" x="-698" y="823"/>
         </scene>
         <!--Search-->
         <scene sceneID="ZPh-E3-e7L">
