@@ -349,17 +349,17 @@
             <objects>
                 <tableViewController id="Lzq-Sl-Df4" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="3vr-se-opc">
-                        <rect key="frame" x="0.0" y="0.0" width="1032" height="1062"/>
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="590"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <sections>
                             <tableViewSection headerTitle="Interests:" id="fMd-DS-eaU">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="200" id="zRY-Qv-OLi">
-                                        <rect key="frame" x="20" y="55.333332061767578" width="992" height="200"/>
+                                        <rect key="frame" x="20" y="55.333332061767578" width="400" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zRY-Qv-OLi" id="brP-aC-tvf">
-                                            <rect key="frame" x="0.0" y="0.0" width="992" height="200"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="400" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <color key="backgroundColor" red="0.85098039219999999" green="0.85098039219999999" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
@@ -369,10 +369,10 @@
                             <tableViewSection headerTitle="Skills:" id="K2P-xD-thV">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="200" id="qsv-d5-dBy">
-                                        <rect key="frame" x="20" y="311.33333015441895" width="992" height="200"/>
+                                        <rect key="frame" x="20" y="311.33333015441895" width="400" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qsv-d5-dBy" id="C8R-51-Xuj">
-                                            <rect key="frame" x="0.0" y="0.0" width="992" height="200"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="400" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.85098039219999999" green="0.85098039219999999" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -870,10 +870,10 @@
             </objects>
             <point key="canvasLocation" x="-4788" y="1282"/>
         </scene>
-        <!--View Controller-->
+        <!--Manage Articles View Controller-->
         <scene sceneID="drP-sg-usg">
             <objects>
-                <viewController id="kXk-nB-O9X" sceneMemberID="viewController">
+                <viewController id="kXk-nB-O9X" customClass="ManageArticlesViewController" customModule="SeekersBH" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4tg-Vw-paQ">
                         <rect key="frame" x="0.0" y="0.0" width="440" height="946"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -889,7 +889,7 @@
                                 <rect key="frame" x="20" y="96" width="400" height="766"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="209" id="0mx-Xa-vJM">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="manageArticleCell" rowHeight="209" id="0mx-Xa-vJM" customClass="ManageArticlesTableViewCell" customModule="SeekersBH" customModuleProvider="target">
                                         <rect key="frame" x="20" y="55.333332061767578" width="360" height="209"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0mx-Xa-vJM" id="vp8-FH-FXx">
@@ -937,6 +937,10 @@
                                                 <constraint firstItem="mwI-M4-QzN" firstAttribute="top" secondItem="vp8-FH-FXx" secondAttribute="topMargin" constant="20" id="we5-rQ-El2"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="descriptionLabel" destination="cDt-q0-dj8" id="g8T-Y8-ANR"/>
+                                            <outlet property="titleLabel" destination="mwI-M4-QzN" id="Bti-GI-4np"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -968,15 +972,18 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Ooj-vS-JSu"/>
+                    <connections>
+                        <outlet property="manageArticlesTable" destination="TnB-43-gyy" id="Y9g-eF-4MJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E0j-4C-osg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3305" y="1306"/>
+            <point key="canvasLocation" x="-3305.4545454545455" y="1305.439330543933"/>
         </scene>
-        <!--View Controller-->
+        <!--Mange Webinars View Controller-->
         <scene sceneID="fzl-7o-9TR">
             <objects>
-                <viewController id="9iT-Qt-2CK" sceneMemberID="viewController">
+                <viewController id="9iT-Qt-2CK" customClass="MangeWebinarsViewController" customModule="SeekersBH" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="h9K-q3-eCa">
                         <rect key="frame" x="0.0" y="0.0" width="440" height="946"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -985,7 +992,7 @@
                                 <rect key="frame" x="20" y="96" width="400" height="766"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="213" id="SH1-d8-CQ1">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="adminWebinarCell" rowHeight="213" id="SH1-d8-CQ1" customClass="MangeWebinarsTableViewCell" customModule="SeekersBH" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="400" height="213"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SH1-d8-CQ1" id="YLy-E6-ta4">
@@ -1022,6 +1029,9 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.85098039219999999" green="0.85098039219999999" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="titleLabel" destination="qQb-ZZ-tVL" id="QnQ-0C-YmI"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -1060,15 +1070,18 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="rh3-AA-jQe"/>
+                    <connections>
+                        <outlet property="tableView" destination="m5b-Td-wpM" id="YYh-5n-H3K"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nqT-gK-Zwq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3213" y="-139"/>
+            <point key="canvasLocation" x="-3214.0909090909095" y="-139.3305439330544"/>
         </scene>
-        <!--View Controller-->
+        <!--Mange Videos View Controller-->
         <scene sceneID="xGE-oM-vqQ">
             <objects>
-                <viewController id="hR0-ns-cR3" sceneMemberID="viewController">
+                <viewController id="hR0-ns-cR3" customClass="MangeVideosViewController" customModule="SeekersBH" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xs3-H3-qw8">
                         <rect key="frame" x="0.0" y="0.0" width="440" height="946"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1084,7 +1097,7 @@
                                 <rect key="frame" x="20" y="93" width="400" height="769"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="282" id="b25-fi-xI2">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="adminVideoCell" rowHeight="282" id="b25-fi-xI2" customClass="MangeVideosTableViewCell" customModule="SeekersBH" customModuleProvider="target">
                                         <rect key="frame" x="20" y="55.333332061767578" width="360" height="282"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="b25-fi-xI2" id="4kw-fA-G3m">
@@ -1132,6 +1145,11 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.85098039219999999" green="0.85098039219999999" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="descriptionLabel" destination="J2g-Xm-cM3" id="c3m-51-C5V"/>
+                                            <outlet property="titleLabel" destination="dx0-AO-ZMP" id="B0l-Yq-ynw"/>
+                                            <outlet property="vidcover" destination="iNK-tH-vMT" id="Z6H-f2-sdj"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -1163,6 +1181,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Hoq-Mg-DrG"/>
+                    <connections>
+                        <outlet property="videoTableview" destination="kVT-SI-fki" id="aii-aP-ypf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zxm-cl-eEt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

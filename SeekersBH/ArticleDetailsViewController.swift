@@ -28,8 +28,6 @@ class ArticleDetailsViewController: UIViewController {
     }
     
     @IBAction func savedResourceButtonTspped(_ sender: Any) {
-        let savedResource = SavedResource(resource: article, type: .article)
-        
         // Save resource to Firebase
         ResourceManager.share.saveResourceToFirebase(userID: AccessManager.userID!, resourceId: article.id, resourceType: .article, viewController: self)
     }

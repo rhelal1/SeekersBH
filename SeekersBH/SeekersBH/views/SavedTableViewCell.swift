@@ -29,16 +29,17 @@ class SavedTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func update(with savedRescource: SavedResource) {
+    func update(with savedRescource: Resource) {
         
-        if savedRescource.type == .video {
-            resourceTitle.text = savedRescource.resource.title + "(Video)"
-
-        } else if savedRescource.type == .article {
-            resourceTitle.text = savedRescource.resource.title + "(Article)"
-            
-        } else if savedRescource.type == .webinar {
-            resourceTitle.text = savedRescource.resource.title + "(Webinar)"
+        switch savedRescource {
+        case _ as Article:
+            resourceTitle.text = savedRescource.title + "(Article)"
+        case _ as Webinar:
+            resourceTitle.text = savedRescource.title + "(Webinar)"
+        case _ as Video:
+            resourceTitle.text = savedRescource.title + "(Video)"
+        default:
+            resourceTitle.text = "unknown"
         }
 
         view.layer.cornerRadius = 15

@@ -45,6 +45,14 @@ extension CourseContentViewController: UITableViewDataSource, UITableViewDelegat
     // UITableViewDelegate method
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedContent = courseContents[indexPath.row]
-        print(selectedContent.videoUrl)
+
+        // Initialize the VideoPlayerViewController
+        let videoPlayerVC = VideoPlayerViewController()
+            videoPlayerVC.videoUrl = URL(string: selectedContent.videoUrl)
+
+
+        // Navigate to the VideoPlayerViewController
+        self.navigationController?.pushViewController(videoPlayerVC, animated: true)
+
     }
 }
