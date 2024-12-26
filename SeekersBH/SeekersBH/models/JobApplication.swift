@@ -28,25 +28,20 @@ struct JobApplication {
 struct WorkExperince {
     var jobTitle : String
     var companyName : String
-    var employmentDate : Date
+    var employmentDate : Data
     var jobResponsibilites : String?
 }
 
 struct Education {
-    //var dgree : Degree
-    var dgree : String
-    //var insinuation : Insinuation
-    var insinuation : String
+    var dgree : Degree
+    var insinuation : Insinuation
     var graduationDate : Date
 }
 
 struct Qualification {
-    //var skill : String
-    var skill : [String]?
-    //var certifications : [Certification]
-    var certifications : [String]?
-    //var languages : String
-    var languages : [String]?
+    var skill : String
+    var certifications : [Certification]
+    var languages : String
 }
 
 struct Reference {

@@ -6,17 +6,11 @@ struct CV {
     var phoneNumber : String
     var likedInURL : String
     var protofolioURL : String
-    var cvName : String
     var aboutMe : String
     var educations : [Degree : Insinuation]
-    var skills : String
-    var otherSkills: String
+    var skills : [Skill]
     var certifications : [Certification]
-    var otherCertification : String
     var projectSecions : [Project]
-    var otherProjects : String
-    var highestDegree: String
-    var university: String
 }
 
 

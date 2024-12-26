@@ -1,5 +1,4 @@
 {
-  "originHash" : "1c1760ad74e54d9b39cbadc521c151d6c1a99bff210eb5ae60f6d099c3410a66",
   "pins" : [
     {
       "identity" : "abseil-cpp-binary",
@@ -20,21 +19,12 @@
       }
     },
     {
-      "identity" : "cloudinary_ios",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/cloudinary/cloudinary_ios",
-      "state" : {
-        "revision" : "215ea1db05e7f3c0212f3c9ad027cfd52c924545",
-        "version" : "5.1.0"
-      }
-    },
-    {
       "identity" : "firebase-ios-sdk",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/firebase/firebase-ios-sdk",
       "state" : {
-        "revision" : "2e02253fd1ce99145bcbf1bb367ccf61bd0ca46b",
-        "version" : "11.6.0"
+        "revision" : "dbdfdc44bee8b8e4eaa5ec27eb12b9338f3f2bc1",
+        "version" : "11.5.0"
       }
     },
     {
@@ -128,5 +118,5 @@
       }
     }
   ],
-  "version" : 3
+  "version" : 2
 }
