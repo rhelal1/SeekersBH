@@ -1,6 +1,7 @@
 import Foundation
 
 struct Course {
+    var id : String
     var title : String
     var rating : Double
     var description : String
@@ -17,7 +18,6 @@ struct Course {
 
 struct CourseComments {
     var userId : Int
-    var username : String
     var commenttext : String
     var rated : Int
 }
@@ -42,5 +42,4 @@ enum CourseCategory: String, Codable {
     case business
     case science
     case economics
-    case health
 }
