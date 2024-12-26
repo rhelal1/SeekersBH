@@ -36,7 +36,6 @@ extension CourseReviewViewController: UITableViewDataSource, UITableViewDelegate
     
     // UITableViewDelegate method
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedUser = courseComments[indexPath.row]
-        print(selectedUser.username)
+        _ = courseComments[indexPath.row]
     }
 }

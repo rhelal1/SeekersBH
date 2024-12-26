@@ -5,8 +5,7 @@ class CourseViewController: UIViewController {
     
     @IBOutlet weak var courseTable: UITableView!
     
-    let courses: [Course] = []
-
+    var courses: [Course] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +18,7 @@ class CourseViewController: UIViewController {
     func fetchCourses() {
         Task {
             do {
-                let courses = try await CourseManager.share.fetchAllCourses()
+                self.courses = try await CourseManager.share.fetchAllCourses()
                 
                 DispatchQueue.main.async {
                     self.courseTable.reloadData()
