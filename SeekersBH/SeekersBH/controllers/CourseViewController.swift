@@ -6,7 +6,6 @@ class CourseViewController: UIViewController {
     @IBOutlet weak var courseTable: UITableView!
     
     var courses: [Course] = []
-
     
     override func viewDidLoad() {
         super.viewDidLoad()

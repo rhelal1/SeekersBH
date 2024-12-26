@@ -15,6 +15,7 @@ class CourseManager {
         // Iterate through all documents and fetch associated data (comments, content, and questions)
         for document in snapshot.documents {
             let course = try await self.fetchCourseDetails(courseId: document.documentID)
+
             courses.append(course)
         }
         
