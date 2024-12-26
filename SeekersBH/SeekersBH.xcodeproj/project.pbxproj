@@ -7,12 +7,60 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CE807E7B2D1AC9AF00F4FA1B /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = CE807E7A2D1AC9AF00F4FA1B /* FirebaseFirestore */; };
-		CE807E7F2D1AD5FD00F4FA1B /* AppUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE807E7E2D1AD5FD00F4FA1B /* AppUser.swift */; };
-		CE807E812D1AF13C00F4FA1B /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE807E802D1AF13C00F4FA1B /* RegisterController.swift */; };
-		CE807E852D1B07C700F4FA1B /* InterestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE807E842D1B07C700F4FA1B /* InterestViewController.swift */; };
-		CE807E872D1B0FD000F4FA1B /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE807E862D1B0FD000F4FA1B /* CollectionViewCell.swift */; };
-		CE807E892D1B12B000F4FA1B /* Interest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE807E882D1B12B000F4FA1B /* Interest.swift */; };
+		435039F02D132D02006F7794 /* CreateCVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435039EF2D132D02006F7794 /* CreateCVViewController.swift */; };
+		435039F22D14161C006F7794 /* AboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435039F12D14161C006F7794 /* AboutMeViewController.swift */; };
+		435039F42D1417C5006F7794 /* EducationCVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435039F32D1417C5006F7794 /* EducationCVViewController.swift */; };
+		435039F62D141C08006F7794 /* SkillCVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435039F52D141C08006F7794 /* SkillCVViewController.swift */; };
+		435039F82D141F54006F7794 /* CertificationCVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435039F72D141F54006F7794 /* CertificationCVViewController.swift */; };
+		435039FA2D142285006F7794 /* ProjectsCVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435039F92D142285006F7794 /* ProjectsCVViewController.swift */; };
+		435039FC2D142811006F7794 /* CVManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435039FB2D142811006F7794 /* CVManager.swift */; };
+		437286D22D11DF64000D3518 /* CreateCVNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437286D12D11DF64000D3518 /* CreateCVNavigationController.swift */; };
+		43B1C5332D1585BF0046F96C /* AllCVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B1C5322D1585BF0046F96C /* AllCVViewController.swift */; };
+		43B1C5352D15EFA20046F96C /* CVTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B1C5342D15EFA20046F96C /* CVTableViewCell.swift */; };
+		43B1C5372D17326E0046F96C /* CVDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B1C5362D17326E0046F96C /* CVDetailsViewController.swift */; };
+		66E035012D1432C60050E168 /* jobDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E035002D1432C60050E168 /* jobDetailsViewController.swift */; };
+		66E035052D143B050050E168 /* generalInformationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E035042D143B050050E168 /* generalInformationCollectionViewCell.swift */; };
+		895C0AAB2D17354800E7283B /* Cloudinary in Frameworks */ = {isa = PBXBuildFile; productRef = 895C0AAA2D17354800E7283B /* Cloudinary */; };
+		895C0AAE2D1735DA00E7283B /* CloudinaryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895C0AAD2D1735D500E7283B /* CloudinaryManager.swift */; };
+		8983F9A02D147DF400DE32B5 /* AddEmployerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8983F99F2D147DF400DE32B5 /* AddEmployerViewController.swift */; };
+		8983F9A22D15D1C200DE32B5 /* AddArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8983F9A12D15D1C200DE32B5 /* AddArticleViewController.swift */; };
+		89ACEE292D1B98F4008D5F57 /* AddWebinarsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89ACEE282D1B98F4008D5F57 /* AddWebinarsViewController.swift */; };
+		89ACEE2B2D1BC799008D5F57 /* AddVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89ACEE2A2D1BC799008D5F57 /* AddVideoViewController.swift */; };
+		942060582D0CCDE800A2DE36 /* VideosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942060572D0CCDE800A2DE36 /* VideosViewController.swift */; };
+		9420605A2D0CCE0100A2DE36 /* VideosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942060592D0CCE0100A2DE36 /* VideosTableViewCell.swift */; };
+		9420605C2D0CCE1900A2DE36 /* VideoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9420605B2D0CCE1900A2DE36 /* VideoDetailsViewController.swift */; };
+		9420605E2D0DAA7600A2DE36 /* SavedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9420605D2D0DAA7600A2DE36 /* SavedViewController.swift */; };
+		942060602D0DAB0E00A2DE36 /* SavedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9420605F2D0DAB0E00A2DE36 /* SavedTableViewCell.swift */; };
+		942060642D10509900A2DE36 /* CourseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942060632D10509900A2DE36 /* CourseTableViewCell.swift */; };
+		942060662D1050A600A2DE36 /* CourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942060652D1050A600A2DE36 /* CourseViewController.swift */; };
+		942060682D1050B900A2DE36 /* CourseDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942060672D1050B900A2DE36 /* CourseDetailsViewController.swift */; };
+		9420606A2D10516000A2DE36 /* OnlineCourses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942060692D10516000A2DE36 /* OnlineCourses.swift */; };
+		9420606C2D1073EC00A2DE36 /* CourseContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9420606B2D1073EC00A2DE36 /* CourseContentViewController.swift */; };
+		9420606E2D1074D400A2DE36 /* CourseContentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9420606D2D1074D400A2DE36 /* CourseContentTableViewCell.swift */; };
+		942060702D10828700A2DE36 /* CourseReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9420606F2D10828700A2DE36 /* CourseReviewTableViewCell.swift */; };
+		942060722D1082AD00A2DE36 /* CourseReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942060712D1082AD00A2DE36 /* CourseReviewViewController.swift */; };
+		946297222D0AFD86005542AA /* ArticleDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946297212D0AFD86005542AA /* ArticleDetailsViewController.swift */; };
+		946297242D0CA075005542AA /* WebinarsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946297232D0CA075005542AA /* WebinarsViewController.swift */; };
+		946297262D0CA226005542AA /* WebinarsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946297252D0CA226005542AA /* WebinarsTableViewCell.swift */; };
+		946297282D0CB25F005542AA /* WebinarDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946297272D0CB25F005542AA /* WebinarDetailsViewController.swift */; };
+		947B8FDB2D10B69D004463EF /* CourseQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947B8FDA2D10B69D004463EF /* CourseQuizViewController.swift */; };
+		947B8FDD2D10B6BB004463EF /* CourseQuizTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947B8FDC2D10B6BB004463EF /* CourseQuizTableViewCell.swift */; };
+		947B8FE22D11B4C0004463EF /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 947B8FE12D11B4C0004463EF /* FirebaseAnalytics */; };
+		947B8FE42D11B559004463EF /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 947B8FE32D11B559004463EF /* FirebaseFirestore */; };
+		947B8FE62D11CA5B004463EF /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947B8FE52D11CA5B004463EF /* FirebaseManager.swift */; };
+		947B8FEB2D12360B004463EF /* ResourceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947B8FEA2D12360B004463EF /* ResourceManager.swift */; };
+		947B8FED2D1C682B004463EF /* AccessManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947B8FEC2D1C682B004463EF /* AccessManager.swift */; };
+		94CADAAA2D08ADD700F8B3AC /* growthHubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CADAA92D08ADD700F8B3AC /* growthHubViewController.swift */; };
+		94CADAAE2D08B96000F8B3AC /* ArticlesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CADAAD2D08B96000F8B3AC /* ArticlesTableViewCell.swift */; };
+		94E2D2772D076FB500614521 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E2D2762D076FB500614521 /* Resource.swift */; };
+		94E2D2792D07925000614521 /* ArticlesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E2D2782D07925000614521 /* ArticlesViewController.swift */; };
+		AC2776E62D0AF25B0019677C /* addJobView3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2776E52D0AF25B0019677C /* addJobView3ViewController.swift */; };
+		AC2776E82D0AF55F0019677C /* testViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2776E72D0AF55F0019677C /* testViewController.swift */; };
+		AC2776EA2D0B02E10019677C /* AddJobView4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2776E92D0B02E10019677C /* AddJobView4ViewController.swift */; };
+		AC2776EC2D0B05360019677C /* addJobView2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2776EB2D0B05360019677C /* addJobView2ViewController.swift */; };
+		AC8BA8FD2D0F430800EE7A2C /* jobCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8BA8FC2D0F430800EE7A2C /* jobCellTableViewCell.swift */; };
+		C311B0D32D06FDF00071CF9B /* EmployerDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C311B0D22D06FDF00071CF9B /* EmployerDashboardViewController.swift */; };
+		C311B0D52D0707D30071CF9B /* ViewJobApplicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C311B0D42D0707D30071CF9B /* ViewJobApplicationViewController.swift */; };
 		D153BE402CF47AC900A81FFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D153BE3F2CF47AC900A81FFC /* AppDelegate.swift */; };
 		D153BE422CF47AC900A81FFC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D153BE412CF47AC900A81FFC /* SceneDelegate.swift */; };
 		D153BE442CF47AC900A81FFC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D153BE432CF47AC900A81FFC /* ViewController.swift */; };
@@ -30,15 +78,19 @@
 		D184E3EC2CF86C9400D896D6 /* zainab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D184E3EB2CF86C9400D896D6 /* zainab.storyboard */; };
 		D184E3EE2CF86C9C00D896D6 /* reem.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D184E3ED2CF86C9C00D896D6 /* reem.storyboard */; };
 		D184E3F12CF86CF400D896D6 /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = D184E3F02CF86CF400D896D6 /* user.swift */; };
-		D184E3F72CF8760E00D896D6 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = D184E3F62CF8760E00D896D6 /* FirebaseAnalytics */; };
-		D184E3F92CF8762900D896D6 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = D184E3F82CF8762900D896D6 /* FirebaseAuth */; };
-		D184E3FB2CF8763200D896D6 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = D184E3FA2CF8763200D896D6 /* FirebaseDatabase */; };
 		D184E3FD2CF8769000D896D6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D184E3FC2CF8769000D896D6 /* GoogleService-Info.plist */; };
 		D184E3FF2CF8785A00D896D6 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = D184E3FE2CF8785A00D896D6 /* Job.swift */; };
 		D184E4012CF87A5600D896D6 /* CV.swift in Sources */ = {isa = PBXBuildFile; fileRef = D184E4002CF87A5600D896D6 /* CV.swift */; };
 		D184E4032CF87E5500D896D6 /* JobApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = D184E4022CF87E5500D896D6 /* JobApplication.swift */; };
-		DA32F22A2D0CC70A00DC9353 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA32F2292D0CC70A00DC9353 /* Login.swift */; };
-		F23B987E2D1C8922005724A0 /* InterestChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23B987D2D1C8922005724A0 /* InterestChoiceViewController.swift */; };
+		D4070DB02D0F11C700E517FE /* NewJobRecommendationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4070DAF2D0F11C700E517FE /* NewJobRecommendationTableViewCell.swift */; };
+		D4070DB22D0F144600E517FE /* NewJobRecommendationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4070DB12D0F144600E517FE /* NewJobRecommendationViewController.swift */; };
+		D4070DB42D0F200600E517FE /* NewJobDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4070DB32D0F200600E517FE /* NewJobDetailViewController.swift */; };
+		D4070DB62D0F206B00E517FE /* NewJobDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4070DB52D0F206B00E517FE /* NewJobDetailTableViewController.swift */; };
+		D4070DB82D10768C00E517FE /* ApplyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4070DB72D10768C00E517FE /* ApplyPageViewController.swift */; };
+		D4070DBC2D107AA100E517FE /* NewApplyPageFormTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4070DBB2D107AA100E517FE /* NewApplyPageFormTableViewController.swift */; };
+		D41DE5E82D1C427900706104 /* CVSelectionJobApplicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41DE5E72D1C427900706104 /* CVSelectionJobApplicationViewController.swift */; };
+		D41DE5EA2D1C433500706104 /* CVSelectionApplicationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41DE5E92D1C433500706104 /* CVSelectionApplicationsTableViewController.swift */; };
+		D45526BC2D09ED2A00149AA9 /* JobTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45526BB2D09ED2A00149AA9 /* JobTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,11 +111,57 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CE807E7E2D1AD5FD00F4FA1B /* AppUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUser.swift; sourceTree = "<group>"; };
-		CE807E802D1AF13C00F4FA1B /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
-		CE807E842D1B07C700F4FA1B /* InterestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestViewController.swift; sourceTree = "<group>"; };
-		CE807E862D1B0FD000F4FA1B /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
-		CE807E882D1B12B000F4FA1B /* Interest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interest.swift; sourceTree = "<group>"; };
+		435039EF2D132D02006F7794 /* CreateCVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCVViewController.swift; sourceTree = "<group>"; };
+		435039F12D14161C006F7794 /* AboutMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
+		435039F32D1417C5006F7794 /* EducationCVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationCVViewController.swift; sourceTree = "<group>"; };
+		435039F52D141C08006F7794 /* SkillCVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillCVViewController.swift; sourceTree = "<group>"; };
+		435039F72D141F54006F7794 /* CertificationCVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificationCVViewController.swift; sourceTree = "<group>"; };
+		435039F92D142285006F7794 /* ProjectsCVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsCVViewController.swift; sourceTree = "<group>"; };
+		435039FB2D142811006F7794 /* CVManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVManager.swift; sourceTree = "<group>"; };
+		437286D12D11DF64000D3518 /* CreateCVNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCVNavigationController.swift; sourceTree = "<group>"; };
+		43B1C5322D1585BF0046F96C /* AllCVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCVViewController.swift; sourceTree = "<group>"; };
+		43B1C5342D15EFA20046F96C /* CVTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVTableViewCell.swift; sourceTree = "<group>"; };
+		43B1C5362D17326E0046F96C /* CVDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVDetailsViewController.swift; sourceTree = "<group>"; };
+		66E035002D1432C60050E168 /* jobDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jobDetailsViewController.swift; sourceTree = "<group>"; };
+		66E035042D143B050050E168 /* generalInformationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = generalInformationCollectionViewCell.swift; sourceTree = "<group>"; };
+		895C0AAD2D1735D500E7283B /* CloudinaryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudinaryManager.swift; sourceTree = "<group>"; };
+		8983F99F2D147DF400DE32B5 /* AddEmployerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEmployerViewController.swift; sourceTree = "<group>"; };
+		8983F9A12D15D1C200DE32B5 /* AddArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddArticleViewController.swift; sourceTree = "<group>"; };
+		89ACEE282D1B98F4008D5F57 /* AddWebinarsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWebinarsViewController.swift; sourceTree = "<group>"; };
+		89ACEE2A2D1BC799008D5F57 /* AddVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVideoViewController.swift; sourceTree = "<group>"; };
+		942060572D0CCDE800A2DE36 /* VideosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosViewController.swift; sourceTree = SOURCE_ROOT; };
+		942060592D0CCE0100A2DE36 /* VideosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosTableViewCell.swift; sourceTree = "<group>"; };
+		9420605B2D0CCE1900A2DE36 /* VideoDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDetailsViewController.swift; sourceTree = "<group>"; };
+		9420605D2D0DAA7600A2DE36 /* SavedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SavedViewController.swift; path = SeekersBH/views/SavedViewController.swift; sourceTree = SOURCE_ROOT; };
+		9420605F2D0DAB0E00A2DE36 /* SavedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SavedTableViewCell.swift; path = SeekersBH/views/SavedTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		942060632D10509900A2DE36 /* CourseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		942060652D1050A600A2DE36 /* CourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseViewController.swift; sourceTree = "<group>"; };
+		942060672D1050B900A2DE36 /* CourseDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailsViewController.swift; sourceTree = "<group>"; };
+		942060692D10516000A2DE36 /* OnlineCourses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineCourses.swift; sourceTree = "<group>"; };
+		9420606B2D1073EC00A2DE36 /* CourseContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseContentViewController.swift; sourceTree = "<group>"; };
+		9420606D2D1074D400A2DE36 /* CourseContentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseContentTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		9420606F2D10828700A2DE36 /* CourseReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseReviewTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		942060712D1082AD00A2DE36 /* CourseReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseReviewViewController.swift; sourceTree = SOURCE_ROOT; };
+		946297212D0AFD86005542AA /* ArticleDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailsViewController.swift; sourceTree = SOURCE_ROOT; };
+		946297232D0CA075005542AA /* WebinarsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebinarsViewController.swift; sourceTree = SOURCE_ROOT; };
+		946297252D0CA226005542AA /* WebinarsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebinarsTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		946297272D0CB25F005542AA /* WebinarDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebinarDetailsViewController.swift; sourceTree = SOURCE_ROOT; };
+		947B8FDA2D10B69D004463EF /* CourseQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseQuizViewController.swift; sourceTree = SOURCE_ROOT; };
+		947B8FDC2D10B6BB004463EF /* CourseQuizTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseQuizTableViewCell.swift; sourceTree = "<group>"; };
+		947B8FE52D11CA5B004463EF /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = SOURCE_ROOT; };
+		947B8FEA2D12360B004463EF /* ResourceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceManager.swift; sourceTree = "<group>"; };
+		947B8FEC2D1C682B004463EF /* AccessManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessManager.swift; sourceTree = "<group>"; };
+		94CADAA92D08ADD700F8B3AC /* growthHubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = growthHubViewController.swift; path = SeekersBH/views/growthHubViewController.swift; sourceTree = SOURCE_ROOT; };
+		94CADAAD2D08B96000F8B3AC /* ArticlesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		94E2D2762D076FB500614521 /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
+		94E2D2782D07925000614521 /* ArticlesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesViewController.swift; sourceTree = "<group>"; };
+		AC2776E52D0AF25B0019677C /* addJobView3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addJobView3ViewController.swift; sourceTree = "<group>"; };
+		AC2776E72D0AF55F0019677C /* testViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testViewController.swift; sourceTree = "<group>"; };
+		AC2776E92D0B02E10019677C /* AddJobView4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddJobView4ViewController.swift; sourceTree = "<group>"; };
+		AC2776EB2D0B05360019677C /* addJobView2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addJobView2ViewController.swift; sourceTree = "<group>"; };
+		AC8BA8FC2D0F430800EE7A2C /* jobCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jobCellTableViewCell.swift; sourceTree = "<group>"; };
+		C311B0D22D06FDF00071CF9B /* EmployerDashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployerDashboardViewController.swift; sourceTree = "<group>"; };
+		C311B0D42D0707D30071CF9B /* ViewJobApplicationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewJobApplicationViewController.swift; sourceTree = "<group>"; };
 		D153BE3C2CF47AC900A81FFC /* SeekersBH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeekersBH.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D153BE3F2CF47AC900A81FFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D153BE412CF47AC900A81FFC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,8 +187,15 @@
 		D184E3FE2CF8785A00D896D6 /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
 		D184E4002CF87A5600D896D6 /* CV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CV.swift; sourceTree = "<group>"; };
 		D184E4022CF87E5500D896D6 /* JobApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobApplication.swift; sourceTree = "<group>"; };
-		DA32F2292D0CC70A00DC9353 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
-		F23B987D2D1C8922005724A0 /* InterestChoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestChoiceViewController.swift; sourceTree = "<group>"; };
+		D4070DAF2D0F11C700E517FE /* NewJobRecommendationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewJobRecommendationTableViewCell.swift; sourceTree = "<group>"; };
+		D4070DB12D0F144600E517FE /* NewJobRecommendationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewJobRecommendationViewController.swift; sourceTree = "<group>"; };
+		D4070DB32D0F200600E517FE /* NewJobDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewJobDetailViewController.swift; sourceTree = "<group>"; };
+		D4070DB52D0F206B00E517FE /* NewJobDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewJobDetailTableViewController.swift; sourceTree = "<group>"; };
+		D4070DB72D10768C00E517FE /* ApplyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplyPageViewController.swift; sourceTree = "<group>"; };
+		D4070DBB2D107AA100E517FE /* NewApplyPageFormTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewApplyPageFormTableViewController.swift; sourceTree = "<group>"; };
+		D41DE5E72D1C427900706104 /* CVSelectionJobApplicationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVSelectionJobApplicationViewController.swift; sourceTree = "<group>"; };
+		D41DE5E92D1C433500706104 /* CVSelectionApplicationsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVSelectionApplicationsTableViewController.swift; sourceTree = "<group>"; };
+		D45526BB2D09ED2A00149AA9 /* JobTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,30 +203,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D184E3FB2CF8763200D896D6 /* FirebaseDatabase in Frameworks */,
-				CE807E7B2D1AC9AF00F4FA1B /* FirebaseFirestore in Frameworks */,
-				D184E3F72CF8760E00D896D6 /* FirebaseAnalytics in Frameworks */,
-				D184E3F92CF8762900D896D6 /* FirebaseAuth in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D153BE4F2CF47ACC00A81FFC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D153BE592CF47ACC00A81FFC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				947B8FE22D11B4C0004463EF /* FirebaseAnalytics in Frameworks */,
+				947B8FE42D11B559004463EF /* FirebaseFirestore in Frameworks */,
+				895C0AAB2D17354800E7283B /* Cloudinary in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		895C0AAC2D1735C900E7283B /* Cloudinary */ = {
+			isa = PBXGroup;
+			children = (
+				895C0AAD2D1735D500E7283B /* CloudinaryManager.swift */,
+			);
+			path = Cloudinary;
+			sourceTree = "<group>";
+		};
+		947B8FE92D123571004463EF /* Firestore */ = {
+			isa = PBXGroup;
+			children = (
+				947B8FE52D11CA5B004463EF /* FirebaseManager.swift */,
+				947B8FEA2D12360B004463EF /* ResourceManager.swift */,
+			);
+			path = Firestore;
+			sourceTree = "<group>";
+		};
 		D153BE332CF47AC900A81FFC = {
 			isa = PBXGroup;
 			children = (
@@ -129,7 +236,6 @@
 				D153BE552CF47ACC00A81FFC /* SeekersBHTests */,
 				D153BE5F2CF47ACC00A81FFC /* SeekersBHUITests */,
 				D153BE3D2CF47AC900A81FFC /* Products */,
-				D184E3F52CF8760E00D896D6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -146,11 +252,14 @@
 		D153BE3E2CF47AC900A81FFC /* SeekersBH */ = {
 			isa = PBXGroup;
 			children = (
+				895C0AAC2D1735C900E7283B /* Cloudinary */,
+				947B8FE92D123571004463EF /* Firestore */,
 				D184E3F32CF86D6600D896D6 /* controllers */,
 				D184E3F22CF86D4800D896D6 /* views */,
 				D184E3EF2CF86CD500D896D6 /* models */,
 				D153BE3F2CF47AC900A81FFC /* AppDelegate.swift */,
 				D153BE412CF47AC900A81FFC /* SceneDelegate.swift */,
+				947B8FEC2D1C682B004463EF /* AccessManager.swift */,
 				D153BE452CF47AC900A81FFC /* Main.storyboard */,
 				D184E3FC2CF8769000D896D6 /* GoogleService-Info.plist */,
 				D153BE6F2CF47E8400A81FFC /* testTableViewController.swift */,
@@ -183,10 +292,10 @@
 			children = (
 				D184E3F02CF86CF400D896D6 /* user.swift */,
 				D184E4022CF87E5500D896D6 /* JobApplication.swift */,
+				94E2D2762D076FB500614521 /* Resource.swift */,
+				942060692D10516000A2DE36 /* OnlineCourses.swift */,
 				D184E4002CF87A5600D896D6 /* CV.swift */,
 				D184E3FE2CF8785A00D896D6 /* Job.swift */,
-				CE807E7E2D1AD5FD00F4FA1B /* AppUser.swift */,
-				CE807E882D1B12B000F4FA1B /* Interest.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -207,21 +316,63 @@
 		D184E3F32CF86D6600D896D6 /* controllers */ = {
 			isa = PBXGroup;
 			children = (
+				947B8FDA2D10B69D004463EF /* CourseQuizViewController.swift */,
+				947B8FDC2D10B6BB004463EF /* CourseQuizTableViewCell.swift */,
+				942060712D1082AD00A2DE36 /* CourseReviewViewController.swift */,
+				9420606F2D10828700A2DE36 /* CourseReviewTableViewCell.swift */,
+				9420606D2D1074D400A2DE36 /* CourseContentTableViewCell.swift */,
+				942060632D10509900A2DE36 /* CourseTableViewCell.swift */,
+				942060652D1050A600A2DE36 /* CourseViewController.swift */,
+				942060672D1050B900A2DE36 /* CourseDetailsViewController.swift */,
+				9420606B2D1073EC00A2DE36 /* CourseContentViewController.swift */,
+				9420605F2D0DAB0E00A2DE36 /* SavedTableViewCell.swift */,
+				9420605D2D0DAA7600A2DE36 /* SavedViewController.swift */,
+				942060572D0CCDE800A2DE36 /* VideosViewController.swift */,
+				942060592D0CCE0100A2DE36 /* VideosTableViewCell.swift */,
+				9420605B2D0CCE1900A2DE36 /* VideoDetailsViewController.swift */,
+				946297272D0CB25F005542AA /* WebinarDetailsViewController.swift */,
+				946297252D0CA226005542AA /* WebinarsTableViewCell.swift */,
+				946297232D0CA075005542AA /* WebinarsViewController.swift */,
+				946297212D0AFD86005542AA /* ArticleDetailsViewController.swift */,
+				94CADAAD2D08B96000F8B3AC /* ArticlesTableViewCell.swift */,
+				94CADAA92D08ADD700F8B3AC /* growthHubViewController.swift */,
 				D153BE432CF47AC900A81FFC /* ViewController.swift */,
-				DA32F2292D0CC70A00DC9353 /* Login.swift */,
-				CE807E802D1AF13C00F4FA1B /* RegisterController.swift */,
-				CE807E842D1B07C700F4FA1B /* InterestViewController.swift */,
-				CE807E862D1B0FD000F4FA1B /* CollectionViewCell.swift */,
-				F23B987D2D1C8922005724A0 /* InterestChoiceViewController.swift */,
+				C311B0D22D06FDF00071CF9B /* EmployerDashboardViewController.swift */,
+				94E2D2782D07925000614521 /* ArticlesViewController.swift */,
+				C311B0D42D0707D30071CF9B /* ViewJobApplicationViewController.swift */,
+				AC8BA8FC2D0F430800EE7A2C /* jobCellTableViewCell.swift */,
+				AC2776E72D0AF55F0019677C /* testViewController.swift */,
+				D45526BB2D09ED2A00149AA9 /* JobTableViewCell.swift */,
+				AC2776E52D0AF25B0019677C /* addJobView3ViewController.swift */,
+				AC2776EB2D0B05360019677C /* addJobView2ViewController.swift */,
+				AC2776E92D0B02E10019677C /* AddJobView4ViewController.swift */,
+				D4070DAF2D0F11C700E517FE /* NewJobRecommendationTableViewCell.swift */,
+				D4070DB12D0F144600E517FE /* NewJobRecommendationViewController.swift */,
+				D4070DB32D0F200600E517FE /* NewJobDetailViewController.swift */,
+				D4070DB52D0F206B00E517FE /* NewJobDetailTableViewController.swift */,
+				D4070DB72D10768C00E517FE /* ApplyPageViewController.swift */,
+				D4070DBB2D107AA100E517FE /* NewApplyPageFormTableViewController.swift */,
+				437286D12D11DF64000D3518 /* CreateCVNavigationController.swift */,
+				66E035002D1432C60050E168 /* jobDetailsViewController.swift */,
+				66E035042D143B050050E168 /* generalInformationCollectionViewCell.swift */,
+				8983F99F2D147DF400DE32B5 /* AddEmployerViewController.swift */,
+				8983F9A12D15D1C200DE32B5 /* AddArticleViewController.swift */,
+				435039EF2D132D02006F7794 /* CreateCVViewController.swift */,
+				435039F12D14161C006F7794 /* AboutMeViewController.swift */,
+				435039F32D1417C5006F7794 /* EducationCVViewController.swift */,
+				435039F72D141F54006F7794 /* CertificationCVViewController.swift */,
+				435039F52D141C08006F7794 /* SkillCVViewController.swift */,
+				435039F92D142285006F7794 /* ProjectsCVViewController.swift */,
+				435039FB2D142811006F7794 /* CVManager.swift */,
+				43B1C5322D1585BF0046F96C /* AllCVViewController.swift */,
+				43B1C5342D15EFA20046F96C /* CVTableViewCell.swift */,
+				43B1C5362D17326E0046F96C /* CVDetailsViewController.swift */,
+				D41DE5E72D1C427900706104 /* CVSelectionJobApplicationViewController.swift */,
+				D41DE5E92D1C433500706104 /* CVSelectionApplicationsTableViewController.swift */,
+				89ACEE282D1B98F4008D5F57 /* AddWebinarsViewController.swift */,
+				89ACEE2A2D1BC799008D5F57 /* AddVideoViewController.swift */,
 			);
 			path = controllers;
-			sourceTree = "<group>";
-		};
-		D184E3F52CF8760E00D896D6 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,10 +392,9 @@
 			);
 			name = SeekersBH;
 			packageProductDependencies = (
-				D184E3F62CF8760E00D896D6 /* FirebaseAnalytics */,
-				D184E3F82CF8762900D896D6 /* FirebaseAuth */,
-				D184E3FA2CF8763200D896D6 /* FirebaseDatabase */,
-				CE807E7A2D1AC9AF00F4FA1B /* FirebaseFirestore */,
+				947B8FE12D11B4C0004463EF /* FirebaseAnalytics */,
+				947B8FE32D11B559004463EF /* FirebaseFirestore */,
+				895C0AAA2D17354800E7283B /* Cloudinary */,
 			);
 			productName = SeekersBH;
 			productReference = D153BE3C2CF47AC900A81FFC /* SeekersBH.app */;
@@ -255,7 +405,6 @@
 			buildConfigurationList = D153BE692CF47ACC00A81FFC /* Build configuration list for PBXNativeTarget "SeekersBHTests" */;
 			buildPhases = (
 				D153BE4E2CF47ACC00A81FFC /* Sources */,
-				D153BE4F2CF47ACC00A81FFC /* Frameworks */,
 				D153BE502CF47ACC00A81FFC /* Resources */,
 			);
 			buildRules = (
@@ -273,7 +422,6 @@
 			buildConfigurationList = D153BE6C2CF47ACC00A81FFC /* Build configuration list for PBXNativeTarget "SeekersBHUITests" */;
 			buildPhases = (
 				D153BE582CF47ACC00A81FFC /* Sources */,
-				D153BE592CF47ACC00A81FFC /* Frameworks */,
 				D153BE5A2CF47ACC00A81FFC /* Resources */,
 			);
 			buildRules = (
@@ -294,10 +442,11 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1520;
-				LastUpgradeCheck = 1520;
+				LastUpgradeCheck = 1610;
 				TargetAttributes = {
 					D153BE3B2CF47AC900A81FFC = {
 						CreatedOnToolsVersion = 15.2;
+						LastSwiftMigration = 1610;
 					};
 					D153BE512CF47ACC00A81FFC = {
 						CreatedOnToolsVersion = 15.2;
@@ -319,7 +468,8 @@
 			);
 			mainGroup = D153BE332CF47AC900A81FFC;
 			packageReferences = (
-				D184E3F42CF875AC00D896D6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				947B8FE02D11B4BF004463EF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				895C0AA92D17354800E7283B /* XCRemoteSwiftPackageReference "cloudinary_ios" */,
 			);
 			productRefGroup = D153BE3D2CF47AC900A81FFC /* Products */;
 			projectDirPath = "";
@@ -371,21 +521,76 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA32F22A2D0CC70A00DC9353 /* Login.swift in Sources */,
+				435039FC2D142811006F7794 /* CVManager.swift in Sources */,
+				946297262D0CA226005542AA /* WebinarsTableViewCell.swift in Sources */,
+				947B8FED2D1C682B004463EF /* AccessManager.swift in Sources */,
+				66E035012D1432C60050E168 /* jobDetailsViewController.swift in Sources */,
+				947B8FDD2D10B6BB004463EF /* CourseQuizTableViewCell.swift in Sources */,
+				43B1C5352D15EFA20046F96C /* CVTableViewCell.swift in Sources */,
+				AC2776EC2D0B05360019677C /* addJobView2ViewController.swift in Sources */,
+				94CADAAE2D08B96000F8B3AC /* ArticlesTableViewCell.swift in Sources */,
+				C311B0D52D0707D30071CF9B /* ViewJobApplicationViewController.swift in Sources */,
+				94CADAAA2D08ADD700F8B3AC /* growthHubViewController.swift in Sources */,
+				94E2D2792D07925000614521 /* ArticlesViewController.swift in Sources */,
+				9420605A2D0CCE0100A2DE36 /* VideosTableViewCell.swift in Sources */,
 				D184E3F12CF86CF400D896D6 /* user.swift in Sources */,
-				CE807E812D1AF13C00F4FA1B /* RegisterController.swift in Sources */,
+				89ACEE292D1B98F4008D5F57 /* AddWebinarsViewController.swift in Sources */,
+				89ACEE2B2D1BC799008D5F57 /* AddVideoViewController.swift in Sources */,
+				435039F62D141C08006F7794 /* SkillCVViewController.swift in Sources */,
+				942060582D0CCDE800A2DE36 /* VideosViewController.swift in Sources */,
+				942060582D0CCDE800A2DE36 /* VideosViewController.swift in Sources */,
 				D184E4012CF87A5600D896D6 /* CV.swift in Sources */,
-				CE807E7F2D1AD5FD00F4FA1B /* AppUser.swift in Sources */,
-				CE807E892D1B12B000F4FA1B /* Interest.swift in Sources */,
-				CE807E852D1B07C700F4FA1B /* InterestViewController.swift in Sources */,
+				946297282D0CB25F005542AA /* WebinarDetailsViewController.swift in Sources */,
+				AC8BA8FD2D0F430800EE7A2C /* jobCellTableViewCell.swift in Sources */,
 				D184E3FF2CF8785A00D896D6 /* Job.swift in Sources */,
 				D153BE442CF47AC900A81FFC /* ViewController.swift in Sources */,
-				CE807E872D1B0FD000F4FA1B /* CollectionViewCell.swift in Sources */,
-				F23B987E2D1C8922005724A0 /* InterestChoiceViewController.swift in Sources */,
+				435039F82D141F54006F7794 /* CertificationCVViewController.swift in Sources */,
+				435039F42D1417C5006F7794 /* EducationCVViewController.swift in Sources */,
+				435039F22D14161C006F7794 /* AboutMeViewController.swift in Sources */,
+				435039F02D132D02006F7794 /* CreateCVViewController.swift in Sources */,
+				946297242D0CA075005542AA /* WebinarsViewController.swift in Sources */,
+				AC2776E82D0AF55F0019677C /* testViewController.swift in Sources */,
+				942060662D1050A600A2DE36 /* CourseViewController.swift in Sources */,
+				D41DE5E82D1C427900706104 /* CVSelectionJobApplicationViewController.swift in Sources */,
+				9420606A2D10516000A2DE36 /* OnlineCourses.swift in Sources */,
+				9420605E2D0DAA7600A2DE36 /* SavedViewController.swift in Sources */,
+				AC2776E62D0AF25B0019677C /* addJobView3ViewController.swift in Sources */,
+				437286D22D11DF64000D3518 /* CreateCVNavigationController.swift in Sources */,
+				94E2D2772D076FB500614521 /* Resource.swift in Sources */,
 				D153BE402CF47AC900A81FFC /* AppDelegate.swift in Sources */,
+				8983F9A02D147DF400DE32B5 /* AddEmployerViewController.swift in Sources */,
+				43B1C5332D1585BF0046F96C /* AllCVViewController.swift in Sources */,
+				D4070DBC2D107AA100E517FE /* NewApplyPageFormTableViewController.swift in Sources */,
+				9420606E2D1074D400A2DE36 /* CourseContentTableViewCell.swift in Sources */,
+				66E035052D143B050050E168 /* generalInformationCollectionViewCell.swift in Sources */,
+				946297222D0AFD86005542AA /* ArticleDetailsViewController.swift in Sources */,
+				D4070DB82D10768C00E517FE /* ApplyPageViewController.swift in Sources */,
+				AC2776EA2D0B02E10019677C /* AddJobView4ViewController.swift in Sources */,
+				942060602D0DAB0E00A2DE36 /* SavedTableViewCell.swift in Sources */,
+				947B8FDB2D10B69D004463EF /* CourseQuizViewController.swift in Sources */,
+				D4070DB22D0F144600E517FE /* NewJobRecommendationViewController.swift in Sources */,
 				D153BE422CF47AC900A81FFC /* SceneDelegate.swift in Sources */,
+				D41DE5EA2D1C433500706104 /* CVSelectionApplicationsTableViewController.swift in Sources */,
 				D184E4032CF87E5500D896D6 /* JobApplication.swift in Sources */,
+				D4070DB02D0F11C700E517FE /* NewJobRecommendationTableViewCell.swift in Sources */,
+				43B1C5372D17326E0046F96C /* CVDetailsViewController.swift in Sources */,
+				9420605C2D0CCE1900A2DE36 /* VideoDetailsViewController.swift in Sources */,
+				895C0AAE2D1735DA00E7283B /* CloudinaryManager.swift in Sources */,
+				942060702D10828700A2DE36 /* CourseReviewTableViewCell.swift in Sources */,
+				9420605C2D0CCE1900A2DE36 /* VideoDetailsViewController.swift in Sources */,
+				947B8FE62D11CA5B004463EF /* FirebaseManager.swift in Sources */,
+				9420606C2D1073EC00A2DE36 /* CourseContentViewController.swift in Sources */,
+				947B8FEB2D12360B004463EF /* ResourceManager.swift in Sources */,
+				942060722D1082AD00A2DE36 /* CourseReviewViewController.swift in Sources */,
+				D4070DB62D0F206B00E517FE /* NewJobDetailTableViewController.swift in Sources */,
+				8983F9A22D15D1C200DE32B5 /* AddArticleViewController.swift in Sources */,
+				C311B0D32D06FDF00071CF9B /* EmployerDashboardViewController.swift in Sources */,
+				435039FA2D142285006F7794 /* ProjectsCVViewController.swift in Sources */,
+				D4070DB42D0F200600E517FE /* NewJobDetailViewController.swift in Sources */,
 				D153BE702CF47E8400A81FFC /* testTableViewController.swift in Sources */,
+				942060682D1050B900A2DE36 /* CourseDetailsViewController.swift in Sources */,
+				D45526BC2D09ED2A00149AA9 /* JobTableViewCell.swift in Sources */,
+				942060642D10509900A2DE36 /* CourseTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -565,6 +770,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -574,7 +780,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -583,6 +789,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = m.SeekersBH;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -593,6 +800,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -602,7 +810,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -619,7 +827,6 @@
 		D153BE6A2CF47ACC00A81FFC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -638,7 +845,6 @@
 		D153BE6B2CF47ACC00A81FFC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -657,7 +863,6 @@
 		D153BE6D2CF47ACC00A81FFC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -674,7 +879,6 @@
 		D153BE6E2CF47ACC00A81FFC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -730,36 +934,39 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		D184E3F42CF875AC00D896D6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+		895C0AA92D17354800E7283B /* XCRemoteSwiftPackageReference "cloudinary_ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/cloudinary/cloudinary_ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.0;
+			};
+		};
+		947B8FE02D11B4BF004463EF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 11.5.0;
+				minimumVersion = 11.6.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		CE807E7A2D1AC9AF00F4FA1B /* FirebaseFirestore */ = {
+		895C0AAA2D17354800E7283B /* Cloudinary */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D184E3F42CF875AC00D896D6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseFirestore;
+			package = 895C0AA92D17354800E7283B /* XCRemoteSwiftPackageReference "cloudinary_ios" */;
+			productName = Cloudinary;
 		};
-		D184E3F62CF8760E00D896D6 /* FirebaseAnalytics */ = {
+		947B8FE12D11B4C0004463EF /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D184E3F42CF875AC00D896D6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = 947B8FE02D11B4BF004463EF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAnalytics;
 		};
-		D184E3F82CF8762900D896D6 /* FirebaseAuth */ = {
+		947B8FE32D11B559004463EF /* FirebaseFirestore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D184E3F42CF875AC00D896D6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAuth;
-		};
-		D184E3FA2CF8763200D896D6 /* FirebaseDatabase */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D184E3F42CF875AC00D896D6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseDatabase;
+			package = 947B8FE02D11B4BF004463EF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
