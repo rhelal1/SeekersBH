@@ -18,7 +18,9 @@ struct JobAd {
     var status: JobStatus = .Open
     var applicationStatus : ApplicationStatus = .pending
     var isHidden : Bool = false
-    var intrest: Interest
+//    var intrest: Interest
+    
+    
 
 }
 
