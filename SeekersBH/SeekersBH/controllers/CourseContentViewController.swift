@@ -53,5 +53,6 @@ extension CourseContentViewController: UITableViewDataSource, UITableViewDelegat
 
         // Navigate to the VideoPlayerViewController
         self.navigationController?.pushViewController(videoPlayerVC, animated: true)
+
     }
 }
