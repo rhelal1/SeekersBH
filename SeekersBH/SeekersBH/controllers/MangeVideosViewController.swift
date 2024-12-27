@@ -43,7 +43,6 @@ class MangeVideosViewController: UIViewController {
             present(alert, animated: true)
         }
 
-        // Optionally, add action methods to add/edit/remove videos
     }
 
     extension MangeVideosViewController: UITableViewDataSource, UITableViewDelegate {
