@@ -42,60 +42,65 @@ class NewJobDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // If jobDocumentID is set, fetch job details from Firestore
-               if let jobID = jobDocumentID {
-                   fetchJobDetails(jobID: jobID)
-               }
+        // Validate jobDocumentID
+                guard let jobID = jobDocumentID else {
+                    print("Error: jobDocumentID is nil.")
+                    return
+                }
+                
+                // Fetch job details
+                fetchJobDetails(jobID: jobID)
                 
             }
     
     
     // Fetch job details from Firestore
     func fetchJobDetails(jobID: String) {
-        db.collection("jobs").document(jobID).getDocument { (document, error) in
-            if let error = error {
-                print("Error fetching document: \(error.localizedDescription)")
-                return
-            }
+          db.collection("jobs").document(jobID).getDocument { (document, error) in
+              if let error = error {
+                  print("Error fetching document: \(error.localizedDescription)")
+                  return
+              }
 
-            if let document = document, document.exists {
-                let data = document.data()
+              if let document = document, document.exists {
+                  let data = document.data()
+                  
+                  // Debugging: Log fetched data
+                  print("Fetched Document Data: \(String(describing: data))")
+                  
+                  // Assign data to properties
+                  self.jobTitle = data?["jobName"] as? String
+                  self.companyName = data?["companyName"] as? String
+                  self.experience = data?["experience"] as? String
+                  self.postedDate = data?["datePosted"] as? String
+                  self.location = data?["jobLocation"] as? String
+                  self.employmentType = data?["jobType"] as? String
+                  self.salary = data?["jobSalary"] as? String
+                  self.jobDescription = data?["jobDescription"] as? String
+                  self.keyResponsibilities = data?["jobKeyResponsibilities"] as? String
+                  self.requirements = data?["requirements"] as? String
+                  self.benefits = data?["jobEmploymentBenfits"] as? String
 
-                // Debugging: Log the entire data
-                print("Fetched Document Data: \(String(describing: data))")
-
-                self.jobTitle = data?["jobName"] as? String
-                self.companyName = data?["companyName"] as? String
-                self.experience = data?["experience"] as? String
-                self.postedDate = data?["datePosted"] as? String
-                self.location = data?["jobLocation"] as? String
-                self.employmentType = data?["jobType"] as? String
-                self.salary = data?["jobSalary"] as? String
-                self.jobDescription = data?["jobDescription"] as? String
-                self.keyResponsibilities = data?["jobKeyResponsibilities"] as? String
-                self.requirements = data?["requirements"] as? String
-                self.benefits = data?["jobEmploymentBenfits"] as? String
-
-                // Update the UI only after data is fetched
-                DispatchQueue.main.async {
-                    self.updateUI()
-                }
-            } else {
-                print("Document does not exist")
-            }
-        }
-    }
+                  // Update UI on the main thread
+                  DispatchQueue.main.async {
+                      self.updateUI()
+                  }
+              } else {
+                  print("Document does not exist")
+              }
+          }
+      }
 
 
 
             
     // Update UI with job details
-       func updateUI() {
-           // Update the UI elements with the fetched data
-                  lblJobTitle.text = jobTitle
-                  lblJobCompanyName.text = companyName
-           lblPostedDate.text = "Posted on: \(String(describing: postedDate))"
-       }
+        func updateUI() {
+            lblJobTitle.text = jobTitle ?? "Job Title Unavailable"
+            lblJobCompanyName.text = companyName ?? "Company Name Unavailable"
+            lblPostedDate.text = postedDate != nil ? "Posted on: \(postedDate!)" : "Posted Date Unavailable"
+        }
+
     
     
     
@@ -106,9 +111,17 @@ class NewJobDetailViewController: UIViewController {
   
         //to receive data to the new job deatils table view controller
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.destination is NewJobDetailViewController {
-            //destinationVC.jobDocumentID = selectedJobID  // Pass the job document ID to fetch details
-        }
-    }
+        if let destinationVC = segue.destination as? NewJobDetailTableViewController {
+              destinationVC.location = location
+              destinationVC.employmentType = employmentType
+              destinationVC.experience = experience
+              destinationVC.salary = salary
+              destinationVC.jobDescription = jobDescription
+              destinationVC.keyResponsibilities = keyResponsibilities
+              destinationVC.requirements = requirements
+              destinationVC.benefits = benefits
+          }
+      }
+
 
 }
