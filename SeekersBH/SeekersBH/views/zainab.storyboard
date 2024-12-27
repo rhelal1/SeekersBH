@@ -557,12 +557,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="360" height="209"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="views" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a32-vw-CB4">
-                                                    <rect key="frame" x="297" y="32" width="43" height="20"/>
-                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mwI-M4-QzN">
                                                     <rect key="frame" x="40" y="32" width="32" height="20"/>
                                                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
@@ -582,16 +576,17 @@
                                                         <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="26"/>
                                                         <color key="baseBackgroundColor" red="0.050980389119999997" green="0.094117648900000003" blue="0.32156863810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="didTapActionButton:" destination="0mx-Xa-vJM" eventType="touchUpInside" id="njN-yv-QAP"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" red="0.85098039219999999" green="0.85098039219999999" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
-                                                <constraint firstItem="a32-vw-CB4" firstAttribute="top" secondItem="vp8-FH-FXx" secondAttribute="topMargin" constant="20" id="1fJ-5E-XyW"/>
                                                 <constraint firstItem="aA0-hH-6Ri" firstAttribute="leading" secondItem="vp8-FH-FXx" secondAttribute="leadingMargin" constant="20" id="5bp-Zn-wiy"/>
                                                 <constraint firstItem="cDt-q0-dj8" firstAttribute="top" secondItem="mwI-M4-QzN" secondAttribute="bottom" constant="20" id="5k3-Tq-z7k"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="aA0-hH-6Ri" secondAttribute="bottom" constant="20" id="QR0-XC-GK0"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="cDt-q0-dj8" secondAttribute="trailing" constant="20" id="ehx-ci-Uqb"/>
-                                                <constraint firstItem="a32-vw-CB4" firstAttribute="trailing" secondItem="vp8-FH-FXx" secondAttribute="trailingMargin" id="hh5-r4-6bC"/>
                                                 <constraint firstItem="mwI-M4-QzN" firstAttribute="leading" secondItem="vp8-FH-FXx" secondAttribute="leadingMargin" constant="20" id="kMf-Bv-OdP"/>
                                                 <constraint firstItem="cDt-q0-dj8" firstAttribute="leading" secondItem="vp8-FH-FXx" secondAttribute="leadingMargin" constant="20" id="nWX-ni-Whg"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="aA0-hH-6Ri" secondAttribute="trailing" constant="20" id="u13-L3-9rK"/>
@@ -599,6 +594,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="actionButton" destination="aA0-hH-6Ri" id="xZt-c2-7PM"/>
                                             <outlet property="descriptionLabel" destination="cDt-q0-dj8" id="g8T-Y8-ANR"/>
                                             <outlet property="titleLabel" destination="mwI-M4-QzN" id="Bti-GI-4np"/>
                                         </connections>
@@ -612,6 +608,9 @@
                                     <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="26"/>
                                     <color key="baseBackgroundColor" red="0.050980389119999997" green="0.094117648900000003" blue="0.32156863810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="didTapToggleArticles:" destination="kXk-nB-O9X" eventType="touchUpInside" id="ZJo-Xt-Kbx"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="YhL-3s-Qcf"/>
@@ -632,6 +631,7 @@
                     <navigationItem key="navigationItem" id="Ooj-vS-JSu"/>
                     <connections>
                         <outlet property="manageArticlesTable" destination="TnB-43-gyy" id="Y9g-eF-4MJ"/>
+                        <outlet property="toggleArticlesButton" destination="wcM-3k-BT7" id="viW-tt-WuK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E0j-4C-osg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -657,37 +657,43 @@
                                             <rect key="frame" x="0.0" y="0.0" width="400" height="213"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mEk-Fe-0GI">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mEk-Fe-0GI">
                                                     <rect key="frame" x="30" y="22" width="109.33333333333331" height="97"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bKJ-Ki-LAZ">
-                                                    <rect key="frame" x="30" y="159" width="350" height="44"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bKJ-Ki-LAZ">
+                                                    <rect key="frame" x="20" y="149" width="360" height="44"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="filled" title="Hide">
                                                         <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="26"/>
                                                         <color key="baseBackgroundColor" red="0.050980389119999997" green="0.094117648900000003" blue="0.32156863810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </buttonConfiguration>
                                                 </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qQb-ZZ-tVL">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qQb-ZZ-tVL">
                                                     <rect key="frame" x="153.33333333333334" y="22" width="32" height="20"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="summary summary summary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CL5-iv-J6S">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="summary summary summary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CL5-iv-J6S">
                                                     <rect key="frame" x="153" y="51" width="235" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="CL5-iv-J6S" firstAttribute="top" secondItem="qQb-ZZ-tVL" secondAttribute="bottom" constant="10" id="134-f0-PAu"/>
+                                                <constraint firstAttribute="trailing" secondItem="bKJ-Ki-LAZ" secondAttribute="trailing" constant="20" id="3yH-Ra-vbh"/>
+                                                <constraint firstItem="bKJ-Ki-LAZ" firstAttribute="top" secondItem="CL5-iv-J6S" secondAttribute="bottom" constant="10" id="BCW-mZ-7ad"/>
+                                                <constraint firstAttribute="bottom" secondItem="bKJ-Ki-LAZ" secondAttribute="bottom" constant="20" id="V2J-HS-5A3"/>
+                                                <constraint firstItem="bKJ-Ki-LAZ" firstAttribute="leading" secondItem="YLy-E6-ta4" secondAttribute="leading" constant="20" id="kdZ-Vw-vQl"/>
+                                                <constraint firstItem="CL5-iv-J6S" firstAttribute="leading" secondItem="mEk-Fe-0GI" secondAttribute="trailing" constant="10" id="u9r-cv-aLV"/>
+                                                <constraint firstAttribute="trailing" secondItem="CL5-iv-J6S" secondAttribute="trailing" constant="20" id="vNJ-nj-KXL"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.85098039219999999" green="0.85098039219999999" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
+                                            <outlet property="descriptionLabel" destination="CL5-iv-J6S" id="QKv-Km-VZ7"/>
                                             <outlet property="titleLabel" destination="qQb-ZZ-tVL" id="QnQ-0C-YmI"/>
                                         </connections>
                                     </tableViewCell>
@@ -760,19 +766,19 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dx0-AO-ZMP">
-                                                    <rect key="frame" x="30" y="156" width="300" height="20"/>
+                                                    <rect key="frame" x="30" y="136" width="300" height="20"/>
                                                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="summary summary summary summary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J2g-Xm-cM3">
-                                                    <rect key="frame" x="30" y="186" width="300" height="20"/>
+                                                    <rect key="frame" x="30" y="166" width="300" height="20"/>
                                                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rbQ-zK-qi2">
-                                                    <rect key="frame" x="30" y="216" width="310" height="44"/>
+                                                    <rect key="frame" x="40" y="206" width="300" height="44"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="filled" title="Hide">
                                                         <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="26"/>
@@ -780,19 +786,19 @@
                                                     </buttonConfiguration>
                                                 </button>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iNK-tH-vMT">
-                                                    <rect key="frame" x="30" y="22" width="310" height="124"/>
+                                                    <rect key="frame" x="30" y="22" width="310" height="104"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="rbQ-zK-qi2" firstAttribute="trailing" secondItem="4kw-fA-G3m" secondAttribute="trailingMargin" id="37Z-rI-uXX"/>
                                                 <constraint firstItem="J2g-Xm-cM3" firstAttribute="leading" secondItem="4kw-fA-G3m" secondAttribute="leadingMargin" constant="10" id="Cme-X5-N7O"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="rbQ-zK-qi2" secondAttribute="bottom" constant="10" id="DH6-7q-i64"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="rbQ-zK-qi2" secondAttribute="bottom" constant="20" id="DH6-7q-i64"/>
                                                 <constraint firstItem="dx0-AO-ZMP" firstAttribute="top" secondItem="iNK-tH-vMT" secondAttribute="bottom" constant="10" id="EOr-zx-kPb"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="dx0-AO-ZMP" secondAttribute="trailing" constant="10" id="I3E-4E-Qs8"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="J2g-Xm-cM3" secondAttribute="trailing" constant="10" id="IY4-ze-tFs"/>
-                                                <constraint firstItem="rbQ-zK-qi2" firstAttribute="leading" secondItem="4kw-fA-G3m" secondAttribute="leadingMargin" constant="10" id="J0h-Iv-Qji"/>
+                                                <constraint firstItem="rbQ-zK-qi2" firstAttribute="leading" secondItem="4kw-fA-G3m" secondAttribute="leadingMargin" constant="20" id="J0h-Iv-Qji"/>
                                                 <constraint firstItem="J2g-Xm-cM3" firstAttribute="top" secondItem="dx0-AO-ZMP" secondAttribute="bottom" constant="10" id="Jhs-Hj-FxY"/>
-                                                <constraint firstItem="rbQ-zK-qi2" firstAttribute="top" secondItem="J2g-Xm-cM3" secondAttribute="bottom" constant="10" id="Pvq-mx-wu9"/>
+                                                <constraint firstItem="rbQ-zK-qi2" firstAttribute="top" secondItem="J2g-Xm-cM3" secondAttribute="bottom" constant="20" id="Pvq-mx-wu9"/>
                                                 <constraint firstItem="iNK-tH-vMT" firstAttribute="top" secondItem="4kw-fA-G3m" secondAttribute="topMargin" constant="10" id="qE2-Tf-2kZ"/>
                                                 <constraint firstItem="dx0-AO-ZMP" firstAttribute="leading" secondItem="4kw-fA-G3m" secondAttribute="leadingMargin" constant="10" id="tIn-xq-Pim"/>
                                                 <constraint firstItem="iNK-tH-vMT" firstAttribute="trailing" secondItem="4kw-fA-G3m" secondAttribute="trailingMargin" id="wb6-Gd-mYU"/>

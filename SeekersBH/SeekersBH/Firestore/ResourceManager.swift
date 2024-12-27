@@ -19,7 +19,8 @@ final class ResourceManager {
                 let DOI = document["DOI"] as? String,
                 let description = document["description"] as? String,
                 let url = document["url"] as? String,
-                let views = document["views"] as? Int
+                let views = document["views"] as? Int,
+                let isHidden = document["isHidden"] as? Bool
             else {
                 throw URLError(.badServerResponse)
             }
@@ -33,7 +34,8 @@ final class ResourceManager {
                 DOI: DOI,
                 description: description,
                 url: url,
-                views: views
+                views: views,
+                isHidden: isHidden
             )
         }
         
