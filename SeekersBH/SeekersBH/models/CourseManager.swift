@@ -99,7 +99,7 @@ class CourseManager {
     }
 
     private func parseCourseCommentData(data: [String: Any]) -> CourseComments? {
-        guard let userId = data["user_id"] as? Int,
+        guard let userId = data["user_id"] as? String,
               let commentText = data["commenttext"] as? String,
               let rated = data["rated"] as? Int else {
             return nil
@@ -140,30 +140,71 @@ class CourseManager {
         return Question(questionTxt: questionTxt, options: options, correctAnswer: correctAnswer, points: points)
     }
     
-    func fetchTheUserCVs(forUserID userID: String) async throws -> [String] {
+    func fetchTheUserCVs(forUserID userID: String) async throws -> [CVInfo] {
         let db = Firestore.firestore()
-           
-           // Reference to the "CV" collection
-           let cvCollection = db.collection("CV")
-           
-           // Perform the query asynchronously
-           let querySnapshot = try await cvCollection
-               .whereField("userID", isEqualTo: userID)
-               .getDocuments()
-           
-           // Create an array to hold CV names
-           var cvNames: [String] = []
-           
-           // Iterate over the documents and extract the CVName
-           for document in querySnapshot.documents {
-               if let cvName = document["CVName"] as? String {
-                   cvNames.append(cvName)
-               }
-           }
-           
-           // Return the array of CV names
-           return cvNames
+        
+        // Reference to the "CV" collection
+        let cvCollection = db.collection("CV")
+        
+        // Perform the query asynchronously
+        let querySnapshot = try await cvCollection
+            .whereField("userID", isEqualTo: userID)
+            .getDocuments()
+        // Create an array to hold CV information
+        var cvs: [CVInfo] = []
+        
+        // Iterate over the documents and extract the CV ID and Name
+        for document in querySnapshot.documents {
+            let id = document.documentID
+            if let name = document["cvName"] as? String {
+                cvs.append(CVInfo(id: id, name: name))
+            }
+        }
+        // Return the array of CV information
+        return cvs
     }
+    
+    func addComment(courseId: String, commentText: String, userId: String, rated: Int, completion: @escaping (Error?) -> Void) {
+        let db = Firestore.firestore()
+
+        // Reference to the course document
+        let courseDocRef = db.collection("OnlineCourses").document(courseId)
+
+        // Check if the course document exists
+        courseDocRef.getDocument { (document, error) in
+            if let error = error {
+                print("Error checking course document: \(error.localizedDescription)")
+                completion(error)
+                return
+            }
+
+            guard let document = document, document.exists else {
+                print("Course document does not exist.")
+                completion(NSError(domain: "", code: 404, userInfo: [NSLocalizedDescriptionKey: "Course not found"]))
+                return
+            }
+
+            // Create a new comment dictionary
+            let newComment: [String: Any] = [
+                "user_id": userId,
+                "commenttext": commentText,
+                "rated": rated,
+                "timestamp": FieldValue.serverTimestamp() // Automatically set the timestamp
+            ]
+
+            // Reference to the courseComments sub-collection within the specified course document
+            courseDocRef.collection("courseComments").addDocument(data: newComment) { error in
+                if let error = error {
+                    print("Error adding comment: \(error.localizedDescription)")
+                    completion(error)
+                } else {
+                    print("Comment added successfully!")
+                    completion(nil)
+                }
+            }
+        }
+    }
+    
     
     func addCourseCertification(certification: CourseCertification, completion: @escaping (Result<Void, Error>) -> Void) {
             // Reference to the "courseCertifications" collection
@@ -202,6 +243,54 @@ class CourseManager {
                         }
                     }
                 }
+        }
+    
+    func fetchUsername(userId: String) async throws -> String {
+        let db = Firestore.firestore()
+
+        // Reference to the User collection
+        let documentSnapshot = try await db.collection("User").document(userId).getDocument()
+
+        // Check if the document exists
+        guard documentSnapshot.exists else {
+            throw NSError(domain: "FetchError", code: 1, userInfo: [NSLocalizedDescriptionKey: "User document does not exist"])
+        }
+
+        // Extract the username from the document
+        if let username = documentSnapshot.get("username") as? String {
+            return username
+        } else {
+            throw NSError(domain: "FetchError", code: 0, userInfo: [NSLocalizedDescriptionKey: "Username not found"])
+        }
+    }
+    
+    // Function to fetch certifications for a CV based on cvID
+        func fetchCertifications(forCVID cvID: String) async throws -> [[String: Any]] {
+            let db = Firestore.firestore()
+            
+            // Reference to the CV document in Firestore
+            let cvDocumentRef = db.collection("CV").document(cvID)
+            
+            // Fetch the CV document
+            let document = try await cvDocumentRef.getDocument()
+            
+            if let certificationsArray = document.data()?["certifications"] as? [[String: Any]] {
+                return certificationsArray
+            } else {
+                throw NSError(domain: "CourseManager", code: 404, userInfo: [NSLocalizedDescriptionKey: "Certifications not found"])
+            }
+        }
+
+        // Function to update certifications in Firestore
+        func updateCertifications(forCVID cvID: String, certifications: [[String: Any]], completion: @escaping (Error?) -> Void) {
+            let db = Firestore.firestore()
+            let cvDocumentRef = db.collection("CV").document(cvID)
+            
+            cvDocumentRef.updateData([
+                "certifications": certifications
+            ]) { error in
+                completion(error)
+            }
         }
 }
 

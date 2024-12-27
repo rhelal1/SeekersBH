@@ -100,7 +100,6 @@ extension CourseViewController: UITableViewDataSource, UITableViewDelegate {
     // UITableViewDelegate method
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedCourse = filteredCourses[indexPath.row]
-
         // Instantiate the CourseDetailsViewController
         if let courseDetailsVC = storyboard?.instantiateViewController(withIdentifier: "CourseDetailsViewController") as? CourseDetailsViewController {
             // Pass the selected course to the CourseDetailsViewController
