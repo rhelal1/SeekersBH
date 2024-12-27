@@ -665,9 +665,6 @@
                                                         <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="26"/>
                                                         <color key="baseBackgroundColor" red="0.050980389119999997" green="0.094117648900000003" blue="0.32156863810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </buttonConfiguration>
-                                                    <connections>
-                                                        <action selector="didTapActionButton:" destination="SH1-d8-CQ1" eventType="touchUpInside" id="RGM-eE-zRI"/>
-                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qQb-ZZ-tVL">
                                                     <rect key="frame" x="40" y="32" width="320" height="19.666666666666671"/>
@@ -696,7 +693,6 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.85098039219999999" green="0.85098039219999999" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
-                                            <outlet property="actionButton" destination="bKJ-Ki-LAZ" id="wCp-3m-hmI"/>
                                             <outlet property="descriptionLabel" destination="CL5-iv-J6S" id="QKv-Km-VZ7"/>
                                             <outlet property="titleLabel" destination="qQb-ZZ-tVL" id="QnQ-0C-YmI"/>
                                         </connections>
@@ -717,9 +713,6 @@
                                     <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="26"/>
                                     <color key="baseBackgroundColor" red="0.050980389119999997" green="0.094117648900000003" blue="0.32156863810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
-                                <connections>
-                                    <action selector="didTapToggleWebinars:" destination="9iT-Qt-2CK" eventType="touchUpInside" id="ouU-LC-vZa"/>
-                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hwu-tQ-TdT"/>
@@ -740,7 +733,6 @@
                     <navigationItem key="navigationItem" id="rh3-AA-jQe"/>
                     <connections>
                         <outlet property="tableView" destination="m5b-Td-wpM" id="YYh-5n-H3K"/>
-                        <outlet property="toggleWebinarsButton" destination="CNz-hK-uIB" id="z1P-Qf-YbY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nqT-gK-Zwq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -786,6 +778,9 @@
                                                         <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="26"/>
                                                         <color key="baseBackgroundColor" red="0.050980389119999997" green="0.094117648900000003" blue="0.32156863810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="didTapActionButton:" destination="b25-fi-xI2" eventType="touchUpInside" id="9G9-HD-eAW"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dx0-AO-ZMP">
                                                     <rect key="frame" x="40" y="32" width="280" height="20"/>
@@ -808,6 +803,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.85098039219999999" green="0.85098039219999999" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
+                                            <outlet property="actionButton" destination="rbQ-zK-qi2" id="g2q-4O-LSD"/>
                                             <outlet property="descriptionLabel" destination="J2g-Xm-cM3" id="c3m-51-C5V"/>
                                             <outlet property="titleLabel" destination="dx0-AO-ZMP" id="B0l-Yq-ynw"/>
                                         </connections>
@@ -821,6 +817,9 @@
                                     <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="26"/>
                                     <color key="baseBackgroundColor" red="0.050980389119999997" green="0.094117648900000003" blue="0.32156863810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="didTapToggleVideos:" destination="hR0-ns-cR3" eventType="touchUpInside" id="1q2-Jp-b2K"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="SN9-L8-bBz"/>
@@ -840,6 +839,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Hoq-Mg-DrG"/>
                     <connections>
+                        <outlet property="toggleVideosButton" destination="E5k-53-xDF" id="EiT-yC-zcy"/>
                         <outlet property="videoTableview" destination="kVT-SI-fki" id="aii-aP-ypf"/>
                     </connections>
                 </viewController>
