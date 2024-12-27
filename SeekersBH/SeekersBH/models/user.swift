@@ -1,7 +1,7 @@
 import Foundation
 
 struct User {
-    var id : Int
+    var id : String
     var email : String
     var firstName : String
     var lastName : String
@@ -12,9 +12,10 @@ struct User {
     var mostResentJobTitle : String
     var mostResentCompany : String
     var password : String
+    var isHidden : Bool
     
-    var listOfUserInterset : [Interest]
-    var listOfSkills : [Skill]
+//    var listOfUserInterset : [Interest]
+//    var listOfSkills : [Skill]
     
 //    var CVs : [CV]
 //    var following : [User]
@@ -23,7 +24,7 @@ struct User {
 }
 
 enum Location {
-    
+    case city(String)
 }
 
 enum Interest {

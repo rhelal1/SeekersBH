@@ -100,6 +100,7 @@ class NewJobDetailViewController: UIViewController {
             lblJobCompanyName.text = companyName ?? "Company Name Unavailable"
             lblPostedDate.text = postedDate != nil ? "Posted on: \(postedDate!)" : "Posted Date Unavailable"
         }
+
     
     
     
@@ -121,5 +122,6 @@ class NewJobDetailViewController: UIViewController {
               destinationVC.benefits = benefits
           }
       }
+
 
 }
