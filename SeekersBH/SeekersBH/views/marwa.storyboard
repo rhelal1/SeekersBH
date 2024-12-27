@@ -1159,7 +1159,7 @@
         <!--Application Tracker View Controller-->
         <scene sceneID="a1N-vm-uyF">
             <objects>
-                <viewController id="cjp-z5-jaI" customClass="ApplicationTrackerViewController" customModule="SeekersBH" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ApplicationTrackerViewController" id="cjp-z5-jaI" customClass="ApplicationTrackerViewController" customModule="SeekersBH" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="o5n-IM-b4q">
                         <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1172,74 +1172,75 @@ Tracker</string>
                                 <color key="textColor" red="0.035294115539999997" green="0.094117648900000003" blue="0.33725491169999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="tyT-Fx-jZl">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="200" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="tyT-Fx-jZl">
                                 <rect key="frame" x="20" y="169" width="400" height="733"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="186" id="7nN-zQ-bS9" customClass="ApplicationTrackerTableViewCell" customModule="SeekersBH" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="400" height="186"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ApplicationTrackerCell" rowHeight="176" id="7nN-zQ-bS9" customClass="ApplicationTrackerTableViewCell" customModule="SeekersBH" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="400" height="176"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7nN-zQ-bS9" id="1B0-Ds-xSt">
-                                            <rect key="frame" x="0.0" y="0.0" width="400" height="186"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="400" height="176"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Job Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NvQ-fE-y7u">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Job Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NvQ-fE-y7u">
                                                     <rect key="frame" x="10" y="10" width="380" height="20"/>
                                                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Organization" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fDr-Px-P1M">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Job Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fDr-Px-P1M">
                                                     <rect key="frame" x="10" y="40" width="380" height="20"/>
                                                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Employer Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FGL-cU-aai">
-                                                    <rect key="frame" x="10" y="70" width="380" height="20"/>
-                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Job Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GkN-6a-2r4">
+                                                    <rect key="frame" x="10" y="70" width="380" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Io9-to-Wai">
-                                                    <rect key="frame" x="30" y="100" width="340" height="20"/>
-                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Job Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Uv-LI-TaP">
+                                                    <rect key="frame" x="10" y="101" width="380" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cVs-ER-rta">
-                                                    <rect key="frame" x="10" y="130" width="380" height="44"/>
-                                                    <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="filled" title="withdrew">
-                                                        <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="26"/>
-                                                        <color key="baseBackgroundColor" systemColor="systemRedColor"/>
-                                                    </buttonConfiguration>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                            <integer key="value" value="15"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                    </userDefinedRuntimeAttributes>
-                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Application Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AP0-1F-CoC">
+                                                    <rect key="frame" x="10" y="132" width="380" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" red="0.85098040100000005" green="0.85098040100000005" blue="0.85098040100000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <constraints>
-                                                <constraint firstItem="FGL-cU-aai" firstAttribute="top" secondItem="fDr-Px-P1M" secondAttribute="bottom" constant="10" id="5Ag-BM-KBt"/>
+                                                <constraint firstItem="8Uv-LI-TaP" firstAttribute="leading" secondItem="1B0-Ds-xSt" secondAttribute="leading" constant="10" id="0dx-hU-xIx"/>
                                                 <constraint firstAttribute="trailing" secondItem="fDr-Px-P1M" secondAttribute="trailing" constant="10" id="EGc-mj-Goq"/>
+                                                <constraint firstItem="8Uv-LI-TaP" firstAttribute="top" secondItem="GkN-6a-2r4" secondAttribute="bottom" constant="10" id="Fpg-bF-6BF"/>
                                                 <constraint firstItem="fDr-Px-P1M" firstAttribute="leading" secondItem="1B0-Ds-xSt" secondAttribute="leading" constant="10" id="Hta-yv-Yc8"/>
+                                                <constraint firstAttribute="trailing" secondItem="8Uv-LI-TaP" secondAttribute="trailing" constant="10" id="K6O-LG-071"/>
                                                 <constraint firstItem="NvQ-fE-y7u" firstAttribute="leading" secondItem="1B0-Ds-xSt" secondAttribute="leading" constant="10" id="KkX-X5-ife"/>
-                                                <constraint firstAttribute="trailing" secondItem="cVs-ER-rta" secondAttribute="trailing" constant="10" id="RJI-cd-P7r"/>
-                                                <constraint firstItem="cVs-ER-rta" firstAttribute="leading" secondItem="1B0-Ds-xSt" secondAttribute="leading" constant="10" id="TQK-7N-AqY"/>
-                                                <constraint firstItem="Io9-to-Wai" firstAttribute="top" secondItem="FGL-cU-aai" secondAttribute="bottom" constant="10" id="Taw-pC-21x"/>
+                                                <constraint firstAttribute="trailing" secondItem="AP0-1F-CoC" secondAttribute="trailing" constant="10" id="LRq-nC-xJH"/>
+                                                <constraint firstItem="AP0-1F-CoC" firstAttribute="top" secondItem="8Uv-LI-TaP" secondAttribute="bottom" constant="10" id="PL0-Nu-Yby"/>
                                                 <constraint firstItem="fDr-Px-P1M" firstAttribute="top" secondItem="NvQ-fE-y7u" secondAttribute="bottom" constant="10" id="VfL-vb-O5n"/>
-                                                <constraint firstItem="FGL-cU-aai" firstAttribute="leading" secondItem="1B0-Ds-xSt" secondAttribute="leading" constant="10" id="Zm4-AL-5Og"/>
-                                                <constraint firstAttribute="trailing" secondItem="FGL-cU-aai" secondAttribute="trailing" constant="10" id="aOh-Pp-6MM"/>
-                                                <constraint firstItem="cVs-ER-rta" firstAttribute="top" secondItem="Io9-to-Wai" secondAttribute="bottom" constant="10" id="bcd-1P-jYJ"/>
-                                                <constraint firstItem="Io9-to-Wai" firstAttribute="leading" secondItem="1B0-Ds-xSt" secondAttribute="leadingMargin" constant="10" id="buy-TF-l52"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="Io9-to-Wai" secondAttribute="trailing" constant="10" id="h6T-p3-aFR"/>
+                                                <constraint firstItem="AP0-1F-CoC" firstAttribute="leading" secondItem="1B0-Ds-xSt" secondAttribute="leading" constant="10" id="Y2b-bL-KZm"/>
+                                                <constraint firstItem="GkN-6a-2r4" firstAttribute="leading" secondItem="1B0-Ds-xSt" secondAttribute="leading" constant="10" id="d6K-bP-DMZ"/>
+                                                <constraint firstAttribute="trailing" secondItem="GkN-6a-2r4" secondAttribute="trailing" constant="10" id="m5B-4P-ZKS"/>
+                                                <constraint firstItem="GkN-6a-2r4" firstAttribute="top" secondItem="fDr-Px-P1M" secondAttribute="bottom" constant="10" id="rGM-cH-qAQ"/>
                                                 <constraint firstItem="NvQ-fE-y7u" firstAttribute="top" secondItem="1B0-Ds-xSt" secondAttribute="top" constant="10" id="rZh-bS-BNv"/>
                                                 <constraint firstAttribute="trailing" secondItem="NvQ-fE-y7u" secondAttribute="trailing" constant="10" id="wj2-8S-s9s"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration" identifier="ApplicationTrackerCell"/>
+                                        <connections>
+                                            <outlet property="appStatus" destination="AP0-1F-CoC" id="VqS-Jh-GLZ"/>
+                                            <outlet property="jobLocation" destination="fDr-Px-P1M" id="XzW-lq-I5h"/>
+                                            <outlet property="jobName" destination="NvQ-fE-y7u" id="LA4-oz-VC9"/>
+                                            <outlet property="jobStatus" destination="8Uv-LI-TaP" id="xnL-ZK-ReO"/>
+                                            <outlet property="jobType" destination="GkN-6a-2r4" id="Gba-dk-uBc"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -1256,10 +1257,13 @@ Tracker</string>
                             <constraint firstItem="tyT-Fx-jZl" firstAttribute="leading" secondItem="lrT-yV-KLw" secondAttribute="leading" constant="20" id="lh5-C6-03u"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="appTracker" destination="tyT-Fx-jZl" id="wjT-lD-u2I"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LgO-y6-15f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3556.4885496183206" y="691.54929577464793"/>
+            <point key="canvasLocation" x="-2247.2727272727275" y="-1295.3974895397489"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="8wi-om-gcE">
@@ -1550,9 +1554,6 @@ Tracker</string>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
