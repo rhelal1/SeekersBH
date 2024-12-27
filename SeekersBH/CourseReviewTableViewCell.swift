@@ -20,7 +20,7 @@ class CourseReviewTableViewCell: UITableViewCell {
         imageW.image = UIImage(named: "imageTest2") // "imageTest" should change to "webinar.picture" later
         imageW.layer.cornerRadius = imageW.frame.width / 2
         
-        username.text = courseConment.username
+//        username.text = courseConment.username
         comment.text = courseConment.commenttext
         
         view.layer.cornerRadius = 15

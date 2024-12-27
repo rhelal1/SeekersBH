@@ -39,94 +39,66 @@ class NewJobDetailTableViewController: UITableViewController {
     @IBOutlet weak var lblBenefitsInBenefitsSection: UILabel!
     
     // Properties to hold the passed data
-        var location: String?
-        var employmentType: String?
-        var experience: String?
-        var salary: String?
+    var location: String?
+    var employmentType: String?
+    var experience: String?
+    var salary: String?
     
-    
-    
+    var jobDescription: String?
+      var keyResponsibilities: String?
+      var requirements: String?
+      var benefits: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       
+        
         
         
         // Allow the table view to automatically adjust row height
         tableView.rowHeight = UITableView.automaticDimension
         
-        
-        
-        // Apply the formatted data to the labels (custome)
-        if let location = location {
-            lblLocationInGeneralSection.attributedText = getFormattedText(title: "Location:", value: location)
+        // Update UI with the passed data
+               updateUI()
+    }
+   
+    // Update the table UI with the passed data
+        func updateUI() {
+            if let location = location {
+                lblLocationInGeneralSection.text = location
+            }
+            if let employmentType = employmentType {
+                lblEmploymentTypeInGeneralSection.text = employmentType
+            }
+            if let experience = experience {
+                lblExperienceInGeneralSection.text = experience
+            }
+            if let salary = salary {
+                lblSalaryInGeneralSection.text = salary
+            }
+            if let jobDescription = jobDescription {
+                lblJobDescriptionInJobDescriptionSection.text = jobDescription
+            }
+            if let keyResponsibilities = keyResponsibilities {
+                lblKeyResponsInKeyResponsibilitiesSection.text = keyResponsibilities
+            }
+            if let requirements = requirements {
+                lblRequirementsInRequiremntsSection.text = requirements
+            }
+            if let benefits = benefits {
+                lblBenefitsInBenefitsSection.text = benefits
+            }
         }
-        
-        if let employmentType = employmentType {
-            lblEmploymentTypeInGeneralSection.attributedText = getFormattedText(title: "Employment Type:", value: employmentType)
-        }
-        
-        if let experience = experience {
-            lblExperienceInGeneralSection.attributedText = getFormattedText(title: "Experience:", value: experience)
-        }
-        
-        if let salary = salary {
-            lblSalaryInGeneralSection.attributedText = getFormattedText(title: "Salary:", value: salary)
-        }
-       
-        
-        lblJobDescriptionInJobDescriptionSection.text = """
-           This is a test for the Job Description section to check if the cell resizes 
-           This is a test for the Job Description section to check if the cell resizes
-           This is a test for the Job Description section to check if the cell resizes
-           This is a test for the Job Description section to check if the cell resizes
-           This is a test for the Job Description section to check if the cell resizes
-           This is a test for the Job Description section to check if the cell resizes
-           This is a test for the Job Description section to check if the cell resizes
-           This is a test for the Job Description section to check if the cell resizes
-           This is a test for the Job Description section to check if the cell resizes
-           This is a test for the Job Description section to check if the cell resizes
-           This is a test for the Job Description section to check if the cell resizes
-           This is a test for the Job Description section to check if the cell resizes
-           This is a test for the Job Description section to check if the cell resizes
-           This is a test for the Job Description section to check if the cell resizes
-           This is a test for the Job Description section to check if the cell duha
-           """
+
+
+
+      
+
            
-           lblKeyResponsInKeyResponsibilitiesSection.text = """
-           This section lists the key responsibilities for the role. Add enough content here to test the resizing behavior. 
-           Responsibilities include:
-           - Developing and maintaining applications.
-           - Collaborating with the team.
-           - Collaborating with the team.
-           - Collaborating with the team.
-           - Collaborating with the team.
-           - Collaborating with the team.
-           - Collaborating with the team.
-           - Collaborating with the team.
-           - Collaborating with the team.
-           - Collaborating with the team.
-           - Collaborating with the team.
-           
-           """
-           
-           lblRequirementsInRequiremntsSection.text = """
-           Requirements for the role include a degree in Computer Science, 5+ years of experience, and expertise in Swift. 
-           Add long text here to simulate detailed requirements and observe resizing.
-           """
-           
-           lblBenefitsInBenefitsSection.text = """
-           This section describes the benefits offered to employees. 
-           Add more content to test multiline labels, ensuring that the cell dynamically resifit the full content.
-           Add more content to test multiline labels, ensuring that the cell dynamically resifit the full content.
-           Add more content to test multiline labels, ensuring that the cell dynamically resifit the full content.
-           Add more content to test multiline labels, ensuring that the cell dynamically resifit the full content.
-           Add more content to test multiline labels, ensuring that the cell dynamically resifit the full content.
-           """
+      
         
 
-    }
+    
     
 
     
