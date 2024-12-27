@@ -16,6 +16,7 @@ class AddJobView4ViewController: UIViewController, UITextViewDelegate {
     var coordinator: AddEditJobCoordinator? // Added coordinator for mode handling
     var job: JobAd? // Receive JobAd object
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         viewv.layer.cornerRadius = 10
