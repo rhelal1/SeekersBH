@@ -22,18 +22,17 @@ class ApplyPageViewController: UIViewController {
     
     @IBAction func continuebtn(_ sender: Any) {
         
+       
         // Collect data from the NewApplyPageFormTableViewController
-               let jobApplication = collectFormData()
-
-               if let jobApplication = jobApplication {
-                   // Temporarily store the job application data
-                   tempJobApplication = jobApplication
-                   
-                   // Segue is triggered automatically by the storyboard; no need to call performSegue
-               } else {
-                   // Show alert if form data is invalid
-                   showAlert(message: "Please fill out all required fields.")
-               }
+            if let jobApplication = collectFormData() {
+                // Temporarily store the job application data
+                tempJobApplication = jobApplication
+                
+                // Segue is triggered automatically by the storyboard; no need to call performSegue
+            } else {
+                // Show alert if form data is invalid
+                showAlert(message: "Please fill out all required fields.")
+            }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -61,3 +60,4 @@ class ApplyPageViewController: UIViewController {
         }
 
 }
+
