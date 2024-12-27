@@ -22,8 +22,7 @@ class CourseDetailsViewController: UIViewController {
         // Instantiate the CourseContentViewController
         if let courseContentVC = storyboard?.instantiateViewController(withIdentifier: "CourseContentViewController") as? CourseContentViewController {
             // Pass the selected course to the CourseContentViewController
-            courseContentVC.courseContents = course.courseContent
-            courseContentVC.quize = course.courseQuestions
+            courseContentVC.course = course
             
             // Push the detail view controller
             navigationController?.pushViewController(courseContentVC, animated: true)

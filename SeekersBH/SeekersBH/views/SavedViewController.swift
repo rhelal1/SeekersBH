@@ -74,7 +74,7 @@ extension SavedViewController: UITableViewDataSource, UITableViewDelegate {
         
         let deleteAction = UIAlertAction(title: "Yes", style: .destructive) { _ in
             // Call the deletion function if user confirms
-            var selectedResource = self.saved[indexPath.row]
+            let selectedResource = self.saved[indexPath.row]
             var typeSaved : ResourceTypes = .article
             
             

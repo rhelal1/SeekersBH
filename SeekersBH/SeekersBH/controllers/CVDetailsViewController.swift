@@ -14,8 +14,15 @@ class CVDetailsViewController: UIViewController {
     @IBOutlet weak var cvNameLabel: UILabel!
     
     
-    var cvDetails: (name: String, createdDate: String, aboutMe: String, certifications: [[String: Any]], email: String, fullName: String, highestDegree: String, phoneNumber: String, skillName: String, university: String, portfolio: String, projects: [(name: String, overview: String, url: String)], certificationsOther: String, projectsOther: String, skillsOther: String, linkedIn: String)?
+    var cvDetails: (id: String, name: String, createdDate: String, aboutMe: String, certifications: [[String: Any]], email: String, fullName: String, highestDegree: String, phoneNumber: String, skillName: String, university: String, portfolio: String, projects: [(name: String, overview: String, url: String)], certificationsOther: String, projectsOther: String, skillsOther: String, linkedIn: String)?
     
+    
+    @IBAction func editButtonClicked(_ sender: Any) {
+        let editVC = storyboard?.instantiateViewController(withIdentifier: "EditCVViewController") as! EditCVViewController
+        
+        editVC.cvDetails = cvDetails
+        present(editVC, animated: true)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

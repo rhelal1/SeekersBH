@@ -13,6 +13,7 @@ class AllCVViewController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBOutlet weak var cvTableView: UITableView!
     
     var cvList: [(id: String, name: String, createdDate: String)] = []
+    var cvDetails: (id: String, name: String, createdDate: String, aboutMe: String, certifications: [[String: Any]], email: String, fullName: String, highestDegree: String, phoneNumber: String, skillName: String, university: String, portfolio: String, projects: [(name: String, overview: String, url: String)], certificationsOther: String, projectsOther: String, skillsOther: String, linkedIn: String)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -118,8 +119,6 @@ class AllCVViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
 
-    
-    var cvDetails: (name: String, createdDate: String, aboutMe: String, certifications: [[String: Any]], email: String, fullName: String, highestDegree: String, phoneNumber: String, skillName: String, university: String, portfolio: String, projects: [(name: String, overview: String, url: String)], certificationsOther: String, projectsOther: String, skillsOther: String, linkedIn: String)?
 
     
     func fetchCVDetails(cvID: String, completion: @escaping () -> Void) {
@@ -134,21 +133,21 @@ class AllCVViewController: UIViewController, UITableViewDelegate, UITableViewDat
             
             let certifications = data["certifications"] as? [[String: Any]] ?? []
             let certificationsOther = data["certificationsOther"] as? String ?? "N/A"
-            
             let projectNames = data["projectName"] as? [String] ?? []
             let projectOverviews = data["projectOverview"] as? [String] ?? []
             let projectURLs = data["projectURL"] as? [String] ?? []
             let projectsOther = data["projectsOther"] as? String ?? "N/A"
-            
             let skillName = data["skillName"] as? String ?? "N/A"
             let skillsOther = data["skillsOther"] as? String ?? "N/A"
-            
             var projects: [(name: String, overview: String, url: String)] = []
             for i in 0..<min(projectNames.count, projectOverviews.count, projectURLs.count) {
                 projects.append((name: projectNames[i], overview: projectOverviews[i], url: projectURLs[i]))
             }
             
+            
+            
             self.cvDetails = (
+                id: cvID,
                 name: data["cvName"] as? String ?? "Unnamed CV",
                 createdDate: self.formatDateToString(date: (data["createdDate"] as? Timestamp)?.dateValue() ?? Date()),
                 aboutMe: data["aboutMe"] as? String ?? "N/A",

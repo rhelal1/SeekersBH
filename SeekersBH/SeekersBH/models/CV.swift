@@ -1,6 +1,7 @@
 import Foundation
 
 struct CV {
+    var id: String?
     var fullName : String
     var email : String
     var phoneNumber : String
@@ -39,3 +40,4 @@ struct Project {
     var overview : String
     var resource : String
 }
+

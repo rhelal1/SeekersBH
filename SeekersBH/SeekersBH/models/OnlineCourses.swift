@@ -1,23 +1,22 @@
 import Foundation
 
 struct Course {
-    var title : String
-    var rating : Double
-    var description : String
-    var instructor : String
-    var prerequisites : String
-    var outcomes : String
-    
-    var category : CourseCategory
-    
-    var courseComments : [CourseComments]
-    var courseContent : [CourseContent]
-    var courseQuestions : [Question]
+    var id: String // The course ID
+    var title: String
+    var rating: Double
+    var description: String
+    var instructor: String
+    var prerequisites: String
+    var outcomes: String
+    var category: CourseCategory
+    var pictureUrl: String  // Add pictureUrl here
+    var courseComments: [CourseComments]
+    var courseContent: [CourseContent]
+    var courseQuestions: [Question]
 }
 
 struct CourseComments {
     var userId : Int
-    var username : String
     var commenttext : String
     var rated : Int
 }
@@ -40,7 +39,13 @@ struct Question {
 enum CourseCategory: String, Codable {
     case technology
     case business
-    case science
     case economics
-    case health
+}
+
+struct CourseCertification {
+    var title: String
+    var courseId: String
+    var date: Date
+    var userId: String
+    var score: Int // Add score to store the user's achievement
 }
