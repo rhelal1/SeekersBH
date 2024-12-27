@@ -23,7 +23,6 @@
 		666767342D1DE94200193BFD /* JobDetails2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666767332D1DE94200193BFD /* JobDetails2ViewController.swift */; };
 		66A160B32D1DDA5700721827 /* searchAndFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A160B22D1DDA5700721827 /* searchAndFilterViewController.swift */; };
 		43F5F6AF2D1C923900FA080C /* EditCVFieldsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F5F6AE2D1C923900FA080C /* EditCVFieldsTableViewController.swift */; };
-		66E035012D1432C60050E168 /* jobDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E035002D1432C60050E168 /* jobDetailsViewController.swift */; };
 		66E035052D143B050050E168 /* generalInformationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E035042D143B050050E168 /* generalInformationCollectionViewCell.swift */; };
 		893E0F4B2D1D7955004CB6C3 /* MangeWebinarsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893E0F4A2D1D7955004CB6C3 /* MangeWebinarsTableViewCell.swift */; };
 		893E0F4D2D1D7998004CB6C3 /* MangeWebinarsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893E0F4C2D1D7998004CB6C3 /* MangeWebinarsViewController.swift */; };
@@ -147,7 +146,6 @@
 		666767332D1DE94200193BFD /* JobDetails2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JobDetails2ViewController.swift; path = SeekersBH/views/JobDetails2ViewController.swift; sourceTree = SOURCE_ROOT; };
 		66A160B22D1DDA5700721827 /* searchAndFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = searchAndFilterViewController.swift; path = SeekersBH/views/searchAndFilterViewController.swift; sourceTree = SOURCE_ROOT; };
 		43F5F6AE2D1C923900FA080C /* EditCVFieldsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCVFieldsTableViewController.swift; sourceTree = "<group>"; };
-		66E035002D1432C60050E168 /* jobDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jobDetailsViewController.swift; sourceTree = "<group>"; };
 		66E035042D143B050050E168 /* generalInformationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = generalInformationCollectionViewCell.swift; sourceTree = "<group>"; };
 		893E0F4A2D1D7955004CB6C3 /* MangeWebinarsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MangeWebinarsTableViewCell.swift; sourceTree = "<group>"; };
 		893E0F4C2D1D7998004CB6C3 /* MangeWebinarsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MangeWebinarsViewController.swift; sourceTree = "<group>"; };

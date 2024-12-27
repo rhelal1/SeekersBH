@@ -15,14 +15,46 @@ class CertificationCVViewController: UIViewController {
     @IBOutlet weak var certificationIssuingOrganization: UITextField!
     @IBOutlet weak var otherCertification: UITextField!
     
+    let datePicker = UIDatePicker()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+        // Set up the date picker
+        setupDatePicker()
+    }
+    
+    func setupDatePicker() {
+        // Configure date picker
+        datePicker.datePickerMode = .date
+        datePicker.locale = Locale(identifier: "en_US")
+        datePicker.preferredDatePickerStyle = .wheels
+        
+        // Add the date picker as the input view for the certificationDateObtained text field
+        certificationDateObtained.inputView = datePicker
+        
+        // Add a toolbar for "Done" and "Cancel" actions
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        
+        // Done button to dismiss date picker
+        let doneButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneTapped))
+        toolbar.setItems([doneButton], animated: false)
+        
+        certificationDateObtained.inputAccessoryView = toolbar
+    }
+    
+    @objc func doneTapped() {
+        // When the done button is tapped, set the text field to the selected date
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM/dd/yyyy"
+        certificationDateObtained.text = dateFormatter.string(from: datePicker.date)
+        self.view.endEditing(true) // Dismiss the keyboard
     }
     
     @IBAction func nextButtonTapped(_ sender: UIButton) {
         
+        // Validate inputs
         if certificationName.text?.isEmpty ?? true {
             showAlert(message: "Certification name cannot be empty.")
             return
@@ -32,7 +64,6 @@ class CertificationCVViewController: UIViewController {
             showAlert(message: "Certification date obtained cannot be empty.")
             return
         }
-        
         
         guard let certificationDateString = certificationDateObtained.text,
               let certificationDate = isValidDate(certificationDateString) else {
@@ -50,9 +81,9 @@ class CertificationCVViewController: UIViewController {
             return
         }
         
+        // Proceed with saving the certification
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MM/dd/yyyy"
-        
         let formattedDate = dateFormatter.string(from: certificationDate)
         
         let newCertification = Certification(
@@ -61,15 +92,14 @@ class CertificationCVViewController: UIViewController {
             IssuingOrganization: certificationIssuingOrganization.text ?? ""
         )
         
-        // printing just to make sure it is saved
+        // Save the certification (printing for debugging)
         print("Saved Certification: \(newCertification.name), Date Obtained: \(formattedDate), Issuing Organization: \(newCertification.IssuingOrganization)")
         
         CVManager.shared.cv.certifications.append(newCertification)
-        
         CVManager.shared.cv.otherCertification = otherCertification.text ?? ""
-        // printing just to make sure it is saved
-        print("Saved other certifications: \(CVManager.shared.cv.otherCertification)")
         
+        // Save other certifications (printing for debugging)
+        print("Saved other certifications: \(CVManager.shared.cv.otherCertification)")
     }
     
     func showAlert(message: String) {
@@ -77,6 +107,7 @@ class CertificationCVViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "OK", style: .default))
         present(alert, animated: true)
     }
+    
     func isValidDate(_ dateString: String?) -> Date? {
         guard let dateString = dateString else { return nil }
         
@@ -87,15 +118,4 @@ class CertificationCVViewController: UIViewController {
         
         return dateFormatter.date(from: dateString)
     }
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
 }
