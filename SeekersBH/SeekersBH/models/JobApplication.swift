@@ -26,6 +26,15 @@ struct JobApplication {
     //var coverLetter : Data
 }
 
+struct Applicant {
+    var id : String
+    var applicantName : String
+    var applicationDate : Date?
+    var specialization : String
+    var jobId : String = ""
+    var status : String = "Pending"
+   }
+
 struct WorkExperince {
     var jobTitle : String
     var companyName : String
