@@ -12,6 +12,8 @@ class ManageArticlesViewController: UIViewController {
     
     @IBOutlet weak var manageArticlesTable: UITableView!
     var articles: [Article] = []
+    var allArticles: [Article] = []
+    var isShowingHidden = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,26 +22,50 @@ class ManageArticlesViewController: UIViewController {
         manageArticlesTable.dataSource = self
         manageArticlesTable.delegate = self
     }
-
+    
     private func fetchArticles() {
         Task {
-            do {
-                self.articles = try await ResourceManager.share.fetchArticles()
-                DispatchQueue.main.async {
-                    self.manageArticlesTable.reloadData()
-                }
-            } catch {
-                DispatchQueue.main.async {
-                    self.showError(error)
-                }
-            }
-        }
+               do {
+                   let fetchedArticles = try await AdminResourceManager.share.fetchArticles()
+                   DispatchQueue.main.async {
+                       self.allArticles = fetchedArticles
+                       self.updateVisibleArticles()
+                   }
+               } catch {
+                   DispatchQueue.main.async {
+                       self.showError(error)
+                   }
+               }
+           }
     }
 
     private func showError(_ error: Error) {
         let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default))
         present(alert, animated: true)
+    }
+    
+    @IBOutlet weak var toggleArticlesButton: UIButton!
+    @IBAction func didTapToggleArticles(_ sender: Any) {
+        isShowingHidden.toggle()
+           toggleArticlesButton.setTitle(isShowingHidden ? "Hide Hidden" : "Show Hidden", for: .normal)
+           updateVisibleArticles()
+    }
+    
+    func updateVisibleArticles() {
+        if isShowingHidden {
+            articles = allArticles.filter { $0.isHidden }
+        } else {
+            articles = allArticles.filter { !$0.isHidden }
+        }
+        manageArticlesTable.reloadData()
+    }
+    
+    func updateArticleVisibility(articleID: String, isHidden: Bool) {
+        if let index = allArticles.firstIndex(where: { $0.id == articleID }) {
+            allArticles[index].isHidden = isHidden
+        }
+        updateVisibleArticles()
     }
 }
 
@@ -54,21 +80,27 @@ extension ManageArticlesViewController: UITableViewDataSource, UITableViewDelega
 
 
         cell.update(with: articles[indexPath.row])
-        cell.showsReorderControl = true
-
-        return cell
-    }
+        
+        cell.toggleVisibilityAction = { [weak self] articleID, isHidden in
+                    guard let self = self else { return }
+                    
+                    // Update Firebase
+                    FirebaseManager.shared.updateDocument(
+                        collectionName: "Article",
+                        documentId: articleID,
+                        data: ["isHidden": isHidden]
+                    ) { error in
+                        if let error = error {
+                            print("Failed to update visibility: \(error.localizedDescription)")
+                        } else {
+                            self.updateArticleVisibility(articleID: articleID, isHidden: isHidden)
+                        }
+                    }
+                }
+                return cell
+        }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 170
-    }
-
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedArticle = articles[indexPath.row]
-
-        if let articleDetailsVC = storyboard?.instantiateViewController(withIdentifier: "ArticleDetailsViewController") as? ArticleDetailsViewController {
-            articleDetailsVC.article = selectedArticle
-            navigationController?.pushViewController(articleDetailsVC, animated: true)
-        }
     }
 }

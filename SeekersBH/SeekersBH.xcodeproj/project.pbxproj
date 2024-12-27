@@ -29,11 +29,17 @@
 		893E0F4B2D1D7955004CB6C3 /* MangeWebinarsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893E0F4A2D1D7955004CB6C3 /* MangeWebinarsTableViewCell.swift */; };
 		893E0F4D2D1D7998004CB6C3 /* MangeWebinarsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893E0F4C2D1D7998004CB6C3 /* MangeWebinarsViewController.swift */; };
 		893E0F4F2D1DA202004CB6C3 /* MangeVideosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893E0F4E2D1DA202004CB6C3 /* MangeVideosViewController.swift */; };
-		893E0F512D1DA2A6004CB6C3 /* MangeVideosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893E0F502D1DA2A6004CB6C3 /* MangeVideosTableViewCell.swift */; };
 		895C0AAB2D17354800E7283B /* Cloudinary in Frameworks */ = {isa = PBXBuildFile; productRef = 895C0AAA2D17354800E7283B /* Cloudinary */; };
 		895C0AAE2D1735DA00E7283B /* CloudinaryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895C0AAD2D1735D500E7283B /* CloudinaryManager.swift */; };
 		8983F9A02D147DF400DE32B5 /* AddEmployerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8983F99F2D147DF400DE32B5 /* AddEmployerViewController.swift */; };
 		8983F9A22D15D1C200DE32B5 /* AddArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8983F9A12D15D1C200DE32B5 /* AddArticleViewController.swift */; };
+		899D03D22D1F166E003E6353 /* zainab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 899D03D12D1F166E003E6353 /* zainab.storyboard */; };
+		899D03D42D1F180A003E6353 /* MangeVideosTableViewCell .swift in Sources */ = {isa = PBXBuildFile; fileRef = 899D03D32D1F1809003E6353 /* MangeVideosTableViewCell .swift */; };
+		899D03D62D1F2EF9003E6353 /* UserMangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899D03D52D1F2EF9003E6353 /* UserMangeViewController.swift */; };
+		899D03D82D1F2F24003E6353 /* UserMangeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899D03D72D1F2F24003E6353 /* UserMangeCell.swift */; };
+		899D03DA2D1F2FB7003E6353 /* UserManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899D03D92D1F2FB7003E6353 /* UserManger.swift */; };
+		899D03DC2D1F317B003E6353 /* ManageJobsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899D03DB2D1F317B003E6353 /* ManageJobsViewController.swift */; };
+		899D03DE2D1F329A003E6353 /* ManageAdminJobCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899D03DD2D1F329A003E6353 /* ManageAdminJobCell.swift */; };
 		89ACEE292D1B98F4008D5F57 /* AddWebinarsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89ACEE282D1B98F4008D5F57 /* AddWebinarsViewController.swift */; };
 		89ACEE2B2D1BC799008D5F57 /* AddVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89ACEE2A2D1BC799008D5F57 /* AddVideoViewController.swift */; };
 		89BB590F2D1CC076000FE481 /* MangeArticlesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BB590E2D1CC076000FE481 /* MangeArticlesViewController.swift */; };
@@ -92,7 +98,6 @@
 		D184E3E62CF86C7500D896D6 /* marwa.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D184E3E52CF86C7500D896D6 /* marwa.storyboard */; };
 		D184E3E82CF86C7F00D896D6 /* qasim.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D184E3E72CF86C7F00D896D6 /* qasim.storyboard */; };
 		D184E3EA2CF86C8900D896D6 /* duha.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D184E3E92CF86C8900D896D6 /* duha.storyboard */; };
-		D184E3EC2CF86C9400D896D6 /* zainab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D184E3EB2CF86C9400D896D6 /* zainab.storyboard */; };
 		D184E3EE2CF86C9C00D896D6 /* reem.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D184E3ED2CF86C9C00D896D6 /* reem.storyboard */; };
 		D184E3F12CF86CF400D896D6 /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = D184E3F02CF86CF400D896D6 /* user.swift */; };
 		D184E3FD2CF8769000D896D6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D184E3FC2CF8769000D896D6 /* GoogleService-Info.plist */; };
@@ -156,10 +161,16 @@
 		893E0F4A2D1D7955004CB6C3 /* MangeWebinarsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MangeWebinarsTableViewCell.swift; sourceTree = "<group>"; };
 		893E0F4C2D1D7998004CB6C3 /* MangeWebinarsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MangeWebinarsViewController.swift; sourceTree = "<group>"; };
 		893E0F4E2D1DA202004CB6C3 /* MangeVideosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MangeVideosViewController.swift; sourceTree = "<group>"; };
-		893E0F502D1DA2A6004CB6C3 /* MangeVideosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MangeVideosTableViewCell.swift; sourceTree = "<group>"; };
 		895C0AAD2D1735D500E7283B /* CloudinaryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudinaryManager.swift; sourceTree = "<group>"; };
 		8983F99F2D147DF400DE32B5 /* AddEmployerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEmployerViewController.swift; sourceTree = "<group>"; };
 		8983F9A12D15D1C200DE32B5 /* AddArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddArticleViewController.swift; sourceTree = "<group>"; };
+		899D03D12D1F166E003E6353 /* zainab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = zainab.storyboard; sourceTree = "<group>"; };
+		899D03D32D1F1809003E6353 /* MangeVideosTableViewCell .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MangeVideosTableViewCell .swift"; sourceTree = "<group>"; };
+		899D03D52D1F2EF9003E6353 /* UserMangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMangeViewController.swift; sourceTree = "<group>"; };
+		899D03D72D1F2F24003E6353 /* UserMangeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMangeCell.swift; sourceTree = "<group>"; };
+		899D03D92D1F2FB7003E6353 /* UserManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManger.swift; sourceTree = "<group>"; };
+		899D03DB2D1F317B003E6353 /* ManageJobsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageJobsViewController.swift; sourceTree = "<group>"; };
+		899D03DD2D1F329A003E6353 /* ManageAdminJobCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageAdminJobCell.swift; sourceTree = "<group>"; };
 		89ACEE282D1B98F4008D5F57 /* AddWebinarsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWebinarsViewController.swift; sourceTree = "<group>"; };
 		89ACEE2A2D1BC799008D5F57 /* AddVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVideoViewController.swift; sourceTree = "<group>"; };
 		89BB590E2D1CC076000FE481 /* MangeArticlesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MangeArticlesViewController.swift; sourceTree = "<group>"; };
@@ -220,7 +231,6 @@
 		D184E3E52CF86C7500D896D6 /* marwa.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = marwa.storyboard; sourceTree = "<group>"; };
 		D184E3E72CF86C7F00D896D6 /* qasim.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = qasim.storyboard; sourceTree = "<group>"; };
 		D184E3E92CF86C8900D896D6 /* duha.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = duha.storyboard; sourceTree = "<group>"; };
-		D184E3EB2CF86C9400D896D6 /* zainab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = zainab.storyboard; sourceTree = "<group>"; };
 		D184E3ED2CF86C9C00D896D6 /* reem.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = reem.storyboard; sourceTree = "<group>"; };
 		D184E3F02CF86CF400D896D6 /* user.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
 		D184E3FC2CF8769000D896D6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -271,9 +281,9 @@
 			children = (
 				94CEF58B2D1DDB4500D1436E /* CourseManager.swift */,
 				947B8FE52D11CA5B004463EF /* FirebaseManager.swift */,
-				891235AF2D1E586F008B6A3E /* UserManger.swift */,
 				89FEE3AE2D1F034B007F321D /* AdminResourseManger.swift */,
 				947B8FEA2D12360B004463EF /* ResourceManager.swift */,
+				899D03D92D1F2FB7003E6353 /* UserManger.swift */,
 			);
 			path = Firestore;
 			sourceTree = "<group>";
@@ -353,10 +363,10 @@
 			isa = PBXGroup;
 			children = (
 				D184E3E92CF86C8900D896D6 /* duha.storyboard */,
+				899D03D12D1F166E003E6353 /* zainab.storyboard */,
 				D184E3E72CF86C7F00D896D6 /* qasim.storyboard */,
 				D184E3E32CF86C6700D896D6 /* ruqaya.storyboard */,
 				D184E3ED2CF86C9C00D896D6 /* reem.storyboard */,
-				D184E3EB2CF86C9400D896D6 /* zainab.storyboard */,
 				D184E3E52CF86C7500D896D6 /* marwa.storyboard */,
 			);
 			path = views;
@@ -437,7 +447,11 @@
 				89BB590E2D1CC076000FE481 /* MangeArticlesViewController.swift */,
 				89BB59102D1CD711000FE481 /* ManageArticlesTableViewCell.swift */,
 				893E0F4E2D1DA202004CB6C3 /* MangeVideosViewController.swift */,
-				893E0F502D1DA2A6004CB6C3 /* MangeVideosTableViewCell.swift */,
+				899D03D32D1F1809003E6353 /* MangeVideosTableViewCell .swift */,
+				899D03DB2D1F317B003E6353 /* ManageJobsViewController.swift */,
+				899D03D52D1F2EF9003E6353 /* UserMangeViewController.swift */,
+				899D03D72D1F2F24003E6353 /* UserMangeCell.swift */,
+				899D03DD2D1F329A003E6353 /* ManageAdminJobCell.swift */,
 				438BBA062D1EE3C400261153 /* ApplicationTrackerViewController.swift */,
 				438BBA082D1EE3D600261153 /* ApplicationTrackerTableViewCell.swift */,
 				D41DE5ED2D1DD75900706104 /* CVDropdownChooseTableViewCell.swift */,
@@ -558,11 +572,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D184E3EA2CF86C8900D896D6 /* duha.storyboard in Resources */,
+				899D03D22D1F166E003E6353 /* zainab.storyboard in Resources */,
 				D184E3E62CF86C7500D896D6 /* marwa.storyboard in Resources */,
 				D153BE4C2CF47ACC00A81FFC /* LaunchScreen.storyboard in Resources */,
 				D184E3E82CF86C7F00D896D6 /* qasim.storyboard in Resources */,
 				D153BE492CF47ACC00A81FFC /* Assets.xcassets in Resources */,
-				D184E3EC2CF86C9400D896D6 /* zainab.storyboard in Resources */,
 				D153BE472CF47AC900A81FFC /* Main.storyboard in Resources */,
 				D184E3FD2CF8769000D896D6 /* GoogleService-Info.plist in Resources */,
 				D184E3E42CF86C6700D896D6 /* ruqaya.storyboard in Resources */,
@@ -609,13 +623,13 @@
 				435039F62D141C08006F7794 /* SkillCVViewController.swift in Sources */,
 				942060582D0CCDE800A2DE36 /* VideosViewController.swift in Sources */,
 				94CEF5902D1E067800D1436E /* FailQuizViewController.swift in Sources */,
-				893E0F512D1DA2A6004CB6C3 /* MangeVideosTableViewCell.swift in Sources */,
 				942060582D0CCDE800A2DE36 /* VideosViewController.swift in Sources */,
 				E672D9752D1EC6860063F4E8 /* JobDetails2TableViewCell.swift in Sources */,
 				D184E4012CF87A5600D896D6 /* CV.swift in Sources */,
 				946297282D0CB25F005542AA /* WebinarDetailsViewController.swift in Sources */,
 				D41DE5EE2D1DD75900706104 /* CVDropdownChooseTableViewCell.swift in Sources */,
 				AC8BA8FD2D0F430800EE7A2C /* jobCellTableViewCell.swift in Sources */,
+				899D03D62D1F2EF9003E6353 /* UserMangeViewController.swift in Sources */,
 				D184E3FF2CF8785A00D896D6 /* Job.swift in Sources */,
 				D153BE442CF47AC900A81FFC /* ViewController.swift in Sources */,
 				E665567E2D1C30C80010E968 /* applicantCellTableViewCell.swift in Sources */,
@@ -625,8 +639,10 @@
 				435039F02D132D02006F7794 /* CreateCVViewController.swift in Sources */,
 				946297242D0CA075005542AA /* WebinarsViewController.swift in Sources */,
 				AC2776E82D0AF55F0019677C /* testViewController.swift in Sources */,
+				899D03DC2D1F317B003E6353 /* ManageJobsViewController.swift in Sources */,
 				666767342D1DE94200193BFD /* JobDetails2ViewController.swift in Sources */,
 				E66556782D1BFADA0010E968 /* JobDetailsViewController.swift in Sources */,
+				899D03DA2D1F2FB7003E6353 /* UserManger.swift in Sources */,
 				942060662D1050A600A2DE36 /* CourseViewController.swift in Sources */,
 				D41DE5E82D1C427900706104 /* CVSelectionJobApplicationViewController.swift in Sources */,
 				9420606A2D10516000A2DE36 /* OnlineCourses.swift in Sources */,
@@ -663,6 +679,8 @@
 				D41DE5EA2D1C433500706104 /* CVSelectionApplicationsTableViewController.swift in Sources */,
 				E665567C2D1C305E0010E968 /* viewApplicantsViewController.swift in Sources */,
 				D184E4032CF87E5500D896D6 /* JobApplication.swift in Sources */,
+				899D03DE2D1F329A003E6353 /* ManageAdminJobCell.swift in Sources */,
+				899D03D42D1F180A003E6353 /* MangeVideosTableViewCell .swift in Sources */,
 				D4070DB02D0F11C700E517FE /* NewJobRecommendationTableViewCell.swift in Sources */,
 				43B1C5372D17326E0046F96C /* CVDetailsViewController.swift in Sources */,
 				9420605C2D0CCE1900A2DE36 /* VideoDetailsViewController.swift in Sources */,
@@ -674,6 +692,7 @@
 				9420606C2D1073EC00A2DE36 /* CourseContentViewController.swift in Sources */,
 				947B8FEB2D12360B004463EF /* ResourceManager.swift in Sources */,
 				942060722D1082AD00A2DE36 /* CourseReviewViewController.swift in Sources */,
+				899D03D82D1F2F24003E6353 /* UserMangeCell.swift in Sources */,
 				D4070DB62D0F206B00E517FE /* NewJobDetailTableViewController.swift in Sources */,
 				8983F9A22D15D1C200DE32B5 /* AddArticleViewController.swift in Sources */,
 				C311B0D32D06FDF00071CF9B /* EmployerDashboardViewController.swift in Sources */,
