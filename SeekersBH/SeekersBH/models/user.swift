@@ -12,6 +12,7 @@ struct User {
     var mostResentJobTitle : String
     var mostResentCompany : String
     var password : String
+    var isHidden : Bool
     
 //    var listOfUserInterset : [Interest]
 //    var listOfSkills : [Skill]

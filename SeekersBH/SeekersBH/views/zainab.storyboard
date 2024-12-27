@@ -121,6 +121,9 @@
                                                     <buttonConfiguration key="configuration" style="filled" title="hide">
                                                         <color key="baseBackgroundColor" red="0.050980389119999997" green="0.094117648900000003" blue="0.32156863810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="didTapActionButton:" destination="JZP-1n-54U" eventType="touchUpInside" id="nxO-y9-kKY"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0WJ-PD-a7g">
                                                     <rect key="frame" x="40" y="114" width="320" height="39"/>
@@ -154,6 +157,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.85098039219999999" green="0.85098039219999999" blue="0.85098039219999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
+                                            <outlet property="actionButton" destination="D5i-38-rxX" id="aHH-UR-L1X"/>
                                             <outlet property="email" destination="yV2-bZ-UKK" id="QoB-EC-afH"/>
                                             <outlet property="username" destination="o2D-vX-2UX" id="6LL-GY-UMy"/>
                                         </connections>
@@ -169,6 +173,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title="show hidden">
                                     <color key="baseBackgroundColor" red="0.050980389119999997" green="0.094117648900000003" blue="0.32156863810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="didTapToggleUsers:" destination="Hza-Xj-m4O" eventType="touchUpInside" id="yHv-ys-sqj"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="b1y-r3-BRb"/>
@@ -186,6 +193,7 @@
                     <navigationItem key="navigationItem" id="NIt-kp-ZV8"/>
                     <connections>
                         <outlet property="tableView" destination="1sU-UK-JbH" id="HFa-Jl-okv"/>
+                        <outlet property="toggleUsersButton" destination="9HA-RX-P6Y" id="Xhe-t0-6Og"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fw2-td-gCk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

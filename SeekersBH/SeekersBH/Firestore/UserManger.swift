@@ -45,7 +45,8 @@ func fetchAllUsers(completion: @escaping ([User]) -> Void) {
                 location: Location.city(data["location"] as? String ?? ""),
                 mostResentJobTitle: data["recentJob"] as? String ?? "",
                 mostResentCompany: data["recentCompany"] as? String ?? "",
-                password: data["password"] as? String ?? ""
+                password: data["password"] as? String ?? "",
+                isHidden: data["isHidden"] as? Bool ?? false
             )
             users.append(user)
         }
