@@ -2112,7 +2112,7 @@
                                                     <backgroundConfiguration key="background">
                                                         <color key="backgroundColor" red="0.050980389119999997" green="0.094117648900000003" blue="0.32156863810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </backgroundConfiguration>
-                                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
+                                                    <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="ReTakeTheQuizButtonTapped:" destination="2is-rm-hVc" eventType="touchUpInside" id="NCz-eK-olV"/>
@@ -2126,7 +2126,7 @@
                                                     <backgroundConfiguration key="background">
                                                         <color key="backgroundColor" red="0.050980389119999997" green="0.094117648900000003" blue="0.32156863810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </backgroundConfiguration>
-                                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
+                                                    <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="ReturnButtonTapped:" destination="2is-rm-hVc" eventType="touchUpInside" id="MEw-aC-095"/>
@@ -2205,11 +2205,11 @@
                                             <constraint firstItem="d7x-ar-Mg9" firstAttribute="height" secondItem="vq9-7T-Rbu" secondAttribute="height" multiplier="0.17" id="6sj-ur-RF2"/>
                                         </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ogu-qQ-FAJ">
-                                        <rect key="frame" x="0.0" y="278.33333333333331" width="308" height="86.666666666666686"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ogu-qQ-FAJ">
+                                        <rect key="frame" x="0.0" y="278.33333333333331" width="308" height="120.66666666666669"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T5l-zV-YNm">
-                                                <rect key="frame" x="0.0" y="0.0" width="308" height="38.333333333333336"/>
+                                            <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T5l-zV-YNm">
+                                                <rect key="frame" x="0.0" y="0.0" width="308" height="55.333333333333336"/>
                                                 <fontDescription key="fontDescription" name="Helvetica-LightOblique" family="Helvetica" pointSize="19"/>
                                                 <menu key="menu" id="0lz-a6-8WD">
                                                     <children>
@@ -2228,35 +2228,35 @@
                                                     <color key="baseForegroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lhy-dM-4yO">
-                                                <rect key="frame" x="0.0" y="48.333333333333314" width="308" height="38.333333333333343"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lhy-dM-4yO">
+                                                <rect key="frame" x="0.0" y="65.333333333333314" width="308" height="55.333333333333343"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Add Certificate to CV" cornerStyle="dynamic">
                                                     <backgroundConfiguration key="background">
                                                         <color key="backgroundColor" red="0.050980389119999997" green="0.094117648900000003" blue="0.32156863810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </backgroundConfiguration>
-                                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
+                                                    <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="AddCVButtonTapped:" destination="0S2-rx-dgA" eventType="touchUpInside" id="xzZ-1v-fPR"/>
+                                                    <action selector="AddCVButtonTapped:" destination="0S2-rx-dgA" eventType="touchUpInside" id="REX-cg-RqR"/>
                                                 </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="FCs-a4-lHx">
-                                        <rect key="frame" x="0.0" y="405" width="308" height="284.66666666666674"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="FCs-a4-lHx">
+                                        <rect key="frame" x="0.0" y="438.99999999999994" width="308" height="230.66666666666669"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="zAe-sb-2xe">
-                                                <rect key="frame" x="0.0" y="0.0" width="308" height="227.66666666666666"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="zAe-sb-2xe">
+                                                <rect key="frame" x="0.0" y="0.0" width="308" height="165.33333333333334"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qtt-M7-5TX">
-                                                        <rect key="frame" x="0.0" y="0.0" width="308" height="177.33333333333334"/>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qtt-M7-5TX">
+                                                        <rect key="frame" x="0.0" y="0.0" width="308" height="115"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="2Dt-0x-uEl">
-                                                        <rect key="frame" x="0.0" y="193.33333333333331" width="308" height="34.333333333333343"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="2Dt-0x-uEl">
+                                                        <rect key="frame" x="0.0" y="131" width="308" height="34.333333333333343"/>
                                                         <subviews>
                                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="liP-of-Vvw">
                                                                 <rect key="frame" x="0.0" y="0.0" width="61.666666666666664" height="34.333333333333336"/>
@@ -2307,40 +2307,43 @@
                                                     </stackView>
                                                 </subviews>
                                             </stackView>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="En1-oL-EaW">
-                                                <rect key="frame" x="0.0" y="237.66666666666669" width="308" height="47"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="En1-oL-EaW">
+                                                <rect key="frame" x="0.0" y="175.33333333333337" width="308" height="55.333333333333343"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Add Review" cornerStyle="dynamic">
                                                     <backgroundConfiguration key="background">
                                                         <color key="backgroundColor" red="0.050980389119999997" green="0.094117648900000003" blue="0.32156863810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </backgroundConfiguration>
-                                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
+                                                    <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="addReviewButtonTapped:" destination="0S2-rx-dgA" eventType="touchUpInside" id="wqm-LB-7qc"/>
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstItem="zAe-sb-2xe" firstAttribute="height" secondItem="FCs-a4-lHx" secondAttribute="height" multiplier="0.8" id="9vC-eJ-Ncn"/>
-                                        </constraints>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M8k-QB-7BP">
-                                        <rect key="frame" x="0.0" y="729.66666666666674" width="308" height="35"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M8k-QB-7BP">
+                                        <rect key="frame" x="0.0" y="709.66666666666674" width="308" height="55"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Return" cornerStyle="dynamic">
+                                        <buttonConfiguration key="configuration" style="plain" title="Return to Courses" cornerStyle="dynamic">
                                             <backgroundConfiguration key="background">
                                                 <color key="backgroundColor" red="0.050980389119999997" green="0.094117648900000003" blue="0.32156863810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             </backgroundConfiguration>
-                                            <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
+                                            <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="RetunbuttonTapped:" destination="0S2-rx-dgA" eventType="touchUpInside" id="Qaf-WT-74n"/>
+                                            <action selector="addReviewButtonTapped:" destination="0S2-rx-dgA" eventType="touchUpInside" id="aIp-Tk-NuJ"/>
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="M8k-QB-7BP" firstAttribute="height" secondItem="lhy-dM-4yO" secondAttribute="height" id="0NE-33-naN"/>
+                                    <constraint firstItem="zAe-sb-2xe" firstAttribute="height" secondItem="lhy-dM-4yO" secondAttribute="height" multiplier="3" id="CEC-Gc-osg"/>
+                                    <constraint firstItem="En1-oL-EaW" firstAttribute="height" secondItem="lhy-dM-4yO" secondAttribute="height" id="Mhs-a6-M9a"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ks0-Bi-zrb"/>

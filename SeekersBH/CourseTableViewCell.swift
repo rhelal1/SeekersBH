@@ -45,7 +45,24 @@ class CourseTableViewCell: UITableViewCell {
         view.layer.masksToBounds = true
         
         // Set the rating stars
-        updateStars(for: course.rating)
+        updateStars(for: calculateAverageRating(comments: course.courseComments))
+    }
+    
+    func calculateAverageRating(comments: [CourseComments]) -> Double {
+        guard !comments.isEmpty else { return 0.0 } // Return 0 if the array is empty
+
+        var totalRating = 0
+        var ratingCount = 0
+
+        // Loop over the comments to calculate the total rating and count
+        for comment in comments {
+            totalRating += comment.rated
+            ratingCount += 1
+        }
+
+        // Calculate the average rating
+        let averageRating = Double(totalRating) / Double(ratingCount)
+        return averageRating
     }
     
     
