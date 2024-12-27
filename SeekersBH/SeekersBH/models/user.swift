@@ -6,7 +6,7 @@ struct User {
     static var loggedInID = "4iW3tfx0ca5bfzpXpD83"
 
     static var loggedInUsername = ""
-    var id : Int
+    var id : String
     var email : String
     var firstName : String
     var lastName : String
@@ -22,10 +22,10 @@ struct User {
 //    var listOfUserInterset : [Interest]
 //    var listOfSkills : [Skill]
     
-    var CVs : [CV]
-    var following : [User]
-    var followers : [User]
-    var jobApplications : [JobApplication]
+//    var CVs : [CV]
+//    var following : [User]
+//    var followers : [User]
+//    var jobApplications : [JobApplication]
 }
 
 enum Location {
