@@ -25,7 +25,6 @@ struct Article : Resource {
     var description : String
     var url : String
     var views : Int
-    var isHidden : Bool = false
     
     // Mapping Firestore's 'year_of_publication' to 'yearOfPublication'
     enum CodingKeys: String, CodingKey {
@@ -48,7 +47,7 @@ struct Webinar : Resource{
     var date : Date
     var timeZone : String 
     var picture : String
-    var isHidden : Bool = false
+    
     var description : String
     var url : String
     var views : Int
@@ -74,7 +73,7 @@ struct Video : Resource {
     var channel : String
     var duration : Int // Duration in mintues
     var picture : String
-    var isHidden : Bool = false
+    
     var description : String
     var url : String
     var views : Int

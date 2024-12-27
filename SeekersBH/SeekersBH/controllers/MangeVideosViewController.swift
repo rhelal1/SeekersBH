@@ -11,13 +11,8 @@ class MangeVideosViewController: UIViewController {
     
     @IBOutlet weak var videoTableview: UITableView!
     
-    @IBOutlet weak var toggleVideosButton: UIButton!
-    
     var videos: [Video] = []
-    var allVideos: [Video] = []
-    var isShowingHidden = false
-
-    
+        
         override func viewDidLoad() {
             super.viewDidLoad()
             fetchVideos()
@@ -32,8 +27,7 @@ class MangeVideosViewController: UIViewController {
                 do {
                     self.videos = try await ResourceManager.share.fetchVideos()
                     DispatchQueue.main.async {
-                        self.allVideos = self.videos
-                        self.updateVisibleVideos()
+                        self.videoTableview.reloadData()
                     }
                 } catch {
                     DispatchQueue.main.async {
@@ -48,29 +42,8 @@ class MangeVideosViewController: UIViewController {
             alert.addAction(UIAlertAction(title: "OK", style: .default))
             present(alert, animated: true)
         }
-    
-    
-    @IBAction func didTapToggleVideos(_ sender: Any) {
-        isShowingHidden.toggle()
-                toggleVideosButton.setTitle(isShowingHidden ? "Hide Hidden" : "Show Hidden", for: .normal)
-                updateVisibleVideos()
-    }
-    
-    func updateVisibleVideos() {
-        if isShowingHidden {
-            videos = allVideos.filter { $0.isHidden }
-        } else {
-            videos = allVideos.filter { !$0.isHidden }
-        }
-        videoTableview.reloadData()
-    }
-    
-    func updateVideoVisibility(videoID: String, isHidden: Bool) {
-            if let index = allVideos.firstIndex(where: { $0.id == videoID }) {
-                allVideos[index].isHidden = isHidden
-            }
-            updateVisibleVideos()
-        }
+
+        // Optionally, add action methods to add/edit/remove videos
     }
 
     extension MangeVideosViewController: UITableViewDataSource, UITableViewDelegate {
@@ -85,8 +58,8 @@ class MangeVideosViewController: UIViewController {
             let cell = tableView.dequeueReusableCell(withIdentifier: "adminVideoCell", for: indexPath) as! MangeVideosTableViewCell
             
 
-            let video = videos[indexPath.row]
-            cell.update(with: video) 
+            cell.update(with: videos[indexPath.row])
+
             return cell
         }
 
