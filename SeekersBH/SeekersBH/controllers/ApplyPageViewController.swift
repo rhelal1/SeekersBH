@@ -1,13 +1,13 @@
+////
+////  ApplyPageViewController.swift
+////  SeekersBH
+////
+////  Created by Duha Hashem on 16/12/2024.
+////
 //
-//  ApplyPageViewController.swift
-//  SeekersBH
+//import UIKit
 //
-//  Created by Duha Hashem on 16/12/2024.
-//
-
-import UIKit
-
-class ApplyPageViewController: UIViewController {
+//class ApplyPageViewController: UIViewController {
 //
 //    @IBOutlet weak var Contiuebtn: UIButton!
 //    
@@ -61,4 +61,4 @@ class ApplyPageViewController: UIViewController {
 //        }
 //
 //}
-}
+//}

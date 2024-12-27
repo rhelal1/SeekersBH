@@ -1,9 +1,16 @@
+//
+//  AdminResourseManger.swift
+//  SeekersBH
+//
+//  Created by Zainab Madan on 27/12/2024.
+//
+
 import Foundation
 import FirebaseFirestore
 
-final class ResourceManager {
+final class AdminResourceManager {
     
-    static let share = ResourceManager()
+    static let share = AdminResourceManager()
     private init() {}
     
     func fetchArticles() async throws -> [Article] {
@@ -19,7 +26,8 @@ final class ResourceManager {
                 let DOI = document["DOI"] as? String,
                 let description = document["description"] as? String,
                 let url = document["url"] as? String,
-                let views = document["views"] as? Int
+                let views = document["views"] as? Int,
+                let isHidden = document["isHidden"] as? Bool
             else {
                 throw URLError(.badServerResponse)
             }
@@ -33,7 +41,8 @@ final class ResourceManager {
                 DOI: DOI,
                 description: description,
                 url: url,
-                views: views
+                views: views,
+                isHidden: isHidden
             )
         }
         
@@ -112,6 +121,7 @@ final class ResourceManager {
                 let channel = document["channel"] as? String,
                 let duration = document["duration"] as? Int,
                 let picture = document["picture"] as? String,
+                let isHidden = document["isHidden"] as? Bool,
                 let description = document["description"] as? String,
                 let url = document["url"] as? String,
                 let views = document["views"] as? Int
@@ -131,6 +141,7 @@ final class ResourceManager {
                 duration: duration,
                 
                 picture: picture,
+                isHidden: isHidden,
                 description: description,
                 url: url,
                 views: views
