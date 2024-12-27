@@ -20,7 +20,6 @@
 		43B1C5352D15EFA20046F96C /* CVTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B1C5342D15EFA20046F96C /* CVTableViewCell.swift */; };
 		43B1C5372D17326E0046F96C /* CVDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B1C5362D17326E0046F96C /* CVDetailsViewController.swift */; };
 		43F5F6AF2D1C923900FA080C /* EditCVFieldsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F5F6AE2D1C923900FA080C /* EditCVFieldsTableViewController.swift */; };
-		66E035012D1432C60050E168 /* jobDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E035002D1432C60050E168 /* jobDetailsViewController.swift */; };
 		66E035052D143B050050E168 /* generalInformationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E035042D143B050050E168 /* generalInformationCollectionViewCell.swift */; };
 		893E0F4B2D1D7955004CB6C3 /* MangeWebinarsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893E0F4A2D1D7955004CB6C3 /* MangeWebinarsTableViewCell.swift */; };
 		893E0F4D2D1D7998004CB6C3 /* MangeWebinarsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893E0F4C2D1D7998004CB6C3 /* MangeWebinarsViewController.swift */; };
@@ -138,7 +137,6 @@
 		43B1C5342D15EFA20046F96C /* CVTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVTableViewCell.swift; sourceTree = "<group>"; };
 		43B1C5362D17326E0046F96C /* CVDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVDetailsViewController.swift; sourceTree = "<group>"; };
 		43F5F6AE2D1C923900FA080C /* EditCVFieldsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCVFieldsTableViewController.swift; sourceTree = "<group>"; };
-		66E035002D1432C60050E168 /* jobDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jobDetailsViewController.swift; sourceTree = "<group>"; };
 		66E035042D143B050050E168 /* generalInformationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = generalInformationCollectionViewCell.swift; sourceTree = "<group>"; };
 		893E0F4A2D1D7955004CB6C3 /* MangeWebinarsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MangeWebinarsTableViewCell.swift; sourceTree = "<group>"; };
 		893E0F4C2D1D7998004CB6C3 /* MangeWebinarsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MangeWebinarsViewController.swift; sourceTree = "<group>"; };
