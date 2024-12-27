@@ -90,20 +90,13 @@ class NewJobDetailViewController: UIViewController {
 
             
     // Update UI with job details
-<<<<<<< HEAD
        func updateUI() {
            // Update the UI elements with the fetched data
                   lblJobTitle.text = jobTitle
                   lblJobCompanyName.text = companyName
            lblPostedDate.text = "Posted on: \(String(describing: postedDate))"
        }
-=======
-        func updateUI() {
-            lblJobTitle.text = jobTitle ?? "Job Title Unavailable"
-            lblJobCompanyName.text = companyName ?? "Company Name Unavailable"
-            lblPostedDate.text = postedDate != nil ? "Posted on: \(postedDate!)" : "Posted Date Unavailable"
-        }
->>>>>>> parent of dd92a32 (Merge branch 'main' into duha2)
+
     
     
     
@@ -114,23 +107,9 @@ class NewJobDetailViewController: UIViewController {
   
         //to receive data to the new job deatils table view controller
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-<<<<<<< HEAD
         if segue.destination is NewJobDetailViewController {
             //destinationVC.jobDocumentID = selectedJobID  // Pass the job document ID to fetch details
         }
     }
-=======
-        if let destinationVC = segue.destination as? NewJobDetailTableViewController {
-              destinationVC.location = location
-              destinationVC.employmentType = employmentType
-              destinationVC.experience = experience
-              destinationVC.salary = salary
-              destinationVC.jobDescription = jobDescription
-              destinationVC.keyResponsibilities = keyResponsibilities
-              destinationVC.requirements = requirements
-              destinationVC.benefits = benefits
-          }
-      }
->>>>>>> parent of dd92a32 (Merge branch 'main' into duha2)
 
 }
