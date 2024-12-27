@@ -10,9 +10,9 @@ import FirebaseCore
 
 class ChatViewController: UIViewController {
     public var receiverId: String?
-    var recevier: User?
-    var chatManager: ChatManager?
-    var messages: [Message] = []
+    private var recevier: User?
+    private var chatManager: ChatManager?
+    private var messages: [Message] = []
     
     
     @IBOutlet weak var tableView: UITableView!
