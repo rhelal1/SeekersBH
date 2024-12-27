@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RxE-Q0-RCh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RxE-Q0-RCh">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -56,7 +56,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Jlk-I7-Emx">
-                                <rect key="frame" x="91.333333333333329" y="234.33333333333334" width="210.66666666666669" height="383.33333333333326"/>
+                                <rect key="frame" x="91.333333333333329" y="215.33333333333334" width="210.66666666666669" height="421.66666666666663"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hX4-AI-RU9">
                                         <rect key="frame" x="0.0" y="0.0" width="210.66666666666666" height="38.333333333333336"/>
@@ -67,7 +67,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LZw-Yg-SgM">
-                                        <rect key="frame" x="0.0" y="38.333333333333343" width="210.66666666666666" height="38.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="38.333333333333314" width="210.66666666666666" height="38.333333333333343"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Online Courses"/>
                                         <connections>
@@ -128,6 +128,11 @@
                                         <connections>
                                             <segue destination="j1M-da-Cyt" kind="show" id="Plt-ZH-nQM"/>
                                         </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vkl-FY-yzJ">
+                                        <rect key="frame" x="0.0" y="383.33333333333326" width="210.66666666666666" height="38.333333333333314"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Settings"/>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -218,7 +223,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="65P-2L-DON">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="RxE-Q0-RCh" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="mainStoryboard" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RxE-Q0-RCh" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HlX-mN-hyb">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
