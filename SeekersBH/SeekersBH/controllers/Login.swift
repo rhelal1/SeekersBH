@@ -34,11 +34,15 @@ class Login: UIViewController {
                 DispatchQueue.main.async {
                     // Show success alert and navigate
                     self.showAlert(title: "Success", message: "You logged in successfully!") {
-                        // Perform navigation to main screen
-                        if let mainVC = self.storyboard?.instantiateViewController(withIdentifier: "Settings") {
-                            mainVC.modalPresentationStyle = .fullScreen
-                            self.present(mainVC, animated: true, completion: nil)
-                        }
+                        // Instantiate the Main storyboard
+                                            let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                                            
+                                            // Instantiate the initial view controller of the Main storyboard
+                                            if let mainVC = mainStoryboard.instantiateInitialViewController() {
+                                                mainVC.modalPresentationStyle = .fullScreen
+                                                // Present the main view controller
+                                                self.present(mainVC, animated: true, completion: nil)
+                                            }
                     }
                 }
             } else {

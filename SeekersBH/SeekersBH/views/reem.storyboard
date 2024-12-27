@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="f6k-BP-7An">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ib6-1g-hWS">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -16,11 +15,11 @@
             <objects>
                 <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sEW-Mm-Yjp">
-                                <rect key="frame" x="97" y="299" width="199" height="66"/>
+                                <rect key="frame" x="97" y="402" width="199" height="66"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="66" id="6bJ-Ky-8V7"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="66" id="WWQ-61-eNg"/>
@@ -36,7 +35,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="val-bg-Uyl">
-                                <rect key="frame" x="97" y="387" width="199" height="66"/>
+                                <rect key="frame" x="97" y="490" width="199" height="66"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="66" id="PZ2-qj-qqP"/>
                                 </constraints>
@@ -51,7 +50,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cVo-lf-9Tx">
-                                <rect key="frame" x="109" y="477" width="175" height="35"/>
+                                <rect key="frame" x="109" y="580" width="175" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="fzH-I4-YAj"/>
                                 </constraints>
@@ -60,7 +59,7 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Continue as a guest" titleAlignment="center"/>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="3Tl-ke-eU2">
-                                <rect key="frame" x="31" y="23" width="331" height="246"/>
+                                <rect key="frame" x="31" y="126" width="331" height="246"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="3Tl-ke-eU2" secondAttribute="height" multiplier="331:246" id="BFv-tg-yAb"/>
                                 </constraints>
@@ -94,7 +93,7 @@
             <objects>
                 <viewController id="aCk-I0-Tgh" customClass="Login" customModule="SeekersBH" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="H4k-RB-W7q">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F2S-nQ-Du2">
@@ -288,7 +287,7 @@
             <objects>
                 <viewController id="f6k-BP-7An" customClass="RegisterController" customModule="SeekersBH" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yk7-ZD-DeA">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Register" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FJt-Zi-mJS">
@@ -1143,7 +1142,7 @@ Social Impact</string>
                                                     <rect key="frame" x="20" y="10" width="313" height="150"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RBX-ub-n3d">
-                                                            <rect key="frame" x="0.0" y="-2.3333333333333357" width="313" height="105.33333333333334"/>
+                                                            <rect key="frame" x="0.0" y="-2.6666666666666643" width="313" height="105.33333333333331"/>
                                                             <color key="tintColor" red="0.062745101750000004" green="0.14509806040000001" blue="0.39607840779999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="100" id="7WX-NJ-eSv"/>
@@ -1704,7 +1703,7 @@ Social Impact</string>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="v1n-V4-fik"/>
-        <segue reference="EFl-Yx-Kfh"/>
+        <segue reference="Kqx-bz-KPb"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Image" width="1080" height="1080"/>
@@ -1713,7 +1712,7 @@ Social Impact</string>
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

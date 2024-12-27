@@ -81,6 +81,7 @@
 		94CEF5A92D1F104700D1436E /* InterestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CEF5992D1F104700D1436E /* InterestViewController.swift */; };
 		94CEF5AA2D1F104700D1436E /* InterestChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CEF5982D1F104700D1436E /* InterestChoiceViewController.swift */; };
 		94CEF5AE2D1F10BE00D1436E /* Interest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CEF5AD2D1F10BE00D1436E /* Interest.swift */; };
+		94CEF5B02D1F158300D1436E /* MainStoryboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CEF5AF2D1F158300D1436E /* MainStoryboardViewController.swift */; };
 		94E2D2772D076FB500614521 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E2D2762D076FB500614521 /* Resource.swift */; };
 		94E2D2792D07925000614521 /* ArticlesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E2D2782D07925000614521 /* ArticlesViewController.swift */; };
 		AC2776E62D0AF25B0019677C /* addJobView3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2776E52D0AF25B0019677C /* addJobView3ViewController.swift */; };
@@ -217,6 +218,7 @@
 		94CEF59E2D1F104700D1436E /* SkillsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsViewController.swift; sourceTree = "<group>"; };
 		94CEF59F2D1F104700D1436E /* UIViewController+Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Theme.swift"; sourceTree = "<group>"; };
 		94CEF5AD2D1F10BE00D1436E /* Interest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interest.swift; sourceTree = "<group>"; };
+		94CEF5AF2D1F158300D1436E /* MainStoryboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainStoryboardViewController.swift; sourceTree = "<group>"; };
 		94E2D2762D076FB500614521 /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 		94E2D2782D07925000614521 /* ArticlesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesViewController.swift; sourceTree = "<group>"; };
 		AC2776E52D0AF25B0019677C /* addJobView3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addJobView3ViewController.swift; sourceTree = "<group>"; };
@@ -304,6 +306,7 @@
 		D153BE332CF47AC900A81FFC = {
 			isa = PBXGroup;
 			children = (
+				94CEF5AF2D1F158300D1436E /* MainStoryboardViewController.swift */,
 				D153BE3E2CF47AC900A81FFC /* SeekersBH */,
 				D153BE552CF47ACC00A81FFC /* SeekersBHTests */,
 				D153BE5F2CF47ACC00A81FFC /* SeekersBHUITests */,
@@ -686,6 +689,7 @@
 				893E0F4B2D1D7955004CB6C3 /* MangeWebinarsTableViewCell.swift in Sources */,
 				94E2D2772D076FB500614521 /* Resource.swift in Sources */,
 				D153BE402CF47AC900A81FFC /* AppDelegate.swift in Sources */,
+				94CEF5B02D1F158300D1436E /* MainStoryboardViewController.swift in Sources */,
 				893E0F4F2D1DA202004CB6C3 /* MangeVideosViewController.swift in Sources */,
 				89BB59112D1CD711000FE481 /* ManageArticlesTableViewCell.swift in Sources */,
 				89BB590F2D1CC076000FE481 /* MangeArticlesViewController.swift in Sources */,
