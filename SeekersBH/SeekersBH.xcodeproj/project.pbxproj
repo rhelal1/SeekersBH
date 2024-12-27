@@ -19,6 +19,9 @@
 		43B1C5352D15EFA20046F96C /* CVTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B1C5342D15EFA20046F96C /* CVTableViewCell.swift */; };
 		43B1C5372D17326E0046F96C /* CVDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B1C5362D17326E0046F96C /* CVDetailsViewController.swift */; };
 		66E035052D143B050050E168 /* generalInformationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E035042D143B050050E168 /* generalInformationCollectionViewCell.swift */; };
+		891235A82D1E5349008B6A3E /* UserMangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891235A72D1E5349008B6A3E /* UserMangeViewController.swift */; };
+		891235AC2D1E568D008B6A3E /* UserMangeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891235AB2D1E568D008B6A3E /* UserMangeCell.swift */; };
+		891235B02D1E586F008B6A3E /* UserManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891235AF2D1E586F008B6A3E /* UserManger.swift */; };
 		893E0F4B2D1D7955004CB6C3 /* MangeWebinarsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893E0F4A2D1D7955004CB6C3 /* MangeWebinarsTableViewCell.swift */; };
 		893E0F4D2D1D7998004CB6C3 /* MangeWebinarsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893E0F4C2D1D7998004CB6C3 /* MangeWebinarsViewController.swift */; };
 		893E0F4F2D1DA202004CB6C3 /* MangeVideosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893E0F4E2D1DA202004CB6C3 /* MangeVideosViewController.swift */; };
@@ -135,6 +138,9 @@
 		43B1C5342D15EFA20046F96C /* CVTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVTableViewCell.swift; sourceTree = "<group>"; };
 		43B1C5362D17326E0046F96C /* CVDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVDetailsViewController.swift; sourceTree = "<group>"; };
 		66E035042D143B050050E168 /* generalInformationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = generalInformationCollectionViewCell.swift; sourceTree = "<group>"; };
+		891235A72D1E5349008B6A3E /* UserMangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMangeViewController.swift; sourceTree = "<group>"; };
+		891235AB2D1E568D008B6A3E /* UserMangeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMangeCell.swift; sourceTree = "<group>"; };
+		891235AF2D1E586F008B6A3E /* UserManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManger.swift; sourceTree = "<group>"; };
 		893E0F4A2D1D7955004CB6C3 /* MangeWebinarsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MangeWebinarsTableViewCell.swift; sourceTree = "<group>"; };
 		893E0F4C2D1D7998004CB6C3 /* MangeWebinarsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MangeWebinarsViewController.swift; sourceTree = "<group>"; };
 		893E0F4E2D1DA202004CB6C3 /* MangeVideosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MangeVideosViewController.swift; sourceTree = "<group>"; };
@@ -248,6 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				947B8FE52D11CA5B004463EF /* FirebaseManager.swift */,
+				891235AF2D1E586F008B6A3E /* UserManger.swift */,
 				947B8FEA2D12360B004463EF /* ResourceManager.swift */,
 			);
 			path = Firestore;
@@ -406,7 +413,9 @@
 				89BB59102D1CD711000FE481 /* ManageArticlesTableViewCell.swift */,
 				893E0F582D1DCCC4004CB6C3 /* AdminJobCell.swift */,
 				893E0F4E2D1DA202004CB6C3 /* MangeVideosViewController.swift */,
+				891235AB2D1E568D008B6A3E /* UserMangeCell.swift */,
 				893E0F502D1DA2A6004CB6C3 /* MangeVideosTableViewCell.swift */,
+				891235A72D1E5349008B6A3E /* UserMangeViewController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -608,7 +617,9 @@
 				D4070DBC2D107AA100E517FE /* NewApplyPageFormTableViewController.swift in Sources */,
 				9420606E2D1074D400A2DE36 /* CourseContentTableViewCell.swift in Sources */,
 				66E035052D143B050050E168 /* generalInformationCollectionViewCell.swift in Sources */,
+				891235A82D1E5349008B6A3E /* UserMangeViewController.swift in Sources */,
 				946297222D0AFD86005542AA /* ArticleDetailsViewController.swift in Sources */,
+				891235AC2D1E568D008B6A3E /* UserMangeCell.swift in Sources */,
 				D4070DB82D10768C00E517FE /* ApplyPageViewController.swift in Sources */,
 				AC2776EA2D0B02E10019677C /* AddJobView4ViewController.swift in Sources */,
 				942060602D0DAB0E00A2DE36 /* SavedTableViewCell.swift in Sources */,
@@ -617,6 +628,7 @@
 				D153BE422CF47AC900A81FFC /* SceneDelegate.swift in Sources */,
 				D41DE5EA2D1C433500706104 /* CVSelectionApplicationsTableViewController.swift in Sources */,
 				E665567C2D1C305E0010E968 /* viewApplicantsViewController.swift in Sources */,
+				891235B02D1E586F008B6A3E /* UserManger.swift in Sources */,
 				D184E4032CF87E5500D896D6 /* JobApplication.swift in Sources */,
 				D4070DB02D0F11C700E517FE /* NewJobRecommendationTableViewCell.swift in Sources */,
 				43B1C5372D17326E0046F96C /* CVDetailsViewController.swift in Sources */,
