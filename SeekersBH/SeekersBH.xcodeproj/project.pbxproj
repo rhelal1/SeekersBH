@@ -69,6 +69,18 @@
 		94CEF58C2D1DDB4500D1436E /* CourseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CEF58B2D1DDB4500D1436E /* CourseManager.swift */; };
 		94CEF5902D1E067800D1436E /* FailQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CEF58F2D1E067800D1436E /* FailQuizViewController.swift */; };
 		94CEF5922D1E074600D1436E /* PassQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CEF5912D1E074600D1436E /* PassQuizViewController.swift */; };
+		94CEF5942D1F101C00D1436E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CEF5932D1F101C00D1436E /* SettingsViewController.swift */; };
+		94CEF5A12D1F104700D1436E /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CEF5962D1F104700D1436E /* CollectionViewCell.swift */; };
+		94CEF5A22D1F104700D1436E /* EditProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CEF5972D1F104700D1436E /* EditProfileTableViewController.swift */; };
+		94CEF5A32D1F104700D1436E /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CEF59C2D1F104700D1436E /* RegisterController.swift */; };
+		94CEF5A42D1F104700D1436E /* Regester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CEF59B2D1F104700D1436E /* Regester.swift */; };
+		94CEF5A52D1F104700D1436E /* SkillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CEF59E2D1F104700D1436E /* SkillsViewController.swift */; };
+		94CEF5A62D1F104700D1436E /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CEF5952D1F104700D1436E /* ChangePasswordViewController.swift */; };
+		94CEF5A72D1F104700D1436E /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CEF59A2D1F104700D1436E /* Login.swift */; };
+		94CEF5A82D1F104700D1436E /* UIViewController+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CEF59F2D1F104700D1436E /* UIViewController+Theme.swift */; };
+		94CEF5A92D1F104700D1436E /* InterestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CEF5992D1F104700D1436E /* InterestViewController.swift */; };
+		94CEF5AA2D1F104700D1436E /* InterestChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CEF5982D1F104700D1436E /* InterestChoiceViewController.swift */; };
+		94CEF5AE2D1F10BE00D1436E /* Interest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CEF5AD2D1F10BE00D1436E /* Interest.swift */; };
 		94E2D2772D076FB500614521 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E2D2762D076FB500614521 /* Resource.swift */; };
 		94E2D2792D07925000614521 /* ArticlesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E2D2782D07925000614521 /* ArticlesViewController.swift */; };
 		AC2776E62D0AF25B0019677C /* addJobView3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2776E52D0AF25B0019677C /* addJobView3ViewController.swift */; };
@@ -193,6 +205,18 @@
 		94CEF58B2D1DDB4500D1436E /* CourseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CourseManager.swift; path = SeekersBH/models/CourseManager.swift; sourceTree = SOURCE_ROOT; };
 		94CEF58F2D1E067800D1436E /* FailQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailQuizViewController.swift; sourceTree = "<group>"; };
 		94CEF5912D1E074600D1436E /* PassQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassQuizViewController.swift; sourceTree = "<group>"; };
+		94CEF5932D1F101C00D1436E /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		94CEF5952D1F104700D1436E /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
+		94CEF5962D1F104700D1436E /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		94CEF5972D1F104700D1436E /* EditProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileTableViewController.swift; sourceTree = "<group>"; };
+		94CEF5982D1F104700D1436E /* InterestChoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestChoiceViewController.swift; sourceTree = "<group>"; };
+		94CEF5992D1F104700D1436E /* InterestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestViewController.swift; sourceTree = "<group>"; };
+		94CEF59A2D1F104700D1436E /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		94CEF59B2D1F104700D1436E /* Regester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Regester.swift; sourceTree = "<group>"; };
+		94CEF59C2D1F104700D1436E /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
+		94CEF59E2D1F104700D1436E /* SkillsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsViewController.swift; sourceTree = "<group>"; };
+		94CEF59F2D1F104700D1436E /* UIViewController+Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Theme.swift"; sourceTree = "<group>"; };
+		94CEF5AD2D1F10BE00D1436E /* Interest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interest.swift; sourceTree = "<group>"; };
 		94E2D2762D076FB500614521 /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 		94E2D2782D07925000614521 /* ArticlesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesViewController.swift; sourceTree = "<group>"; };
 		AC2776E52D0AF25B0019677C /* addJobView3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addJobView3ViewController.swift; sourceTree = "<group>"; };
@@ -271,7 +295,6 @@
 			children = (
 				94CEF58B2D1DDB4500D1436E /* CourseManager.swift */,
 				947B8FE52D11CA5B004463EF /* FirebaseManager.swift */,
-				891235AF2D1E586F008B6A3E /* UserManger.swift */,
 				89FEE3AE2D1F034B007F321D /* AdminResourseManger.swift */,
 				947B8FEA2D12360B004463EF /* ResourceManager.swift */,
 			);
@@ -343,6 +366,7 @@
 				D184E4022CF87E5500D896D6 /* JobApplication.swift */,
 				94E2D2762D076FB500614521 /* Resource.swift */,
 				942060692D10516000A2DE36 /* OnlineCourses.swift */,
+				94CEF5AD2D1F10BE00D1436E /* Interest.swift */,
 				D184E4002CF87A5600D896D6 /* CV.swift */,
 				D184E3FE2CF8785A00D896D6 /* Job.swift */,
 			);
@@ -368,9 +392,20 @@
 				E672D9742D1EC6860063F4E8 /* JobDetails2TableViewCell.swift */,
 				666767332D1DE94200193BFD /* JobDetails2ViewController.swift */,
 				666767312D1DE01300193BFD /* searchFilterTableViewCell.swift */,
+				94CEF5932D1F101C00D1436E /* SettingsViewController.swift */,
 				66A160B22D1DDA5700721827 /* searchAndFilterViewController.swift */,
 				94CEF57F2D1D726D00D1436E /* VideoPlayerViewController.swift */,
 				E665567D2D1C30C80010E968 /* applicantCellTableViewCell.swift */,
+				94CEF5952D1F104700D1436E /* ChangePasswordViewController.swift */,
+				94CEF5962D1F104700D1436E /* CollectionViewCell.swift */,
+				94CEF5972D1F104700D1436E /* EditProfileTableViewController.swift */,
+				94CEF5982D1F104700D1436E /* InterestChoiceViewController.swift */,
+				94CEF5992D1F104700D1436E /* InterestViewController.swift */,
+				94CEF59A2D1F104700D1436E /* Login.swift */,
+				94CEF59B2D1F104700D1436E /* Regester.swift */,
+				94CEF59C2D1F104700D1436E /* RegisterController.swift */,
+				94CEF59E2D1F104700D1436E /* SkillsViewController.swift */,
+				94CEF59F2D1F104700D1436E /* UIViewController+Theme.swift */,
 				E665567B2D1C305E0010E968 /* viewApplicantsViewController.swift */,
 				E66556792D1BFB320010E968 /* JobDetailsTableViewCell.swift */,
 				E66556772D1BFADA0010E968 /* JobDetailsViewController.swift */,
@@ -609,6 +644,16 @@
 				435039F62D141C08006F7794 /* SkillCVViewController.swift in Sources */,
 				942060582D0CCDE800A2DE36 /* VideosViewController.swift in Sources */,
 				94CEF5902D1E067800D1436E /* FailQuizViewController.swift in Sources */,
+				94CEF5A12D1F104700D1436E /* CollectionViewCell.swift in Sources */,
+				94CEF5A22D1F104700D1436E /* EditProfileTableViewController.swift in Sources */,
+				94CEF5A32D1F104700D1436E /* RegisterController.swift in Sources */,
+				94CEF5A42D1F104700D1436E /* Regester.swift in Sources */,
+				94CEF5A52D1F104700D1436E /* SkillsViewController.swift in Sources */,
+				94CEF5A62D1F104700D1436E /* ChangePasswordViewController.swift in Sources */,
+				94CEF5A72D1F104700D1436E /* Login.swift in Sources */,
+				94CEF5A82D1F104700D1436E /* UIViewController+Theme.swift in Sources */,
+				94CEF5A92D1F104700D1436E /* InterestViewController.swift in Sources */,
+				94CEF5AA2D1F104700D1436E /* InterestChoiceViewController.swift in Sources */,
 				893E0F512D1DA2A6004CB6C3 /* MangeVideosTableViewCell.swift in Sources */,
 				942060582D0CCDE800A2DE36 /* VideosViewController.swift in Sources */,
 				E672D9752D1EC6860063F4E8 /* JobDetails2TableViewCell.swift in Sources */,
@@ -635,6 +680,7 @@
 				E665567A2D1BFB320010E968 /* JobDetailsTableViewCell.swift in Sources */,
 				AC2776E62D0AF25B0019677C /* addJobView3ViewController.swift in Sources */,
 				94CEF5802D1D726D00D1436E /* VideoPlayerViewController.swift in Sources */,
+				94CEF5AE2D1F10BE00D1436E /* Interest.swift in Sources */,
 				89FEE3AF2D1F034B007F321D /* AdminResourseManger.swift in Sources */,
 				437286D22D11DF64000D3518 /* CreateCVNavigationController.swift in Sources */,
 				893E0F4B2D1D7955004CB6C3 /* MangeWebinarsTableViewCell.swift in Sources */,
@@ -664,6 +710,7 @@
 				E665567C2D1C305E0010E968 /* viewApplicantsViewController.swift in Sources */,
 				D184E4032CF87E5500D896D6 /* JobApplication.swift in Sources */,
 				D4070DB02D0F11C700E517FE /* NewJobRecommendationTableViewCell.swift in Sources */,
+				94CEF5942D1F101C00D1436E /* SettingsViewController.swift in Sources */,
 				43B1C5372D17326E0046F96C /* CVDetailsViewController.swift in Sources */,
 				9420605C2D0CCE1900A2DE36 /* VideoDetailsViewController.swift in Sources */,
 				895C0AAE2D1735DA00E7283B /* CloudinaryManager.swift in Sources */,
