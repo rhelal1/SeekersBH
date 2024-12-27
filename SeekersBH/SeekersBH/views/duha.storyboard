@@ -268,7 +268,8 @@
                                     <color key="baseBackgroundColor" red="0.035294117649999998" green="0.094117647060000004" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="QGB-Cb-yCY" kind="show" id="2fj-jl-dcA"/>
+                                    <action selector="continuebtn:" destination="60Q-GC-yR2" eventType="touchUpInside" id="xBc-RH-ivg"/>
+                                    <segue destination="QGB-Cb-yCY" kind="show" identifier="goToCVViewController" id="2fj-jl-dcA"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -285,6 +286,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bWu-vK-b3h"/>
+                    <connections>
+                        <outlet property="Contiuebtn" destination="MDl-6S-8SY" id="dbj-Pr-ptf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g08-gr-LTE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -293,21 +297,13 @@
         <!--Selection Job Application View Controller-->
         <scene sceneID="eea-gW-tQM">
             <objects>
-                <viewController id="QGB-Cb-yCY" customClass="CVSelectionJobApplicationViewController" customModule="SeekersBH" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="QGB-Cb-yCY" customClass="CVSelectionJobApplicationViewController" customModule="SeekersBH" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="x1p-a6-H2R">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b5P-cr-srf">
-                                <rect key="frame" x="0.0" y="135" width="393" height="728"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <connections>
-                                    <segue destination="hA2-k1-Dyn" kind="embed" id="RxG-DM-MH3"/>
-                                </connections>
-                            </containerView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FER-Gk-yB6">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FER-Gk-yB6">
                                 <rect key="frame" x="34" y="895" width="324" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Apply" cornerStyle="dynamic">
@@ -317,9 +313,24 @@
                                     <color key="baseBackgroundColor" red="0.035294117649999998" green="0.094117647060000004" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
                             </button>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b5P-cr-srf">
+                                <rect key="frame" x="0.0" y="122" width="393" height="741"/>
+                                <connections>
+                                    <segue destination="hA2-k1-Dyn" kind="embed" id="2Kw-hE-GPx"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tRY-KF-qhU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FER-Gk-yB6" firstAttribute="leading" secondItem="tRY-KF-qhU" secondAttribute="leading" constant="34" id="3Bm-AT-fie"/>
+                            <constraint firstItem="tRY-KF-qhU" firstAttribute="bottom" secondItem="FER-Gk-yB6" secondAttribute="bottom" constant="27" id="Evs-c6-acU"/>
+                            <constraint firstItem="b5P-cr-srf" firstAttribute="top" secondItem="tRY-KF-qhU" secondAttribute="top" constant="19" id="Kec-CY-mO7"/>
+                            <constraint firstItem="tRY-KF-qhU" firstAttribute="trailing" secondItem="FER-Gk-yB6" secondAttribute="trailing" constant="35" id="Xf2-Ls-44R"/>
+                            <constraint firstItem="b5P-cr-srf" firstAttribute="leading" secondItem="tRY-KF-qhU" secondAttribute="leading" id="dI0-7a-QKV"/>
+                            <constraint firstItem="FER-Gk-yB6" firstAttribute="top" secondItem="b5P-cr-srf" secondAttribute="bottom" constant="32" id="gbu-iC-hKz"/>
+                            <constraint firstItem="b5P-cr-srf" firstAttribute="trailing" secondItem="tRY-KF-qhU" secondAttribute="trailing" id="hHq-hg-vCY"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="wcm-VX-sjF"/>
                     <size key="freeformSize" width="393" height="1000"/>
@@ -333,13 +344,13 @@
             <objects>
                 <tableViewController id="hA2-k1-Dyn" customClass="CVSelectionApplicationsTableViewController" customModule="SeekersBH" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="2tE-gA-EM5">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="728"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="741"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <sections>
                             <tableViewSection headerTitle="Upload CV" id="Ji1-TE-Ohx">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="dropDownCell" rowHeight="476" id="xPy-0h-cda">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MainCell" rowHeight="476" id="xPy-0h-cda">
                                         <rect key="frame" x="20" y="55.333332061767578" width="353" height="476"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xPy-0h-cda" id="iGM-68-EiK">
@@ -347,19 +358,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upload Created CV" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="98t-85-AQk">
-                                                    <rect key="frame" x="20" y="30" width="293" height="21"/>
+                                                    <rect key="frame" x="20" y="43" width="283" height="21"/>
                                                     <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
                                                     <color key="textColor" red="0.035294117649999998" green="0.094117647060000004" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upload  a CV/Cover Letter" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hI8-bh-gin">
-                                                    <rect key="frame" x="20" y="335" width="293" height="21"/>
-                                                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
-                                                    <color key="textColor" red="0.035294117649999998" green="0.094117647060000004" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="djZ-0L-XBw">
-                                                    <rect key="frame" x="15" y="79" width="323" height="214"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="oho-qt-oFN">
+                                                    <rect key="frame" x="10" y="84.000000000000014" width="323" height="225.33333333333337"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tOR-6l-v1p">
                                                             <rect key="frame" x="0.0" y="0.0" width="323" height="44"/>
@@ -373,15 +378,15 @@
                                                                 <color key="baseForegroundColor" red="0.60392156860000001" green="0.60392156860000001" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </buttonConfiguration>
+                                                            <connections>
+                                                                <action selector="dropdownButtonTapped:" destination="hA2-k1-Dyn" eventType="touchUpInside" id="0rS-V5-Dtl"/>
+                                                            </connections>
                                                         </button>
                                                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="9mn-jm-Wkw">
-                                                            <rect key="frame" x="0.0" y="44" width="323" height="170"/>
+                                                            <rect key="frame" x="0.0" y="44.000000000000014" width="323" height="181.33333333333337"/>
                                                             <color key="backgroundColor" red="0.70196078431372544" green="0.70196078431372544" blue="0.70196078431372544" alpha="0.81999999999999995" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="170" id="cI2-Pf-meI"/>
-                                                            </constraints>
                                                             <prototypes>
-                                                                <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="RBc-Qc-ofX">
+                                                                <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CVCellDropDown" id="RBc-Qc-ofX">
                                                                     <rect key="frame" x="0.0" y="50" width="323" height="47.666667938232422"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RBc-Qc-ofX" id="E6r-r1-M76">
@@ -394,8 +399,8 @@
                                                         </tableView>
                                                     </subviews>
                                                 </stackView>
-                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a7H-jS-upO">
-                                                    <rect key="frame" x="15" y="379" width="323" height="44"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a7H-jS-upO">
+                                                    <rect key="frame" x="10" y="392.33333333333331" width="323" height="32.666666666666686"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="filled" title="Select CV/ Cover Letter from the System" cornerStyle="dynamic">
                                                         <backgroundConfiguration key="background" cornerRadius="8"/>
@@ -404,21 +409,28 @@
                                                         <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </buttonConfiguration>
                                                 </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upload  a CV/Cover Letter" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hI8-bh-gin">
+                                                    <rect key="frame" x="20" y="352.33333333333331" width="303" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
+                                                    <color key="textColor" red="0.035294117649999998" green="0.094117647060000004" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" red="0.85098039219999999" green="0.85098039219999999" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
-                                                <constraint firstItem="djZ-0L-XBw" firstAttribute="top" secondItem="98t-85-AQk" secondAttribute="bottom" constant="28" id="2Og-6t-8WK"/>
-                                                <constraint firstItem="98t-85-AQk" firstAttribute="leading" secondItem="iGM-68-EiK" secondAttribute="leadingMargin" id="4DA-g9-DqS"/>
-                                                <constraint firstItem="hI8-bh-gin" firstAttribute="top" secondItem="djZ-0L-XBw" secondAttribute="bottom" constant="42" id="4JD-sM-c8S"/>
-                                                <constraint firstItem="hI8-bh-gin" firstAttribute="leading" secondItem="iGM-68-EiK" secondAttribute="leadingMargin" id="Al8-y7-Xze"/>
-                                                <constraint firstAttribute="trailing" secondItem="a7H-jS-upO" secondAttribute="trailing" constant="15" id="C9Z-tZ-d73"/>
-                                                <constraint firstItem="djZ-0L-XBw" firstAttribute="leading" secondItem="iGM-68-EiK" secondAttribute="leading" constant="15" id="HsS-H2-LfW"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="hI8-bh-gin" secondAttribute="trailing" constant="20" id="NAF-xn-BaJ"/>
-                                                <constraint firstItem="98t-85-AQk" firstAttribute="top" secondItem="iGM-68-EiK" secondAttribute="topMargin" constant="18" id="QvC-Wu-Bxw"/>
-                                                <constraint firstItem="a7H-jS-upO" firstAttribute="leading" secondItem="iGM-68-EiK" secondAttribute="leading" constant="15" id="UPe-6s-rFs"/>
-                                                <constraint firstItem="a7H-jS-upO" firstAttribute="top" secondItem="hI8-bh-gin" secondAttribute="bottom" constant="23" id="Uk0-o3-VBr"/>
-                                                <constraint firstAttribute="trailing" secondItem="djZ-0L-XBw" secondAttribute="trailing" constant="15" id="c47-9t-MTH"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="98t-85-AQk" secondAttribute="trailing" constant="20" id="n3T-A5-ThM"/>
+                                                <constraint firstItem="98t-85-AQk" firstAttribute="leading" secondItem="iGM-68-EiK" secondAttribute="leadingMargin" id="1Pg-aQ-bm9"/>
+                                                <constraint firstItem="oho-qt-oFN" firstAttribute="leading" secondItem="a7H-jS-upO" secondAttribute="leading" id="4n7-rh-8QO"/>
+                                                <constraint firstItem="oho-qt-oFN" firstAttribute="top" secondItem="98t-85-AQk" secondAttribute="bottom" constant="20" id="EBG-Yx-YWD"/>
+                                                <constraint firstItem="a7H-jS-upO" firstAttribute="leading" secondItem="iGM-68-EiK" secondAttribute="leading" constant="10" id="O42-bP-NGB"/>
+                                                <constraint firstItem="a7H-jS-upO" firstAttribute="top" secondItem="hI8-bh-gin" secondAttribute="bottom" constant="19" id="Rzx-Sa-s0A"/>
+                                                <constraint firstAttribute="bottom" secondItem="a7H-jS-upO" secondAttribute="bottom" constant="51" id="X7l-K3-IlE"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="98t-85-AQk" secondAttribute="trailing" constant="30" id="h72-Kh-B82"/>
+                                                <constraint firstItem="98t-85-AQk" firstAttribute="top" secondItem="iGM-68-EiK" secondAttribute="topMargin" constant="31" id="igu-w2-Dcl"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="hI8-bh-gin" secondAttribute="trailing" constant="10" id="jWy-df-bcz"/>
+                                                <constraint firstAttribute="trailing" secondItem="a7H-jS-upO" secondAttribute="trailing" constant="20" id="jbO-bL-a0B"/>
+                                                <constraint firstItem="hI8-bh-gin" firstAttribute="top" secondItem="oho-qt-oFN" secondAttribute="bottom" constant="43" id="oXj-gc-yhh"/>
+                                                <constraint firstItem="oho-qt-oFN" firstAttribute="centerX" secondItem="hI8-bh-gin" secondAttribute="centerX" id="pXJ-r4-YaN"/>
+                                                <constraint firstItem="hI8-bh-gin" firstAttribute="leading" secondItem="iGM-68-EiK" secondAttribute="leadingMargin" id="ypM-dP-vTV"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -430,6 +442,12 @@
                             <outlet property="delegate" destination="hA2-k1-Dyn" id="Lyq-X5-Jgt"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="wbV-A1-5yI"/>
+                    <connections>
+                        <outlet property="cvTableView" destination="9mn-jm-Wkw" id="ylz-eo-dDG"/>
+                        <outlet property="dropdownButton" destination="tOR-6l-v1p" id="m0f-2F-B4s"/>
+                        <outlet property="uploadButton" destination="a7H-jS-upO" id="KcV-F1-pUB"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cGP-aN-kUo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -21,7 +21,8 @@ struct JobApplication {
     var reference : Reference?
     var additionalQuestions : [String : String]?
     
-    var uploadCV : CV
+    //var uploadCV : CV
+    var uploadCV : String?
     //var coverLetter : Data
 }
 

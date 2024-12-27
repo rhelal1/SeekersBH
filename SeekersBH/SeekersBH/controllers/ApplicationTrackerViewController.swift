@@ -1,16 +1,13 @@
 //
-//  CVSelectionJobApplicationViewController.swift
+//  ApplicationTrackerViewController.swift
 //  SeekersBH
 //
-//  Created by Duha Hashem on 25/12/2024.
+//  Created by marwa on 27/12/2024.
 //
 
 import UIKit
 
-class CVSelectionJobApplicationViewController: UIViewController {
-    
-    // Property to hold the job application data passed from the previous view
-        var tempJobApplication: JobApplication?
+class ApplicationTrackerViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
