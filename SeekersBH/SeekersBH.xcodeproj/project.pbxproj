@@ -106,6 +106,7 @@
 		D4070DBC2D107AA100E517FE /* NewApplyPageFormTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4070DBB2D107AA100E517FE /* NewApplyPageFormTableViewController.swift */; };
 		D41DE5E82D1C427900706104 /* CVSelectionJobApplicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41DE5E72D1C427900706104 /* CVSelectionJobApplicationViewController.swift */; };
 		D41DE5EA2D1C433500706104 /* CVSelectionApplicationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41DE5E92D1C433500706104 /* CVSelectionApplicationsTableViewController.swift */; };
+		D41DE5EE2D1DD75900706104 /* CVDropdownChooseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41DE5ED2D1DD75900706104 /* CVDropdownChooseTableViewCell.swift */; };
 		D45526BC2D09ED2A00149AA9 /* JobTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45526BB2D09ED2A00149AA9 /* JobTableViewCell.swift */; };
 		E66556782D1BFADA0010E968 /* JobDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66556772D1BFADA0010E968 /* JobDetailsViewController.swift */; };
 		E665567A2D1BFB320010E968 /* JobDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66556792D1BFB320010E968 /* JobDetailsTableViewCell.swift */; };
@@ -232,6 +233,7 @@
 		D4070DBB2D107AA100E517FE /* NewApplyPageFormTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewApplyPageFormTableViewController.swift; sourceTree = "<group>"; };
 		D41DE5E72D1C427900706104 /* CVSelectionJobApplicationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVSelectionJobApplicationViewController.swift; sourceTree = "<group>"; };
 		D41DE5E92D1C433500706104 /* CVSelectionApplicationsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVSelectionApplicationsTableViewController.swift; sourceTree = "<group>"; };
+		D41DE5ED2D1DD75900706104 /* CVDropdownChooseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVDropdownChooseTableViewCell.swift; sourceTree = "<group>"; };
 		D45526BB2D09ED2A00149AA9 /* JobTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobTableViewCell.swift; sourceTree = "<group>"; };
 		E66556772D1BFADA0010E968 /* JobDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JobDetailsViewController.swift; path = SeekersBH/views/JobDetailsViewController.swift; sourceTree = SOURCE_ROOT; };
 		E66556792D1BFB320010E968 /* JobDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JobDetailsTableViewCell.swift; path = SeekersBH/views/JobDetailsTableViewCell.swift; sourceTree = SOURCE_ROOT; };
@@ -434,6 +436,7 @@
 				893E0F502D1DA2A6004CB6C3 /* MangeVideosTableViewCell.swift */,
 				438BBA062D1EE3C400261153 /* ApplicationTrackerViewController.swift */,
 				438BBA082D1EE3D600261153 /* ApplicationTrackerTableViewCell.swift */,
+				D41DE5ED2D1DD75900706104 /* CVDropdownChooseTableViewCell.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -607,6 +610,7 @@
 				E672D9752D1EC6860063F4E8 /* JobDetails2TableViewCell.swift in Sources */,
 				D184E4012CF87A5600D896D6 /* CV.swift in Sources */,
 				946297282D0CB25F005542AA /* WebinarDetailsViewController.swift in Sources */,
+				D41DE5EE2D1DD75900706104 /* CVDropdownChooseTableViewCell.swift in Sources */,
 				AC8BA8FD2D0F430800EE7A2C /* jobCellTableViewCell.swift in Sources */,
 				D184E3FF2CF8785A00D896D6 /* Job.swift in Sources */,
 				D153BE442CF47AC900A81FFC /* ViewController.swift in Sources */,
