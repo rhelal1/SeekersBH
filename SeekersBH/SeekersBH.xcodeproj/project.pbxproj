@@ -46,6 +46,8 @@
 		89BB590F2D1CC076000FE481 /* MangeArticlesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BB590E2D1CC076000FE481 /* MangeArticlesViewController.swift */; };
 		89BB59112D1CD711000FE481 /* ManageArticlesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BB59102D1CD711000FE481 /* ManageArticlesTableViewCell.swift */; };
 		89FEE3AF2D1F034B007F321D /* AdminResourseManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FEE3AE2D1F034B007F321D /* AdminResourseManger.swift */; };
+		940FF3E82D1F973F00763EEF /* CertificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940FF3E72D1F973F00763EEF /* CertificationsViewController.swift */; };
+		940FF3EA2D1F977D00763EEF /* CertificationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940FF3E92D1F977D00763EEF /* CertificationsTableViewCell.swift */; };
 		942060582D0CCDE800A2DE36 /* VideosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942060572D0CCDE800A2DE36 /* VideosViewController.swift */; };
 		9420605A2D0CCE0100A2DE36 /* VideosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942060592D0CCE0100A2DE36 /* VideosTableViewCell.swift */; };
 		9420605C2D0CCE1900A2DE36 /* VideoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9420605B2D0CCE1900A2DE36 /* VideoDetailsViewController.swift */; };
@@ -194,6 +196,8 @@
 		89BB590E2D1CC076000FE481 /* MangeArticlesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MangeArticlesViewController.swift; sourceTree = "<group>"; };
 		89BB59102D1CD711000FE481 /* ManageArticlesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageArticlesTableViewCell.swift; sourceTree = "<group>"; };
 		89FEE3AE2D1F034B007F321D /* AdminResourseManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminResourseManger.swift; sourceTree = "<group>"; };
+		940FF3E72D1F973F00763EEF /* CertificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificationsViewController.swift; sourceTree = "<group>"; };
+		940FF3E92D1F977D00763EEF /* CertificationsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificationsTableViewCell.swift; sourceTree = "<group>"; };
 		942060572D0CCDE800A2DE36 /* VideosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosViewController.swift; sourceTree = SOURCE_ROOT; };
 		942060592D0CCE0100A2DE36 /* VideosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosTableViewCell.swift; sourceTree = "<group>"; };
 		9420605B2D0CCE1900A2DE36 /* VideoDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDetailsViewController.swift; sourceTree = "<group>"; };
@@ -419,6 +423,8 @@
 			isa = PBXGroup;
 			children = (
 				E672D9742D1EC6860063F4E8 /* JobDetails2TableViewCell.swift */,
+				940FF3E72D1F973F00763EEF /* CertificationsViewController.swift */,
+				940FF3E92D1F977D00763EEF /* CertificationsTableViewCell.swift */,
 				666767332D1DE94200193BFD /* JobDetails2ViewController.swift */,
 				666767312D1DE01300193BFD /* searchFilterTableViewCell.swift */,
 				94CEF5932D1F101C00D1436E /* SettingsViewController.swift */,
@@ -509,8 +515,6 @@
 				438BBA062D1EE3C400261153 /* ApplicationTrackerViewController.swift */,
 				438BBA082D1EE3D600261153 /* ApplicationTrackerTableViewCell.swift */,
 				43F8B3AF2D1F7F9E00E669BB /* CVDoneViewController.swift */,
-				438BBA0A2D1F2E9500261153 /* ApplicationTrackerTableViewController.swift */,
-				D41DE5ED2D1DD75900706104 /* CVDropdownChooseTableViewCell.swift */,
 				EE9713B92D1EF4AC00D5F90B /* ChatViewController.swift */,
 				EE28CC2B2D1F5A9F00F8FF13 /* ProfileViewController.swift */,
 			);
@@ -722,6 +726,7 @@
 				9420605E2D0DAA7600A2DE36 /* SavedViewController.swift in Sources */,
 				E665567A2D1BFB320010E968 /* JobDetailsTableViewCell.swift in Sources */,
 				43F8B3B02D1F7F9E00E669BB /* CVDoneViewController.swift in Sources */,
+				940FF3E82D1F973F00763EEF /* CertificationsViewController.swift in Sources */,
 				AC2776E62D0AF25B0019677C /* addJobView3ViewController.swift in Sources */,
 				94CEF5802D1D726D00D1436E /* VideoPlayerViewController.swift in Sources */,
 				94CEF5AE2D1F10BE00D1436E /* Interest.swift in Sources */,
@@ -742,6 +747,7 @@
 				9420606E2D1074D400A2DE36 /* CourseContentTableViewCell.swift in Sources */,
 				66A160B32D1DDA5700721827 /* searchAndFilterViewController.swift in Sources */,
 				66E035052D143B050050E168 /* generalInformationCollectionViewCell.swift in Sources */,
+				940FF3EA2D1F977D00763EEF /* CertificationsTableViewCell.swift in Sources */,
 				946297222D0AFD86005542AA /* ArticleDetailsViewController.swift in Sources */,
 				4377348A2D1D657300A5DBD2 /* EditCVViewController.swift in Sources */,
 				D4070DB82D10768C00E517FE /* ApplyPageViewController.swift in Sources */,
