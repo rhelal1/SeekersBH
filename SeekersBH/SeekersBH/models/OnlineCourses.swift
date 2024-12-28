@@ -16,7 +16,7 @@ struct Course {
 }
 
 struct CourseComments {
-    var userId : Int
+    var userId : String
     var commenttext : String
     var rated : Int
 }
@@ -48,4 +48,9 @@ struct CourseCertification {
     var date: Date
     var userId: String
     var score: Int // Add score to store the user's achievement
+}
+
+struct CVInfo {
+    let id: String
+    let name: String
 }

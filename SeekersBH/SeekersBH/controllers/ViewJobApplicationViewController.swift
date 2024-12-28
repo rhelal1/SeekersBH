@@ -11,7 +11,8 @@ import FirebaseFirestore
 class ViewJobApplicationViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     @IBOutlet weak var jobsTableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
-    
+    @IBOutlet weak var filterButton: UIButton!
+
     private var jobs: [JobAd] = []
     private var filteredJobs: [JobAd] = []
     private var allJobs: [JobAd] = []
@@ -260,7 +261,7 @@ class ViewJobApplicationViewController: UIViewController, UITableViewDelegate, U
         jobsTableView.reloadData()
     }
     
-    @IBAction func filterButtonTapped(_ sender: UIBarButtonItem) {
+    @IBAction func filterButtonTapped(_ sender: UIButton) {
         let alert = UIAlertController(title: "Filter Jobs", message: nil, preferredStyle: .actionSheet)
         
         alert.addAction(UIAlertAction(title: "All Jobs", style: .default) { [weak self] _ in
@@ -281,7 +282,8 @@ class ViewJobApplicationViewController: UIViewController, UITableViewDelegate, U
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
         
         if let popoverController = alert.popoverPresentationController {
-            popoverController.barButtonItem = sender
+            popoverController.sourceView = sender
+            popoverController.sourceRect = sender.bounds
         }
         
         present(alert, animated: true)

@@ -100,6 +100,10 @@ class JobDetailsViewController: UIViewController, UITableViewDelegate, UITableVi
             // Initialize coordinator with .edit mode and the job to edit
             destination.coordinator = AddEditJobCoordinator(mode: .edit(job: job))
         }
+        if segue.identifier == "toViewApplicants",
+           let destination = segue.destination as? viewApplicantsViewController{
+            destination.selectedJob = selectedJob
+        }
     }
     
     // MARK: - UITableViewDataSource

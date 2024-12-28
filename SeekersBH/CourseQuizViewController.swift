@@ -19,38 +19,35 @@ class CourseQuizViewController: UIViewController, AnswerSelectionDelegate {
         quizeTable.reloadData()
     }
     
-    func resetQuiz() {
-            // Clear all previous answers
-        for index in 0..<course.courseQuestions.count {
-            course.courseQuestions[index].selectedAnswer = -1 // Reset to default value
-            }
-            quizeTable.reloadData()
-        }
-
-    
     @IBAction func submitButtonTapped(_ sender: Any) {
         // Calculate the score
                var score = 0
                var totalPoints = 0
                
-               for question in course.courseQuestions {
+               for var question in course.courseQuestions {
                    totalPoints += question.points
                    if question.selectedAnswer != -1 && question.options[question.selectedAnswer] == question.correctAnswer {
                        score += question.points
                    }
+                   question.selectedAnswer = -1
                }
                
                // Determine if the user passed
-               var passingScore = Int(Double(totalPoints) * 0.6) // 60% is the passing threshold
-        passingScore = 0
+        let passingScore = Int(Double(totalPoints) * 0.6) // 60% is the passing threshold
                
+//        let passingScore = 0
         if score >= passingScore {
+        
                 // Navigate to PassQuizViewController
                 if let passVC = storyboard?.instantiateViewController(withIdentifier: "PassQuizViewController") as? PassQuizViewController {
+                    
                     passVC.score = score
                     passVC.course = course
+                    
                     passVC.modalPresentationStyle = .fullScreen // Prevent dismissal gesture
                     present(passVC, animated: true, completion: nil)
+                    
+//                    present(passVC, animated: true, completion: nil)
                 }
             } else {
                 // Navigate to FailQuizViewController

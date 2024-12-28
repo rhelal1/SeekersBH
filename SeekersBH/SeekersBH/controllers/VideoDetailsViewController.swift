@@ -30,8 +30,24 @@ class VideoDetailsViewController: UIViewController {
         speaker.text = video.speaker
         channel.text = video.channel
         duration.text = "\(video.duration)"
-        imageW.image = UIImage(named: "imageTest2")
-        
+        // Load the image asynchronously
+        if let imageUrl = URL(string: video.picture) {
+                // Perform the network request asynchronously
+                URLSession.shared.dataTask(with: imageUrl) { data, response, error in
+                    if let error = error {
+                        print("Error loading image: \(error.localizedDescription)")
+                        return
+                    }
+                    
+                    // Ensure data is available and it is valid
+                    if let data = data, let image = UIImage(data: data) {
+                        DispatchQueue.main.async {
+                            // Update the image view on the main thread
+                            self.imageW.image = image
+                        }
+                    }
+                }.resume()
+            }
         videoDescription.text = video.description
     }
     
