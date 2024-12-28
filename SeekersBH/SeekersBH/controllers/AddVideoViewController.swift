@@ -84,10 +84,10 @@ class AddVideoViewController: UIViewController, UIImagePickerControllerDelegate,
         picker.dismiss(animated: true, completion: nil)
         
         if let selectedImage = info[.editedImage] as? UIImage {
-            print("Edited image selected.")
+//            print("Edited image selected.")
             vidCover.image = selectedImage
         } else if let originalImage = info[.originalImage] as? UIImage {
-            print("Original image selected.")
+//            print("Original image selected.")
             vidCover.image = originalImage
         } else {
             print("No image selected.")

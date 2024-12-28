@@ -93,10 +93,10 @@ class AddWebinarsViewController: UIViewController,  UIImagePickerControllerDeleg
         picker.dismiss(animated: true, completion: nil)
         
         if let selectedImage = info[.editedImage] as? UIImage {
-            print("Edited image selected.")
+//            print("Edited image selected.")
             webcover.image = selectedImage
         } else if let originalImage = info[.originalImage] as? UIImage {
-            print("Original image selected.")
+//            print("Original image selected.")
             webcover.image = originalImage
         } else {
             print("No image selected.")

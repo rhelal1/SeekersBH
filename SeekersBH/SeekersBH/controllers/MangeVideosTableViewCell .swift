@@ -8,7 +8,6 @@ class MangeVideosTableViewCell: UITableViewCell {
     
     var video: Video?
     
-    // Closure to handle visibility toggle
     var toggleVisibilityAction: ((String, Bool) -> Void)?
     
     func update(with video: Video) {
@@ -23,7 +22,6 @@ class MangeVideosTableViewCell: UITableViewCell {
         
         let newHiddenState = !(video?.isHidden ?? false)
         
-        // Invoke the closure
         toggleVisibilityAction?(videoID, newHiddenState)
     }
 }
