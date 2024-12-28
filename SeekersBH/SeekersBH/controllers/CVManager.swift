@@ -78,7 +78,7 @@ class CVManager {
             if let error = error {
                 print("Error saving CV: \(error.localizedDescription)")
             } else {
-                print("CV saved successfully!")
+                // print("CV saved successfully!")
             }
         }
         
@@ -89,6 +89,5 @@ class CVManager {
         dateFormatter.dateFormat = "yyyy-MM-dd"
         return dateFormatter.string(from: date)
     }
-    
 }
 

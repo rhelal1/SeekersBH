@@ -25,32 +25,40 @@ class AllCVViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func fetchCVs() {
-        let db = Firestore.firestore()
-        db.collection("CV").getDocuments { snapshot, error in
-            if let error = error {
-                print("Error fetching CVs: \(error.localizedDescription)")
-                return
-            }
-            
-            guard let documents = snapshot?.documents else { return }
-            
-            self.cvList = documents.compactMap { document in
-                let data = document.data()
-                let cvName = data["cvName"] as? String ?? "Unnamed CV"
-                let createdDate = (data["createdDate"] as? Timestamp)?.dateValue() ?? Date()
-                
-                let formatter = DateFormatter()
-                formatter.dateStyle = .medium
-                let formattedDate = formatter.string(from: createdDate)
-                
-                return (id: document.documentID, name: cvName, createdDate: formattedDate)
-            }
-            
-            DispatchQueue.main.async {
-                self.cvTableView.reloadData()
-            }
+        guard let userID = AccessManager.userID else {
+            print("User ID is not available.")
+            return
         }
+        
+        let db = Firestore.firestore()
+        db.collection("CV")
+            .whereField("userID", isEqualTo: userID)
+            .getDocuments { snapshot, error in
+                if let error = error {
+                    print("Error fetching CVs: \(error.localizedDescription)")
+                    return
+                }
+                
+                guard let documents = snapshot?.documents else { return }
+                
+                self.cvList = documents.compactMap { document in
+                    let data = document.data()
+                    let cvName = data["cvName"] as? String ?? "Unnamed CV"
+                    let createdDate = (data["createdDate"] as? Timestamp)?.dateValue() ?? Date()
+                    
+                    let formatter = DateFormatter()
+                    formatter.dateStyle = .medium
+                    let formattedDate = formatter.string(from: createdDate)
+                    
+                    return (id: document.documentID, name: cvName, createdDate: formattedDate)
+                }
+                
+                DispatchQueue.main.async {
+                    self.cvTableView.reloadData()
+                }
+            }
     }
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return cvList.count
@@ -88,10 +96,8 @@ class AllCVViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 loadingIndicator.stopAnimating()
                 loadingAlert.dismiss(animated: true) {
                     if self.cvDetails != nil {
-                        // Manually perform the segue
                         self.performSegue(withIdentifier: "showCVDetails", sender: self)
                     } else {
-                        // Show an error if details are unavailable
                         let errorAlert = UIAlertController(title: "Error", message: "CV details are unavailable. Please try again.", preferredStyle: .alert)
                         errorAlert.addAction(UIAlertAction(title: "OK", style: .default))
                         self.present(errorAlert, animated: true)
