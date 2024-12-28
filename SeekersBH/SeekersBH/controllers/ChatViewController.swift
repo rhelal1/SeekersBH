@@ -36,7 +36,7 @@ class ChatViewController: UIViewController {
     
     private func prepareForUser(with id: String) {
         sendButton.isEnabled = false
-        fetchAllUsers() { users in
+        UserManger.shared.fetchAllUsers() { users in
             let receiver = users.first { $0.id == id }
             
             if receiver == nil {
@@ -57,6 +57,7 @@ class ChatViewController: UIViewController {
             self.chatManager = ChatManager(userId1: AccessManager.userID!, userId2: self.receiverId!) {_ in
                 self.chatReady()
             }
+            //to do
             self.navItem.title = receiver.userName
         }
     }
@@ -79,6 +80,7 @@ class ChatViewController: UIViewController {
     }
     
     private func scrollToBottom() {
+        guard !messages.isEmpty else { return }
         let indexPath = IndexPath(row: self.messages.count - 1, section: 0)
         tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
     }
