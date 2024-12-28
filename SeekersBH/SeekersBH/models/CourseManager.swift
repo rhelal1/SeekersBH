@@ -6,6 +6,7 @@ class CourseManager {
     private let db = Firestore.firestore()
 
     func fetchAllCourses() async throws -> [Course] {
+                
         let snapshot = try await db.collection("OnlineCourses").getDocuments()
         
         return try await withThrowingTaskGroup(of: Course?.self) { group in
@@ -48,15 +49,14 @@ class CourseManager {
                                courseComments: [], courseContent: [], courseQuestions: [])
 
            let courseRef = db.collection("OnlineCourses").document(courseId)
-
-           // Fetch related collections concurrently
+            // Fetch related collections concurrently
            async let comments = fetchComments(for: courseRef)
            async let content = fetchContent(for: courseRef)
            async let questions = fetchQuestions(for: courseRef)
 
            // Aggregate fetched data
+            course.courseContent = try await content
            course.courseComments = try await comments
-           course.courseContent = try await content
            course.courseQuestions = try await questions
 
            return course
@@ -69,10 +69,8 @@ class CourseManager {
 
     private func fetchContent(for courseRef: DocumentReference) async throws -> [CourseContent] {
         let snapshot = try await courseRef.collection("courseContent").getDocuments()
-        
         // Parse the documents and sort them by title
         let content = snapshot.documents.compactMap { parseCourseContentData(data: $0.data()) }
-        
         // Sort content based on the title
         return content.sorted { $0.title < $1.title }
     }
@@ -292,5 +290,70 @@ class CourseManager {
                 completion(error)
             }
         }
+    
+    
 }
 
+func renameSubCollection(oldPath: String, newPath: String) {
+    let db = Firestore.firestore()
+    
+    // Reference to the old and new sub-collections
+    let oldSubCollectionRef = db.collection(oldPath)
+    let newSubCollectionRef = db.collection(newPath)
+    
+    // Get all documents from the old sub-collection
+    oldSubCollectionRef.getDocuments { (snapshot, error) in
+        if let error = error {
+            print("Error getting documents: \(error)")
+            return
+        }
+        
+        guard let documents = snapshot?.documents else { return }
+        
+        // Create a batch for writing
+        let batch = db.batch()
+        
+        for document in documents {
+            let newDocRef = newSubCollectionRef.document(document.documentID) // Keep the same document ID
+            batch.setData(document.data(), forDocument: newDocRef)
+        }
+        
+        // Commit the batch to copy documents
+        batch.commit { (error) in
+            if let error = error {
+                print("Error copying documents: \(error)")
+            } else {
+                print("Documents copied successfully!")
+                // Now delete the old sub-collection
+                deleteOldSubCollection(collectionRef: oldSubCollectionRef)
+            }
+        }
+    }
+}
+
+func deleteOldSubCollection(collectionRef: CollectionReference) {
+    collectionRef.getDocuments { (snapshot, error) in
+        if let error = error {
+            print("Error getting documents for deletion: \(error)")
+            return
+        }
+        
+        guard let documents = snapshot?.documents else { return }
+        
+        // Create a batch for deleting
+        let batch = Firestore.firestore().batch()
+        
+        for document in documents {
+            batch.deleteDocument(document.reference)
+        }
+        
+        // Commit the batch to delete documents
+        batch.commit { (error) in
+            if let error = error {
+                print("Error deleting old sub-collection: \(error)")
+            } else {
+                print("Old sub-collection deleted successfully!")
+            }
+        }
+    }
+}

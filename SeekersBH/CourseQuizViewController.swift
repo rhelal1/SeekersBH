@@ -33,9 +33,9 @@ class CourseQuizViewController: UIViewController, AnswerSelectionDelegate {
                }
                
                // Determine if the user passed
-        //let passingScore = Int(Double(totalPoints) * 0.6) // 60% is the passing threshold
+        let passingScore = Int(Double(totalPoints) * 0.6) // 60% is the passing threshold
                
-        let passingScore = 0
+//        let passingScore = 0
         if score >= passingScore {
         
                 // Navigate to PassQuizViewController
