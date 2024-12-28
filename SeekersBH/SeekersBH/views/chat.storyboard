@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                                 <items>
                                     <navigationItem title="Title" id="4Ju-4s-EUb">
-                                        <barButtonItem key="leftBarButtonItem" title="Close" style="plain" id="CR9-rm-VSe">
+                                        <barButtonItem key="leftBarButtonItem" title="Close" style="done" id="CR9-rm-VSe">
                                             <connections>
                                                 <action selector="didTapCloseButton:" destination="Y6W-OH-hqX" id="PbP-gK-xv1"/>
                                             </connections>
@@ -104,7 +104,7 @@
     <resources>
         <image name="paperplane" catalog="system" width="128" height="119"/>
         <systemColor name="placeholderTextColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29803921570000003" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
