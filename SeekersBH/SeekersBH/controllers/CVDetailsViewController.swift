@@ -27,12 +27,10 @@ class CVDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Disable editing for the text view
         cvDetailsTextView.isEditable = false
         
         cvDetailsTextView.font = UIFont(name: "Helvetica", size: 14)
         
-        // Set padding for the text view
         cvDetailsTextView.textContainerInset = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 0)
         
         cvDetailsTextView.text = "Loading CV details..."
@@ -47,7 +45,7 @@ class CVDetailsViewController: UIViewController {
         
         let formattedDetails = NSMutableAttributedString()
         
-        // Add "Full Name" label and info
+        // Full Name
         let fullNameTitle = NSAttributedString(string: "Full Name:\n", attributes: [
             .font: UIFont.boldSystemFont(ofSize: 18),
             .paragraphStyle: createParagraphStyle()
@@ -59,7 +57,7 @@ class CVDetailsViewController: UIViewController {
         formattedDetails.append(fullNameTitle)
         formattedDetails.append(fullNameInfo)
         
-        // Add "Email" label and info
+        // Email
         let emailTitle = NSAttributedString(string: "Email:\n", attributes: [
             .font: UIFont.boldSystemFont(ofSize: 18),
             .paragraphStyle: createParagraphStyle()
@@ -71,7 +69,7 @@ class CVDetailsViewController: UIViewController {
         formattedDetails.append(emailTitle)
         formattedDetails.append(emailInfo)
         
-        // Add "Phone Number" label and info
+        // Phone Number
         let phoneNumberTitle = NSAttributedString(string: "Phone Number:\n", attributes: [
             .font: UIFont.boldSystemFont(ofSize: 18),
             .paragraphStyle: createParagraphStyle()
@@ -83,7 +81,7 @@ class CVDetailsViewController: UIViewController {
         formattedDetails.append(phoneNumberTitle)
         formattedDetails.append(phoneNumberInfo)
         
-        // Add "LinkedIn" label and info
+        // LinkedIn
         let linkedinTitle = NSAttributedString(string: "LinkedIn:\n", attributes: [
             .font: UIFont.boldSystemFont(ofSize: 18),
             .paragraphStyle: createParagraphStyle()
@@ -97,7 +95,7 @@ class CVDetailsViewController: UIViewController {
         formattedDetails.append(linkedinTitle)
         formattedDetails.append(linkedinInfo)
         
-        // Add "Portfolio" label and info
+        // Portfolio
         let portfolioTitle = NSAttributedString(string: "Portfolio:\n", attributes: [
             .font: UIFont.boldSystemFont(ofSize: 18),
             .paragraphStyle: createParagraphStyle()
@@ -110,7 +108,7 @@ class CVDetailsViewController: UIViewController {
         formattedDetails.append(portfolioInfo)
         
         
-        // Add "About Me" label and info
+        // About Me
         let aboutMeTitle = NSAttributedString(string: "About Me:\n", attributes: [
             .font: UIFont.boldSystemFont(ofSize: 18),
             .paragraphStyle: createParagraphStyle()
@@ -123,7 +121,7 @@ class CVDetailsViewController: UIViewController {
         formattedDetails.append(aboutMeInfo)
         
         
-        // Add "Highest Degree" label and info
+        // Highest Degree
         let highestDegreeTitle = NSAttributedString(string: "Highest Degree:\n", attributes: [
             .font: UIFont.boldSystemFont(ofSize: 18),
             .paragraphStyle: createParagraphStyle()
@@ -135,7 +133,7 @@ class CVDetailsViewController: UIViewController {
         formattedDetails.append(highestDegreeTitle)
         formattedDetails.append(highestDegreeInfo)
         
-        // Add "University" label and info
+        // University
         let universityTitle = NSAttributedString(string: "University:\n", attributes: [
             .font: UIFont.boldSystemFont(ofSize: 18),
             .paragraphStyle: createParagraphStyle()
@@ -147,7 +145,7 @@ class CVDetailsViewController: UIViewController {
         formattedDetails.append(universityTitle)
         formattedDetails.append(universityInfo)
         
-        // Add "Skills" label and info
+        // Skills
         let skillsTitle = NSAttributedString(string: "Skills:\n", attributes: [
             .font: UIFont.boldSystemFont(ofSize: 18),
             .paragraphStyle: createParagraphStyle()
@@ -158,7 +156,7 @@ class CVDetailsViewController: UIViewController {
         ])
         formattedDetails.append(skillsTitle)
         formattedDetails.append(skillsInfo)
-        // Add "Other Skills" section
+        // Other Skills
         let skillsOtherTitle = NSAttributedString(string: "Other Skills:\n", attributes: [
             .font: UIFont.boldSystemFont(ofSize: 18),
             .paragraphStyle: createParagraphStyle()
@@ -172,7 +170,7 @@ class CVDetailsViewController: UIViewController {
         
         
         
-        // Add "Certifications" section
+        // Certifications
         let certificationsTitle = NSAttributedString(string: "Certifications:\n", attributes: [
             .font: UIFont.boldSystemFont(ofSize: 20),
             .paragraphStyle: createParagraphStyle()
@@ -224,7 +222,7 @@ class CVDetailsViewController: UIViewController {
         formattedDetails.append(certificationsOtherTitle)
         formattedDetails.append(certificationsOtherInfo)
         
-        // Add "Projects" section
+        // Projects
         let projectsTitle = NSAttributedString(string: "Projects:\n", attributes: [
             .font: UIFont.boldSystemFont(ofSize: 18),
             .paragraphStyle: createParagraphStyle()
@@ -253,7 +251,7 @@ class CVDetailsViewController: UIViewController {
             formattedDetails.append(projectOverviewTitle)
             formattedDetails.append(projectOverviewInfo)
             
-            let projectUrlTitle = NSAttributedString(string: "Project URL:", attributes: [
+            let projectUrlTitle = NSAttributedString(string: "Project URL:\n", attributes: [
                 .font: UIFont.systemFont(ofSize: 18, weight: .semibold),
                 .paragraphStyle: createParagraphStyle()
             ])
@@ -264,7 +262,7 @@ class CVDetailsViewController: UIViewController {
             formattedDetails.append(projectUrlTitle)
             formattedDetails.append(projectUrlInfo)
             
-            // Add "Other Projects" section
+            // Other Projects
             let projectsOtherTitle = NSAttributedString(string: "Other Projects:\n", attributes: [
                 .font: UIFont.boldSystemFont(ofSize: 18),
                 .paragraphStyle: createParagraphStyle()
@@ -276,7 +274,7 @@ class CVDetailsViewController: UIViewController {
             formattedDetails.append(projectsOtherTitle)
             formattedDetails.append(projectsOtherInfo)
             
-            // Add "Created Date" label and info
+            // Created Date
             let createdDateTitle = NSAttributedString(string: "Created Date:\n", attributes: [
                 .font: UIFont.boldSystemFont(ofSize: 18),
                 .paragraphStyle: createParagraphStyle()

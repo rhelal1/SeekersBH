@@ -18,8 +18,6 @@ class CreateCVViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func nextButtonTapped(_ sender: UIButton) {
@@ -29,8 +27,6 @@ class CreateCVViewController: UIViewController {
         }
         
         CVManager.shared.cv.fullName = fullNameField.text ?? ""
-        // printing just to make sure it is saved
-        print("Saved Full Name: \(CVManager.shared.cv.fullName)")
         
         if emailField.text?.isEmpty ?? true {
             showAlert(message: "Email cannot be empty.")
@@ -41,8 +37,6 @@ class CreateCVViewController: UIViewController {
         }
         
         CVManager.shared.cv.email = emailField.text ?? ""
-        // printing just to make sure it is saved
-        print("Saved Email: \(CVManager.shared.cv.email)")
         
         if let phoneNumber = phoneNumberField.text, phoneNumber.isEmpty {
             showAlert(message: "Phone Number cannot be empty.")
@@ -53,8 +47,6 @@ class CreateCVViewController: UIViewController {
         }
         
         CVManager.shared.cv.phoneNumber = phoneNumberField.text ?? ""
-        // printing just to make sure it is saved
-        print("Saved Phone Number: \(CVManager.shared.cv.phoneNumber)")
         
         if let linkedIn = linkedInField.text, linkedIn.isEmpty {
             showAlert(message: "LinkedIn URL cannot be empty.")
@@ -65,8 +57,6 @@ class CreateCVViewController: UIViewController {
         }
         
         CVManager.shared.cv.likedInURL = linkedInField.text ?? ""
-        // printing just to make sure it is saved
-        print("Saved LinkedIn URL: \(CVManager.shared.cv.likedInURL)")
         
         if let portfolio = portfolioField.text, portfolio.isEmpty {
             showAlert(message: "Portfolio URL cannot be empty.")
@@ -77,8 +67,6 @@ class CreateCVViewController: UIViewController {
         }
         
         CVManager.shared.cv.protofolioURL = portfolioField.text ?? ""
-        // printing just to make sure it is saved
-        print("Saved Portfolio URL: \(CVManager.shared.cv.protofolioURL)")
     }
     
     
@@ -95,7 +83,7 @@ class CreateCVViewController: UIViewController {
     }
     
     func isValidPhoneNumber(_ phoneNumber: String) -> Bool {
-        let phoneRegex = "^[0-9]{8,15}$" // Allows numbers with 8 to 15 digits
+        let phoneRegex = "^[0-9]{8,15}$"
         let phoneTest = NSPredicate(format: "SELF MATCHES %@", phoneRegex)
         return phoneTest.evaluate(with: phoneNumber)
     }
@@ -106,18 +94,4 @@ class CreateCVViewController: UIViewController {
         }
         return true
     }
-    
-    
-    //    func configureCreateCVController(navigationController: UINavigationController?, fullName: String, aboutMe: String? = nil) {
-    //
-    //        guard let createCVController = navigationController as? CreateCVNavigationController else {
-    //            print("Error: Navigation controller is not of type CreateCVNavigationController.")
-    //            return
-    //        }
-    //
-    //        // Assign the properties
-    //        createCVController.fullName = fullName
-    //
-    //        }
-    //
 }
