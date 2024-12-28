@@ -39,7 +39,6 @@ class AllCVViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 let cvName = data["cvName"] as? String ?? "Unnamed CV"
                 let createdDate = (data["createdDate"] as? Timestamp)?.dateValue() ?? Date()
                 
-                // format the date
                 let formatter = DateFormatter()
                 formatter.dateStyle = .medium
                 let formattedDate = formatter.string(from: createdDate)
@@ -71,9 +70,8 @@ class AllCVViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedCV = cvList[indexPath.row]
-        self.cvDetails = nil // Clear old data
-
-        // Show a loading spinner to indicate progress
+        self.cvDetails = nil
+        
         let loadingAlert = UIAlertController(title: nil, message: "Loading CV details...", preferredStyle: .alert)
         let loadingIndicator = UIActivityIndicatorView(style: .medium)
         loadingIndicator.translatesAutoresizingMaskIntoConstraints = false
@@ -82,12 +80,11 @@ class AllCVViewController: UIViewController, UITableViewDelegate, UITableViewDat
         loadingIndicator.bottomAnchor.constraint(equalTo: loadingAlert.view.bottomAnchor, constant: -20).isActive = true
         loadingIndicator.startAnimating()
         present(loadingAlert, animated: true, completion: nil)
-
-        // Fetch CV details
+        
         fetchCVDetails(cvID: selectedCV.id) { [weak self] in
             DispatchQueue.main.async {
                 guard let self = self else { return }
-
+                
                 loadingIndicator.stopAnimating()
                 loadingAlert.dismiss(animated: true) {
                     if self.cvDetails != nil {
@@ -103,7 +100,7 @@ class AllCVViewController: UIViewController, UITableViewDelegate, UITableViewDat
             }
         }
     }
-
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showCVDetails" {
             if let detailsVC = segue.destination as? CVDetailsViewController {
@@ -111,15 +108,11 @@ class AllCVViewController: UIViewController, UITableViewDelegate, UITableViewDat
             }
         }
     }
-
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.cvDetails = nil // Clear any lingering CV details
+        self.cvDetails = nil
     }
-    
-
-
     
     func fetchCVDetails(cvID: String, completion: @escaping () -> Void) {
         let db = Firestore.firestore()
@@ -132,19 +125,17 @@ class AllCVViewController: UIViewController, UITableViewDelegate, UITableViewDat
             guard let data = snapshot?.data() else { return }
             
             let certifications = data["certifications"] as? [[String: Any]] ?? []
-            let certificationsOther = data["certificationsOther"] as? String ?? "N/A"
+            _ = data["certificationsOther"] as? String ?? "N/A"
             let projectNames = data["projectName"] as? [String] ?? []
             let projectOverviews = data["projectOverview"] as? [String] ?? []
             let projectURLs = data["projectURL"] as? [String] ?? []
-            let projectsOther = data["projectsOther"] as? String ?? "N/A"
+            _ = data["projectsOther"] as? String ?? "N/A"
             let skillName = data["skillName"] as? String ?? "N/A"
-            let skillsOther = data["skillsOther"] as? String ?? "N/A"
+            _ = data["skillsOther"] as? String ?? "N/A"
             var projects: [(name: String, overview: String, url: String)] = []
             for i in 0..<min(projectNames.count, projectOverviews.count, projectURLs.count) {
                 projects.append((name: projectNames[i], overview: projectOverviews[i], url: projectURLs[i]))
             }
-            
-            
             
             self.cvDetails = (
                 id: cvID,
@@ -169,7 +160,6 @@ class AllCVViewController: UIViewController, UITableViewDelegate, UITableViewDat
             completion()
         }
     }
-
     
     func formatDateToString(date: Date) -> String {
         let formatter = DateFormatter()
