@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -51,110 +52,156 @@
         <!--Options-->
         <scene sceneID="Y7z-3O-eFg">
             <objects>
-                <viewController id="KrW-qs-F0k" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OptionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KrW-qs-F0k" customClass="OptionViewController" customModule="SeekersBH" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jpJ-6x-5hL">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Jlk-I7-Emx">
-                                <rect key="frame" x="91.333333333333329" y="215.33333333333334" width="210.66666666666669" height="421.66666666666663"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vDs-qZ-4iW">
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hX4-AI-RU9">
-                                        <rect key="frame" x="0.0" y="0.0" width="210.66666666666666" height="38.333333333333336"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Growth Hub"/>
-                                        <connections>
-                                            <segue destination="69e-JO-d4P" kind="presentation" modalPresentationStyle="fullScreen" id="r8m-TB-gYu"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LZw-Yg-SgM">
-                                        <rect key="frame" x="0.0" y="38.333333333333314" width="210.66666666666666" height="38.333333333333343"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Online Courses"/>
-                                        <connections>
-                                            <segue destination="Fae-Wc-3VP" kind="show" id="pN7-Ke-0n6"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2hL-87-vef">
-                                        <rect key="frame" x="0.0" y="76.666666666666657" width="210.66666666666666" height="38.333333333333343"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Settings"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p0j-Qt-Au7">
-                                        <rect key="frame" x="0.0" y="114.99999999999996" width="210.66666666666666" height="38.333333333333329"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Create CV"/>
-                                        <connections>
-                                            <segue destination="IyQ-7w-sgS" kind="show" id="xBE-vd-L82"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DuD-0y-rL2">
-                                        <rect key="frame" x="0.0" y="153.33333333333334" width="210.66666666666666" height="38.333333333333343"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Created CV"/>
-                                        <connections>
-                                            <segue destination="q8O-ZQ-Ppk" kind="show" id="l32-U9-g12"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BKj-RL-Y5p">
-                                        <rect key="frame" x="0.0" y="191.66666666666666" width="210.66666666666666" height="38.333333333333343"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Job Application Tracker"/>
-                                        <connections>
-                                            <segue destination="pcB-je-mff" kind="show" id="vfD-bq-9dE"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jcm-6i-blT">
-                                        <rect key="frame" x="0.0" y="229.99999999999997" width="210.66666666666666" height="38.333333333333343"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="User Managment"/>
-                                        <connections>
-                                            <segue destination="NAg-k4-8eU" kind="show" id="RL0-Fz-XL4"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jzp-1i-QCl">
-                                        <rect key="frame" x="0.0" y="268.33333333333337" width="210.66666666666666" height="38.333333333333314"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Resource Managment"/>
-                                        <connections>
-                                            <segue destination="wZP-Xc-OZe" kind="show" id="kSo-QG-Up4"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t8x-IC-wwo">
-                                        <rect key="frame" x="0.0" y="306.66666666666663" width="210.66666666666666" height="38.333333333333314"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Job Managment (admin)"/>
-                                        <connections>
-                                            <segue destination="AY8-NY-Rz4" kind="show" id="KuN-Mp-F0S"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="02A-5T-C2M">
-                                        <rect key="frame" x="0.0" y="345" width="210.66666666666666" height="38.333333333333314"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Job Managment"/>
-                                        <connections>
-                                            <segue destination="j1M-da-Cyt" kind="show" id="Plt-ZH-nQM"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vkl-FY-yzJ">
-                                        <rect key="frame" x="0.0" y="383.33333333333326" width="210.66666666666666" height="38.333333333333314"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Settings"/>
-                                        <connections>
-                                            <segue destination="BpT-Cq-psu" kind="show" id="AiE-b9-Or0"/>
-                                        </connections>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Jlk-I7-Emx">
+                                        <rect key="frame" x="73.666666666666686" y="166.33333333333334" width="246" height="377.33333333333326"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hX4-AI-RU9">
+                                                <rect key="frame" x="0.0" y="0.0" width="246" height="35.666666666666664"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="arrow.right" catalog="system" title="Growth Hub" subtitle="" imagePadding="10" titleAlignment="leading">
+                                                    <backgroundConfiguration key="background"/>
+                                                    <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="growthHubButton:" destination="KrW-qs-F0k" eventType="touchUpInside" id="XWl-oY-DSg"/>
+                                                    <segue destination="69e-JO-d4P" kind="presentation" modalPresentationStyle="fullScreen" id="r8m-TB-gYu"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LZw-Yg-SgM">
+                                                <rect key="frame" x="0.0" y="35.666666666666657" width="246" height="35"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" imagePlacement="leading" title="Online Courses" imagePadding="10">
+                                                    <imageReference key="image" image="arrow.right" catalog="system" symbolScale="large"/>
+                                                    <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="onlineCoursesButton:" destination="KrW-qs-F0k" eventType="touchUpInside" id="ybF-Ed-8Pq"/>
+                                                    <segue destination="Fae-Wc-3VP" kind="show" id="pN7-Ke-0n6"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p0j-Qt-Au7">
+                                                <rect key="frame" x="0.0" y="70.666666666666657" width="246" height="38.333333333333343"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="arrow.right" catalog="system" title="Create CV" imagePadding="10">
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="createCVButton:" destination="KrW-qs-F0k" eventType="touchUpInside" id="1ec-Gu-fMz"/>
+                                                    <segue destination="IyQ-7w-sgS" kind="show" id="xBE-vd-L82"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DuD-0y-rL2">
+                                                <rect key="frame" x="0.0" y="108.99999999999996" width="246" height="38.333333333333329"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="arrow.right" catalog="system" title="Created CV" imagePadding="10">
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <segue destination="q8O-ZQ-Ppk" kind="show" id="l32-U9-g12"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BKj-RL-Y5p">
+                                                <rect key="frame" x="0.0" y="147.33333333333334" width="246" height="38.333333333333343"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="arrow.right" catalog="system" title="Job Application Tracker" imagePadding="10">
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <segue destination="pcB-je-mff" kind="show" id="vfD-bq-9dE"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jcm-6i-blT">
+                                                <rect key="frame" x="0.0" y="185.66666666666666" width="246" height="38.333333333333343"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="arrow.right" catalog="system" title="User Managment" imagePadding="10">
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <segue destination="NAg-k4-8eU" kind="show" id="RL0-Fz-XL4"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jzp-1i-QCl">
+                                                <rect key="frame" x="0.0" y="223.99999999999997" width="246" height="38.333333333333343"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="arrow.right" catalog="system" title="Resource Managment" imagePadding="10">
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <segue destination="wZP-Xc-OZe" kind="show" id="kSo-QG-Up4"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t8x-IC-wwo">
+                                                <rect key="frame" x="0.0" y="262.33333333333337" width="246" height="38.333333333333314"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="arrow.right" catalog="system" title="Job Managment (admin)" imagePadding="10">
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <segue destination="AY8-NY-Rz4" kind="show" id="KuN-Mp-F0S"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="02A-5T-C2M">
+                                                <rect key="frame" x="0.0" y="300.66666666666663" width="246" height="38.333333333333314"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="arrow.right" catalog="system" title="Job Managment" imagePadding="10">
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="JobManagemntButton:" destination="KrW-qs-F0k" eventType="touchUpInside" id="sOn-um-JGI"/>
+                                                    <segue destination="j1M-da-Cyt" kind="show" id="Plt-ZH-nQM"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vkl-FY-yzJ">
+                                                <rect key="frame" x="0.0" y="339" width="246" height="38.333333333333314"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="arrow.right" catalog="system" title="Settings" imagePadding="10">
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <segue destination="BpT-Cq-psu" kind="show" id="AiE-b9-Or0"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
-                            </stackView>
+                                <color key="backgroundColor" red="0.050980389119999997" green="0.094117648900000003" blue="0.32156863810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="Jlk-I7-Emx" firstAttribute="centerX" secondItem="vDs-qZ-4iW" secondAttribute="centerX" id="1wm-if-0Q0"/>
+                                    <constraint firstItem="Jlk-I7-Emx" firstAttribute="centerY" secondItem="vDs-qZ-4iW" secondAttribute="centerY" id="F0N-Tq-5f1"/>
+                                    <constraint firstItem="Jlk-I7-Emx" firstAttribute="width" secondItem="vDs-qZ-4iW" secondAttribute="width" multiplier="0.625954" id="i85-2W-A6r"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rPS-Dp-WoI"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Jlk-I7-Emx" firstAttribute="centerY" secondItem="jpJ-6x-5hL" secondAttribute="centerY" id="8LE-qt-ens"/>
-                            <constraint firstItem="Jlk-I7-Emx" firstAttribute="centerX" secondItem="jpJ-6x-5hL" secondAttribute="centerX" id="odL-1c-inu"/>
+                            <constraint firstItem="vDs-qZ-4iW" firstAttribute="leading" secondItem="rPS-Dp-WoI" secondAttribute="leading" id="3pc-rA-LRu"/>
+                            <constraint firstItem="vDs-qZ-4iW" firstAttribute="top" secondItem="rPS-Dp-WoI" secondAttribute="top" id="IYy-cX-Dx9"/>
+                            <constraint firstItem="rPS-Dp-WoI" firstAttribute="bottom" secondItem="vDs-qZ-4iW" secondAttribute="bottom" id="O4L-kq-tfy"/>
+                            <constraint firstItem="rPS-Dp-WoI" firstAttribute="trailing" secondItem="vDs-qZ-4iW" secondAttribute="trailing" id="xSz-oD-3gL"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Options" image="ellipsis.rectangle" catalog="system" id="4oS-EM-nOE"/>
+                    <connections>
+                        <outlet property="AdminJobManagmentButton" destination="t8x-IC-wwo" id="KK6-sg-sxU"/>
+                        <outlet property="CreateCVButton" destination="p0j-Qt-Au7" id="0BC-Cp-Spz"/>
+                        <outlet property="CreatedCVButton" destination="DuD-0y-rL2" id="33N-WC-bFX"/>
+                        <outlet property="JobApplicationTrackerButton" destination="BKj-RL-Y5p" id="ciY-i1-BWP"/>
+                        <outlet property="JobManagmentButton" destination="02A-5T-C2M" id="pwI-QK-xkz"/>
+                        <outlet property="ResourceManagemntButton" destination="Jzp-1i-QCl" id="5Vq-9E-3tS"/>
+                        <outlet property="UserManagmentButton" destination="Jcm-6i-blT" id="fPf-R5-wwg"/>
+                        <outlet property="growthHubButton" destination="hX4-AI-RU9" id="UlN-1m-b72"/>
+                        <outlet property="onlineCoursesButton" destination="LZw-Yg-SgM" id="bWA-37-5fm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FI0-tk-P6x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -479,6 +526,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.right" catalog="system" width="128" height="95"/>
         <image name="ellipsis.rectangle" catalog="system" width="128" height="79"/>
         <image name="house" catalog="system" width="128" height="104"/>
         <image name="line.3.horizontal.decrease.circle" catalog="system" width="128" height="123"/>

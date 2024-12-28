@@ -73,6 +73,7 @@
 		947B8FEB2D12360B004463EF /* ResourceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947B8FEA2D12360B004463EF /* ResourceManager.swift */; };
 		947B8FED2D1C682B004463EF /* AccessManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947B8FEC2D1C682B004463EF /* AccessManager.swift */; };
 		94ADD2EC2D1FDC2E00EA2295 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ADD2EB2D1FDC2E00EA2295 /* UserProfile.swift */; };
+		94ADD2F22D20A2E300EA2295 /* OptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ADD2F12D20A2E300EA2295 /* OptionViewController.swift */; };
 		94CADAAA2D08ADD700F8B3AC /* growthHubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CADAA92D08ADD700F8B3AC /* growthHubViewController.swift */; };
 		94CADAAE2D08B96000F8B3AC /* ArticlesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CADAAD2D08B96000F8B3AC /* ArticlesTableViewCell.swift */; };
 		94CEF5802D1D726D00D1436E /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CEF57F2D1D726D00D1436E /* VideoPlayerViewController.swift */; };
@@ -222,6 +223,7 @@
 		947B8FEA2D12360B004463EF /* ResourceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceManager.swift; sourceTree = "<group>"; };
 		947B8FEC2D1C682B004463EF /* AccessManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessManager.swift; sourceTree = "<group>"; };
 		94ADD2EB2D1FDC2E00EA2295 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		94ADD2F12D20A2E300EA2295 /* OptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionViewController.swift; sourceTree = "<group>"; };
 		94CADAA92D08ADD700F8B3AC /* growthHubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = growthHubViewController.swift; path = SeekersBH/views/growthHubViewController.swift; sourceTree = SOURCE_ROOT; };
 		94CADAAD2D08B96000F8B3AC /* ArticlesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		94CEF57F2D1D726D00D1436E /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VideoPlayerViewController.swift; path = SeekersBH/models/VideoPlayerViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -366,6 +368,7 @@
 				D153BE412CF47AC900A81FFC /* SceneDelegate.swift */,
 				947B8FEC2D1C682B004463EF /* AccessManager.swift */,
 				D153BE452CF47AC900A81FFC /* Main.storyboard */,
+				94ADD2F12D20A2E300EA2295 /* OptionViewController.swift */,
 				D184E3FC2CF8769000D896D6 /* GoogleService-Info.plist */,
 				D153BE6F2CF47E8400A81FFC /* testTableViewController.swift */,
 				D153BE482CF47ACC00A81FFC /* Assets.xcassets */,
@@ -761,6 +764,7 @@
 				947B8FDB2D10B69D004463EF /* CourseQuizViewController.swift in Sources */,
 				D4070DB22D0F144600E517FE /* NewJobRecommendationViewController.swift in Sources */,
 				D153BE422CF47AC900A81FFC /* SceneDelegate.swift in Sources */,
+				94ADD2F22D20A2E300EA2295 /* OptionViewController.swift in Sources */,
 				EE9713C02D1F018E00D5F90B /* Message.swift in Sources */,
 				D41DE5EA2D1C433500706104 /* CVSelectionApplicationsTableViewController.swift in Sources */,
 				E665567C2D1C305E0010E968 /* viewApplicantsViewController.swift in Sources */,
