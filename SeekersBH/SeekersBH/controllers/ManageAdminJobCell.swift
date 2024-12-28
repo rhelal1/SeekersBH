@@ -58,7 +58,7 @@ class AdminJobCell: UITableViewCell {
                if let error = error {
                    print("Failed to update isHidden: \(error.localizedDescription)")
                } else {
-                   print("isHidden updated successfully.")
+//                   print("isHidden updated successfully.")
 
                    DispatchQueue.main.async {
                        self.isJobHidden = newHiddenState

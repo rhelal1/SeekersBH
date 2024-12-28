@@ -124,6 +124,9 @@
                                         <rect key="frame" x="0.0" y="306.66666666666663" width="210.66666666666666" height="38.333333333333314"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Job Managment (admin)"/>
+                                        <connections>
+                                            <segue destination="AY8-NY-Rz4" kind="show" id="KuN-Mp-F0S"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="02A-5T-C2M">
                                         <rect key="frame" x="0.0" y="345" width="210.66666666666666" height="38.333333333333314"/>
@@ -202,7 +205,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1d2-lI-LOt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1873" y="842"/>
+            <point key="canvasLocation" x="1895" y="820"/>
         </scene>
         <!--ApplicationTrackerViewController-->
         <scene sceneID="5W2-iz-ofT">
@@ -213,6 +216,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4rJ-Ru-fYR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2089" y="896"/>
+        </scene>
+        <!--ManageJobsViewController-->
+        <scene sceneID="5lK-SG-eOp">
+            <objects>
+                <viewControllerPlaceholder storyboardName="zainab" referencedIdentifier="ManageJobsViewController" id="AY8-NY-Rz4" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="8zb-sq-alc"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iZi-9G-9lq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1902" y="858"/>
         </scene>
         <!--ResourceManagementViewController-->
         <scene sceneID="uuU-6F-94V">
