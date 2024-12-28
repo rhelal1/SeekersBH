@@ -6,6 +6,14 @@ class CourseViewController: UIViewController {
     @IBOutlet weak var courseTable: UITableView!
     @IBOutlet weak var categorySegment: UISegmentedControl!
     
+    @IBAction func viewCertificationsButtonTapped(_ sender: Any) {
+        if let CertificationsViewController = storyboard?.instantiateViewController(withIdentifier: "CertificationsViewController") as? CertificationsViewController {
+
+            // Push the detail view controller
+            navigationController?.pushViewController(CertificationsViewController, animated: true)
+        }
+    }
+    
     var courses: [Course] = []
     var filteredCourses: [Course] = [] // Courses filtered by category
     

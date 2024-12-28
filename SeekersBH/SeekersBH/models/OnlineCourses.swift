@@ -47,7 +47,7 @@ struct CourseCertification {
     var courseId: String
     var date: Date
     var userId: String
-    var score: Int // Add score to store the user's achievement
+    var score: Int
 }
 
 struct CVInfo {

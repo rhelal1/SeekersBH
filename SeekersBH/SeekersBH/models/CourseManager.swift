@@ -218,12 +218,12 @@ class CourseManager {
                         return
                     }
                     
-                    // If documents exist, the user already has the certification
-                    if let documents = querySnapshot?.documents, !documents.isEmpty {
-                        completion(.failure(NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "Certification already exists."])))
-                        return
-                    }
-                    
+//                    // If documents exist, the user already has the certification
+//                    if let documents = querySnapshot?.documents, !documents.isEmpty {
+//                        completion(.failure(NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "Certification already exists."])))
+//                        return
+//                    }
+//                    
                     // If no documents exist, add the new certification
                     let certificationData: [String: Any] = [
                         "title": certification.title,
@@ -290,6 +290,54 @@ class CourseManager {
                 completion(error)
             }
         }
+    
+    func fetchCertifications(for userId: String) async throws -> [CourseCertification] {
+        let db = Firestore.firestore()
+
+        do {
+            // Fetch all certifications for the specified user
+            let querySnapshot = try await db.collection("courseCertifications")
+                .whereField("userId", isEqualTo: userId)
+                .getDocuments()
+
+            // Process the documents using a task group
+            return try await withThrowingTaskGroup(of: CourseCertification?.self) { group in
+                for document in querySnapshot.documents {
+                    group.addTask {
+                        let data = document.data()
+
+                        // Safely unwrap values and log errors if data is invalid
+                        guard let title = data["title"] as? String,
+                              let courseId = data["courseId"] as? String,
+                              let timestamp = data["date"] as? Timestamp,
+                              let score = data["score"] as? Int else {
+                            print("Invalid data for document: \(document.documentID), data: \(data)")
+                            return nil // Skip invalid data
+                        }
+
+                        // Convert Firestore timestamp to Date
+                        let date = timestamp.dateValue()
+
+                        // Create and return a valid CourseCertification object
+                        return CourseCertification(title: title, courseId: courseId, date: date, userId: userId, score: score)
+                    }
+                }
+
+                // Collect results, skipping nil values
+                var certifications = [CourseCertification]()
+                for try await certification in group {
+                    if let validCertification = certification {
+                        certifications.append(validCertification)
+                    }
+                }
+                return certifications
+            }
+        } catch {
+            // Handle Firestore errors or any unexpected issues
+            print("Error fetching certifications: \(error.localizedDescription)")
+            throw error
+        }
+    }
     
     
 }
