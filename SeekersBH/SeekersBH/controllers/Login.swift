@@ -27,14 +27,15 @@ class Login: UIViewController {
         // Check if the user exists in Firestore
         checkIfUserExists(username: username, password: password) { success, userID in
             if success, let userID = userID {
-                // Store both username and userID
-                User.loggedInUser = username
-                User.loggedInID = userID
                 
                 DispatchQueue.main.async {
                     // Show success alert and navigate
                     self.showAlert(title: "Success", message: "You logged in successfully!") {
                         // Instantiate the Main storyboard
+                        // Store both username and userID
+                        AccessManager.userID = userID
+//                        print(AccessManager.userID!)
+        //                User.loggedInID = userID
                                             let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
                                             
                                             // Instantiate the initial view controller of the Main storyboard
