@@ -552,6 +552,9 @@
                                                         <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="26"/>
                                                         <color key="baseBackgroundColor" red="0.050980389119999997" green="0.094117648900000003" blue="0.32156863810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="didTapActionButton:" destination="SH1-d8-CQ1" eventType="touchUpInside" id="tND-CG-nZI"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qQb-ZZ-tVL">
                                                     <rect key="frame" x="40" y="32" width="320" height="19.666666666666671"/>
@@ -580,6 +583,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.85098039219999999" green="0.85098039219999999" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
+                                            <outlet property="actionButton" destination="bKJ-Ki-LAZ" id="KQe-fH-Spt"/>
                                             <outlet property="descriptionLabel" destination="CL5-iv-J6S" id="QKv-Km-VZ7"/>
                                             <outlet property="titleLabel" destination="qQb-ZZ-tVL" id="QnQ-0C-YmI"/>
                                         </connections>
@@ -600,6 +604,9 @@
                                     <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="26"/>
                                     <color key="baseBackgroundColor" red="0.050980389119999997" green="0.094117648900000003" blue="0.32156863810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="didTapToggleWebinars:" destination="9iT-Qt-2CK" eventType="touchUpInside" id="aJT-iM-ghN"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hwu-tQ-TdT"/>
@@ -620,6 +627,7 @@
                     <navigationItem key="navigationItem" id="rh3-AA-jQe"/>
                     <connections>
                         <outlet property="tableView" destination="m5b-Td-wpM" id="YYh-5n-H3K"/>
+                        <outlet property="toggleWebinarsButton" destination="CNz-hK-uIB" id="pXD-ru-T1l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nqT-gK-Zwq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
