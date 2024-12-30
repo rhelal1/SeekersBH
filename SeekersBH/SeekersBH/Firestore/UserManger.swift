@@ -105,17 +105,34 @@ class UserManger {
     }
     
     func fetchUserConnections(userID: String, completion: @escaping (Int, Int, Error?) -> Void) {
-        db.collection("userConnections")
+        db.collection("userConnections2")
             .whereField("userID", isEqualTo: userID)
             .getDocuments { (querySnapshot, error) in
                 if let error = error {
                     completion(0, 0, error)
                     return
                 }
-                let data = querySnapshot?.documents.first?.data() ?? [:]
-                let followers = data["followers"] as? [String] ?? []
-                let following = data["following"] as? [String] ?? []
-                completion(followers.count, following.count, nil)
+                
+                guard let document = querySnapshot?.documents.first else {
+                    completion(0, 0, nil)
+                    return
+                }
+                
+                do {
+                    let userRelations = try document.data(as: UserRelations.self)
+                    completion(userRelations.followers.count, userRelations.followings.count, nil)
+                } catch {
+                    completion(0, 0, error)
+                }
             }
     }
+
+
+}
+
+
+struct UserRelations: Codable {
+    let userID: String
+    let followers: [String]
+    let followings: [String]
 }
