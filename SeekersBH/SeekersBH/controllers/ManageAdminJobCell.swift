@@ -22,7 +22,9 @@ class AdminJobCell: UITableViewCell {
     
     @IBOutlet weak var actionButton: UIButton!
     
-//    @IBOutlet weak var datePostedLabel: UILabel!
+
+    @IBOutlet weak var darePostedLabel: UILabel!
+    
     
     @IBOutlet weak var statusLabel: UILabel!
         
@@ -33,11 +35,14 @@ class AdminJobCell: UITableViewCell {
     func setupCell(jobName: String, jobLocation: String, date: Date, status: JobStatus, isHidden: Bool, documentId: String) {
         jobNameLabel.text = jobName
            jobLocationLabel.text = jobLocation
-//           statusLabel.text = status.rawValue
-           statusLabel.textColor = (status == .Open) ? .systemGreen : .systemRed
+        statusLabel.text = (status == .Open) ? "Open" : "Closed"
+        statusLabel.textColor = (status == .Open) ? .systemGreen : .systemRed
            isJobHidden = isHidden
            self.documentId = documentId
-           
+        let dateFormatter = DateFormatter()
+          dateFormatter.dateStyle = .medium 
+          dateFormatter.timeStyle = .none
+          darePostedLabel.text = "Posted on \(dateFormatter.string(from: date))"
            actionButton.setTitle(
                isJobHidden ? "Unhide" : "Hide",
                for: .normal

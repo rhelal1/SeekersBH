@@ -301,43 +301,43 @@
                                     <outlet property="delegate" destination="5go-aV-NfU" id="RlX-l3-mf1"/>
                                 </connections>
                             </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="IRI-69-z0U">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" separatorInsetReference="fromAutomaticInsets" rowHeight="220" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="IRI-69-z0U">
                                 <rect key="frame" x="20" y="158" width="400" height="700"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="adminJobCell" rowHeight="243" id="WKX-Fr-8vs" customClass="AdminJobCell" customModule="SeekersBH" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="400" height="243"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="adminJobCell" id="WKX-Fr-8vs" customClass="AdminJobCell" customModule="SeekersBH" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="55.333332061767578" width="360" height="220"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WKX-Fr-8vs" id="iRg-gD-f1F">
-                                            <rect key="frame" x="0.0" y="0.0" width="400" height="243"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="360" height="220"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Software Engineer - Tech Innovators Inc." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xr5-ME-duX">
-                                                    <rect key="frame" x="30" y="22" width="340" height="20"/>
+                                                    <rect key="frame" x="30" y="22" width="300" height="20"/>
                                                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location: Manama, Bahrain" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="azn-E2-PvC">
-                                                    <rect key="frame" x="30" y="52" width="340" height="20"/>
+                                                    <rect key="frame" x="30" y="52" width="300" height="20"/>
                                                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Employment Type: Full-time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gv6-p6-hBt">
-                                                    <rect key="frame" x="30" y="82" width="340" height="20"/>
+                                                    <rect key="frame" x="30" y="82" width="300" height="20"/>
                                                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Experience: 2+ years" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lFJ-FY-TXv">
-                                                    <rect key="frame" x="30" y="112" width="340" height="20"/>
+                                                    <rect key="frame" x="30" y="112" width="300" height="20"/>
                                                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K6q-Mo-g1T">
-                                                    <rect key="frame" x="30" y="177" width="340" height="44"/>
+                                                    <rect key="frame" x="30" y="154" width="300" height="44"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="filled" title="Hide">
                                                         <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="26"/>
@@ -374,6 +374,7 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <outlet property="actionButton" destination="K6q-Mo-g1T" id="1Tp-lp-EkT"/>
+                                            <outlet property="darePostedLabel" destination="gv6-p6-hBt" id="Iiq-IU-4CV"/>
                                             <outlet property="jobLocationLabel" destination="azn-E2-PvC" id="ijK-77-ew9"/>
                                             <outlet property="jobNameLabel" destination="Xr5-ME-duX" id="nag-CX-Cq5"/>
                                             <outlet property="statusLabel" destination="lFJ-FY-TXv" id="c5S-lq-wdL"/>

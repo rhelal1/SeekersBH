@@ -34,9 +34,6 @@ class ManageJobsViewController: UIViewController, UITableViewDelegate, UITableVi
     private func setupTableView() {
         jobsTable.delegate = self
         jobsTable.dataSource = self
-        jobsTable.separatorStyle = .none
-        jobsTable.rowHeight = 188
-        jobsTable.estimatedRowHeight = 188
     }
     
     private func fetchJobs() {
@@ -103,7 +100,9 @@ class ManageJobsViewController: UIViewController, UITableViewDelegate, UITableVi
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return visibleJobs.count
     }
-    
+
+
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "adminJobCell") as? AdminJobCell else {
             return UITableViewCell()
