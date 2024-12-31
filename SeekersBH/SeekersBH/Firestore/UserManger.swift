@@ -79,11 +79,14 @@ class UserManger {
                 completion([], error)
                 return
             }
+            print(userID)
             for doc in querySnapshot?.documents ?? [] {
-                if let skill = doc["skill1"] as? String, !skill.isEmpty {
-                    skills.append(skill)
-                }
-            }
+                       for i in 1...4 {
+                           if let skill = doc["skill\(i)"] as? String, !skill.isEmpty {
+                               skills.append(skill)
+                           }
+                       }
+                   }
             completion(skills, nil)
         }
     }
@@ -96,10 +99,12 @@ class UserManger {
                 return
             }
             for doc in querySnapshot?.documents ?? [] {
-                if let interest = doc["interest1"] as? String, !interest.isEmpty {
-                    interests.append(interest)
-                }
-            }
+                       for i in 1...4 {
+                           if let interest = doc["interest\(i)"] as? String, !interest.isEmpty {
+                               interests.append(interest)
+                           }
+                       }
+                   }
             completion(interests, nil)
         }
     }

@@ -211,7 +211,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hd7-0l-ZiD">
                                 <rect key="frame" x="0.0" y="364" width="440" height="582"/>
                                 <connections>
-                                    <segue destination="Lzq-Sl-Df4" kind="embed" id="eTJ-Bc-J45"/>
+                                    <segue destination="Lzq-Sl-Df4" kind="embed" identifier="showProfileDetails" id="eTJ-Bc-J45"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -240,10 +240,10 @@
             </objects>
             <point key="canvasLocation" x="3073.636363636364" y="-935.14644351464437"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Profile Table View Table View Controller-->
         <scene sceneID="34f-b8-OOc">
             <objects>
-                <tableViewController id="Lzq-Sl-Df4" sceneMemberID="viewController">
+                <tableViewController id="Lzq-Sl-Df4" customClass="ProfileTableViewTableViewController" customModule="SeekersBH" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="3vr-se-opc">
                         <rect key="frame" x="0.0" y="0.0" width="440" height="582"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -251,11 +251,11 @@
                         <sections>
                             <tableViewSection headerTitle="Interests:" id="fMd-DS-eaU">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="200" id="zRY-Qv-OLi">
-                                        <rect key="frame" x="20" y="55.333332061767578" width="400" height="200"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="150" id="zRY-Qv-OLi">
+                                        <rect key="frame" x="20" y="55.333332061767578" width="400" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zRY-Qv-OLi" id="brP-aC-tvf">
-                                            <rect key="frame" x="0.0" y="0.0" width="400" height="200"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="400" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <color key="backgroundColor" red="0.85098039219999999" green="0.85098039219999999" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
@@ -264,11 +264,11 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="Skills:" id="K2P-xD-thV">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="200" id="qsv-d5-dBy">
-                                        <rect key="frame" x="20" y="311.33333015441895" width="400" height="200"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="150" id="qsv-d5-dBy">
+                                        <rect key="frame" x="20" y="261.33333015441895" width="400" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qsv-d5-dBy" id="C8R-51-Xuj">
-                                            <rect key="frame" x="0.0" y="0.0" width="400" height="200"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="400" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.85098039219999999" green="0.85098039219999999" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -281,10 +281,14 @@
                             <outlet property="delegate" destination="Lzq-Sl-Df4" id="k1R-Zb-DFI"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="intersts" destination="zRY-Qv-OLi" id="Qd9-2n-AKl"/>
+                        <outlet property="skills" destination="qsv-d5-dBy" id="jHn-rb-T15"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XXB-nD-BK9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-653" y="-1516"/>
+            <point key="canvasLocation" x="3957" y="-872"/>
         </scene>
         <!--Manage Jobs View Controller-->
         <scene sceneID="Qu1-SQ-Gtv">
