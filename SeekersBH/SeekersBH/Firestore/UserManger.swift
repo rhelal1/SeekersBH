@@ -132,46 +132,6 @@ class UserManger {
             }
     }
 
-//    func toggleFollowStatus(userID: String, followerID: String, completion: @escaping (Bool, Error?) -> Void) {
-//            let userQuery = db.collection("userConnections2").whereField("userID", isEqualTo: userID)
-//            
-//            userQuery.getDocuments { snapshot, error in
-//                guard let snapshot = snapshot, !snapshot.isEmpty, let document = snapshot.documents.first else {
-//                    completion(false, error ?? NSError(domain: "UserNotFound", code: 404, userInfo: [NSLocalizedDescriptionKey: "User document not found"]))
-//                    return
-//                }
-//                
-//                let userDocRef = self.db.collection("userConnections2").document(document.documentID)
-//                
-//                self.db.runTransaction({ (transaction, errorPointer) -> Any? in
-//                    let userDocument: DocumentSnapshot
-//                    do {
-//                        try userDocument = transaction.getDocument(userDocRef)
-//                    } catch let fetchError as NSError {
-//                        errorPointer?.pointee = fetchError
-//                        return nil
-//                    }
-//                    
-//                    var followers = userDocument.data()?["followers"] as? [String] ?? []
-//                    
-//                    if !followers.contains(followerID) {
-//                        // Add follower
-//                        followers.append(followerID)
-//                    } else {
-//                        // Remove follower
-//                        followers.removeAll { $0 == followerID }
-//                    }
-//                    transaction.updateData(["followers": followers], forDocument: userDocRef)
-//                    return nil
-//                }) { (_, error) in
-//                    if let error = error {
-//                        completion(false, error)
-//                    } else {
-//                        completion(true, nil)
-//                    }
-//                }
-//            }
-//        }
     func toggleFollowStatus(userID: String, followerID: String, completion: @escaping (Bool, Bool, Error?) -> Void) {
         let userQuery = db.collection("userConnections2").whereField("userID", isEqualTo: userID)
         
