@@ -12,7 +12,6 @@ class Login: UIViewController {
     }
     
     @IBAction func LoginMessage(_ sender: Any) {
-        print("hello")
         // Validate username and password fields
         guard let username = usernameTextField.text, !username.isEmpty else {
             showAlert(title: "Error", message: "Username cannot be empty.")
@@ -34,8 +33,8 @@ class Login: UIViewController {
                         // Instantiate the Main storyboard
                         // Store both username and userID
                         AccessManager.userID = userID
-//                        print(AccessManager.userID!)
-        //                User.loggedInID = userID
+                        AccessManager.Role = "NormalUser"
+                      
                                             let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
                                             
                                             // Instantiate the initial view controller of the Main storyboard

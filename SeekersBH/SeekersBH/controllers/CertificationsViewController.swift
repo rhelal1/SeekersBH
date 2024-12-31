@@ -54,15 +54,15 @@ extension CertificationsViewController: UITableViewDataSource, UITableViewDelega
     
     // UITableViewDelegate method
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let selectedCertificate = courseCertification[indexPath.row]
+        let selectedCertificate = courseCertification[indexPath.row]
 
-        // Instantiate the ArticleDetailsViewController
-//        if let articleDetailsVC = storyboard?.instantiateViewController(withIdentifier: "ArticleDetailsViewController") as? ArticleDetailsViewController {
-//            // Pass the selected article to the ArticleDetailsViewController
-//            articleDetailsVC.article = selectedArticle
-//
-//            // Push the detail view controller
-//            navigationController?.pushViewController(articleDetailsVC, animated: true)
-//        }
+         //Instantiate the CertificateManageViewController
+        if let certificateDetailsVC = storyboard?.instantiateViewController(withIdentifier: "CertificateManageViewController") as? CertificateManageViewController {
+            // Pass the selected article to the CertificateManageViewController
+            certificateDetailsVC.certificate = selectedCertificate
+
+            // Push the detail view controller
+            navigationController?.pushViewController(certificateDetailsVC, animated: true)
+        }
     }
 }

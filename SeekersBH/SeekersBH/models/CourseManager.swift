@@ -139,8 +139,6 @@ class CourseManager {
     }
     
     func fetchTheUserCVs(forUserID userID: String) async throws -> [CVInfo] {
-        let db = Firestore.firestore()
-        
         // Reference to the "CV" collection
         let cvCollection = db.collection("CV")
         
@@ -163,7 +161,6 @@ class CourseManager {
     }
     
     func addComment(courseId: String, commentText: String, userId: String, rated: Int, completion: @escaping (Error?) -> Void) {
-        let db = Firestore.firestore()
 
         // Reference to the course document
         let courseDocRef = db.collection("OnlineCourses").document(courseId)
@@ -203,49 +200,55 @@ class CourseManager {
         }
     }
     
+//    func checkExistance (certification: CourseCertification, completion: @escaping (Result<Void, Error>) -> Bool)  {
+//        // Reference to the "courseCertifications" collection
+//        let certificationsRef = db.collection("courseCertifications")
+//        
+//        // Query to check if the user already has a certificate for the course
+//        certificationsRef
+//            .whereField("userId", isEqualTo: certification.userId)
+//            .whereField("courseId", isEqualTo: certification.courseId)
+//            .getDocuments { querySnapshot, error in
+//                if let error = error {
+//                    completion(.failure(error)) // Handle the error
+//                    return
+//                }
+//                
+//        // If documents exist, the user already has the certification
+//                if let documents = querySnapshot?.documents, !documents.isEmpty {
+//                    completion(.failure(NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "Certification already exists."])))
+//                    return
+//                }
+//                
+//            }
+//    }
     
     func addCourseCertification(certification: CourseCertification, completion: @escaping (Result<Void, Error>) -> Void) {
-            // Reference to the "courseCertifications" collection
-            let certificationsRef = db.collection("courseCertifications")
-            
-            // Query to check if the user already has a certificate for the course
-            certificationsRef
-                .whereField("userId", isEqualTo: certification.userId)
-                .whereField("courseId", isEqualTo: certification.courseId)
-                .getDocuments { querySnapshot, error in
+                
+        // If no documents exist, add the new certification
+        let docRef = db.collection("courseCertifications").document() // Create a reference with an auto-generated ID
+
+                let certificationData: [String: Any] = [
+                    "id": docRef.documentID,
+                    "title": certification.title,
+                    "courseId": certification.courseId,
+                    "date": Timestamp(date: certification.date), // Convert Date to Firebase Timestamp
+                    "userId": certification.userId, // Add userId field
+                    "score": certification.score // Add score field
+                ]
+                
+        docRef.setData(certificationData) { error in
                     if let error = error {
                         completion(.failure(error)) // Handle the error
-                        return
+                    } else {
+                        
+                        completion(.success(())) // Successfully added and updated
                     }
                     
-//                    // If documents exist, the user already has the certification
-//                    if let documents = querySnapshot?.documents, !documents.isEmpty {
-//                        completion(.failure(NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "Certification already exists."])))
-//                        return
-//                    }
-//                    
-                    // If no documents exist, add the new certification
-                    let certificationData: [String: Any] = [
-                        "title": certification.title,
-                        "courseId": certification.courseId,
-                        "date": Timestamp(date: certification.date), // Convert Date to Firebase Timestamp
-                        "userId": certification.userId, // Add userId field
-                        "score": certification.score // Add score field
-                    ]
-                    
-                    certificationsRef.addDocument(data: certificationData) { error in
-                        if let error = error {
-                            completion(.failure(error)) // Handle the error
-                        } else {
-                            completion(.success(())) // Successfully added
-                        }
-                    }
-                }
-        }
+            }
+    }
     
     func fetchUsername(userId: String) async throws -> String {
-        let db = Firestore.firestore()
-
         // Reference to the User collection
         let documentSnapshot = try await db.collection("User").document(userId).getDocument()
 
@@ -264,8 +267,6 @@ class CourseManager {
     
     // Function to fetch certifications for a CV based on cvID
         func fetchCertifications(forCVID cvID: String) async throws -> [[String: Any]] {
-            let db = Firestore.firestore()
-            
             // Reference to the CV document in Firestore
             let cvDocumentRef = db.collection("CV").document(cvID)
             
@@ -281,7 +282,6 @@ class CourseManager {
 
         // Function to update certifications in Firestore
         func updateCertifications(forCVID cvID: String, certifications: [[String: Any]], completion: @escaping (Error?) -> Void) {
-            let db = Firestore.firestore()
             let cvDocumentRef = db.collection("CV").document(cvID)
             
             cvDocumentRef.updateData([
@@ -292,8 +292,6 @@ class CourseManager {
         }
     
     func fetchCertifications(for userId: String) async throws -> [CourseCertification] {
-        let db = Firestore.firestore()
-
         do {
             // Fetch all certifications for the specified user
             let querySnapshot = try await db.collection("courseCertifications")
@@ -307,7 +305,8 @@ class CourseManager {
                         let data = document.data()
 
                         // Safely unwrap values and log errors if data is invalid
-                        guard let title = data["title"] as? String,
+                        guard let id = data["id"] as? String,
+                              let title = data["title"] as? String,
                               let courseId = data["courseId"] as? String,
                               let timestamp = data["date"] as? Timestamp,
                               let score = data["score"] as? Int else {
@@ -319,7 +318,7 @@ class CourseManager {
                         let date = timestamp.dateValue()
 
                         // Create and return a valid CourseCertification object
-                        return CourseCertification(title: title, courseId: courseId, date: date, userId: userId, score: score)
+                        return CourseCertification(id: id, title: title, courseId: courseId, date: date, userId: userId, score: score)
                     }
                 }
 
@@ -339,6 +338,14 @@ class CourseManager {
         }
     }
     
+    func removeCertificateFromFirebase(withID id: String, completion: @escaping (Error?) -> Void) {
+            let db = Firestore.firestore()
+            let collectionRef = db.collection("courseCertifications")
+            
+            collectionRef.document(id).delete { error in
+                completion(error) // Pass the error to the completion handler
+            }
+    }
     
 }
 

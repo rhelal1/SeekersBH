@@ -47,12 +47,15 @@ class PassQuizViewController: UIViewController {
 
            // Get the selected CV ID
            let cvID = selectedCV.id
+        
+        let currentDate = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM/dd/yyyy, HH:mm" // Format for date and time
            
            // Prepare the new certification data (replace these with real data)
            let newCertification = [
             "certificationName": course.title, // Certification name
-               "certificationDateObtained": DateFormatter().string(from: Date())
-, // Date the certification was obtained
+               "certificationDateObtained": dateFormatter.string(from: currentDate),
                "certificationIssuingOrganization": "SeekersBH" // Issuing organization
            ]
            
@@ -83,8 +86,23 @@ class PassQuizViewController: UIViewController {
     }
     
     func returnToCourses(){
-        let courseViewController = storyboard?.instantiateViewController(withIdentifier: "CourseViewController") as! CourseViewController
-        let navController = UINavigationController(rootViewController: courseViewController)
+        // Load the root view controller from the "Main" storyboard
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let rootViewController = mainStoryboard.instantiateViewController(withIdentifier: "mainStoryboard")
+
+        // Create a UINavigationController with the root view controller from the "Main" storyboard
+        let navController = UINavigationController(rootViewController: rootViewController)
+
+        // Load the CourseViewController from the current storyboard
+        if let courseViewController = storyboard?.instantiateViewController(withIdentifier: "CourseViewController") as? CourseViewController {
+            // Push the CourseViewController onto the navigation stack
+            navController.pushViewController(courseViewController, animated: false)
+        }
+
+        // Set the presentation style to full screen
+        navController.modalPresentationStyle = .fullScreen
+
+        // Present the navigation controller
         present(navController, animated: true, completion: nil)
     }
     
@@ -103,7 +121,6 @@ class PassQuizViewController: UIViewController {
 
         
         submitComment()
-        
     }
     
 
@@ -157,7 +174,6 @@ class PassQuizViewController: UIViewController {
         @IBAction func starTapped(_ sender: UIButton) {
             // Update the rating based on the button's tag
             currentRating = sender.tag
-            print(currentRating)
             updateStars(rating: currentRating)
         }
     
@@ -175,7 +191,7 @@ class PassQuizViewController: UIViewController {
         updateStars(rating: 0)
         
         let certification = CourseCertification(
-            title: "Python Basics Certification",
+            title: course.title,
             courseId: course.id,              // ID of the course
             date: Date(),                       // Current date
             userId: AccessManager.userID!,
