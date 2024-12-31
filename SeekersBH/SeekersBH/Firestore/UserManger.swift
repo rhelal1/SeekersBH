@@ -109,29 +109,112 @@ class UserManger {
         }
     }
     
-    func fetchUserConnections(userID: String, completion: @escaping (Int, Int, Error?) -> Void) {
+    func fetchUserConnections(userID: String, completion: @escaping ([String], [String], Error?) -> Void) {
         db.collection("userConnections2")
             .whereField("userID", isEqualTo: userID)
             .getDocuments { (querySnapshot, error) in
                 if let error = error {
-                    completion(0, 0, error)
+                    completion([], [], error)
                     return
                 }
                 
                 guard let document = querySnapshot?.documents.first else {
-                    completion(0, 0, nil)
+                    completion([], [], nil)
                     return
                 }
                 
                 do {
                     let userRelations = try document.data(as: UserRelations.self)
-                    completion(userRelations.followers.count, userRelations.followings.count, nil)
+                    completion(userRelations.followers, userRelations.followings, nil)
                 } catch {
-                    completion(0, 0, error)
+                    completion([], [], error)
                 }
             }
     }
 
+//    func toggleFollowStatus(userID: String, followerID: String, completion: @escaping (Bool, Error?) -> Void) {
+//            let userQuery = db.collection("userConnections2").whereField("userID", isEqualTo: userID)
+//            
+//            userQuery.getDocuments { snapshot, error in
+//                guard let snapshot = snapshot, !snapshot.isEmpty, let document = snapshot.documents.first else {
+//                    completion(false, error ?? NSError(domain: "UserNotFound", code: 404, userInfo: [NSLocalizedDescriptionKey: "User document not found"]))
+//                    return
+//                }
+//                
+//                let userDocRef = self.db.collection("userConnections2").document(document.documentID)
+//                
+//                self.db.runTransaction({ (transaction, errorPointer) -> Any? in
+//                    let userDocument: DocumentSnapshot
+//                    do {
+//                        try userDocument = transaction.getDocument(userDocRef)
+//                    } catch let fetchError as NSError {
+//                        errorPointer?.pointee = fetchError
+//                        return nil
+//                    }
+//                    
+//                    var followers = userDocument.data()?["followers"] as? [String] ?? []
+//                    
+//                    if !followers.contains(followerID) {
+//                        // Add follower
+//                        followers.append(followerID)
+//                    } else {
+//                        // Remove follower
+//                        followers.removeAll { $0 == followerID }
+//                    }
+//                    transaction.updateData(["followers": followers], forDocument: userDocRef)
+//                    return nil
+//                }) { (_, error) in
+//                    if let error = error {
+//                        completion(false, error)
+//                    } else {
+//                        completion(true, nil)
+//                    }
+//                }
+//            }
+//        }
+    func toggleFollowStatus(userID: String, followerID: String, completion: @escaping (Bool, Bool, Error?) -> Void) {
+        let userQuery = db.collection("userConnections2").whereField("userID", isEqualTo: userID)
+        
+        userQuery.getDocuments { snapshot, error in
+            guard let snapshot = snapshot, !snapshot.isEmpty, let document = snapshot.documents.first else {
+                completion(false, false, error ?? NSError(domain: "UserNotFound", code: 404, userInfo: [NSLocalizedDescriptionKey: "User document not found"]))
+                return
+            }
+            
+            let userDocRef = self.db.collection("userConnections2").document(document.documentID)
+            
+            self.db.runTransaction({ (transaction, errorPointer) -> Any? in
+                let userDocument: DocumentSnapshot
+                do {
+                    try userDocument = transaction.getDocument(userDocRef)
+                } catch let fetchError as NSError {
+                    errorPointer?.pointee = fetchError
+                    return nil
+                }
+                
+                var followers = userDocument.data()?["followers"] as? [String] ?? []
+                var isFollowing = false
+                
+                if followers.contains(followerID) {
+                    // Remove follower
+                    followers.removeAll { $0 == followerID }
+                    isFollowing = false
+                } else {
+                    // Add follower
+                    followers.append(followerID)
+                    isFollowing = true
+                }
+                transaction.updateData(["followers": followers], forDocument: userDocRef)
+                return isFollowing
+            }) { (isFollowing, error) in
+                if let error = error {
+                    completion(false, false, error)
+                } else if let isFollowing = isFollowing as? Bool {
+                    completion(true, isFollowing, nil)
+                }
+            }
+        }
+    }
 
 }
 

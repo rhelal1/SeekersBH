@@ -134,7 +134,25 @@
                                 <rect key="frame" x="20" y="76" width="400" height="280"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u7P-l7-4bN">
-                                        <rect key="frame" x="20" y="20" width="360" height="9"/>
+                                        <rect key="frame" x="20" y="20" width="360" height="19.666666666666671"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="email.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQI-Nr-Lln">
+                                        <rect key="frame" x="20" y="59.66666666666665" width="360" height="19.666666666666664"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="followers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="acV-ib-Skh">
+                                        <rect key="frame" x="20" y="99.333333333333343" width="360" height="19.666666666666671"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" text="following" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V1L-en-dm9">
+                                        <rect key="frame" x="20" y="129" width="360" height="19.666666666666657"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -150,8 +168,11 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Follow">
                                                     <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="26"/>
-                                                    <color key="baseBackgroundColor" red="0.050980389119999997" green="0.094117648900000003" blue="0.32156863810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="baseBackgroundColor" red="0.050980392159999999" green="0.094117648900000003" blue="0.32156863810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="clickFollow:" destination="Vd3-0g-WxM" eventType="touchUpInside" id="1dE-NW-bWn"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HHS-d2-hpk">
                                                 <rect key="frame" x="0.0" y="49" width="360" height="44"/>
@@ -169,40 +190,22 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" text="following" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V1L-en-dm9">
-                                        <rect key="frame" x="20" y="128.33333333333334" width="360" height="19.666666666666657"/>
-                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="email.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQI-Nr-Lln">
-                                        <rect key="frame" x="20" y="49" width="360" height="19.666666666666671"/>
-                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="followers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="acV-ib-Skh">
-                                        <rect key="frame" x="20" y="88.666666666666657" width="360" height="19.666666666666671"/>
-                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.85098039219999999" green="0.85098039219999999" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="gQI-Nr-Lln" secondAttribute="trailing" constant="20" id="1O3-Cq-zsQ"/>
                                     <constraint firstItem="u7P-l7-4bN" firstAttribute="leading" secondItem="M7H-Oh-xgI" secondAttribute="leading" constant="20" id="4SD-Rc-Ce4"/>
                                     <constraint firstItem="acV-ib-Skh" firstAttribute="leading" secondItem="M7H-Oh-xgI" secondAttribute="leading" constant="20" id="Cw0-fJ-ktc"/>
-                                    <constraint firstItem="Jvl-hV-zhT" firstAttribute="top" secondItem="V1L-en-dm9" secondAttribute="bottom" constant="20" id="Pkg-WU-lZd"/>
                                     <constraint firstAttribute="bottom" secondItem="Jvl-hV-zhT" secondAttribute="bottom" constant="19" id="RAR-dr-AfO"/>
                                     <constraint firstAttribute="trailing" secondItem="acV-ib-Skh" secondAttribute="trailing" constant="20" id="Vya-ks-b4F"/>
                                     <constraint firstItem="Jvl-hV-zhT" firstAttribute="leading" secondItem="M7H-Oh-xgI" secondAttribute="leading" constant="20" id="WBU-66-dff"/>
                                     <constraint firstItem="u7P-l7-4bN" firstAttribute="top" secondItem="M7H-Oh-xgI" secondAttribute="top" constant="20" id="XjT-5w-k0D"/>
+                                    <constraint firstAttribute="height" constant="280" id="dvv-U9-6gs"/>
                                     <constraint firstAttribute="trailing" secondItem="V1L-en-dm9" secondAttribute="trailing" constant="20" id="kx0-wa-A1Y"/>
                                     <constraint firstItem="acV-ib-Skh" firstAttribute="top" secondItem="gQI-Nr-Lln" secondAttribute="bottom" constant="20" id="miY-nR-Ynz"/>
                                     <constraint firstAttribute="trailing" secondItem="Jvl-hV-zhT" secondAttribute="trailing" constant="20" id="qw6-3i-2AS"/>
                                     <constraint firstAttribute="trailing" secondItem="u7P-l7-4bN" secondAttribute="trailing" constant="20" id="tLs-L5-MtD"/>
-                                    <constraint firstItem="V1L-en-dm9" firstAttribute="top" secondItem="acV-ib-Skh" secondAttribute="bottom" constant="20" id="uD2-AA-9oP"/>
+                                    <constraint firstItem="V1L-en-dm9" firstAttribute="top" secondItem="acV-ib-Skh" secondAttribute="bottom" constant="10" id="uD2-AA-9oP"/>
                                     <constraint firstItem="V1L-en-dm9" firstAttribute="leading" secondItem="M7H-Oh-xgI" secondAttribute="leading" constant="20" id="wsA-rd-4ja"/>
                                     <constraint firstItem="gQI-Nr-Lln" firstAttribute="leading" secondItem="M7H-Oh-xgI" secondAttribute="leading" constant="20" id="x4l-c3-DHQ"/>
                                     <constraint firstItem="gQI-Nr-Lln" firstAttribute="top" secondItem="u7P-l7-4bN" secondAttribute="bottom" constant="20" id="xTL-CI-175"/>
@@ -224,13 +227,13 @@
                             <constraint firstItem="hd7-0l-ZiD" firstAttribute="trailing" secondItem="IXG-cv-AUE" secondAttribute="trailing" id="Fds-re-2Yk"/>
                             <constraint firstItem="M7H-Oh-xgI" firstAttribute="leading" secondItem="IXG-cv-AUE" secondAttribute="leading" constant="20" id="S6w-Yr-lDY"/>
                             <constraint firstItem="hd7-0l-ZiD" firstAttribute="bottom" secondItem="IXG-cv-AUE" secondAttribute="bottom" id="afr-xI-7S3"/>
-                            <constraint firstItem="hd7-0l-ZiD" firstAttribute="top" secondItem="HhW-aa-k7G" secondAttribute="top" constant="364" id="hVG-sw-sh7"/>
                             <constraint firstItem="M7H-Oh-xgI" firstAttribute="top" secondItem="IXG-cv-AUE" secondAttribute="top" constant="20" id="ltX-nm-XVm"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ANE-1q-hof"/>
                     <connections>
                         <outlet property="emailLabel" destination="gQI-Nr-Lln" id="Bvv-eH-OIi"/>
+                        <outlet property="follow" destination="JdH-Aq-6nF" id="ub0-US-XZV"/>
                         <outlet property="followersLabel" destination="acV-ib-Skh" id="uDi-g5-ihW"/>
                         <outlet property="followingLabel" destination="V1L-en-dm9" id="JS0-cb-cPq"/>
                         <outlet property="usernameLabel" destination="u7P-l7-4bN" id="wjK-GJ-f5R"/>
