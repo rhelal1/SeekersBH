@@ -33,6 +33,7 @@ class Login: UIViewController {
                         // Instantiate the Main storyboard
                         // Store both username and userID
                         //AccessManager.userID = userID
+                      
 //                        print(AccessManager.userID!)
         //                User.loggedInID = userID
                                             let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
