@@ -297,8 +297,9 @@ class CourseManager {
         do {
             // Fetch all certifications for the specified user
             let querySnapshot = try await db.collection("courseCertifications")
-                .whereField("userId", isEqualTo: userId)
+                .whereField("userId", isEqualTo: "GXO7LpU0O3SUi6a22e4N")
                 .getDocuments()
+            print(querySnapshot.count)
 
             // Process the documents using a task group
             return try await withThrowingTaskGroup(of: CourseCertification?.self) { group in
