@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -48,177 +49,187 @@
             </objects>
             <point key="canvasLocation" x="1714" y="134"/>
         </scene>
-        <!--Options-->
+        <!--Option View Controller-->
         <scene sceneID="Y7z-3O-eFg">
             <objects>
-                <viewController id="KrW-qs-F0k" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OptionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KrW-qs-F0k" customClass="OptionViewController" customModule="SeekersBH" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jpJ-6x-5hL">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Jlk-I7-Emx">
-                                <rect key="frame" x="91.333333333333329" y="215.33333333333334" width="210.66666666666669" height="421.66666666666663"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vDs-qZ-4iW">
+                                <rect key="frame" x="137.66666666666663" y="103" width="255.33333333333337" height="666"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hX4-AI-RU9">
-                                        <rect key="frame" x="0.0" y="0.0" width="210.66666666666666" height="38.333333333333336"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Growth Hub"/>
-                                        <connections>
-                                            <segue destination="69e-JO-d4P" kind="presentation" modalPresentationStyle="fullScreen" id="r8m-TB-gYu"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LZw-Yg-SgM">
-                                        <rect key="frame" x="0.0" y="38.333333333333314" width="210.66666666666666" height="38.333333333333343"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Online Courses"/>
-                                        <connections>
-                                            <segue destination="Fae-Wc-3VP" kind="show" id="pN7-Ke-0n6"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2hL-87-vef">
-                                        <rect key="frame" x="0.0" y="76.666666666666657" width="210.66666666666666" height="38.333333333333343"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Settings"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p0j-Qt-Au7">
-                                        <rect key="frame" x="0.0" y="114.99999999999996" width="210.66666666666666" height="38.333333333333329"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Create CV"/>
-                                        <connections>
-                                            <segue destination="IyQ-7w-sgS" kind="show" id="xBE-vd-L82"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DuD-0y-rL2">
-                                        <rect key="frame" x="0.0" y="153.33333333333334" width="210.66666666666666" height="38.333333333333343"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Created CV"/>
-                                        <connections>
-                                            <segue destination="q8O-ZQ-Ppk" kind="show" id="l32-U9-g12"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BKj-RL-Y5p">
-                                        <rect key="frame" x="0.0" y="191.66666666666666" width="210.66666666666666" height="38.333333333333343"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Job Application Tracker"/>
-                                        <connections>
-                                            <segue destination="pcB-je-mff" kind="show" id="vfD-bq-9dE"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jcm-6i-blT">
-                                        <rect key="frame" x="0.0" y="229.99999999999997" width="210.66666666666666" height="38.333333333333343"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="User Managment"/>
-                                        <connections>
-                                            <segue destination="NAg-k4-8eU" kind="show" id="RL0-Fz-XL4"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jzp-1i-QCl">
-                                        <rect key="frame" x="0.0" y="268.33333333333337" width="210.66666666666666" height="38.333333333333314"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Resource Managment"/>
-                                        <connections>
-                                            <segue destination="wZP-Xc-OZe" kind="show" id="kSo-QG-Up4"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t8x-IC-wwo">
-                                        <rect key="frame" x="0.0" y="306.66666666666663" width="210.66666666666666" height="38.333333333333314"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Job Managment (admin)"/>
-                                        <connections>
-                                            <segue destination="AY8-NY-Rz4" kind="show" id="KuN-Mp-F0S"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="02A-5T-C2M">
-                                        <rect key="frame" x="0.0" y="345" width="210.66666666666666" height="38.333333333333314"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Job Managment"/>
-                                        <connections>
-                                            <segue destination="j1M-da-Cyt" kind="show" id="Plt-ZH-nQM"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vkl-FY-yzJ">
-                                        <rect key="frame" x="0.0" y="383.33333333333326" width="210.66666666666666" height="38.333333333333314"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Settings"/>
-                                        <connections>
-                                            <segue destination="BpT-Cq-psu" kind="show" id="AiE-b9-Or0"/>
-                                        </connections>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Jlk-I7-Emx">
+                                        <rect key="frame" x="0.0" y="158" width="246.66666666666666" height="350"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hX4-AI-RU9">
+                                                <rect key="frame" x="0.0" y="0.0" width="246.66666666666666" height="35"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
+                                                <state key="normal" title="Button">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="Growth Hub">
+                                                            <attributes>
+                                                                <font key="NSFont" size="18" name="HelveticaNeue-Bold"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <imageReference key="image" image="arrow.right" catalog="system" symbolScale="large" variableValue="1"/>
+                                                </state>
+                                                <buttonConfiguration key="configuration" style="plain" title="Growth Hub " imagePadding="10" titleAlignment="leading">
+                                                    <imageReference key="image" image="arrow.right" catalog="system" symbolScale="large" variableValue="1"/>
+                                                    <fontDescription key="titleFontDescription" name="Helvetica-BoldOblique" family="Helvetica" pointSize="18"/>
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="growthHubTapButton:" destination="KrW-qs-F0k" eventType="touchUpInside" id="ouI-2R-hO8"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LZw-Yg-SgM">
+                                                <rect key="frame" x="0.0" y="35" width="246.66666666666666" height="35"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Online Courses" imagePadding="10">
+                                                    <imageReference key="image" image="arrow.right" catalog="system" symbolScale="large"/>
+                                                    <fontDescription key="titleFontDescription" name="Helvetica-BoldOblique" family="Helvetica" pointSize="18"/>
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="onlineCoursesTapButton:" destination="KrW-qs-F0k" eventType="touchUpInside" id="Lut-mS-nwu"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p0j-Qt-Au7">
+                                                <rect key="frame" x="0.0" y="70" width="246.66666666666666" height="35"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Create CV" imagePadding="10">
+                                                    <imageReference key="image" image="arrow.right" catalog="system" symbolScale="large"/>
+                                                    <fontDescription key="titleFontDescription" name="Helvetica-BoldOblique" family="Helvetica" pointSize="18"/>
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="createCVTapButton:" destination="KrW-qs-F0k" eventType="touchUpInside" id="hqf-7p-CXD"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DuD-0y-rL2">
+                                                <rect key="frame" x="0.0" y="105" width="246.66666666666666" height="35"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Created CV" imagePadding="10">
+                                                    <imageReference key="image" image="arrow.right" catalog="system" symbolScale="large"/>
+                                                    <fontDescription key="titleFontDescription" name="Helvetica-BoldOblique" family="Helvetica" pointSize="18"/>
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="createdCVButtonTapped:" destination="KrW-qs-F0k" eventType="touchUpInside" id="ZKl-0b-3MB"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BKj-RL-Y5p">
+                                                <rect key="frame" x="0.0" y="140" width="246.66666666666666" height="35"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Application Tracker" imagePadding="10">
+                                                    <imageReference key="image" image="arrow.right" catalog="system" symbolScale="large"/>
+                                                    <fontDescription key="titleFontDescription" name="Helvetica-BoldOblique" family="Helvetica" pointSize="18"/>
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="jobApplicationTrackerbuttonTapped:" destination="KrW-qs-F0k" eventType="touchUpInside" id="bDW-kf-qjA"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jcm-6i-blT">
+                                                <rect key="frame" x="0.0" y="175" width="246.66666666666666" height="35"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="User Managment" imagePadding="10">
+                                                    <imageReference key="image" image="arrow.right" catalog="system" symbolScale="large"/>
+                                                    <fontDescription key="titleFontDescription" name="Helvetica-BoldOblique" family="Helvetica" pointSize="18"/>
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <segue destination="NAg-k4-8eU" kind="show" id="RL0-Fz-XL4"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jzp-1i-QCl">
+                                                <rect key="frame" x="0.0" y="210" width="246.66666666666666" height="35"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Resource Managment" imagePadding="10">
+                                                    <imageReference key="image" image="arrow.right" catalog="system" symbolScale="large"/>
+                                                    <fontDescription key="titleFontDescription" name="Helvetica-BoldOblique" family="Helvetica" pointSize="18"/>
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <segue destination="wZP-Xc-OZe" kind="show" id="kSo-QG-Up4"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t8x-IC-wwo">
+                                                <rect key="frame" x="0.0" y="245" width="246.66666666666666" height="35"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Job Managment" imagePadding="10">
+                                                    <imageReference key="image" image="arrow.right" catalog="system" symbolScale="large"/>
+                                                    <fontDescription key="titleFontDescription" name="Helvetica-BoldOblique" family="Helvetica" pointSize="18"/>
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <segue destination="AY8-NY-Rz4" kind="show" id="KuN-Mp-F0S"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="02A-5T-C2M">
+                                                <rect key="frame" x="0.0" y="280" width="246.66666666666666" height="35"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Job Managment" imagePadding="10">
+                                                    <imageReference key="image" image="arrow.right" catalog="system" symbolScale="large"/>
+                                                    <fontDescription key="titleFontDescription" name="Helvetica-BoldOblique" family="Helvetica" pointSize="18"/>
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="JobManagmentButtonTapped:" destination="KrW-qs-F0k" eventType="touchUpInside" id="ml2-21-rAd"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vkl-FY-yzJ">
+                                                <rect key="frame" x="0.0" y="315" width="246.66666666666666" height="35"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Settings" imagePadding="10">
+                                                    <imageReference key="image" image="arrow.right" catalog="system" symbolScale="large"/>
+                                                    <fontDescription key="titleFontDescription" name="Helvetica-BoldOblique" family="Helvetica" pointSize="18"/>
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="settingButtonTapped:" destination="KrW-qs-F0k" eventType="touchUpInside" id="ISr-oa-Pfd"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
-                            </stackView>
+                                <color key="backgroundColor" red="0.050980389119999997" green="0.094117648900000003" blue="0.32156863810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="Jlk-I7-Emx" firstAttribute="centerY" secondItem="vDs-qZ-4iW" secondAttribute="centerY" id="F0N-Tq-5f1"/>
+                                    <constraint firstItem="Jlk-I7-Emx" firstAttribute="leading" secondItem="vDs-qZ-4iW" secondAttribute="leading" id="IwI-kk-WQi"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rPS-Dp-WoI"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
-                            <constraint firstItem="Jlk-I7-Emx" firstAttribute="centerY" secondItem="jpJ-6x-5hL" secondAttribute="centerY" id="8LE-qt-ens"/>
-                            <constraint firstItem="Jlk-I7-Emx" firstAttribute="centerX" secondItem="jpJ-6x-5hL" secondAttribute="centerX" id="odL-1c-inu"/>
+                            <constraint firstItem="vDs-qZ-4iW" firstAttribute="top" secondItem="rPS-Dp-WoI" secondAttribute="top" id="IYy-cX-Dx9"/>
+                            <constraint firstItem="rPS-Dp-WoI" firstAttribute="bottom" secondItem="vDs-qZ-4iW" secondAttribute="bottom" id="O4L-kq-tfy"/>
+                            <constraint firstItem="vDs-qZ-4iW" firstAttribute="width" secondItem="jpJ-6x-5hL" secondAttribute="width" multiplier="0.65" id="T8R-tY-jUH"/>
+                            <constraint firstItem="rPS-Dp-WoI" firstAttribute="trailing" secondItem="vDs-qZ-4iW" secondAttribute="trailing" id="euI-dq-S7w"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Options" image="ellipsis.rectangle" catalog="system" id="4oS-EM-nOE"/>
+                    <navigationItem key="navigationItem" id="G2S-i5-bcK"/>
+                    <connections>
+                        <outlet property="AdminJobManagmentButton" destination="t8x-IC-wwo" id="KK6-sg-sxU"/>
+                        <outlet property="CreateCVButton" destination="p0j-Qt-Au7" id="0BC-Cp-Spz"/>
+                        <outlet property="CreatedCVButton" destination="DuD-0y-rL2" id="33N-WC-bFX"/>
+                        <outlet property="JobApplicationTrackerButton" destination="BKj-RL-Y5p" id="ciY-i1-BWP"/>
+                        <outlet property="JobManagmentButton" destination="02A-5T-C2M" id="pwI-QK-xkz"/>
+                        <outlet property="ResourceManagemntButton" destination="Jzp-1i-QCl" id="5Vq-9E-3tS"/>
+                        <outlet property="UserManagmentButton" destination="Jcm-6i-blT" id="fPf-R5-wwg"/>
+                        <outlet property="growthHubButton" destination="hX4-AI-RU9" id="UlN-1m-b72"/>
+                        <outlet property="onlineCoursesButton" destination="LZw-Yg-SgM" id="bWA-37-5fm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FI0-tk-P6x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1132" y="842"/>
-        </scene>
-        <!--GrowthHubViewController-->
-        <scene sceneID="L5R-8W-NK4">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="optionID" storyboardName="ruqaya" referencedIdentifier="GrowthHubViewController" id="69e-JO-d4P" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="Y6O-cG-7Vf"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="q24-Nw-lM0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1900" y="675"/>
-        </scene>
-        <!--OnlineCoursesViewController-->
-        <scene sceneID="Osj-Wq-JZb">
-            <objects>
-                <viewControllerPlaceholder storyboardName="ruqaya" referencedIdentifier="OnlineCoursesViewController" id="Fae-Wc-3VP" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="U7t-h8-unI"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="EBH-BT-6Qa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1915" y="709"/>
-        </scene>
-        <!--CreateNewCV-->
-        <scene sceneID="dxK-FU-g7q">
-            <objects>
-                <viewControllerPlaceholder storyboardName="marwa" referencedIdentifier="CreateNewCV" id="IyQ-7w-sgS" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="ZTg-9N-b5S"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Xul-iF-N6g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1865" y="737"/>
-        </scene>
-        <!--JobManagment-->
-        <scene sceneID="Wd8-Sy-mr3">
-            <objects>
-                <viewControllerPlaceholder storyboardName="qasim" referencedIdentifier="JobManagment" id="j1M-da-Cyt" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="RBc-T1-WqT"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KtN-BH-giR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1872" y="777"/>
-        </scene>
-        <!--AllCVViewController-->
-        <scene sceneID="AkY-TQ-zOc">
-            <objects>
-                <viewControllerPlaceholder storyboardName="marwa" referencedIdentifier="AllCVViewController" id="q8O-ZQ-Ppk" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="dQf-Rc-tgG"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1d2-lI-LOt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1895" y="820"/>
-        </scene>
-        <!--ApplicationTrackerViewController-->
-        <scene sceneID="5W2-iz-ofT">
-            <objects>
-                <viewControllerPlaceholder storyboardName="marwa" referencedIdentifier="ApplicationTrackerViewController" id="pcB-je-mff" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="giN-uI-kVy"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4rJ-Ru-fYR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2089" y="896"/>
+            <point key="canvasLocation" x="2564" y="875"/>
         </scene>
         <!--ManageJobsViewController-->
         <scene sceneID="5lK-SG-eOp">
@@ -228,7 +239,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iZi-9G-9lq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1902" y="858"/>
+            <point key="canvasLocation" x="3744.2748091603053" y="841.54929577464793"/>
         </scene>
         <!--ResourceManagementViewController-->
         <scene sceneID="uuU-6F-94V">
@@ -238,7 +249,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m58-DT-Zvh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1921" y="947"/>
+            <point key="canvasLocation" x="3788.5496183206105" y="808.45070422535218"/>
         </scene>
         <!--ManageUsers-->
         <scene sceneID="SxK-bS-XUn">
@@ -248,17 +259,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iIg-lf-p48" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1940" y="1048"/>
-        </scene>
-        <!--Settings-->
-        <scene sceneID="a02-HZ-2gf">
-            <objects>
-                <viewControllerPlaceholder storyboardName="reem" referencedIdentifier="Settings" id="BpT-Cq-psu" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="RXN-tN-76w"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eYP-xV-szZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1863" y="1149"/>
+            <point key="canvasLocation" x="3678.6259541984732" y="774.64788732394368"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="65P-2L-DON">
@@ -273,29 +274,13 @@
                     <connections>
                         <segue destination="H7w-DE-aqX" kind="relationship" relationship="viewControllers" id="AiZ-ou-0o4"/>
                         <segue destination="t0M-pF-sOd" kind="relationship" relationship="viewControllers" id="JiT-9A-Xg4"/>
-                        <segue destination="104-gw-NJn" kind="relationship" relationship="viewControllers" id="2n8-Gg-SM7"/>
-                        <segue destination="KrW-qs-F0k" kind="relationship" relationship="viewControllers" id="Fru-at-3hy"/>
+                        <segue destination="bWQ-Fa-WHt" kind="relationship" relationship="viewControllers" id="2n8-Gg-SM7"/>
+                        <segue destination="a19-4e-mMj" kind="relationship" relationship="viewControllers" id="Fru-at-3hy"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hJ2-ZO-wBs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="238.93129770992365" y="91.549295774647888"/>
-        </scene>
-        <!--Profile-->
-        <scene sceneID="cNr-5T-c3E">
-            <objects>
-                <viewController id="104-gw-NJn" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="U6f-pL-s6g">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="nDn-z1-kWL"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Profile" image="person.crop.circle" catalog="system" id="XZw-bP-W4N"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1X0-Mm-ucb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-592" y="842"/>
         </scene>
         <!--Search-->
         <scene sceneID="UCL-Sh-WbH">
@@ -475,10 +460,59 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qIF-uf-OY4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="239" y="842"/>
+            <point key="canvasLocation" x="1027" y="876"/>
+        </scene>
+        <!--Options-->
+        <scene sceneID="8Gn-gV-Eqh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="a19-4e-mMj" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Options" image="ellipsis.rectangle" catalog="system" id="4oS-EM-nOE"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UT6-iN-WpC">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="KrW-qs-F0k" kind="relationship" relationship="rootViewController" id="PV9-L7-tjE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bpk-g6-Rh0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1822" y="752"/>
+        </scene>
+        <!--UserProfile-->
+        <scene sceneID="zZQ-BN-fn4">
+            <objects>
+                <viewControllerPlaceholder storyboardName="reem" referencedIdentifier="UserProfile" id="RQw-xx-144" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Clx-sm-v5C"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mUh-ff-hGg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="239" y="949"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="u9q-jx-ak6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bWQ-Fa-WHt" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.crop.circle" catalog="system" id="XZw-bP-W4N"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OAl-7s-eVJ">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="RQw-xx-144" kind="show" identifier="profileSegue" id="Lmq-VW-tKv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="567-gM-nhA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-593.12977099236639" y="841.54929577464793"/>
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.right" catalog="system" width="128" height="95"/>
         <image name="ellipsis.rectangle" catalog="system" width="128" height="79"/>
         <image name="house" catalog="system" width="128" height="104"/>
         <image name="line.3.horizontal.decrease.circle" catalog="system" width="128" height="123"/>
@@ -488,16 +522,19 @@
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="secondaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="separatorColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGroupedBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

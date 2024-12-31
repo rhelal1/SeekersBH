@@ -709,7 +709,7 @@ Social Impact</string>
         <!--User Profile-->
         <scene sceneID="aUw-qT-8Tg">
             <objects>
-                <viewController id="nEb-rq-2H7" customClass="UserProfile" customModule="SeekersBH" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UserProfile" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nEb-rq-2H7" customClass="UserProfile" customModule="SeekersBH" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="usV-34-UUg">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2395,7 +2395,7 @@ Social Impact</string>
         <segue reference="EFl-Yx-Kfh"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="Image" width="1080" height="1080"/>
+        <image name="Image" width="1024" height="1024"/>
         <image name="person.circle" catalog="system" width="128" height="123"/>
         <image name="person.crop.circle.fill" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">

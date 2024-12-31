@@ -43,11 +43,19 @@ enum CourseCategory: String, Codable {
 }
 
 struct CourseCertification {
+    var id : String = ""
     var title: String
     var courseId: String
     var date: Date
     var userId: String
     var score: Int
+    
+    func extractDateTimeString() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM/dd/yyyy, HH:mm"
+
+        return dateFormatter.string(from: date)
+    }
 }
 
 struct CVInfo {

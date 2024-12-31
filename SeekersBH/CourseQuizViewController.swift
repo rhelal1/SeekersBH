@@ -32,22 +32,20 @@ class CourseQuizViewController: UIViewController, AnswerSelectionDelegate {
                    question.selectedAnswer = -1
                }
                
-               // Determine if the user passed
-        let passingScore = Int(Double(totalPoints) * 0.6) // 60% is the passing threshold
+        // Determine if the user passed
+        let passingScore = Int(Double(score) / Double(totalPoints) * 100)
                
-//        let passingScore = 0
-        if score >= passingScore {
+        if passingScore >= 60 {
         
                 // Navigate to PassQuizViewController
                 if let passVC = storyboard?.instantiateViewController(withIdentifier: "PassQuizViewController") as? PassQuizViewController {
                     
-                    passVC.score = score
+                    passVC.score = passingScore
                     passVC.course = course
                     
                     passVC.modalPresentationStyle = .fullScreen // Prevent dismissal gesture
                     present(passVC, animated: true, completion: nil)
                     
-//                    present(passVC, animated: true, completion: nil)
                 }
             } else {
                 // Navigate to FailQuizViewController

@@ -21,9 +21,25 @@ class FailQuizViewController: UIViewController {
     }
     
     @IBAction func ReturnButtonTapped(_ sender: Any) {
-        let courseViewController = storyboard?.instantiateViewController(withIdentifier: "CourseViewController") as! CourseViewController
-        let navController = UINavigationController(rootViewController: courseViewController)
+        // Load the root view controller from the "Main" storyboard
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let rootViewController = mainStoryboard.instantiateViewController(withIdentifier: "mainStoryboard")
+
+        // Create a UINavigationController with the root view controller from the "Main" storyboard
+        let navController = UINavigationController(rootViewController: rootViewController)
+
+        // Load the CourseViewController from the current storyboard
+        if let courseViewController = storyboard?.instantiateViewController(withIdentifier: "CourseViewController") as? CourseViewController {
+            // Push the CourseViewController onto the navigation stack
+            navController.pushViewController(courseViewController, animated: false)
+        }
+
+        // Set the presentation style to full screen
+        navController.modalPresentationStyle = .fullScreen
+
+        // Present the navigation controller
         present(navController, animated: true, completion: nil)
+
     }
     
     override func viewDidLoad() {
