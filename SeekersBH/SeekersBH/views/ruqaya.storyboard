@@ -128,10 +128,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="lF3-wW-6FB">
-                                <rect key="frame" x="22" y="116" width="396" height="757"/>
+                                <rect key="frame" x="22" y="106" width="396" height="767"/>
                                 <subviews>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="eLQ-i8-1mr">
-                                        <rect key="frame" x="0.0" y="0.0" width="396" height="72"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="396" height="32"/>
                                         <color key="backgroundColor" red="0.85098040100000005" green="0.85098040100000005" blue="0.85098040100000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <segments>
                                             <segment title="All"/>
@@ -146,7 +146,7 @@
                                         </connections>
                                     </segmentedControl>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="sJ1-U1-7hp">
-                                        <rect key="frame" x="0.0" y="83" width="396" height="623.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="43" width="396" height="658.33333333333337"/>
                                         <color key="sectionIndexBackgroundColor" red="0.85098040100000005" green="0.85098040100000005" blue="0.85098040100000005" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
                                         <prototypes>
                                             <tableViewCell opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="6" indentationWidth="0.0" reuseIdentifier="courseCell" rowHeight="400" id="8R2-aD-I8T" customClass="CourseTableViewCell" customModule="SeekersBH" customModuleProvider="target">
@@ -237,14 +237,23 @@
                                         </prototypes>
                                     </tableView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KyY-FB-CCK">
-                                        <rect key="frame" x="0.0" y="718.66666666666663" width="396" height="38.333333333333371"/>
+                                        <rect key="frame" x="0.0" y="713.33333333333337" width="396" height="53.666666666666629"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Obtained Certifications" cornerStyle="dynamic">
+                                            <backgroundConfiguration key="background" cornerRadius="15">
+                                                <color key="backgroundColor" red="0.85098040100000005" green="0.85098040100000005" blue="0.85098040100000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </backgroundConfiguration>
+                                            <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
+                                            <color key="baseForegroundColor" red="0.050980389119999997" green="0.094117648900000003" blue="0.32156863810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
                                         <connections>
                                             <segue destination="UJ5-PW-fpw" kind="show" id="ZGp-Tt-Tbq"/>
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="KyY-FB-CCK" firstAttribute="height" secondItem="lF3-wW-6FB" secondAttribute="height" multiplier="0.07" id="qKE-QH-5qY"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="RnC-Jm-T3B"/>
@@ -252,7 +261,7 @@
                         <constraints>
                             <constraint firstItem="lF3-wW-6FB" firstAttribute="width" secondItem="njT-0J-3DP" secondAttribute="width" multiplier="0.9" id="6Lr-rp-ftj"/>
                             <constraint firstItem="RnC-Jm-T3B" firstAttribute="bottom" secondItem="lF3-wW-6FB" secondAttribute="bottom" id="Gc7-l0-jE4"/>
-                            <constraint firstItem="lF3-wW-6FB" firstAttribute="top" secondItem="RnC-Jm-T3B" secondAttribute="top" constant="10" id="YOw-UE-mc1"/>
+                            <constraint firstItem="lF3-wW-6FB" firstAttribute="top" secondItem="RnC-Jm-T3B" secondAttribute="top" id="YOw-UE-mc1"/>
                             <constraint firstItem="lF3-wW-6FB" firstAttribute="centerX" secondItem="njT-0J-3DP" secondAttribute="centerX" id="itC-z0-QHe"/>
                         </constraints>
                     </view>
@@ -2557,6 +2566,7 @@
                                                         <color key="backgroundColor" red="0.050980389119999997" green="0.094117648900000003" blue="0.32156863810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </backgroundConfiguration>
                                                     <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="addToCVButton:" destination="aT6-m5-s60" eventType="touchUpInside" id="ziu-JT-Fok"/>
@@ -2566,10 +2576,12 @@
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qaP-of-Dla">
                                         <rect key="frame" x="0.0" y="610" width="308" height="59.333333333333371"/>
-                                        <color key="backgroundColor" name="size_red"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Remove Certificate" cornerStyle="dynamic">
-                                            <backgroundConfiguration key="background" cornerRadius="15"/>
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" name="size_red"/>
+                                            </backgroundConfiguration>
                                             <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>

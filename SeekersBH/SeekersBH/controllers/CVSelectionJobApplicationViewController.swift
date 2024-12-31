@@ -22,7 +22,8 @@ class CVSelectionJobApplicationViewController: UIViewController, UITableViewDele
     @IBOutlet weak var tableView: UITableView!
     
     // Data source for CVs
-    var cvList: [String] = [] // Replace String with your CV model if necessary
+    var cvList: [String] = []
+    
     var isTableViewVisible = false
     
     var selectedCV: String? // To store the selected CV
@@ -35,16 +36,14 @@ class CVSelectionJobApplicationViewController: UIViewController, UITableViewDele
     }
     
     // Setup initial UI
-    func setupUI() {
-        dropDrownView.layer.cornerRadius = 15
-        dropDrownView.layer.borderWidth = 0
-        
-        tableView.isHidden = true
-        tableView.delegate = self
-        tableView.dataSource = self
-        
-        
-    }
+      func setupUI() {
+          dropDrownView.layer.cornerRadius = 15
+          dropDrownView.layer.borderWidth = 0
+          tableView.isHidden = true
+          tableView.delegate = self
+          tableView.dataSource = self
+      }
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return cvList.count
@@ -52,24 +51,36 @@ class CVSelectionJobApplicationViewController: UIViewController, UITableViewDele
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "showcvsdrop", for: indexPath)
-                cell.textLabel?.text = cvList[indexPath.row]
+                let cvName = cvList[indexPath.row]
+                cell.textLabel?.text = cvName
+                print("Cell at row \(indexPath.row) set with CV name: \(cvName)")
                 return cell
     }
+    
+    // Table View Row Selection
+       func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+           let selectedCV = cvList[indexPath.row]
+              self.selectedCV = selectedCV
+              selectCvbtn.setTitle(selectedCV, for: .normal)
+              tableView.isHidden = true
+              isTableViewVisible = false
+              print("Selected CV: \(selectedCV)")
+       }
     
     
     @IBAction func applyButtonTapped(_ sender: Any) {
         
         guard let tempJobApplication = tempJobApplication else {
-                    showAlert(message: "No previous information found.")
-                    return
-                }
+               showAlert(message: "No previous information found.")
+               return
+           }
 
-                guard let selectedCV = selectedCV else {
-                    showAlert(message: "Please select a CV before applying.")
-                    return
-                }
+           guard let selectedCV = selectedCV else {
+               showAlert(message: "Please select a CV before applying.")
+               return
+           }
 
-                saveJobApplicationToFirebase(jobApplication: tempJobApplication, selectedCV: selectedCV)
+           saveJobApplicationToFirebase(jobApplication: tempJobApplication, selectedCV: selectedCV)
         
     }
     
@@ -87,13 +98,17 @@ class CVSelectionJobApplicationViewController: UIViewController, UITableViewDele
             "workExperince": [
                 "jobTitle": jobApplication.workExperince?.jobTitle ?? "Not provided",
                 "companyName": jobApplication.workExperince?.companyName ?? "Not provided",
-                "employmentDate": Timestamp(date: jobApplication.workExperince?.employmentDate ?? Date()),
-                "jobResponsibilities": jobApplication.workExperince?.jobResponsibilites ?? ""
+                "employmentDate": jobApplication.workExperince?.employmentDate != nil ?
+                Timestamp(date: jobApplication.workExperince!.employmentDate) :
+                    FieldValue.serverTimestamp(), // Save server time if nil
+                "jobResponsibilities": jobApplication.workExperince?.jobResponsibilites ?? "Not provided"
             ],
             "education": [
                 "degree": jobApplication.education?.dgree ?? "Not provided",
                 "institution": jobApplication.education?.insinuation ?? "Not provided",
-                "graduationDate": Timestamp(date: jobApplication.education?.graduationDate ?? Date())
+                "graduationDate": jobApplication.education?.graduationDate != nil ?
+                Timestamp(date: jobApplication.education!.graduationDate) :
+                    FieldValue.serverTimestamp() // Save server time if nil
             ],
             "qualifications": [
                 "skills": jobApplication.qualifications?.skill ?? [],
@@ -110,18 +125,19 @@ class CVSelectionJobApplicationViewController: UIViewController, UITableViewDele
 
         // Add the job application to Firebase
         db.collection("JobApplication").addDocument(data: jobApplicationData) { error in
-                    if let error = error {
-                        print("Error saving job application: \(error.localizedDescription)")
-                        self.showAlert(message: "Failed to apply. Please try again.")
-                    } else {
-                        print("Job application saved successfully!")
-                        self.showAlertWithCompletion(message: "Your application has been submitted successfully.") {
-                            // Action after user clicks "Done"
-                            self.dismiss(animated: true, completion: nil)
-                        }
-                    }
+            if let error = error {
+                print("Error saving job application: \(error.localizedDescription)")
+                self.showAlert(message: "Failed to apply. Please try again. Error: \(error.localizedDescription)")
+            } else {
+                print("Job application saved successfully!")
+                self.showAlertWithCompletion(message: "Your application has been submitted successfully.") {
+                    // Action after user clicks "Done"
+                    self.dismiss(animated: true, completion: nil)
                 }
+            }
+        }
     }
+
     
     
     
@@ -142,35 +158,43 @@ class CVSelectionJobApplicationViewController: UIViewController, UITableViewDele
     
     @IBAction func toggleDropdownMenu(_ sender: Any) {
         isTableViewVisible.toggle()
-            tableView.isHidden = !isTableViewVisible
+               tableView.isHidden = !isTableViewVisible
+               print("Dropdown toggled. TableView is now \(isTableViewVisible ? "visible" : "hidden")")
         
     }
     
     // Fetch CVs from Firebase
-     func fetchCVsFromFirebase() {
-         guard let userID = AccessManager.userID else { return }
-         let db = Firestore.firestore()
+    func fetchCVsFromFirebase() {
+        guard let userID = AccessManager.userID else {
+            print("Error: User ID not found.")
+            return
+        }
+        let db = Firestore.firestore()
 
-         db.collection("CV").whereField("userID", isEqualTo: userID).getDocuments { snapshot, error in
-             if let error = error {
-                 print("Error fetching CVs: \(error.localizedDescription)")
-                 return
-             }
+        db.collection("CV").whereField("userID", isEqualTo: userID).getDocuments { snapshot, error in
+            if let error = error {
+                print("Error fetching CVs: \(error.localizedDescription)")
+                return
+            }
 
-             self.cvList = snapshot?.documents.compactMap { $0["cvName"] as? String } ?? []
-             self.tableView.reloadData()
-         }
-     }
+            guard let documents = snapshot?.documents, !documents.isEmpty else {
+                print("No CVs found for userID: \(userID)")
+                return
+            }
+
+            self.cvList = documents.compactMap { $0["cvName"] as? String }
+            print("Fetched CVs: \(self.cvList)")
+
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
 
         
       
         
-        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            let selectedCV = cvList[indexPath.row]
-            selectCvbtn.setTitle(selectedCV, for: .normal)
-            tableView.isHidden = true
-            isTableViewVisible = false
-        }
+        
     }
 
 

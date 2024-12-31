@@ -338,13 +338,16 @@ class CourseManager {
         }
     }
     
-    func removeCertificateFromFirebase(withID id: String, completion: @escaping (Error?) -> Void) {
-            let db = Firestore.firestore()
-            let collectionRef = db.collection("courseCertifications")
-            
-            collectionRef.document(id).delete { error in
-                completion(error) // Pass the error to the completion handler
-            }
+    func removeCertificateFromFirebase(withID id: String) async throws -> Bool {
+        let db = Firestore.firestore()
+        let collectionRef = db.collection("courseCertifications")
+        
+        do {
+            try await collectionRef.document(id).delete()
+            return true // Return true if deletion is successful
+        } catch {
+            throw error // Rethrow the error if deletion fails
+        }
     }
     
 }

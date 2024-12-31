@@ -12,6 +12,7 @@ class Login: UIViewController {
     }
     
     @IBAction func LoginMessage(_ sender: Any) {
+        print("hello")
         // Validate username and password fields
         guard let username = usernameTextField.text, !username.isEmpty else {
             showAlert(title: "Error", message: "Username cannot be empty.")
@@ -24,25 +25,24 @@ class Login: UIViewController {
         }
         
         // Check if the user exists in Firestore
-        checkIfUserExists(username: username, password: password) { success, userID in
-            if success, let userID = userID {
-                
+        checkIfUserExists(username: username, password: password) { success, userID, role in
+            if success, let userID = userID, let role = role {
+                // Store the logged-in user's details globally
+                AccessManager.userID = userID
+                AccessManager.Role = role // Save the role globally
+                                
                 DispatchQueue.main.async {
                     // Show success alert and navigate
                     self.showAlert(title: "Success", message: "You logged in successfully!") {
-                        // Instantiate the Main storyboard
-                        // Store both username and userID
-                        AccessManager.userID = userID
-                        AccessManager.Role = "NormalUser"
-                      
-                                            let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                                            
-                                            // Instantiate the initial view controller of the Main storyboard
-                                            if let mainVC = mainStoryboard.instantiateInitialViewController() {
-                                                mainVC.modalPresentationStyle = .fullScreen
-                                                // Present the main view controller
-                                                self.present(mainVC, animated: true, completion: nil)
-                                            }
+                        
+                        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                        
+                        // Instantiate the initial view controller of the Main storyboard
+                        if let mainVC = mainStoryboard.instantiateInitialViewController() {
+                            mainVC.modalPresentationStyle = .fullScreen
+                            // Present the main view controller
+                            self.present(mainVC, animated: true, completion: nil)
+                        }
                     }
                 }
             } else {
@@ -53,28 +53,29 @@ class Login: UIViewController {
         }
     }
     
-    func checkIfUserExists(username: String, password: String, completion: @escaping (Bool, String?) -> Void) {
+    func checkIfUserExists(username: String, password: String, completion: @escaping (Bool, String?, String?) -> Void) {
         let db = Firestore.firestore()
         
         // Query Firestore to check if the username exists
         db.collection("User").whereField("username", isEqualTo: username).getDocuments { (querySnapshot, error) in
             if let error = error {
                 print("Error checking user: \(error.localizedDescription)")
-                completion(false, nil)
+                completion(false, nil, nil)
                 return
             }
             
             if let snapshot = querySnapshot, let document = snapshot.documents.first,
-               let storedPassword = document.data()["password"] as? String {
+               let storedPassword = document.data()["password"] as? String,
+               let role = document.data()["role"] as? String { // Retrieve the role
                 // Check if password matches
                 if storedPassword == password {
-                    // Return success with the document ID as userID
-                    completion(true, document.documentID)
+                    // Return success with the document ID as userID and the role
+                    completion(true, document.documentID, role)
                 } else {
-                    completion(false, nil)
+                    completion(false, nil, nil)
                 }
             } else {
-                completion(false, nil)
+                completion(false, nil, nil)
             }
         }
     }

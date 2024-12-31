@@ -70,27 +70,59 @@ class CertificateManageViewController: UIViewController {
     }
     
     @IBAction func removeCertificate(_ sender: Any) {
-        CourseManager.share.removeCertificateFromFirebase(withID: certificate.id) { [weak self] error in
-        if let error = error {
-            print("Error: \(error.localizedDescription)")
-                        
-            // Show an alert in the view controller for failure
-            let alert = UIAlertController(title: "Error", message: "Failed to remove certificate", preferredStyle: .alert)
-                let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-                alert.addAction(okAction)
-                        
-                DispatchQueue.main.async {
-                    self?.present(alert, animated: true, completion: nil)
-                }
-                    } else {
-                        // Show an alert in the view controller
-                        let alert = UIAlertController(title: "Success", message: "Certificate removed successfully", preferredStyle: .alert)
-                        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-                                        alert.addAction(okAction)
-                        
+        // Create the alert controller
+            let alertController = UIAlertController(
+                title: "Confirm Deletion",
+                message: "Are you sure you want to remove this certificate?",
+                preferredStyle: .alert
+            )
+            
+            // Add a "Cancel" action
+            alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+            
+            // Add a "Delete" action
+            alertController.addAction(UIAlertAction(title: "Delete", style: .destructive) { _ in
+                Task {
+                    do {
+                        let success = try await CourseManager.share.removeCertificateFromFirebase(withID: self.certificate.id)
+                        if success {
+                            self.showAlert(title: "Success", message: "Certificate removed successfully")
+                        }
+                    } catch {
+                        self.showAlert(title: "Error", message: "Failed to remove certificate")
                     }
                 }
+                self.returnBack() // Call returnBack only after deletion is attempted
+            })
+            
+            // Present the alert
+            present(alertController, animated: true, completion: nil)
     }
+    
+    func returnBack() {
+        // Instantiate the CertificationsViewController
+            if let certificationsVC = storyboard?.instantiateViewController(withIdentifier: "CertificationsViewController") as? CertificationsViewController {
+                
+                // Get the current view controller stack
+                var viewControllers = navigationController?.viewControllers ?? []
+                
+                // Check if there are at least two view controllers in the stack
+                if viewControllers.count >= 2 {
+                    // Remove the last two view controllers (the current one and the one before it)
+                    viewControllers.removeLast(2)
+                } else {
+                    // If there are less than two, just remove all and add CertificationsViewController
+                    viewControllers.removeAll()
+                }
+                
+                // Add the CertificationsViewController to the stack
+                viewControllers.append(certificationsVC)
+                
+                // Set the new view controller stack
+                navigationController?.setViewControllers(viewControllers, animated: true)
+            }
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
