@@ -58,13 +58,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vDs-qZ-4iW">
-                                <rect key="frame" x="100" y="103" width="293" height="666"/>
+                                <rect key="frame" x="137.66666666666663" y="103" width="255.33333333333337" height="666"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Jlk-I7-Emx">
-                                        <rect key="frame" x="0.0" y="158" width="266.66666666666669" height="350"/>
+                                        <rect key="frame" x="0.0" y="158" width="246.66666666666666" height="350"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hX4-AI-RU9">
-                                                <rect key="frame" x="0.0" y="0.0" width="266.66666666666669" height="35"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="246.66666666666666" height="35"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
                                                 <state key="normal" title="Button">
                                                     <attributedString key="attributedTitle">
@@ -88,7 +88,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LZw-Yg-SgM">
-                                                <rect key="frame" x="0.0" y="35" width="266.66666666666669" height="35"/>
+                                                <rect key="frame" x="0.0" y="35" width="246.66666666666666" height="35"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Online Courses" imagePadding="10">
                                                     <imageReference key="image" image="arrow.right" catalog="system" symbolScale="large"/>
@@ -100,7 +100,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p0j-Qt-Au7">
-                                                <rect key="frame" x="0.0" y="70" width="266.66666666666669" height="35"/>
+                                                <rect key="frame" x="0.0" y="70" width="246.66666666666666" height="35"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Create CV" imagePadding="10">
                                                     <imageReference key="image" image="arrow.right" catalog="system" symbolScale="large"/>
@@ -112,7 +112,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DuD-0y-rL2">
-                                                <rect key="frame" x="0.0" y="105" width="266.66666666666669" height="35"/>
+                                                <rect key="frame" x="0.0" y="105" width="246.66666666666666" height="35"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Created CV" imagePadding="10">
                                                     <imageReference key="image" image="arrow.right" catalog="system" symbolScale="large"/>
@@ -124,7 +124,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BKj-RL-Y5p">
-                                                <rect key="frame" x="0.0" y="140" width="266.66666666666669" height="35"/>
+                                                <rect key="frame" x="0.0" y="140" width="246.66666666666666" height="35"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Application Tracker" imagePadding="10">
                                                     <imageReference key="image" image="arrow.right" catalog="system" symbolScale="large"/>
@@ -136,7 +136,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jcm-6i-blT">
-                                                <rect key="frame" x="0.0" y="175" width="266.66666666666669" height="35"/>
+                                                <rect key="frame" x="0.0" y="175" width="246.66666666666666" height="35"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="User Managment" imagePadding="10">
                                                     <imageReference key="image" image="arrow.right" catalog="system" symbolScale="large"/>
@@ -148,7 +148,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jzp-1i-QCl">
-                                                <rect key="frame" x="0.0" y="210" width="266.66666666666669" height="35"/>
+                                                <rect key="frame" x="0.0" y="210" width="246.66666666666666" height="35"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Resource Managment" imagePadding="10">
                                                     <imageReference key="image" image="arrow.right" catalog="system" symbolScale="large"/>
@@ -160,9 +160,9 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t8x-IC-wwo">
-                                                <rect key="frame" x="0.0" y="245" width="266.66666666666669" height="35"/>
+                                                <rect key="frame" x="0.0" y="245" width="246.66666666666666" height="35"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Job Managment (admin)" imagePadding="10">
+                                                <buttonConfiguration key="configuration" style="plain" title="Job Managment" imagePadding="10">
                                                     <imageReference key="image" image="arrow.right" catalog="system" symbolScale="large"/>
                                                     <fontDescription key="titleFontDescription" name="Helvetica-BoldOblique" family="Helvetica" pointSize="18"/>
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -172,7 +172,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="02A-5T-C2M">
-                                                <rect key="frame" x="0.0" y="280" width="266.66666666666669" height="35"/>
+                                                <rect key="frame" x="0.0" y="280" width="246.66666666666666" height="35"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Job Managment" imagePadding="10">
                                                     <imageReference key="image" image="arrow.right" catalog="system" symbolScale="large"/>
@@ -184,7 +184,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vkl-FY-yzJ">
-                                                <rect key="frame" x="0.0" y="315" width="266.66666666666669" height="35"/>
+                                                <rect key="frame" x="0.0" y="315" width="246.66666666666666" height="35"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Settings" imagePadding="10">
                                                     <imageReference key="image" image="arrow.right" catalog="system" symbolScale="large"/>
@@ -206,12 +206,12 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rPS-Dp-WoI"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
-                            <constraint firstItem="vDs-qZ-4iW" firstAttribute="leading" secondItem="rPS-Dp-WoI" secondAttribute="leading" constant="100" id="3pc-rA-LRu"/>
                             <constraint firstItem="vDs-qZ-4iW" firstAttribute="top" secondItem="rPS-Dp-WoI" secondAttribute="top" id="IYy-cX-Dx9"/>
                             <constraint firstItem="rPS-Dp-WoI" firstAttribute="bottom" secondItem="vDs-qZ-4iW" secondAttribute="bottom" id="O4L-kq-tfy"/>
-                            <constraint firstItem="rPS-Dp-WoI" firstAttribute="trailing" secondItem="vDs-qZ-4iW" secondAttribute="trailing" id="xSz-oD-3gL"/>
+                            <constraint firstItem="vDs-qZ-4iW" firstAttribute="width" secondItem="jpJ-6x-5hL" secondAttribute="width" multiplier="0.65" id="T8R-tY-jUH"/>
+                            <constraint firstItem="rPS-Dp-WoI" firstAttribute="trailing" secondItem="vDs-qZ-4iW" secondAttribute="trailing" id="euI-dq-S7w"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="G2S-i5-bcK"/>
@@ -260,16 +260,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iIg-lf-p48" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3678.6259541984732" y="774.64788732394368"/>
-        </scene>
-        <!--Settings-->
-        <scene sceneID="a02-HZ-2gf">
-            <objects>
-                <viewControllerPlaceholder storyboardName="reem" referencedIdentifier="Settings" id="BpT-Cq-psu" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="RXN-tN-76w"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eYP-xV-szZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1863" y="1149"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="65P-2L-DON">
@@ -489,7 +479,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bpk-g6-Rh0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1801" y="875"/>
+            <point key="canvasLocation" x="1822" y="752"/>
         </scene>
         <!--UserProfile-->
         <scene sceneID="zZQ-BN-fn4">
@@ -532,16 +522,19 @@
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="secondaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="separatorColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGroupedBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

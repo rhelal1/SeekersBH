@@ -32,10 +32,9 @@ class Login: UIViewController {
                     self.showAlert(title: "Success", message: "You logged in successfully!") {
                         // Instantiate the Main storyboard
                         // Store both username and userID
-                        //AccessManager.userID = userID
+                        AccessManager.userID = userID
+                        AccessManager.Role = "NormalUser"
                       
-//                        print(AccessManager.userID!)
-        //                User.loggedInID = userID
                                             let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
                                             
                                             // Instantiate the initial view controller of the Main storyboard

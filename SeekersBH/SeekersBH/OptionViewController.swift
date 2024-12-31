@@ -36,7 +36,7 @@ class OptionViewController: UIViewController {
             growthHubButton.isHidden = false
             onlineCoursesButton.isHidden = false
             
-        } else if AccessManager.Role == "User" {
+        } else if AccessManager.Role == "NormalUser" {
             JobApplicationTrackerButton.isHidden = false
             CreatedCVButton.isHidden = false
             CreateCVButton.isHidden = false
