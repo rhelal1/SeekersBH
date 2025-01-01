@@ -84,7 +84,7 @@ final class AdminResourceManager {
                 let views = document["views"] as? Int
             else {
                 // Skip the document if it doesn't contain all required fields
-//                print("Skipping document with missing or invalid data")
+                print("Skipping document with missing or invalid data")
                 return nil  // Returning nil skips this document from the final list
             }
             
@@ -127,7 +127,7 @@ final class AdminResourceManager {
                 let views = document["views"] as? Int
             else {
                 // Skip the document if it doesn't contain all required fields
-//                print("Skipping document with missing or invalid data")
+                print("Skipping document with missing or invalid data")
                 return nil  // Returning nil skips this document from the final list
             }
             

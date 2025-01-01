@@ -65,11 +65,17 @@ class UserMangeViewController: UIViewController, UITableViewDelegate, UITableVie
                   let indexPath = tableView.indexPath(for: cell) else { return }
 
             let selectedUser = users[indexPath.row]
+        print(selectedUser)
         let storyboard = UIStoryboard(name: "zainab", bundle: nil)
         if let profileVC = storyboard.instantiateViewController(withIdentifier: "ProfileViewController") as? ProfileViewController {
             profileVC.userID = selectedUser.id
             present(profileVC, animated: true, completion: nil)
+
+                print(selectedUser.id)
                 self.navigationController?.pushViewController(profileVC, animated: true)
+
+
+
            }
     }
     

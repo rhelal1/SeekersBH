@@ -8,6 +8,11 @@
 
 import UIKit
 
+
+protocol ManageAdminJobCell: AnyObject {
+    func didTapDelete(at indexPath: IndexPath)
+}
+
 class AdminJobCell: UITableViewCell {
     
     
@@ -17,26 +22,22 @@ class AdminJobCell: UITableViewCell {
     
     @IBOutlet weak var actionButton: UIButton!
     
-
-    @IBOutlet weak var darePostedLabel: UILabel!
-    
+//    @IBOutlet weak var datePostedLabel: UILabel!
     
     @IBOutlet weak var statusLabel: UILabel!
         
     var isJobHidden =  false
+    var indexPath: IndexPath?
     var documentId: String?
     
     func setupCell(jobName: String, jobLocation: String, date: Date, status: JobStatus, isHidden: Bool, documentId: String) {
         jobNameLabel.text = jobName
            jobLocationLabel.text = jobLocation
-        statusLabel.text = (status == .Open) ? "Open" : "Closed"
-        statusLabel.textColor = (status == .Open) ? .systemGreen : .systemRed
+//           statusLabel.text = status.rawValue
+           statusLabel.textColor = (status == .Open) ? .systemGreen : .systemRed
            isJobHidden = isHidden
            self.documentId = documentId
-        let dateFormatter = DateFormatter()
-          dateFormatter.dateStyle = .medium
-          dateFormatter.timeStyle = .none
-          darePostedLabel.text = "Posted on \(dateFormatter.string(from: date))"
+           
            actionButton.setTitle(
                isJobHidden ? "Unhide" : "Hide",
                for: .normal
@@ -45,7 +46,7 @@ class AdminJobCell: UITableViewCell {
     
     
     @IBAction func didTapAction(_ sender: Any) {
-        guard let documentId = documentId else { return }
+        guard let indexPath = indexPath, let documentId = documentId else { return }
 
            let newHiddenState = !isJobHidden
 
