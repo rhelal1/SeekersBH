@@ -18,10 +18,15 @@ class CVDetailsViewController: UIViewController {
     
     
     @IBAction func editButtonClicked(_ sender: Any) {
+//        let editVC = storyboard?.instantiateViewController(withIdentifier: "EditCVViewController") as! EditCVViewController
+//        
+//        editVC.cvDetails = cvDetails
+//        present(editVC, animated: true)
         let editVC = storyboard?.instantiateViewController(withIdentifier: "EditCVViewController") as! EditCVViewController
-        
-        editVC.cvDetails = cvDetails
-        present(editVC, animated: true)
+            
+            editVC.cvDetails = cvDetails
+            editVC.modalPresentationStyle = .fullScreen  // Set modal presentation to full screen
+            present(editVC, animated: true)
     }
     
     override func viewDidLoad() {
