@@ -26,7 +26,7 @@ class CVDetailsViewController: UIViewController {
             
             editVC.cvDetails = cvDetails
             editVC.modalPresentationStyle = .fullScreen  // Set modal presentation to full screen
-            present(editVC, animated: true)
+        navigationController?.pushViewController(editVC, animated: true)
     }
     
     override func viewDidLoad() {

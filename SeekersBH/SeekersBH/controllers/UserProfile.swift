@@ -169,4 +169,12 @@ class UserProfile: UIViewController {
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // Reload data or update UI
+        loadUserProfileData()
+        loadUserSkills()
+    }
 }

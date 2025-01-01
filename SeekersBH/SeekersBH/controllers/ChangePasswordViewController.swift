@@ -39,7 +39,7 @@ class ChangePasswordViewController: UIViewController {
         
         // First verify current password
         let db = Firestore.firestore()
-        db.collection("User").whereField("email", isEqualTo: User.loggedInUser)
+        db.collection("User").whereField("email", isEqualTo: AccessManager.userID ?? "")
             .getDocuments { [weak self] (querySnapshot, error) in
                 if let error = error {
                     self?.showAlert(message: "Error: \(error.localizedDescription)")

@@ -2,6 +2,7 @@
 //  InterestChoiceViewController.swift
 //  SeekersBH
 //
+//  Created by Noora Qasim on 25/12/2024.
 //
 
 import UIKit
@@ -47,7 +48,7 @@ class InterestChoiceViewController: UIViewController {
         print("loading")
            let db = Firestore.firestore()
            db.collection("Interest")
-            .whereField("userID", isEqualTo: AccessManager.userID!) // Changed from email
+               .whereField("userID", isEqualTo: AccessManager.userID!) // Changed from email
                .getDocuments { [weak self] (querySnapshot, error) in
                guard let self = self,
                      let document = querySnapshot?.documents.first,
@@ -151,7 +152,7 @@ class InterestChoiceViewController: UIViewController {
            
            let db = Firestore.firestore()
            let interestsData: [String: Any] = [
-            "userID": AccessManager.userID!, // Changed from email
+               "userID": AccessManager.userID!, // Changed from email
                "interest1": selectedInterests[0],
                "interest2": selectedInterests[1],
                "interest3": selectedInterests[2],
