@@ -146,7 +146,9 @@ class RegisterController: UIViewController {
             "role": "NormalUser",
             "dateOfBirth": Timestamp(date: self.date.date),
             "userID": userID,
-            "isHidden": false
+            "isHidden": false,
+            "followers": 0,
+            "following": 0
         ]
         
         // Save the user data using the generated document reference

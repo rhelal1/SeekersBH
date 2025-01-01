@@ -6,6 +6,14 @@ class CourseViewController: UIViewController {
     @IBOutlet weak var courseTable: UITableView!
     @IBOutlet weak var categorySegment: UISegmentedControl!
     
+    @IBAction func viewCertificationsButtonTapped(_ sender: Any) {
+        if let CertificationsViewController = storyboard?.instantiateViewController(withIdentifier: "CertificationsViewController") as? CertificationsViewController {
+
+            // Push the detail view controller
+            navigationController?.pushViewController(CertificationsViewController, animated: true)
+        }
+    }
+    
     var courses: [Course] = []
     var filteredCourses: [Course] = [] // Courses filtered by category
     
@@ -100,7 +108,6 @@ extension CourseViewController: UITableViewDataSource, UITableViewDelegate {
     // UITableViewDelegate method
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedCourse = filteredCourses[indexPath.row]
-
         // Instantiate the CourseDetailsViewController
         if let courseDetailsVC = storyboard?.instantiateViewController(withIdentifier: "CourseDetailsViewController") as? CourseDetailsViewController {
             // Pass the selected course to the CourseDetailsViewController

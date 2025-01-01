@@ -16,7 +16,7 @@ struct Course {
 }
 
 struct CourseComments {
-    var userId : Int
+    var userId : String
     var commenttext : String
     var rated : Int
 }
@@ -43,9 +43,22 @@ enum CourseCategory: String, Codable {
 }
 
 struct CourseCertification {
+    var id : String = ""
     var title: String
     var courseId: String
     var date: Date
     var userId: String
-    var score: Int // Add score to store the user's achievement
+    var score: Int
+    
+    func extractDateTimeString() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM/dd/yyyy, HH:mm"
+
+        return dateFormatter.string(from: date)
+    }
+}
+
+struct CVInfo {
+    let id: String
+    let name: String
 }

@@ -9,32 +9,45 @@ class FailQuizViewController: UIViewController {
     @IBOutlet weak var scoreLabel: UILabel!
     
     @IBAction func ReTakeTheQuizButtonTapped(_ sender: Any) {
-        // Dismiss the view controller and inform the quiz controller to reset answers
-        if let presentingVC = presentingViewController as? CourseQuizViewController {
-            presentingVC.resetQuiz()
+        // Instantiate the CourseQuizViewController
+        if let courseQuizVC = storyboard?.instantiateViewController(withIdentifier: "CourseQuizViewController") as? CourseQuizViewController {
+            
+            // Pass the selected course to the CourseQuizViewController
+            courseQuizVC.course = course
+
+            courseQuizVC.modalPresentationStyle = .fullScreen
+            present(courseQuizVC, animated: true, completion: nil)
         }
-        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func ReturnButtonTapped(_ sender: Any) {
-        // Instantiate the CourseDetailsViewController
-        if let courseDetailsVC = storyboard?.instantiateViewController(withIdentifier: "CourseDetailsViewController") as? CourseDetailsViewController {
-            // Pass the course to the CourseDetailsViewController
-            courseDetailsVC.course = course
+        // Load the root view controller from the "Main" storyboard
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let rootViewController = mainStoryboard.instantiateViewController(withIdentifier: "mainStoryboard")
 
-//            // Push the detail view controller
-//            navigationController?.pushViewController(courseDetailsVC, animated: true)
-            
-            courseDetailsVC.modalPresentationStyle = .fullScreen
+        // Create a UINavigationController with the root view controller from the "Main" storyboard
+        let navController = UINavigationController(rootViewController: rootViewController)
 
-
-            present(courseDetailsVC, animated: true, completion: nil)
-
+        // Load the CourseViewController from the current storyboard
+        if let courseViewController = storyboard?.instantiateViewController(withIdentifier: "CourseViewController") as? CourseViewController {
+            // Push the CourseViewController onto the navigation stack
+            navController.pushViewController(courseViewController, animated: false)
         }
+
+        // Set the presentation style to full screen
+        navController.modalPresentationStyle = .fullScreen
+
+        // Present the navigation controller
+        present(navController, animated: true, completion: nil)
+
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Hide the default back button
+        self.navigationItem.hidesBackButton = true
+        
         scoreLabel.text = "Your score is \(score)%."
     }
 

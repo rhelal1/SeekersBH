@@ -17,14 +17,26 @@ class CourseReviewTableViewCell: UITableViewCell {
     }
     
     func update(with courseConment: CourseComments) {
-        imageW.image = UIImage(named: "imageTest2") // "imageTest" should change to "webinar.picture" later
-        imageW.layer.cornerRadius = imageW.frame.width / 2
+        imageW.image = UIImage(named: "user")
+        imageW.layer.cornerRadius = imageW.frame.height / 2
+        updateUsername(userId: courseConment.userId)
         
-//        username.text = courseConment.username
         comment.text = courseConment.commenttext
         
         view.layer.cornerRadius = 15
         view.layer.masksToBounds = true
+    }
+    
+    func updateUsername(userId : String) {
+        Task {
+            do {
+                let usernames = try await CourseManager.share.fetchUsername(userId: userId)
+                username.text = usernames
+            } catch {
+                username.text = "user123"
+                print("Error fetching username: \(error.localizedDescription)")
+            }
+        }
     }
 
 }

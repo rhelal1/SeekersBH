@@ -13,8 +13,8 @@ class CourseContentViewController: UIViewController {
             // Pass the selected course to the CourseQuizViewController
             courseQuizVC.course = course
 
-            // Push the detail view controller
-            navigationController?.pushViewController(courseQuizVC, animated: true)
+            courseQuizVC.modalPresentationStyle = .fullScreen
+            present(courseQuizVC, animated: true, completion: nil)
         }
     }
     
