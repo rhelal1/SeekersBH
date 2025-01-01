@@ -76,7 +76,7 @@ class EditCVViewController: UIViewController {
                 print("Error updating CV: \(error.localizedDescription)")
             } else {
                 print("CV updated successfully!")
-                self.presentingViewController!.presentingViewController!.dismiss(animated: true)
+                self.presentingViewController!.dismiss(animated: true)
                 
             }
         }
