@@ -55,7 +55,7 @@ class IInterest: UIViewController, UICollectionViewDelegate {
     func getUserId() -> String? {
         // Replace this with logic to fetch the current user's ID (e.g., from Firebase Auth)
         // Mock user ID for testing
-        return "mock_user_id" // Replace with a valid document ID from Firestore
+        return AccessManager.userID // Replace with a valid document ID from Firestore
     }
     
     func showAlert(message: String, title: String = "Error") {
@@ -110,7 +110,7 @@ extension IInterest {
             // If the selection is under the max limit (4), add the indexPath
             if selectedIndexPaths.count < 4 {
                 selectedIndexPaths.append(indexPath)
-                selectedInterests.append(selectedInterestTitle) // Add the title
+               selectedInterests.append(selectedInterestTitle) // Add the title
             } else {
                 showAlert(message: "You can only select up to 4 interests.")
             }

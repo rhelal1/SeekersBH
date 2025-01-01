@@ -149,7 +149,7 @@ class SkillsViewController: UIViewController {
         
         let db = Firestore.firestore()
         let skillsData: [String: Any] = [
-            "userID": User.loggedInID,
+            "userID": AccessManager.userID ?? "",
             "skill1": selectedSkills[0],
             "skill2": selectedSkills[1],
             "skill3": selectedSkills[2],
@@ -194,4 +194,7 @@ class SkillsViewController: UIViewController {
         })
         present(alert, animated: true)
     }
+    
+    
+    
 }

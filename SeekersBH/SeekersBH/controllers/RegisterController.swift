@@ -162,6 +162,7 @@ class RegisterController: UIViewController {
                 User.loggedInUser = email
                 User.loggedInUsername = username
                 User.loggedInID = userID  // Updated to use consistent property name
+                AccessManager.userID = userID 
                 
                 let alert = UIAlertController(title: "Success", message: "User successfully registered and saved to Firestore.", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "OK", style: .default) { _ in
