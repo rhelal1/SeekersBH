@@ -31,7 +31,7 @@ class UserMangeViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     @IBAction func didTapToggleUsers(_ sender: Any) {
         isShowingHidden.toggle()
-                toggleUsersButton.setTitle(isShowingHidden ? "Hide Hidden" : "Show Hidden", for: .normal)
+                toggleUsersButton.setTitle(isShowingHidden ? "Hide disabled user" : "Show disabled user", for: .normal)
                 updateVisibleUsers()
     }
     func updateVisibleUsers() {

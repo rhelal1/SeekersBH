@@ -47,10 +47,10 @@ class AddEmployerViewController: UIViewController {
         }
         
         let documentReference = FirebaseManager.shared.db.collection("Employer").document()
-           let documentID = documentReference.documentID
+        let documentID = documentReference.documentID
         
         let employerData: [String: String] = [
-            "id":documentID,
+            "id": documentID,
             "username": username,
             "firstName": firstName,
             "lastName": lastName,
@@ -64,5 +64,19 @@ class AddEmployerViewController: UIViewController {
         
         FirebaseManager.shared.addDocumentToCollection(collectionName: "Employer", data: employerData)
         
+        let alert = UIAlertController(title: "Success", message: "New User Added Successfully!", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+        
+        self.username.text = ""
+        self.firstname.text = ""
+        self.lastname.text = ""
+        self.city.text = ""
+        self.DOB.text = ""
+        self.JobTitle.text = ""
+        self.company.text = ""
+        self.password.text = ""
+        self.email.text = ""
     }
+
 }

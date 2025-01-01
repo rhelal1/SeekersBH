@@ -107,12 +107,4 @@ extension MangeWebinarsViewController: UITableViewDataSource, UITableViewDelegat
         return 200
     }
 
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedWebinar = webinars[indexPath.row]
-
-        if let webinarDetailsVC = storyboard?.instantiateViewController(withIdentifier: "WebinarDetailsViewController") as? WebinarDetailsViewController {
-            webinarDetailsVC.webinar = selectedWebinar
-            navigationController?.pushViewController(webinarDetailsVC, animated: true)
-        }
-    }
 }
