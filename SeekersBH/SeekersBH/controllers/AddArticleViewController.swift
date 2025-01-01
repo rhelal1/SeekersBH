@@ -51,7 +51,7 @@ class AddArticleViewController: UIViewController {
                    "description": description,
                    "url": url,
                    "DOI": doi,
-                   "views": 0 // will always start with 0 views 
+                   "views": 0 // will always start with 0 views
                ]
         
         FirebaseManager.shared.addDocumentToCollection(collectionName: "Article", data: articleData)
