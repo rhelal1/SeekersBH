@@ -14,6 +14,6 @@ class CVDoneViewController: UIViewController {
     }
     
     @IBAction func doneButtonTapped(_ sender: UIButton) {
-        self.presentingViewController!.dismiss(animated: true)
+        self.navigationController?.popToRootViewController(animated: true)
     }
 }
