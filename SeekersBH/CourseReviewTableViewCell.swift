@@ -18,7 +18,10 @@ class CourseReviewTableViewCell: UITableViewCell {
     
     func update(with courseConment: CourseComments) {
         imageW.image = UIImage(named: "user")
-        imageW.layer.cornerRadius = imageW.frame.height / 2
+        imageW.layer.cornerRadius = imageW.frame.size.height / 2
+        imageW.clipsToBounds = true
+        imageW.contentMode = .scaleAspectFill
+        
         updateUsername(userId: courseConment.userId)
         
         comment.text = courseConment.commenttext

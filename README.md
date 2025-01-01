@@ -61,8 +61,7 @@ The app stands out by combining professional development resources, personalized
 - **Frontend**: Swift (iOS Development)
 - **Backend**: Firebase for authentication and database management
 - **Design Tools**: Figma for mockups and UI/UX design
-- **Libraries**: Integration of chatbot and messaging functionalities
-
+  
 ---
 
 ## Firebase and Cloudinary Usage
@@ -83,15 +82,37 @@ This section outlines updates made to the design of SeekersBH. These include ref
     In the online courses screen, a new button has been added to allow users to view all their obtained certifications. When clicked, this button navigates the user to a screen displaying all their certifications, where they can select one to manage. Upon selection, they are taken to another screen to manage the certification. Here, the user can remove the certificate or choose a CV from their CV list to add the certification to it.
 - Reason for the Change:
     This change was implemented to address the issue of users not being able to easily view their obtained certifications. By enhancing the user experience with this feature, users can now conveniently manage their certifications, improving the overall usability and functionality of the app.
-2. **[Section Placeholder]**
-3. **[Section Placeholder]**
-4. **[Section Placeholder]**
-
+2. **[Feature: Manage resources]**
+  - Change:
+    Removed the profile picture because we don’t have a section to add the picture in the sign in 
+    Added a section to add a cover to the resources ‘videos and webinars’ 
+3. **[Feature: cv creator]**
+    - Change:
+      Added a cv name field for the user to fill, so when he views his cv's he chooses the cv name he wants to view / edit.
+4. **[Feature: Job Application Tracker]**
+    - Change:
+      Added more job details. removed the employer email because its not related or relevant to the job tracker.
+5. **[Feature: User Authentication - registeration]**
+    - Change:
+      Changes are done in the registration page because there was a problem in scrolling the page
+6. **[Feature: Job Managment For Employers]**
+     - Change:
+    In the add new job application screen, the user is going to fill a four pages of form to add a new job application, unlike the form in the prototype which is made of three pages only, some of the form fields were put in a whole new page.
+  - Reason for the change:
+    This change was made to make the form more user-friendly, since three text views were too much for a an Iphone screen.
+7. **[Feature: Search Engine & Filter]**
+   - Change:
+    In the search engine page, the filter was modifed to filter the jobs based on it's status only (closed,open), unlike the filter in the prototype which was filtering jobs on another criterias.
+  - Reason for the Change:
+    This change was made due to reconsidering the relevant things that the user would want to filter his search based on them.
+8. **[Feature: Job Application]**
+    - Change:
+      The design of the CV has been changed due to challenges I encountered in its application.
 ---
 
 ## Team Members
-- **Marwa Abbas** (202202170): Job Application Tracker, Resume Creator & Customizer
 - **Zainab Abdulla** (202203386): Admin Dashboard, User Connections & Direct Messages
+- **Marwa Abbas** (202202170): Job Application Tracker, Resume Creator
 - **Ruqaya Helal** (202204117): Professional Growth Hub, Interactive Online Courses
 - **Qasim Alshehabi** (202202979): Job Management for Employers, Search Engine & Filter
 - **Duha Hashem** (202201251): Personalized Job Recommendations, Job Application
@@ -101,7 +122,7 @@ This section outlines updates made to the design of SeekersBH. These include ref
 
 ## How to Run the Project
 1. Clone the repository to your local machine.
-2. Open the project in Xcode (requires Xcode 14.0 or later).
+2. Open the project in Xcode (requires Xcode 15.0 or later).
 3. Configure Firebase by adding your `GoogleService-Info.plist` file to the project.
 4. Build and run the project on a simulator or a connected iOS device.
 
