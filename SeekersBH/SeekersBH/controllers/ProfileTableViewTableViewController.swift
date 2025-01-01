@@ -47,12 +47,12 @@ class ProfileTableViewTableViewController: UITableViewController {
 
     func updateCellsContent() {
         skills.textLabel?.numberOfLines = 0 //for multi-line
-        skills.textLabel?.text = skillsARR.isEmpty ? "None" : skillsARR.joined(separator: "\n")
+        skills.textLabel?.text = skillsARR.isEmpty ? "No skills found" : skillsARR.joined(separator: "\n")
         
         let formattedInterests = interestsARR.map { $0.replacingOccurrences(of: "\n", with: " ") }
         
         intersts.textLabel?.numberOfLines = 0 //for multi-line
-        intersts.textLabel?.text = formattedInterests.isEmpty ? "None" : formattedInterests.joined(separator: "\n")
+        intersts.textLabel?.text = formattedInterests.isEmpty ? "No interests found" : formattedInterests.joined(separator: "\n")
     }
 
 

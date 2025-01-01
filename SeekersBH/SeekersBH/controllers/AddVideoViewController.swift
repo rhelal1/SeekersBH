@@ -4,6 +4,7 @@
 //
 //  Created by Zainab Madan on 25/12/2024.
 //
+//
 
 import UIKit
 
@@ -42,12 +43,12 @@ class AddVideoViewController: UIViewController, UIImagePickerControllerDelegate,
         }
         
         guard let coverImage = vidCover.image else {
-                  print("Please select a cover image.")
-                  return
-              }
+            print("Please select a cover image.")
+            return
+        }
         
         let documentReference = FirebaseManager.shared.db.collection("Videos").document()
-           let documentID = documentReference.documentID
+        let documentID = documentReference.documentID
         
         CloudinaryManager.upload(image: coverImage, to: "videosCovers", uploadPreset: "ml_default") { result in
             switch result {
@@ -67,11 +68,26 @@ class AddVideoViewController: UIViewController, UIImagePickerControllerDelegate,
                 FirebaseManager.shared.addDocumentToCollection(collectionName: "Videos", data: videoData)
                 print("Video and image URL saved successfully!")
                 
+                // Show success alert
+                let alert = UIAlertController(title: "Success", message: "New Video Added Successfully!", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+                
+                // Optionally, reset the text fields and image view
+                self.vidTitle.text = ""
+                self.vidLink.text = ""
+                self.vidSpeaker.text = ""
+                self.vidChannel.text = ""
+                self.vidDuration.text = ""
+                self.vidDescription.text = ""
+                self.vidCover.image = nil
+                
             case .failure(let error):
                 print("Image upload failed: \(error.localizedDescription)")
             }
         }
     }
+
     func presentImagePicker() {
             let imagePicker = UIImagePickerController()
             imagePicker.delegate = self
@@ -94,5 +110,4 @@ class AddVideoViewController: UIViewController, UIImagePickerControllerDelegate,
         }
     }
 }
-
 

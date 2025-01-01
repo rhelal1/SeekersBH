@@ -78,27 +78,31 @@ extension ManageArticlesViewController: UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "manageArticleCell", for: indexPath) as! ManageArticlesTableViewCell
 
-
         cell.update(with: articles[indexPath.row])
         
         cell.toggleVisibilityAction = { [weak self] articleID, isHidden in
-                    guard let self = self else { return }
-                    
-                    // Update Firebase
-                    FirebaseManager.shared.updateDocument(
-                        collectionName: "Article",
-                        documentId: articleID,
-                        data: ["isHidden": isHidden]
-                    ) { error in
-                        if let error = error {
-                            print("Failed to update visibility: \(error.localizedDescription)")
-                        } else {
-                            self.updateArticleVisibility(articleID: articleID, isHidden: isHidden)
-                        }
-                    }
-                }
-                return cell
+            guard let self = self else { return }
+            
+            let confirmationMessage = isHidden
+                ? "Are you sure you want to hide this article?"
+                : "Are you sure you want to show this article?"
+            
+            let alert = UIAlertController(
+                title: "Confirmation",
+                message: confirmationMessage,
+                preferredStyle: .alert
+            )
+            
+            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+            
+            alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { _ in
+                self.updateArticleVisibility(articleID: articleID, isHidden: isHidden)
+            }))
+            
+            self.present(alert, animated: true)
         }
+        return cell
+    }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 170
