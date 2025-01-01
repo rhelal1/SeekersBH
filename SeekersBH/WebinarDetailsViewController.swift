@@ -29,14 +29,29 @@ class WebinarDetailsViewController: UIViewController {
         webinarTitle.text = webinar.title
         speaker.text = webinar.speaker
         date.text = "\(webinar.date)"
-        time.text = "\(webinar.timeZone)"
-        imageW.image = UIImage(named: "imageTest2")
-        
+        time.text = webinar.timeZone
+        // Load the image asynchronously
+        if let imageUrl = URL(string: webinar.picture) {
+                // Perform the network request asynchronously
+                URLSession.shared.dataTask(with: imageUrl) { data, response, error in
+                    if let error = error {
+                        print("Error loading image: \(error.localizedDescription)")
+                        return
+                    }
+                    
+                    // Ensure data is available and it is valid
+                    if let data = data, let image = UIImage(data: data) {
+                        DispatchQueue.main.async {
+                            // Update the image view on the main thread
+                            self.imageW.image = image
+                        }
+                    }
+                }.resume()
+            }
         webinarDescription.text = webinar.description
     }
 
     @IBAction func joinWebinar(_ sender: Any) {
-        
         guard let url = URL(string: webinar.url), UIApplication.shared.canOpenURL(url) else {
             let alert = UIAlertController(title: "Invalid URL", message: "The URL provided is not valid.", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default))
@@ -46,4 +61,11 @@ class WebinarDetailsViewController: UIViewController {
         
         UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
+    
+    
+    @IBAction func SaveResourceButtonTapped(_ sender: Any) {
+        // Save resource to Firebase
+        ResourceManager.share.saveResourceToFirebase(userID: AccessManager.userID!, resourceId: webinar.id, resourceType: .webinar, viewController: self)
+    }
+    
 }

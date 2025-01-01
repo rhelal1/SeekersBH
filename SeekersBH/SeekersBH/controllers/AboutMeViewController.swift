@@ -14,8 +14,6 @@ class AboutMeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func nextButtonTapped(_ sender: UIButton) {
@@ -24,16 +22,12 @@ class AboutMeViewController: UIViewController {
             return
         }
         CVManager.shared.cv.cvName = cvName.text ?? ""
-        // printing just to make sure it is saved
-        print("Saved CV Name: \(CVManager.shared.cv.cvName)")
         
         if aboutMeField.text?.isEmpty ?? true {
             showAlert(message: "About Me field cannot be empty.")
             return
         }
         CVManager.shared.cv.aboutMe = aboutMeField.text ?? ""
-        // printing just to make sure it is saved
-        print("Saved About Me: \(CVManager.shared.cv.aboutMe)")
     }
     
     func showAlert(message: String) {
@@ -41,15 +35,4 @@ class AboutMeViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "OK", style: .default))
         present(alert, animated: true)
     }
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
 }

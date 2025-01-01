@@ -22,8 +22,7 @@ class CourseDetailsViewController: UIViewController {
         // Instantiate the CourseContentViewController
         if let courseContentVC = storyboard?.instantiateViewController(withIdentifier: "CourseContentViewController") as? CourseContentViewController {
             // Pass the selected course to the CourseContentViewController
-            courseContentVC.courseContents = course.courseContent
-            courseContentVC.quize = course.courseQuestions
+            courseContentVC.course = course
             
             // Push the detail view controller
             navigationController?.pushViewController(courseContentVC, animated: true)
@@ -35,12 +34,28 @@ class CourseDetailsViewController: UIViewController {
         if let courseReviewVC = storyboard?.instantiateViewController(withIdentifier: "CourseReviewViewController") as? CourseReviewViewController {
             // Pass the selected course to the CourseContentViewController
             courseReviewVC.courseComments = course.courseComments
-            courseReviewVC.ratingText = "\(course.rating)/5 (\(course.courseComments.count) reviews)"
+            courseReviewVC.ratingText = "\(calculateAverageRating(comments: course.courseComments))/5 (\(course.courseComments.count) reviews)"
             // Push the detail view controller
             navigationController?.pushViewController(courseReviewVC, animated: true)
         }
     }
     
+    func calculateAverageRating(comments: [CourseComments]) -> Double {
+        guard !comments.isEmpty else { return 0.0 } // Return 0 if the array is empty
+
+        var totalRating = 0
+        var ratingCount = 0
+
+        // Loop over the comments to calculate the total rating and count
+        for comment in comments {
+            totalRating += comment.rated
+            ratingCount += 1
+        }
+
+        // Calculate the average rating
+        let averageRating = Double(totalRating) / Double(ratingCount)
+        return averageRating
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,8 +75,24 @@ class CourseDetailsViewController: UIViewController {
 
         modules.text = "\(course.courseContent.count)"
         
-        imageV.image = UIImage(named: "imageTest2")
-        
+        // Load the image asynchronously
+            if let imageUrl = URL(string: course.pictureUrl) {
+                // Perform the network request asynchronously
+                URLSession.shared.dataTask(with: imageUrl) { data, response, error in
+                    if let error = error {
+                        print("Error loading image: \(error.localizedDescription)")
+                        return
+                    }
+                    
+                    // Ensure data is available and it is valid
+                    if let data = data, let image = UIImage(data: data) {
+                        DispatchQueue.main.async {
+                            // Update the image view on the main thread
+                            self.imageV.image = image
+                        }
+                    }
+                }.resume()
+            }
         courseDescription.text = course.description
     }
 

@@ -1,6 +1,8 @@
 import Foundation
 
 struct JobAd {
+    
+    var documentId: String?
     var jobName: String = ""
     var jobLocation: String = ""
     var jobType: JobType = .fullTime
@@ -13,21 +15,51 @@ struct JobAd {
     var jobApplicationDeadline: Date = Date()
     var applicants: [JobApplication] = [] // Array to hold job applicants
     var datePosted: Date = Date() // Date when the job post was added
-    var status: status = .Open
+    var status: JobStatus = .Open
     var applicationStatus : ApplicationStatus = .pending
+    var isHidden : Bool = false
+//    var intrest: Interest
+    
+    
+
 }
 
-enum JobType {
-    case fullTime, partTime, contract, temporary
+enum JobType: String {
+    case fullTime = "Full-Time"
+    case partTime = "Part-Time"
+    case contract = "Contract"
+    case temporary = "Temporary"
 }
+
 
 enum ApplicationStatus {
     case pending, underReview, shortlisted, interviewScheduled
 }
 
-enum status {
+enum JobStatus {
     case Closed,Open
 }
+
+enum JobPageMode {
+    case add
+    case edit(job: JobAd)  // edit case expects a JobAd object
+}
+
+
+class AddEditJobCoordinator {
+    var mode: JobPageMode
+    var jobToEdit: JobAd?  // If in edit mode, this will store the job being edited
+    
+    init(mode: JobPageMode) {
+        self.mode = mode
+        if case .edit(let job) = mode {
+            self.jobToEdit = job  // Store the job if the mode is edit
+        }
+    }
+}
+
+
+
 
 class JobManager {
     static let shared = JobManager() // Singleton instance

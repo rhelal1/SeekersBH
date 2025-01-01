@@ -17,7 +17,8 @@ class CourseContentTableViewCell: UITableViewCell {
     }
 
     func update(with courseContent: CourseContent) {
-        imageW.image = UIImage(named: "imageTest2") // "imageTest" should change to "webinar.picture" later
+        imageW.image = UIImage(named: "videoIcone") // "imageTest" should change to "webinar.picture" later
+        
         imageW.layer.cornerRadius = imageW.frame.width / 2
         
         title.text = courseContent.title

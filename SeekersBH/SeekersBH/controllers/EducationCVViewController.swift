@@ -7,16 +7,50 @@
 
 import UIKit
 
-class EducationCVViewController: UIViewController {
+class EducationCVViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     @IBOutlet weak var highestDegreeField: UITextField!
     @IBOutlet weak var universityField: UITextField!
     
+    let degreeOptions = ["High School", "Associate's Degree", "Bachelor's Degree", "Master's Degree", "Doctorate (PhD)"]
+    var selectedDegree: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+        let pickerView = UIPickerView()
+        pickerView.delegate = self
+        pickerView.dataSource = self
+        
+        highestDegreeField.inputView = pickerView
+        
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(doneButtonTapped))
+        toolbar.setItems([doneButton], animated: true)
+        toolbar.isUserInteractionEnabled = true
+        highestDegreeField.inputAccessoryView = toolbar
+    }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return degreeOptions.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return degreeOptions[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        selectedDegree = degreeOptions[row]
+        highestDegreeField.text = selectedDegree
+    }
+    
+    @objc func doneButtonTapped() {
+        highestDegreeField.resignFirstResponder()
     }
     
     @IBAction func nextButtonTabbed(_ sender: UIButton) {
@@ -25,15 +59,12 @@ class EducationCVViewController: UIViewController {
             return
         }
         CVManager.shared.cv.highestDegree = highestDegreeField.text ?? ""
-        // printing just to make sure it is saved
-        print("Saved Highest Degree: \(CVManager.shared.cv.highestDegree)")
+        
         if universityField.text?.isEmpty ?? true {
             showAlert(message: "University field cannot be empty.")
             return
         }
         CVManager.shared.cv.university = universityField.text ?? ""
-        // printing just to make sure it is saved
-        print("Saved University: \(CVManager.shared.cv.university)")
     }
     
     func showAlert(message: String) {
@@ -41,16 +72,4 @@ class EducationCVViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "OK", style: .default))
         present(alert, animated: true)
     }
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
 }

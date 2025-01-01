@@ -1,5 +1,5 @@
 //
-//  addJobView4\ViewController.swift
+//  addJobView4ViewController.swift
 //  SeekersBH
 //
 //  Created by Guest User on 12/12/2024.
@@ -11,8 +11,11 @@ class AddJobView4ViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var textview1: UITextView!
     @IBOutlet weak var textview2: UITextView!
     @IBOutlet weak var viewv: UIView!
+    @IBOutlet weak var titleLabel: UILabel!
     
+    var coordinator: AddEditJobCoordinator? // Added coordinator for mode handling
     var job: JobAd? // Receive JobAd object
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +26,38 @@ class AddJobView4ViewController: UIViewController, UITextViewDelegate {
         // Set delegates for text views
         textview1.delegate = self
         textview2.delegate = self
+        
+        setupPage()
+        setupKeyboard()
+    }
+    
+    private func setupPage() {
+        if let coordinator = coordinator, case .edit(let job) = coordinator.mode {
+            setupForEditMode(with: job)
+        }
+    }
+    
+    private func setupKeyboard() {
+         view.addGestureRecognizer(UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing)))
+         
+         [UIResponder.keyboardWillShowNotification, UIResponder.keyboardWillHideNotification].forEach { notification in
+             NotificationCenter.default.addObserver(forName: notification, object: nil, queue: .main) { [weak self] _ in
+                 UIView.animate(withDuration: 0.3) {
+                     self?.view.frame.origin.y = notification == UIResponder.keyboardWillShowNotification ? -100 : 0
+                 }
+             }
+         }
+     }
+    
+    
+    private func setupForEditMode(with job: JobAd) {
+        titleLabel.text = "Edit Job Details"
+        populateFields(with: job)
+    }
+    
+    private func populateFields(with job: JobAd) {
+        textview1.text = job.jobKeyResponsibilites
+        textview2.text = job.jobEmploymentBenfits
     }
     
     @IBAction func nextbtn(_ sender: UIButton) {
@@ -37,6 +72,7 @@ class AddJobView4ViewController: UIViewController, UITextViewDelegate {
             job?.jobKeyResponsibilites = textview1.text
             job?.jobEmploymentBenfits = textview2.text
             destination.job = job
+            destination.coordinator = coordinator // Pass the coordinator to maintain the mode
         }
     }
     
@@ -76,7 +112,7 @@ class AddJobView4ViewController: UIViewController, UITextViewDelegate {
     
     // Alert function
     private func showAlert(message: String) {
-        let alert = UIAlertController(title: "Validation Error", message: message, preferredStyle: .alert)
+        let alert = UIAlertController(title: "Invalid Input", message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         alert.addAction(okAction)
         present(alert, animated: true, completion: nil)

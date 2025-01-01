@@ -15,10 +15,34 @@ class CertificationCVViewController: UIViewController {
     @IBOutlet weak var certificationIssuingOrganization: UITextField!
     @IBOutlet weak var otherCertification: UITextField!
     
+    let datePicker = UIDatePicker()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupDatePicker()
+    }
+    
+    func setupDatePicker() {
+        datePicker.datePickerMode = .date
+        datePicker.locale = Locale(identifier: "en_US")
+        datePicker.preferredDatePickerStyle = .wheels
         
-        // Do any additional setup after loading the view.
+        certificationDateObtained.inputView = datePicker
+        
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        
+        let doneButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneTapped))
+        toolbar.setItems([doneButton], animated: false)
+        
+        certificationDateObtained.inputAccessoryView = toolbar
+    }
+    
+    @objc func doneTapped() {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM/dd/yyyy"
+        certificationDateObtained.text = dateFormatter.string(from: datePicker.date)
+        self.view.endEditing(true)
     }
     
     @IBAction func nextButtonTapped(_ sender: UIButton) {
@@ -32,7 +56,6 @@ class CertificationCVViewController: UIViewController {
             showAlert(message: "Certification date obtained cannot be empty.")
             return
         }
-        
         
         guard let certificationDateString = certificationDateObtained.text,
               let certificationDate = isValidDate(certificationDateString) else {
@@ -52,8 +75,7 @@ class CertificationCVViewController: UIViewController {
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MM/dd/yyyy"
-        
-        let formattedDate = dateFormatter.string(from: certificationDate)
+        _ = dateFormatter.string(from: certificationDate)
         
         let newCertification = Certification(
             name: certificationName.text ?? "",
@@ -61,14 +83,8 @@ class CertificationCVViewController: UIViewController {
             IssuingOrganization: certificationIssuingOrganization.text ?? ""
         )
         
-        // printing just to make sure it is saved
-        print("Saved Certification: \(newCertification.name), Date Obtained: \(formattedDate), Issuing Organization: \(newCertification.IssuingOrganization)")
-        
         CVManager.shared.cv.certifications.append(newCertification)
-        
         CVManager.shared.cv.otherCertification = otherCertification.text ?? ""
-        // printing just to make sure it is saved
-        print("Saved other certifications: \(CVManager.shared.cv.otherCertification)")
         
     }
     
@@ -77,6 +93,7 @@ class CertificationCVViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "OK", style: .default))
         present(alert, animated: true)
     }
+    
     func isValidDate(_ dateString: String?) -> Date? {
         guard let dateString = dateString else { return nil }
         
@@ -87,15 +104,4 @@ class CertificationCVViewController: UIViewController {
         
         return dateFormatter.date(from: dateString)
     }
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
 }

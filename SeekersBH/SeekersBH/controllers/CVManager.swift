@@ -35,9 +35,20 @@ class CVManager {
     
     // Function to save the CV to Firebase
     func saveCVToFirebase() {
+        
+        guard let userID = AccessManager.userID else {
+            print("Error: userID is nil. Cannot save CV.")
+            return
+        }
+        
         let cv = CVManager.shared.cv
         
+        let documentReference = FirebaseManager.shared.db.collection("CV").document()
+        let documentID = documentReference.documentID
+        
         let cvData: [String: Any] = [
+            "id": documentID,
+            "userID": userID,
             "fullName": cv.fullName,
             "email": cv.email,
             "phoneNumber": cv.phoneNumber,
@@ -59,7 +70,6 @@ class CVManager {
             "projectOverview": cv.projectSecions.map { $0.overview },
             "projectURL": cv.projectSecions.map { $0.resource },
             "otherProjects": cv.otherProjects,
-            "id": 0,
             "createdDate": Timestamp()
         ]
         
@@ -68,14 +78,16 @@ class CVManager {
             if let error = error {
                 print("Error saving CV: \(error.localizedDescription)")
             } else {
-                print("CV saved successfully!")
+                // print("CV saved successfully!")
             }
         }
+        
+    }
+    
+    func formatDateToString(_ date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        return dateFormatter.string(from: date)
     }
 }
 
-func formatDateToString(_ date: Date) -> String {
-    let dateFormatter = DateFormatter()
-    dateFormatter.dateFormat = "yyyy-MM-dd"
-    return dateFormatter.string(from: date)
-}

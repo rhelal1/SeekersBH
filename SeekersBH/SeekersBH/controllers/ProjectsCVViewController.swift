@@ -17,8 +17,6 @@ class ProjectsCVViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func nextButtonTapped(_ sender: UIButton) {
@@ -51,12 +49,7 @@ class ProjectsCVViewController: UIViewController {
         
         CVManager.shared.cv.projectSecions.append(newProject)
         
-        // printing just to make sure it is saved
-        print("Saved Project: \(newProject.name), Overview: \(newProject.overview), URL: \(newProject.resource)")
-        
         CVManager.shared.cv.otherProjects = otherProjects.text ?? ""
-        // printing just to make sure it is saved
-        print("Saved other projects: \(CVManager.shared.cv.otherProjects)")
         
         CVManager.shared.saveCVToFirebase()
     }
@@ -73,14 +66,4 @@ class ProjectsCVViewController: UIViewController {
         }
         return UIApplication.shared.canOpenURL(url)
     }
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
 }

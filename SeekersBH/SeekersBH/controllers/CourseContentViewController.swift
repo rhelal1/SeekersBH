@@ -4,18 +4,17 @@ class CourseContentViewController: UIViewController {
     
     @IBOutlet weak var courseContentTable: UITableView!
     
-    var courseContents: [CourseContent]!
-    var quize : [Question]!
+    var course : Course!
     
     @IBAction func StartQuize(_ sender: Any) {
         // Instantiate the CourseQuizViewController
         if let courseQuizVC = storyboard?.instantiateViewController(withIdentifier: "CourseQuizViewController") as? CourseQuizViewController {
             
             // Pass the selected course to the CourseQuizViewController
-            courseQuizVC.quizeQuestions = quize
+            courseQuizVC.course = course
 
-            // Push the detail view controller
-            navigationController?.pushViewController(courseQuizVC, animated: true)
+            courseQuizVC.modalPresentationStyle = .fullScreen
+            present(courseQuizVC, animated: true, completion: nil)
         }
     }
     
@@ -30,13 +29,13 @@ class CourseContentViewController: UIViewController {
 
 extension CourseContentViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return courseContents.count
+        return course.courseContent.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "courseContentCell", for: indexPath) as! CourseContentTableViewCell
 
-        cell.update(with: courseContents[indexPath.row])
+        cell.update(with: course.courseContent[indexPath.row])
         cell.showsReorderControl = true
                 
         return cell
@@ -44,7 +43,15 @@ extension CourseContentViewController: UITableViewDataSource, UITableViewDelegat
     
     // UITableViewDelegate method
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedContent = courseContents[indexPath.row]
-        print(selectedContent.videoUrl)
+        let selectedContent = course.courseContent[indexPath.row]
+
+        // Initialize the VideoPlayerViewController
+        let videoPlayerVC = VideoPlayerViewController()
+            videoPlayerVC.videoUrl = URL(string: selectedContent.videoUrl)
+
+
+        // Navigate to the VideoPlayerViewController
+        self.navigationController?.pushViewController(videoPlayerVC, animated: true)
+
     }
 }
