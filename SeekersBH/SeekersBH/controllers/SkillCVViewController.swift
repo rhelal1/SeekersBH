@@ -34,7 +34,7 @@ class SkillCVViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         "Event Planning",
         "Microsoft Office (Word, Excel, PowerPoint)"
     ]
-    var selectedSkills: [String] = [] // Store multiple selected skills
+    var selectedSkills: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,9 +56,8 @@ class SkillCVViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         skillName.inputAccessoryView = toolbar
     }
     
-    // MARK: - UIPickerView DataSource Methods
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1 // Single column
+        return 1
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
@@ -73,22 +72,20 @@ class SkillCVViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         let selectedSkill = skills[row]
         
-        // Add skill to selectedSkills array if not already selected
         if !selectedSkills.contains(selectedSkill) {
             selectedSkills.append(selectedSkill)
         }
         
-        // Update text field to display all selected skills
         skillName.text = selectedSkills.joined(separator: ", ")
     }
     
     @objc func doneButtonTapped() {
-        skillName.resignFirstResponder() // Dismiss picker view
+        skillName.resignFirstResponder()
     }
     
     @objc func clearButtonTapped() {
         selectedSkills.removeAll()
-        skillName.text = "" // Clear text field
+        skillName.text = ""
     }
     
     @IBAction func nextButtonTapped(_ sender: Any) {
@@ -96,12 +93,9 @@ class SkillCVViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
             showAlert(message: "Please select at least one skill or enter other skills.")
             return
         }
-        // Save selected skills and other skills
-        CVManager.shared.cv.skills = selectedSkills.joined(separator: ", ")
-        print("Saved skills: \(CVManager.shared.cv.skills)")
         
+        CVManager.shared.cv.skills = selectedSkills.joined(separator: ", ")
         CVManager.shared.cv.otherSkills = otherSkills.text ?? ""
-        print("Saved other skills: \(CVManager.shared.cv.otherSkills)")
     }
     
     func showAlert(message: String) {

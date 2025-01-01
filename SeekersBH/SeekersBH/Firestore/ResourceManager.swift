@@ -51,7 +51,6 @@ final class ResourceManager {
                 print("Error incrementing views: \(error.localizedDescription)")
                 completion(error)
             } else {
-                print("Views incremented successfully")
                 completion(nil)
             }
         }
@@ -141,65 +140,6 @@ final class ResourceManager {
     }
     
     
-    func insertWebinars(webinar : Webinar) {
-        let db = Firestore.firestore()
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd" // Specify the expected format
-        
-            let docRef = db.collection("Webinars").document() // Create a reference with an auto-generated ID
-                        
-            // Prepare the data for Firestore
-            let webinarData: [String: Any] = [
-                "id": docRef.documentID,             // Set the `id` field in the webinar object
-                "title": webinar.title,
-                "speaker": webinar.speaker,
-                "date": Timestamp(date: webinar.date),
-                "timeZone": webinar.timeZone,
-                "picture": webinar.picture,
-                "description": webinar.description,
-                "url": webinar.url,
-                "views": 0
-            ]
-            
-            // Save the data to Firestore
-            docRef.setData(webinarData) { error in
-                if let error = error {
-                    print("Error adding webinar: \(error)")
-                } else {
-                    print("Webinar added successfully with ID: \(webinar.id)")
-                }
-            }
-    }
-    
-    func insertVideos(video : Video) {
-        let db = Firestore.firestore()
-    
-            let docRef = db.collection("Videos").document() // Create a reference with an auto-generated ID
-            
-            // Convert the Video struct to a dictionary for Firestore
-            let videoData: [String: Any] = [
-                "id": docRef.documentID,
-                "title": video.title,
-                "speaker": video.speaker,
-                "channel": video.channel,
-                "duration": video.duration,
-                "picture": video.picture,
-                "description": video.description,
-                "url": video.url,
-                "views": 0
-            ]
-            
-            // Save the data to Firestore
-            docRef.setData(videoData) { error in
-                if let error = error {
-                    print("Error adding webinar: \(error)")
-                } else {
-                    print("Webinar added successfully with ID: \(video.id)")
-                }
-            }
-    }
-    
-    
     func saveResourceToFirebase(userID: String, resourceId: String, resourceType: ResourceTypes, viewController: UIViewController) {
         
         // Check if the resource is already saved
@@ -233,11 +173,11 @@ final class ResourceManager {
     }
     
     // Helper function to show alert in the view controller
-         func showAlert(title: String, message: String, in viewController: UIViewController) {
-            let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+    func showAlert(title: String, message: String, in viewController: UIViewController) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default))
             viewController.present(alert, animated: true, completion: nil)
-        }
+    }
     
     func isResourceAlreadySaved(userID: String, resourceType: ResourceTypes, resourceID: String, completion: @escaping (Result<Bool, Error>) -> Void) {
         let db = Firestore.firestore()

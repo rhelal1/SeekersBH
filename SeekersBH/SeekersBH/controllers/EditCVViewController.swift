@@ -17,10 +17,8 @@ class EditCVViewController: UIViewController {
         super.viewDidLoad()
         
         if let embeddedVC = self.children.first(where: { $0 is EditCVFieldsTableViewController }) {
-            // Now you can work with the embedded view controller
             editFieldsTableVC = (embeddedVC as! EditCVFieldsTableViewController)
         }
-        
         
         editFieldsTableVC.editFullName.text = cvDetails?.fullName
         editFieldsTableVC.editEmail.text = cvDetails?.email
@@ -41,16 +39,11 @@ class EditCVViewController: UIViewController {
         editFieldsTableVC.editProjectURL.text = cvDetails?.projects.first?.url
         editFieldsTableVC.editProjectOverview.text = cvDetails?.projects.first?.overview
         editFieldsTableVC.editOtherProjects.text = cvDetails?.projectsOther
-        
-        
-        
-        
-        
     }
     
     
     @IBAction func saveButton(_ sender: UIButton) {
-        // Fetch updated data from UI fields
+        
         let updatedCVData: [String: Any] = [
             "fullName": editFieldsTableVC.editFullName.text ?? "",
             "email": editFieldsTableVC.editEmail.text ?? "",
@@ -89,15 +82,4 @@ class EditCVViewController: UIViewController {
         }
         
     }
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
 }
