@@ -59,7 +59,7 @@ class SkillsViewController: UIViewController {
     
     private func checkExistingSkills() {
         let db = Firestore.firestore()
-        db.collection("Skill").whereField("userID", isEqualTo: User.loggedInID).getDocuments { [weak self] (querySnapshot, error) in
+        db.collection("Skill").whereField("userID", isEqualTo: AccessManager.userID!).getDocuments { [weak self] (querySnapshot, error) in
             if let _ = querySnapshot?.documents.first {
                 // Record exists, switch to edit mode
                 self?.isEditMode = true
@@ -71,7 +71,7 @@ class SkillsViewController: UIViewController {
     
     private func loadExistingSkills() {
         let db = Firestore.firestore()
-        db.collection("Skill").whereField("userID", isEqualTo: User.loggedInID).getDocuments { [weak self] (querySnapshot, error) in
+        db.collection("Skill").whereField("userID", isEqualTo: AccessManager.userID!).getDocuments { [weak self] (querySnapshot, error) in
             guard let self = self,
                   let document = querySnapshot?.documents.first,
                   let skill1 = document.data()["skill1"] as? String,
@@ -159,7 +159,7 @@ class SkillsViewController: UIViewController {
         if isEditMode {
             // Update existing document
             db.collection("Skill")
-                .whereField("userID", isEqualTo: User.loggedInID)
+                .whereField("userID", isEqualTo: AccessManager.userID!)
                 .getDocuments { [weak self] (querySnapshot, error) in
                     if let document = querySnapshot?.documents.first {
                         document.reference.updateData(skillsData) { error in

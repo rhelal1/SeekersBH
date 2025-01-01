@@ -28,7 +28,7 @@ class EditProfileTableViewController: UITableViewController {
         let db = Firestore.firestore()
         print(User.loggedInID)
         db.collection("User")
-            .whereField("userID", isEqualTo: User.loggedInID)
+            .whereField("userID", isEqualTo: AccessManager.userID!)
             .getDocuments { [weak self] (querySnapshot, error) in
                 guard let self = self else { return }
                 

@@ -25,7 +25,7 @@ class UserProfile: UIViewController {
         
         // Fetch user data using the logged-in user's ID
         db.collection("User")
-            .whereField("userID", isEqualTo: User.loggedInID)
+            .whereField("userID", isEqualTo: AccessManager.userID!)
             .getDocuments { [weak self] (querySnapshot, error) in
                 guard let self = self else { return }
                 
@@ -82,7 +82,7 @@ class UserProfile: UIViewController {
         
         // Fetch user skills from the database
         db.collection("Skill")
-            .whereField("userID", isEqualTo: User.loggedInID)
+            .whereField("userID", isEqualTo: AccessManager.userID!)
             .getDocuments { [weak self] (querySnapshot, error) in
                 guard let self = self else { return }
                 
@@ -124,7 +124,7 @@ class UserProfile: UIViewController {
         
         // Fetch user interests
         db.collection("Interest")
-            .whereField("userID", isEqualTo: User.loggedInID)
+            .whereField("userID", isEqualTo: AccessManager.userID!)
             .getDocuments { [weak self] (querySnapshot, error) in
                 guard let self = self else { return }
                 

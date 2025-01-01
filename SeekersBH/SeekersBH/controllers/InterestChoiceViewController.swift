@@ -2,7 +2,6 @@
 //  InterestChoiceViewController.swift
 //  SeekersBH
 //
-//  Created by Noora Qasim on 25/12/2024.
 //
 
 import UIKit
@@ -28,7 +27,7 @@ class InterestChoiceViewController: UIViewController {
     
     private var selectedInterests: [String] = []  // Will store up to 4 interests in order
        private let maxSelections = 4
-    var userID: String = User.loggedInID
+    var userID: String = AccessManager.userID!
     override func viewDidLoad() {
         super.viewDidLoad()
         print("isEditMode set to: \(self.isEditMode)")
@@ -48,7 +47,7 @@ class InterestChoiceViewController: UIViewController {
         print("loading")
            let db = Firestore.firestore()
            db.collection("Interest")
-               .whereField("userID", isEqualTo: User.loggedInID) // Changed from email
+            .whereField("userID", isEqualTo: AccessManager.userID!) // Changed from email
                .getDocuments { [weak self] (querySnapshot, error) in
                guard let self = self,
                      let document = querySnapshot?.documents.first,
@@ -152,7 +151,7 @@ class InterestChoiceViewController: UIViewController {
            
            let db = Firestore.firestore()
            let interestsData: [String: Any] = [
-               "userID": User.loggedInID, // Changed from email
+            "userID": AccessManager.userID!, // Changed from email
                "interest1": selectedInterests[0],
                "interest2": selectedInterests[1],
                "interest3": selectedInterests[2],
@@ -162,7 +161,7 @@ class InterestChoiceViewController: UIViewController {
            if isEditMode {
                // Update existing document
                db.collection("Interest")
-                   .whereField("userID", isEqualTo: User.loggedInID) // Changed from email
+                   .whereField("userID", isEqualTo: AccessManager.userID!) // Changed from email
                    .getDocuments { [weak self] (querySnapshot, error) in
                        if let document = querySnapshot?.documents.first {
                            document.reference.updateData(interestsData) { error in

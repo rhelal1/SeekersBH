@@ -75,11 +75,13 @@ class EditCVViewController: UIViewController {
             if let error = error {
                 print("Error updating CV: \(error.localizedDescription)")
             } else {
-                print("CV updated successfully!")
-                self.presentingViewController!.dismiss(animated: true)
-                
+                self.presentingViewController?.dismiss(animated: true, completion: nil)
             }
         }
-        
     }
+
+    @IBAction func backButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 }
