@@ -431,7 +431,7 @@
         <!--Selection Applications Table View Controller-->
         <scene sceneID="XOU-ow-e4l">
             <objects>
-                <tableViewController storyboardIdentifier="selection" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hA2-k1-Dyn" customClass="CVSelectionApplicationsTableViewController" customModule="SeekersBH" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="hA2-k1-Dyn" customClass="CVSelectionApplicationsTableViewController" customModule="SeekersBH" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="2tE-gA-EM5">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1134,7 +1134,8 @@
         <!--Navigation Controller-->
         <scene sceneID="CeM-E2-oHo">
             <objects>
-                <navigationController storyboardIdentifier="nav" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="yio-qk-zCD" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bj2-WP-XeH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yio-qk-zCD" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="uS2-Wi-VLE">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -1145,7 +1146,6 @@
                         <segue destination="D70-bo-XNO" kind="relationship" relationship="rootViewController" id="SSh-BF-u4e"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bj2-WP-XeH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1715.2671755725189" y="153.52112676056339"/>
         </scene>
