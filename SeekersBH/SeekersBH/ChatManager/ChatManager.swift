@@ -71,7 +71,7 @@ class ChatManager {
                 return
             }
             
-            print("Chat created successfully!")
+//            print("Chat created successfully!")
             completion(self.chatId)
         }
     }
