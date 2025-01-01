@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 70;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -27,6 +27,8 @@
 		666767342D1DE94200193BFD /* JobDetails2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666767332D1DE94200193BFD /* JobDetails2ViewController.swift */; };
 		66A160B32D1DDA5700721827 /* searchAndFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A160B22D1DDA5700721827 /* searchAndFilterViewController.swift */; };
 		66E035052D143B050050E168 /* generalInformationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E035042D143B050050E168 /* generalInformationCollectionViewCell.swift */; };
+		892D15682D25A4D70038E40D /* ProfileTableViewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892D15672D25A4D70038E40D /* ProfileTableViewTableViewController.swift */; };
+		892D156B2D25B89F0038E40D /* ChatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892D15692D25B89F0038E40D /* ChatManager.swift */; };
 		893E0F4B2D1D7955004CB6C3 /* MangeWebinarsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893E0F4A2D1D7955004CB6C3 /* MangeWebinarsTableViewCell.swift */; };
 		893E0F4D2D1D7998004CB6C3 /* MangeWebinarsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893E0F4C2D1D7998004CB6C3 /* MangeWebinarsViewController.swift */; };
 		893E0F4F2D1DA202004CB6C3 /* MangeVideosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893E0F4E2D1DA202004CB6C3 /* MangeVideosViewController.swift */; };
@@ -179,6 +181,8 @@
 		666767332D1DE94200193BFD /* JobDetails2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JobDetails2ViewController.swift; path = SeekersBH/views/JobDetails2ViewController.swift; sourceTree = SOURCE_ROOT; };
 		66A160B22D1DDA5700721827 /* searchAndFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = searchAndFilterViewController.swift; path = SeekersBH/views/searchAndFilterViewController.swift; sourceTree = SOURCE_ROOT; };
 		66E035042D143B050050E168 /* generalInformationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = generalInformationCollectionViewCell.swift; sourceTree = "<group>"; };
+		892D15672D25A4D70038E40D /* ProfileTableViewTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewTableViewController.swift; sourceTree = "<group>"; };
+		892D15692D25B89F0038E40D /* ChatManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatManager.swift; sourceTree = "<group>"; };
 		893E0F4A2D1D7955004CB6C3 /* MangeWebinarsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MangeWebinarsTableViewCell.swift; sourceTree = "<group>"; };
 		893E0F4C2D1D7998004CB6C3 /* MangeWebinarsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MangeWebinarsViewController.swift; sourceTree = "<group>"; };
 		893E0F4E2D1DA202004CB6C3 /* MangeVideosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MangeVideosViewController.swift; sourceTree = "<group>"; };
@@ -294,10 +298,6 @@
 		EE9713BF2D1F018C00D5F90B /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		EE9713BB2D1EFEB700D5F90B /* ChatManager */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = ChatManager; sourceTree = "<group>"; };
-/* End PBXFileSystemSynchronizedRootGroup section */
-
 /* Begin PBXFrameworksBuildPhase section */
 		D153BE392CF47AC900A81FFC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
@@ -312,6 +312,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		892D156A2D25B89F0038E40D /* ChatManager */ = {
+			isa = PBXGroup;
+			children = (
+				892D15692D25B89F0038E40D /* ChatManager.swift */,
+			);
+			path = ChatManager;
+			sourceTree = "<group>";
+		};
 		895C0AAC2D1735C900E7283B /* Cloudinary */ = {
 			isa = PBXGroup;
 			children = (
@@ -355,7 +363,7 @@
 		D153BE3E2CF47AC900A81FFC /* SeekersBH */ = {
 			isa = PBXGroup;
 			children = (
-				EE9713BB2D1EFEB700D5F90B /* ChatManager */,
+				892D156A2D25B89F0038E40D /* ChatManager */,
 				895C0AAC2D1735C900E7283B /* Cloudinary */,
 				947B8FE92D123571004463EF /* Firestore */,
 				D184E3F32CF86D6600D896D6 /* controllers */,
@@ -520,6 +528,7 @@
 				43F8B3AF2D1F7F9E00E669BB /* CVDoneViewController.swift */,
 				EE9713B92D1EF4AC00D5F90B /* ChatViewController.swift */,
 				EE28CC2B2D1F5A9F00F8FF13 /* ProfileViewController.swift */,
+				892D15672D25A4D70038E40D /* ProfileTableViewTableViewController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -538,9 +547,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				EE9713BB2D1EFEB700D5F90B /* ChatManager */,
 			);
 			name = SeekersBH;
 			packageProductDependencies = (
@@ -745,6 +751,7 @@
 				89BB590F2D1CC076000FE481 /* MangeArticlesViewController.swift in Sources */,
 				8983F9A02D147DF400DE32B5 /* AddEmployerViewController.swift in Sources */,
 				43B1C5332D1585BF0046F96C /* AllCVViewController.swift in Sources */,
+				892D15682D25A4D70038E40D /* ProfileTableViewTableViewController.swift in Sources */,
 				438BBA072D1EE3C400261153 /* ApplicationTrackerViewController.swift in Sources */,
 				D4070DBC2D107AA100E517FE /* NewApplyPageFormTableViewController.swift in Sources */,
 				43F5F6AF2D1C923900FA080C /* EditCVFieldsTableViewController.swift in Sources */,
@@ -775,6 +782,7 @@
 				895C0AAE2D1735DA00E7283B /* CloudinaryManager.swift in Sources */,
 				942060702D10828700A2DE36 /* CourseReviewTableViewCell.swift in Sources */,
 				9420605C2D0CCE1900A2DE36 /* VideoDetailsViewController.swift in Sources */,
+				892D156B2D25B89F0038E40D /* ChatManager.swift in Sources */,
 				947B8FE62D11CA5B004463EF /* FirebaseManager.swift in Sources */,
 				438BBA092D1EE3D600261153 /* ApplicationTrackerTableViewCell.swift in Sources */,
 				9420606C2D1073EC00A2DE36 /* CourseContentViewController.swift in Sources */,

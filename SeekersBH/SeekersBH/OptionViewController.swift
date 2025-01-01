@@ -91,4 +91,15 @@ class OptionViewController: UIViewController {
         navigationController?.pushViewController(viewController, animated: true)
     }
     
+    @IBAction func userManagmentButtonTapped(_ sender: Any) {
+        navigationHelper(storybosrdName: "zainab", viewControllerName: "ManageUsers")
+    }
+    
+    @IBAction func resourceManagmentButtonTapped(_ sender: Any) {
+        navigationHelper(storybosrdName: "zainab", viewControllerName: "ResourceManagementViewController")
+    }
+    
+    @IBAction func adminJobManagemntButtonTapped(_ sender: Any) {
+        navigationHelper(storybosrdName: "zainab", viewControllerName: "ManageJobsViewController")
+    }
 }
