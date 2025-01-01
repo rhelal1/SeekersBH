@@ -36,26 +36,26 @@ class AddWebinarsViewController: UIViewController,  UIImagePickerControllerDeleg
     
     @IBAction func savewebinar(_ sender: Any) {
         guard let title = webtitle.text, !title.isEmpty,
-              let description = wedescription.text, !description.isEmpty,
-              let speaker = webspeaker.text, !speaker.isEmpty,
-              let date = webdate.text, !date.isEmpty,
-              let time = webtime.text, !time.isEmpty,
-              let url = weburl.text, !url.isEmpty else {
-            print("Please fill out all fields.")
-            return
-        }
-        
-        guard let coverImage = webcover.image else {
-            print("Please select a cover image.")
-            return
-        }
-        
+                     let description = wedescription.text, !description.isEmpty,
+                     let speaker = webspeaker.text, !speaker.isEmpty,
+                     let date = webdate.text, !date.isEmpty,
+                     let time = webtime.text, !time.isEmpty,
+                     let url = weburl.text, !url.isEmpty else {
+                   print("Please fill out all fields.")
+                   return
+               }
+               
+               guard let coverImage = webcover.image else {
+                   print("Please select a cover image.")
+                   return
+               }
+               
         let documentReference = FirebaseManager.shared.db.collection("Webinars").document()
-        let documentID = documentReference.documentID
+           let documentID = documentReference.documentID
         
         CloudinaryManager.upload(image: coverImage, to: "webinarsCovers", uploadPreset: "ml_default") { result in
             switch result {
-            case .success(let coverUrl):
+            case .success(let url):
                 let webinarData: [String: Any] = [
                     "id": documentID,
                     "title": title,
@@ -64,31 +64,18 @@ class AddWebinarsViewController: UIViewController,  UIImagePickerControllerDeleg
                     "date": date,
                     "time": time,
                     "url": url,
-                    "cover": coverUrl,
+                    "cover": url,
                     "views": 0
                 ]
                 
                 FirebaseManager.shared.addDocumentToCollection(collectionName: "Webinars", data: webinarData)
                 print("Webinar and cover image URL saved successfully!")
                 
-                let alert = UIAlertController(title: "Success", message: "New Webinars Added Successfully!", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-                self.present(alert, animated: true, completion: nil)
-                
-                self.webtitle.text = ""
-                self.wedescription.text = ""
-                self.webspeaker.text = ""
-                self.webdate.text = ""
-                self.webtime.text = ""
-                self.weburl.text = ""
-                self.webcover.image = nil
-                
             case .failure(let error):
                 print("Image upload failed: \(error.localizedDescription)")
             }
         }
     }
-
 
     
     @IBAction func selectedwebcover(_ sender: Any) {
