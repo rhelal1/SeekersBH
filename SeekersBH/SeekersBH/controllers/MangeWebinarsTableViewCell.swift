@@ -30,27 +30,9 @@ class MangeWebinarsTableViewCell: UITableViewCell {
     
     @IBAction func didTapActionButton(_ sender: Any) {
         guard let webinarID = webinar?.id else { return }
-           let newHiddenState = !(webinar?.isHidden ?? false)
-           
-           let confirmationMessage = newHiddenState
-               ? "Are you sure you want to hide this webinar?"
-               : "Are you sure you want to show this webinar?"
-           
-           guard let parentViewController = self.parentViewController else { return }
-           
-           let alert = UIAlertController(
-               title: "Confirmation",
-               message: confirmationMessage,
-               preferredStyle: .alert
-           )
-           
-           alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-           
-           alert.addAction(UIAlertAction(title: "Yes", style: .default) { _ in
-               self.toggleVisibilityAction?(webinarID, newHiddenState)
-           })
-           
-           parentViewController.present(alert, animated: true)
-           }
+               
+               let newHiddenState = !(webinar?.isHidden ?? false)
+               toggleVisibilityAction?(webinarID, newHiddenState)
+    }
     
 }

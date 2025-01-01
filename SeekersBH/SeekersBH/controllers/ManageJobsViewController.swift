@@ -119,6 +119,7 @@ class ManageJobsViewController: UIViewController, UITableViewDelegate, UITableVi
                 isHidden: job.isHidden,
                 documentId: documentId
             )
+            cell.indexPath = indexPath
         } else {
             print("Warning: Missing document ID for job at index \(indexPath.row)")
         }
