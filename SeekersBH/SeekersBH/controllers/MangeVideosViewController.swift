@@ -82,32 +82,46 @@ class MangeVideosViewController: UIViewController {
         }
         
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
             let cell = tableView.dequeueReusableCell(withIdentifier: "adminVideoCell", for: indexPath) as! MangeVideosTableViewCell
             
-
             let video = videos[indexPath.row]
             cell.update(with: video)
             
             cell.toggleVisibilityAction = { [weak self] videoID, isHidden in
-                       guard let self = self else { return }
-                       
-                       FirebaseManager.shared.updateDocument(
-                           collectionName: "Videos",
-                           documentId: videoID,
-                           data: ["isHidden": isHidden]
-                       ) { error in
-                           if let error = error {
-                               print("Failed to update visibility: \(error.localizedDescription)")
-                           } else {
-                               self.updateVideoVisibility(videoID: videoID, isHidden: isHidden)
-                           }
-                       }
-                   }
-                   
-                   return cell
-               }
-               
+                guard let self = self else { return }
+                
+                let confirmationMessage = isHidden
+                    ? "Are you sure you want to hide this video?"
+                    : "Are you sure you want to show this video?"
+                
+                let alert = UIAlertController(
+                    title: "Confirmation",
+                    message: confirmationMessage,
+                    preferredStyle: .alert
+                )
+                
+                alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+                
+                alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { _ in
+                    FirebaseManager.shared.updateDocument(
+                        collectionName: "Videos",
+                        documentId: videoID,
+                        data: ["isHidden": isHidden]
+                    ) { error in
+                        if let error = error {
+                            print("Failed to update visibility: \(error.localizedDescription)")
+                        } else {
+                            self.updateVideoVisibility(videoID: videoID, isHidden: isHidden)
+                        }
+                    }
+                }))
+                
+                self.present(alert, animated: true)
+            }
+            
+            return cell
+        }
+
 
         func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
             return 200
