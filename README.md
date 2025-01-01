@@ -24,7 +24,7 @@ The app stands out by combining professional development resources, personalized
 ## Features
 ### Core Features:
 1. **User Authentication**: Secure login, registration, guest access, and persistent login.
-2. **User Profile & Settings**: Personalize profiles with information, skills, and preferences. Includes light/dark mode and localization options.
+2. **User Profile & Settings**: Personalize profiles with information, skills, and preferences. Includes light/dark mode option.
 3. **Personalized Job Recommendations**: Tailored job suggestions based on user profiles and interests.
 4. **Job Application**: Simplifies applying to jobs directly within the platform.
 5. **Job Application Tracker**: Tracks the progress of submitted applications.
