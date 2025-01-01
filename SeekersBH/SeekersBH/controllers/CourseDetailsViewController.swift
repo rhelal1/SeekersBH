@@ -31,10 +31,12 @@ class CourseDetailsViewController: UIViewController {
     
     @IBAction func seeComments(_ sender: Any) {
         // Instantiate the CourseContentViewController
+        let number = calculateAverageRating(comments: course.courseComments)
+        
         if let courseReviewVC = storyboard?.instantiateViewController(withIdentifier: "CourseReviewViewController") as? CourseReviewViewController {
             // Pass the selected course to the CourseContentViewController
             courseReviewVC.courseComments = course.courseComments
-            courseReviewVC.ratingText = "\(calculateAverageRating(comments: course.courseComments))/5 (\(course.courseComments.count) reviews)"
+            courseReviewVC.ratingText = "\(String(format: "%.2f", number))/5 (\(course.courseComments.count) reviews)"
             // Push the detail view controller
             navigationController?.pushViewController(courseReviewVC, animated: true)
         }
