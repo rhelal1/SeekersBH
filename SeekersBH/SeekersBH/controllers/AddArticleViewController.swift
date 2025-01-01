@@ -29,44 +29,31 @@ class AddArticleViewController: UIViewController {
   
     @IBAction func saveArticle(_ sender: Any) {
         guard let title = articleTitle.text, !title.isEmpty,
-              let author = articleAuthor.text, !author.isEmpty,
-              let yop = articleYOP.text, !yop.isEmpty,
-              let publisher = articlePublisher.text, !publisher.isEmpty,
-              let description = articleDescription.text, !description.isEmpty,
-              let url = articleURL.text, !url.isEmpty,
-              let doi = articleDOI.text, !doi.isEmpty else {
-            print("Please fill out all fields.")
-            return
-        }
-
-        let documentReference = FirebaseManager.shared.db.collection("Article").document()
-        let documentID = documentReference.documentID
-
-        let articleData: [String: Any] = [
-            "id": documentID,
-            "title": title,
-            "author": author,
-            "year_of_publication": Int(yop) ?? 0, // Convert year to Int
-            "publisher": publisher,
-            "description": description,
-            "url": url,
-            "DOI": doi,
-            "views": 0 // will always start with 0 views
-        ]
-
-        FirebaseManager.shared.addDocumentToCollection(collectionName: "Article", data: articleData)
-
-        let alert = UIAlertController(title: "Success", message: "New Article Added Successfully!", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
+                      let author = articleAuthor.text, !author.isEmpty,
+                      let yop = articleYOP.text, !yop.isEmpty,
+                      let publisher = articlePublisher.text, !publisher.isEmpty,
+                      let description = articleDescription.text, !description.isEmpty,
+                      let url = articleURL.text, !url.isEmpty,
+                      let doi = articleDOI.text, !doi.isEmpty else {
+                    print("Please fill out all fields.")
+                    return
+                }
         
-        self.articleTitle.text = ""
-        self.articleAuthor.text = ""
-        self.articleYOP.text = ""
-        self.articlePublisher.text = ""
-        self.articleDescription.text = ""
-        self.articleURL.text = ""
-        self.articleDOI.text = ""
+        let documentReference = FirebaseManager.shared.db.collection("Article").document()
+           let documentID = documentReference.documentID
+        
+        let articleData: [String: Any] = [
+                    "id":documentID,
+                    "title": title,
+                    "author": author,
+                    "year_of_publication": Int(yop) ?? 0, // Convert year to Int
+                   "publisher": publisher,
+                   "description": description,
+                   "url": url,
+                   "DOI": doi,
+                   "views": 0 // will always start with 0 views 
+               ]
+        
+        FirebaseManager.shared.addDocumentToCollection(collectionName: "Article", data: articleData)
     }
-
 }
