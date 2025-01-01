@@ -79,7 +79,6 @@ class UserManger {
                 completion([], error)
                 return
             }
-            print(userID)
             for doc in querySnapshot?.documents ?? [] {
                        for i in 1...4 {
                            if let skill = doc["skill\(i)"] as? String, !skill.isEmpty {
@@ -110,27 +109,41 @@ class UserManger {
     }
     
     func fetchUserConnections(userID: String, completion: @escaping ([String], [String], Error?) -> Void) {
-        db.collection("userConnections2")
-            .whereField("userID", isEqualTo: userID)
-            .getDocuments { (querySnapshot, error) in
-                if let error = error {
-                    completion([], [], error)
-                    return
-                }
-                
-                guard let document = querySnapshot?.documents.first else {
-                    completion([], [], nil)
-                    return
-                }
-                
-                do {
-                    let userRelations = try document.data(as: UserRelations.self)
-                    completion(userRelations.followers, userRelations.followings, nil)
-                } catch {
-                    completion([], [], error)
-                }
+        let userConnectionsRef = db.collection("userConnections2").whereField("userID", isEqualTo: userID)
+        
+        userConnectionsRef.getDocuments { (querySnapshot, error) in
+            if let error = error {
+                completion([], [], error)
+                return
             }
+            
+            guard let document = querySnapshot?.documents.first else {
+                let newDocRef = self.db.collection("userConnections2").document()
+                let newUserConnections = [
+                    "userID": userID,
+                    "followers": [],
+                    "followings": []
+                ] as [String: Any]
+                
+                newDocRef.setData(newUserConnections) { error in
+                    if let error = error {
+                        completion([], [], error)
+                    } else {
+                        completion([], [], nil)
+                    }
+                }
+                return
+            }
+            
+            do {
+                let userRelations = try document.data(as: UserRelations.self)
+                completion(userRelations.followers, userRelations.followings, nil)
+            } catch {
+                completion([], [], error)
+            }
+        }
     }
+
 
     func toggleFollowStatus(userID: String, followerID: String, completion: @escaping (Bool, Bool, Error?) -> Void) {
         let userQuery = db.collection("userConnections2").whereField("userID", isEqualTo: userID)

@@ -31,7 +31,6 @@ class ProfileTableViewTableViewController: UITableViewController {
                guard let self = self, error == nil else { return }
                DispatchQueue.main.async {
                    self.skillsARR = skills
-                   print(skills)
                    self.updateCellsContent()
                }
            }
@@ -41,7 +40,6 @@ class ProfileTableViewTableViewController: UITableViewController {
                guard let self = self, error == nil else { return }
                DispatchQueue.main.async {
                    self.interestsARR = interests
-                   print(interests)
                    self.updateCellsContent()
                }
            }
