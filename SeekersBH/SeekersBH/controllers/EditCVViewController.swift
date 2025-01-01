@@ -75,7 +75,8 @@ class EditCVViewController: UIViewController {
             if let error = error {
                 print("Error updating CV: \(error.localizedDescription)")
             } else {
-                self.presentingViewController?.dismiss(animated: true, completion: nil)
+                self.navigationController?.popViewController(animated: true)
+                self.navigationController?.popViewController(animated: true)
             }
         }
     }
