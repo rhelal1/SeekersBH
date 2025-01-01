@@ -8,11 +8,6 @@
 
 import UIKit
 
-
-protocol ManageAdminJobCell: AnyObject {
-    func didTapDelete(at indexPath: IndexPath)
-}
-
 class AdminJobCell: UITableViewCell {
     
     
@@ -29,7 +24,6 @@ class AdminJobCell: UITableViewCell {
     @IBOutlet weak var statusLabel: UILabel!
         
     var isJobHidden =  false
-    var indexPath: IndexPath?
     var documentId: String?
     
     func setupCell(jobName: String, jobLocation: String, date: Date, status: JobStatus, isHidden: Bool, documentId: String) {
@@ -40,7 +34,7 @@ class AdminJobCell: UITableViewCell {
            isJobHidden = isHidden
            self.documentId = documentId
         let dateFormatter = DateFormatter()
-          dateFormatter.dateStyle = .medium 
+          dateFormatter.dateStyle = .medium
           dateFormatter.timeStyle = .none
           darePostedLabel.text = "Posted on \(dateFormatter.string(from: date))"
            actionButton.setTitle(
@@ -51,7 +45,7 @@ class AdminJobCell: UITableViewCell {
     
     
     @IBAction func didTapAction(_ sender: Any) {
-        guard let indexPath = indexPath, let documentId = documentId else { return }
+        guard let documentId = documentId else { return }
 
            let newHiddenState = !isJobHidden
 
