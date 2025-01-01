@@ -80,10 +80,12 @@ class UserManger {
                 return
             }
             for doc in querySnapshot?.documents ?? [] {
-                if let skill = doc["skill1"] as? String, !skill.isEmpty {
-                    skills.append(skill)
-                }
-            }
+                       for i in 1...4 {
+                           if let skill = doc["skill\(i)"] as? String, !skill.isEmpty {
+                               skills.append(skill)
+                           }
+                       }
+                   }
             completion(skills, nil)
         }
     }
@@ -96,26 +98,102 @@ class UserManger {
                 return
             }
             for doc in querySnapshot?.documents ?? [] {
-                if let interest = doc["interest1"] as? String, !interest.isEmpty {
-                    interests.append(interest)
-                }
-            }
+                       for i in 1...4 {
+                           if let interest = doc["interest\(i)"] as? String, !interest.isEmpty {
+                               interests.append(interest)
+                           }
+                       }
+                   }
             completion(interests, nil)
         }
     }
     
-    func fetchUserConnections(userID: String, completion: @escaping (Int, Int, Error?) -> Void) {
-        db.collection("userConnections")
-            .whereField("userID", isEqualTo: userID)
-            .getDocuments { (querySnapshot, error) in
-                if let error = error {
-                    completion(0, 0, error)
-                    return
-                }
-                let data = querySnapshot?.documents.first?.data() ?? [:]
-                let followers = data["followers"] as? [String] ?? []
-                let following = data["following"] as? [String] ?? []
-                completion(followers.count, following.count, nil)
+    func fetchUserConnections(userID: String, completion: @escaping ([String], [String], Error?) -> Void) {
+        let userConnectionsRef = db.collection("userConnections2").whereField("userID", isEqualTo: userID)
+        
+        userConnectionsRef.getDocuments { (querySnapshot, error) in
+            if let error = error {
+                completion([], [], error)
+                return
             }
+            
+            guard let document = querySnapshot?.documents.first else {
+                let newDocRef = self.db.collection("userConnections2").document()
+                let newUserConnections = [
+                    "userID": userID,
+                    "followers": [],
+                    "followings": []
+                ] as [String: Any]
+                
+                newDocRef.setData(newUserConnections) { error in
+                    if let error = error {
+                        completion([], [], error)
+                    } else {
+                        completion([], [], nil)
+                    }
+                }
+                return
+            }
+            
+            do {
+                let userRelations = try document.data(as: UserRelations.self)
+                completion(userRelations.followers, userRelations.followings, nil)
+            } catch {
+                completion([], [], error)
+            }
+        }
     }
+
+
+    func toggleFollowStatus(userID: String, followerID: String, completion: @escaping (Bool, Bool, Error?) -> Void) {
+        let userQuery = db.collection("userConnections2").whereField("userID", isEqualTo: userID)
+        
+        userQuery.getDocuments { snapshot, error in
+            guard let snapshot = snapshot, !snapshot.isEmpty, let document = snapshot.documents.first else {
+                completion(false, false, error ?? NSError(domain: "UserNotFound", code: 404, userInfo: [NSLocalizedDescriptionKey: "User document not found"]))
+                return
+            }
+            
+            let userDocRef = self.db.collection("userConnections2").document(document.documentID)
+            
+            self.db.runTransaction({ (transaction, errorPointer) -> Any? in
+                let userDocument: DocumentSnapshot
+                do {
+                    try userDocument = transaction.getDocument(userDocRef)
+                } catch let fetchError as NSError {
+                    errorPointer?.pointee = fetchError
+                    return nil
+                }
+                
+                var followers = userDocument.data()?["followers"] as? [String] ?? []
+                var isFollowing = false
+                
+                if followers.contains(followerID) {
+                    // Remove follower
+                    followers.removeAll { $0 == followerID }
+                    isFollowing = false
+                } else {
+                    // Add follower
+                    followers.append(followerID)
+                    isFollowing = true
+                }
+                transaction.updateData(["followers": followers], forDocument: userDocRef)
+                return isFollowing
+            }) { (isFollowing, error) in
+                if let error = error {
+                    completion(false, false, error)
+                } else if let isFollowing = isFollowing as? Bool {
+                    completion(true, isFollowing, nil)
+                }
+            }
+        }
+    }
+
+}
+
+
+struct UserRelations: Codable {
+    let userID: String
+    let followers: [String]
+    let followings: [String]
 }
