@@ -535,7 +535,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cGP-aN-kUo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6532" y="1001"/>
+            <point key="canvasLocation" x="7456" y="989"/>
         </scene>
         <!--New Apply Page Form Table View Controller-->
         <scene sceneID="4SU-lw-mxN">
@@ -1134,6 +1134,7 @@
         <!--Navigation Controller-->
         <scene sceneID="CeM-E2-oHo">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bj2-WP-XeH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yio-qk-zCD" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="uS2-Wi-VLE">
@@ -1145,7 +1146,6 @@
                         <segue destination="D70-bo-XNO" kind="relationship" relationship="rootViewController" id="SSh-BF-u4e"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bj2-WP-XeH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1715.2671755725189" y="153.52112676056339"/>
         </scene>
